@@ -1,7 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · 汽车 / AI / 机器人</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>每 3 小时整理的 X（推特）汽车、AI、机器人热帖，中文概括。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Thu, 05 Nov 2026 19:13:06 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Thu, 05 Nov 2026 22:12:57 +0000</lastBuildDate><ttl>180</ttl>
+<item><title>[汽车] Waymo详解冬季恶劣天气应对方案</title><link>https://x.com/Waymo/status/2118448973988151407</link><guid isPermaLink="true">https://x.com/Waymo/status/2118448973988151407</guid><category>汽车</category><author>@Waymo</author><pubDate>Thu, 05 Nov 2026 21:02:48 +0000</pubDate><description><![CDATA[<p>Waymo发帖说明如何应对冬季路况：实时识别轮下牵引力变化并调整转向/制动/加速，用仿真复现黑冰与白茫天气，传感器配加热器与微型雨刷，必要时限行或暂停服务。</p><p>@Waymo · 赞 143 · 转 11 · 浏览 8686</p><p><img src="https://pbs.twimg.com/tweet_video_thumb/HWY-EK_XMAA1hpq.jpg"/></p><blockquote>What does Waymo do to fight winter weather? 
+
+Here’s what you need to know. 👇 https://t.co/1aXhioU8Yg</blockquote><p><a href="https://x.com/Waymo/status/2118448973988151407">查看原帖</a></p>]]></description></item>
+<item><title>[汽车] NHTSA推OTA召回现代化：电子通知与AV</title><link>https://x.com/SawyerMerritt/status/2118441515341013460</link><guid isPermaLink="true">https://x.com/SawyerMerritt/status/2118441515341013460</guid><category>汽车</category><author>@SawyerMerritt</author><pubDate>Thu, 05 Nov 2026 20:33:10 +0000</pubDate><description><![CDATA[<p>NHTSA启动车辆安全召回现代化计划，重点推进OTA软件修复；承认OTA完成率高，拟允许电子通知替代邮寄，并向各州拨款150万美元改进召回通知，同时审视自动驾驶与软件修复适用规则。</p><p>@SawyerMerritt · 赞 319 · 转 27 · 浏览 27126</p><p><img src="https://pbs.twimg.com/media/HWY2q3EWIAA_egX.jpg"/></p><blockquote>NHTSA is launching a new initiative to modernize vehicle safety recalls, with a major focus on over-the-air (OTA) software updates.
+
+Info:
+• NHTSA acknowledges that OTA recall fixes generally achieve high completion rates because owners don&#x27;t need to visit a dealership/service center.
+• The agency is exploring more flexible recall notification requirements, including electronic notifications instead of traditional mail (I&#x27;ve been asking for this!)
+• NHTSA announced $1.5 million in grants to help states improve how vehicle owners are notified about outstanding recalls.
+• NHTSA is examining how recall requirements apply to autonomous vehicles and software-based fixes.</blockquote><p><a href="https://x.com/SawyerMerritt/status/2118441515341013460">查看原帖</a></p>]]></description></item>
+<item><title>[汽车] 多伦多见Waymo测试车：服务预计2028</title><link>https://x.com/niccruzpatane/status/2118437979777843518</link><guid isPermaLink="true">https://x.com/niccruzpatane/status/2118437979777843518</guid><category>汽车</category><author>@niccruzpatane</author><pubDate>Thu, 05 Nov 2026 20:19:07 +0000</pubDate><description><![CDATA[<p>Nic Cruz Patane在多伦多街拍到多辆Waymo，称它们已出现在市内各处；Waymo预计2028年在当地推出服务。</p><p>@niccruzpatane · 赞 24 · 转 0 · 浏览 2168</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118437758926553088/img/tAMmJWJURqKLQUlQ.jpg"/></p><blockquote>Waymos have arrived in Toronto. I saw them all over the city today.
+
+Can’t believe they’re here 😂
+
+Waymo is expected to launch service in 2028. https://t.co/3MEzDBzCYU</blockquote><p><a href="https://x.com/niccruzpatane/status/2118437979777843518">查看原帖</a></p>]]></description></item>
+<item><title>[AI] METR发布Anthropic AI研发加速评估报告</title><link>https://x.com/METR_Evals/status/2118412183860351084</link><guid isPermaLink="true">https://x.com/METR_Evals/status/2118412183860351084</guid><category>AI</category><author>@METR_Evals</author><pubDate>Thu, 05 Nov 2026 18:36:37 +0000</pubDate><description><![CDATA[<p>独立评估机构METR称自8月起基于Anthropic内部信息评估“AI是否在加速AI研发”，并发布相关风险评估报告。</p><p>@METR_Evals · 赞 1882 · 转 226 · 浏览 258043</p><blockquote>Since August, a team within METR has worked with internal Anthropic information to assess whether AI itself is accelerating AI development.
+
+We are now publishing a report summarizing the results of this risk assessment.</blockquote><p><a href="https://x.com/METR_Evals/status/2118412183860351084">查看原帖</a></p>]]></description></item>
+<item><title>[AI] METR估Anthropic能力进度提速约1.9倍</title><link>https://x.com/kimmonismus/status/2118423591364546856</link><guid isPermaLink="true">https://x.com/kimmonismus/status/2118423591364546856</guid><category>AI</category><author>@kimmonismus</author><pubDate>Thu, 05 Nov 2026 19:21:57 +0000</pubDate><description><![CDATA[<p>据METR评估，自2025年10月以来Anthropic模型基准分数提升速度约为此前的1.9倍，并估AI自身贡献约80%的加速（不确定性较高）。</p><p>@kimmonismus · 赞 315 · 转 20 · 浏览 24450</p><p><img src="https://pbs.twimg.com/media/HWYm9aCWcAAPbc9.jpg"/></p><blockquote>METR estimates that Anthropic is currently making progress in the capabilities of its models about twice as fast as it used to, and that the use of AI itself is driving a large part of this acceleration.
+
+Independent evaluator METR found that Anthropic’s model benchmark scores have improved 1.9x faster since October 2025.  
+
+METR estimates that AI may account for around 80% of the current acceleration, though that estimate is highly uncertain.</blockquote><p><a href="https://x.com/kimmonismus/status/2118423591364546856">查看原帖</a></p>]]></description></item>
+<item><title>[AI] Meta Muse Realtime Avatar在美上线</title><link>https://x.com/AIatMeta/status/2118412135340572850</link><guid isPermaLink="true">https://x.com/AIatMeta/status/2118412135340572850</guid><category>AI</category><author>@AIatMeta</author><pubDate>Thu, 05 Nov 2026 18:36:25 +0000</pubDate><description><![CDATA[<p>Meta宣布在Connect上预览的Muse Realtime Avatar已在美国Muse应用上线，可将Realtime Voice变为可交互的实时表情化身，用于更自然地与个人代理互动。</p><p>@AIatMeta · 赞 226 · 转 21 · 浏览 22774</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118411815852056576/img/6UaZfCrU4eOkGNWu.jpg"/></p><blockquote>During Connect, we previewed Muse Realtime Avatar, our real-time embodiment technology that turns Muse Realtime Voice into expressive, interactive avatars.
+
+Today, we’re rolling it out in the @Muse app in the US, giving people a more natural way to engage with their personal agents.
+
+Learn more about Muse Realtime Avatar on our research blog: https://t.co/V2cSOHunRw</blockquote><p><a href="https://x.com/AIatMeta/status/2118412135340572850">查看原帖</a></p>]]></description></item>
+<item><title>[AI] StreamEval上线：38模型实时视频基准</title><link>https://x.com/kimmonismus/status/2118420737728151577</link><guid isPermaLink="true">https://x.com/kimmonismus/status/2118420737728151577</guid><category>AI</category><author>@kimmonismus</author><pubDate>Thu, 05 Nov 2026 19:10:36 +0000</pubDate><description><![CDATA[<p>StreamEval公开实时视频AI基准，含300个15秒至5分钟脚本用例，覆盖Avatar、世界生成与视频编辑三类，并开源代码、数据集与评分协议。</p><p>@kimmonismus · 赞 82 · 转 7 · 浏览 7947</p><p><img src="https://pbs.twimg.com/media/HWYkboXa0AAg5X6.png"/></p><p><img src="https://pbs.twimg.com/media/HWYkbyRbgAAJY1S.jpg"/></p><blockquote>StreamEval is worth a look if you’re following real-time video AI.
+
+The paper reports results from 38 models. The benchmark contains 300 scripted test cases, each representing a session lasting from 15 seconds to five minutes.
+
+The leaderboard covers three categories:
+
+- Avatar: dialogue, performance and character consistency.
+- World generation: changing scenes while keeping them coherent.
+- Video editing: applying edits while preserving unaffected content.
+
+Across five tasks and ten metrics, it examines whether models follow requests, maintain visual quality and keep the scene consistent. That includes preserving an earlier edit when the next instruction arrives.
+
+The code, dataset, evaluation protocols and scoring rules are public. Researchers can inspect the test cases and run their own evaluations with the open-source implementation.
+
+The project brings together researchers affiliated with Tsinghua University, NVIDIA, Carnegie Mellon University, UC Berkeley, Princeton University, the National University of Singapore, and Reactor.
+
+If you’re building a video model, you can submit an API endpoint through “Evaluate your model”. The team reviews submissions for future evaluations.
+
+https://t.co/8AKklGVE2W
+
+Paper, code and dataset links below.
+
+#StreamEval #StreamEvalBenchmark #streamingvideo</blockquote><p><a href="https://x.com/kimmonismus/status/2118420737728151577">查看原帖</a></p>]]></description></item>
+<item><title>[机器人] Agility Robotics登纳斯达克成美首家</title><link>https://x.com/Polymarket/status/2118402121976648062</link><guid isPermaLink="true">https://x.com/Polymarket/status/2118402121976648062</guid><category>机器人</category><author>@Polymarket</author><pubDate>Thu, 05 Nov 2026 17:56:38 +0000</pubDate><description><![CDATA[<p>Nvidia支持的Agility Robotics成为美国首家专门做人形机器人并上市的公司，已在纳斯达克挂牌交易。</p><p>@Polymarket · 赞 123 · 转 19 · 浏览 25940</p><p><img src="https://pbs.twimg.com/media/HWYTWByW8AADgOU.jpg"/></p><blockquote>JUST IN: Nvidia-backed Agility Robotics becomes the first dedicated humanoid robot company to go public in the United States, debuting on Nasdaq. https://t.co/MXhhAzfT0B</blockquote><p><a href="https://x.com/Polymarket/status/2118402121976648062">查看原帖</a></p>]]></description></item>
+<item><title>[机器人] Agility Digit已在真实场景作业并上市</title><link>https://x.com/davidpattersonx/status/2118381642230399166</link><guid isPermaLink="true">https://x.com/davidpattersonx/status/2118381642230399166</guid><category>机器人</category><author>@davidpattersonx</author><pubDate>Thu, 05 Nov 2026 16:35:15 +0000</pubDate><description><![CDATA[<p>帖文称Agility Robotics成为美国首家专门做人形机器人并上市的公司，其Digit人形机器人已在真实场景工作，并配有相关视频。</p><p>@davidpattersonx · 赞 45 · 转 3 · 浏览 1661</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118380715997888512/img/GR7rXTCdVBaHBzWc.jpg"/></p><blockquote>Agility Robotics has become the first dedicated humanoid robotics company to go public in the US.
+
+Their Digit humanoid robot is already doing real-world work. https://t.co/16VVvt2qhH</blockquote><p><a href="https://x.com/davidpattersonx/status/2118381642230399166">查看原帖</a></p>]]></description></item>
 <item><title>[汽车] IMC交付首辆Tesla Semi入加州港口</title><link>https://x.com/SawyerMerritt/status/2118374197273727126</link><guid isPermaLink="true">https://x.com/SawyerMerritt/status/2118374197273727126</guid><category>汽车</category><author>@SawyerMerritt</author><pubDate>Thu, 05 Nov 2026 16:05:40 +0000</pubDate><description><![CDATA[<p>美国最大海运集卡承运商IMC Logistics已接收首辆Tesla Semi，系其9月订购的50辆中的首台，将用于加州港口与内陆运输业务。</p><p>@SawyerMerritt · 赞 637 · 转 68 · 浏览 34983</p><blockquote>IMC Logistics, the largest marine drayage provider in the US, has just taken delivery of its first @Tesla Semi.
 
 The truck is the first to arrive from the 50 Tesla Semis IMC ordered in September for its California operations. https://t.co/80P5a4LOa2</blockquote><p><a href="https://x.com/SawyerMerritt/status/2118374197273727126">查看原帖</a></p>]]></description></item>

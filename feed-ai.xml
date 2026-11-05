@@ -1,7 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · AI</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>每 3 小时整理的 X（推特）汽车、AI、机器人热帖，中文概括。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Thu, 05 Nov 2026 19:13:06 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Thu, 05 Nov 2026 22:12:57 +0000</lastBuildDate><ttl>180</ttl>
+<item><title>[AI] METR发布Anthropic AI研发加速评估报告</title><link>https://x.com/METR_Evals/status/2118412183860351084</link><guid isPermaLink="true">https://x.com/METR_Evals/status/2118412183860351084</guid><category>AI</category><author>@METR_Evals</author><pubDate>Thu, 05 Nov 2026 18:36:37 +0000</pubDate><description><![CDATA[<p>独立评估机构METR称自8月起基于Anthropic内部信息评估“AI是否在加速AI研发”，并发布相关风险评估报告。</p><p>@METR_Evals · 赞 1882 · 转 226 · 浏览 258043</p><blockquote>Since August, a team within METR has worked with internal Anthropic information to assess whether AI itself is accelerating AI development.
+
+We are now publishing a report summarizing the results of this risk assessment.</blockquote><p><a href="https://x.com/METR_Evals/status/2118412183860351084">查看原帖</a></p>]]></description></item>
+<item><title>[AI] METR估Anthropic能力进度提速约1.9倍</title><link>https://x.com/kimmonismus/status/2118423591364546856</link><guid isPermaLink="true">https://x.com/kimmonismus/status/2118423591364546856</guid><category>AI</category><author>@kimmonismus</author><pubDate>Thu, 05 Nov 2026 19:21:57 +0000</pubDate><description><![CDATA[<p>据METR评估，自2025年10月以来Anthropic模型基准分数提升速度约为此前的1.9倍，并估AI自身贡献约80%的加速（不确定性较高）。</p><p>@kimmonismus · 赞 315 · 转 20 · 浏览 24450</p><p><img src="https://pbs.twimg.com/media/HWYm9aCWcAAPbc9.jpg"/></p><blockquote>METR estimates that Anthropic is currently making progress in the capabilities of its models about twice as fast as it used to, and that the use of AI itself is driving a large part of this acceleration.
+
+Independent evaluator METR found that Anthropic’s model benchmark scores have improved 1.9x faster since October 2025.  
+
+METR estimates that AI may account for around 80% of the current acceleration, though that estimate is highly uncertain.</blockquote><p><a href="https://x.com/kimmonismus/status/2118423591364546856">查看原帖</a></p>]]></description></item>
+<item><title>[AI] Meta Muse Realtime Avatar在美上线</title><link>https://x.com/AIatMeta/status/2118412135340572850</link><guid isPermaLink="true">https://x.com/AIatMeta/status/2118412135340572850</guid><category>AI</category><author>@AIatMeta</author><pubDate>Thu, 05 Nov 2026 18:36:25 +0000</pubDate><description><![CDATA[<p>Meta宣布在Connect上预览的Muse Realtime Avatar已在美国Muse应用上线，可将Realtime Voice变为可交互的实时表情化身，用于更自然地与个人代理互动。</p><p>@AIatMeta · 赞 226 · 转 21 · 浏览 22774</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118411815852056576/img/6UaZfCrU4eOkGNWu.jpg"/></p><blockquote>During Connect, we previewed Muse Realtime Avatar, our real-time embodiment technology that turns Muse Realtime Voice into expressive, interactive avatars.
+
+Today, we’re rolling it out in the @Muse app in the US, giving people a more natural way to engage with their personal agents.
+
+Learn more about Muse Realtime Avatar on our research blog: https://t.co/V2cSOHunRw</blockquote><p><a href="https://x.com/AIatMeta/status/2118412135340572850">查看原帖</a></p>]]></description></item>
+<item><title>[AI] StreamEval上线：38模型实时视频基准</title><link>https://x.com/kimmonismus/status/2118420737728151577</link><guid isPermaLink="true">https://x.com/kimmonismus/status/2118420737728151577</guid><category>AI</category><author>@kimmonismus</author><pubDate>Thu, 05 Nov 2026 19:10:36 +0000</pubDate><description><![CDATA[<p>StreamEval公开实时视频AI基准，含300个15秒至5分钟脚本用例，覆盖Avatar、世界生成与视频编辑三类，并开源代码、数据集与评分协议。</p><p>@kimmonismus · 赞 82 · 转 7 · 浏览 7947</p><p><img src="https://pbs.twimg.com/media/HWYkboXa0AAg5X6.png"/></p><p><img src="https://pbs.twimg.com/media/HWYkbyRbgAAJY1S.jpg"/></p><blockquote>StreamEval is worth a look if you’re following real-time video AI.
+
+The paper reports results from 38 models. The benchmark contains 300 scripted test cases, each representing a session lasting from 15 seconds to five minutes.
+
+The leaderboard covers three categories:
+
+- Avatar: dialogue, performance and character consistency.
+- World generation: changing scenes while keeping them coherent.
+- Video editing: applying edits while preserving unaffected content.
+
+Across five tasks and ten metrics, it examines whether models follow requests, maintain visual quality and keep the scene consistent. That includes preserving an earlier edit when the next instruction arrives.
+
+The code, dataset, evaluation protocols and scoring rules are public. Researchers can inspect the test cases and run their own evaluations with the open-source implementation.
+
+The project brings together researchers affiliated with Tsinghua University, NVIDIA, Carnegie Mellon University, UC Berkeley, Princeton University, the National University of Singapore, and Reactor.
+
+If you’re building a video model, you can submit an API endpoint through “Evaluate your model”. The team reviews submissions for future evaluations.
+
+https://t.co/8AKklGVE2W
+
+Paper, code and dataset links below.
+
+#StreamEval #StreamEvalBenchmark #streamingvideo</blockquote><p><a href="https://x.com/kimmonismus/status/2118420737728151577">查看原帖</a></p>]]></description></item>
 <item><title>[AI] OpenAI发布GPT-6 Cyber安全研究模型</title><link>https://x.com/OpenAI/status/2118390190246879554</link><guid isPermaLink="true">https://x.com/OpenAI/status/2118390190246879554</guid><category>AI</category><author>@OpenAI</author><pubDate>Thu, 05 Nov 2026 17:09:13 +0000</pubDate><description><![CDATA[<p>OpenAI推出GPT-6 Cyber，强调更强安全研究能力与对齐；已支撑Linux内核研究，并向Mozilla、Palo Alto Networks、Cisco等安全团队开放，目前面向部分Daybreak Red客户逐步扩大。</p><p>@OpenAI · 赞 8768 · 转 736 · 浏览 702680</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118387217588465664/img/N2grMUmP0O_EMvS2.jpg"/></p><blockquote>Introducing GPT‑6 Cyber: a major advance in security research that pairs stronger capabilities with better model alignment.
 
 The model powered the Linux kernel research we announced yesterday, and security teams at companies like Mozilla, Palo Alto Networks, Calif, and Cisco—alongside our own at OpenAI—are already putting it to work.

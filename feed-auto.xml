@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · 汽车</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>每 3 小时整理的 X（推特）汽车、AI、机器人热帖，中文概括。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-auto.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Thu, 05 Nov 2026 19:13:06 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-auto.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Thu, 05 Nov 2026 22:12:57 +0000</lastBuildDate><ttl>180</ttl>
+<item><title>[汽车] Waymo详解冬季恶劣天气应对方案</title><link>https://x.com/Waymo/status/2118448973988151407</link><guid isPermaLink="true">https://x.com/Waymo/status/2118448973988151407</guid><category>汽车</category><author>@Waymo</author><pubDate>Thu, 05 Nov 2026 21:02:48 +0000</pubDate><description><![CDATA[<p>Waymo发帖说明如何应对冬季路况：实时识别轮下牵引力变化并调整转向/制动/加速，用仿真复现黑冰与白茫天气，传感器配加热器与微型雨刷，必要时限行或暂停服务。</p><p>@Waymo · 赞 143 · 转 11 · 浏览 8686</p><p><img src="https://pbs.twimg.com/tweet_video_thumb/HWY-EK_XMAA1hpq.jpg"/></p><blockquote>What does Waymo do to fight winter weather? 
+
+Here’s what you need to know. 👇 https://t.co/1aXhioU8Yg</blockquote><p><a href="https://x.com/Waymo/status/2118448973988151407">查看原帖</a></p>]]></description></item>
+<item><title>[汽车] NHTSA推OTA召回现代化：电子通知与AV</title><link>https://x.com/SawyerMerritt/status/2118441515341013460</link><guid isPermaLink="true">https://x.com/SawyerMerritt/status/2118441515341013460</guid><category>汽车</category><author>@SawyerMerritt</author><pubDate>Thu, 05 Nov 2026 20:33:10 +0000</pubDate><description><![CDATA[<p>NHTSA启动车辆安全召回现代化计划，重点推进OTA软件修复；承认OTA完成率高，拟允许电子通知替代邮寄，并向各州拨款150万美元改进召回通知，同时审视自动驾驶与软件修复适用规则。</p><p>@SawyerMerritt · 赞 319 · 转 27 · 浏览 27126</p><p><img src="https://pbs.twimg.com/media/HWY2q3EWIAA_egX.jpg"/></p><blockquote>NHTSA is launching a new initiative to modernize vehicle safety recalls, with a major focus on over-the-air (OTA) software updates.
+
+Info:
+• NHTSA acknowledges that OTA recall fixes generally achieve high completion rates because owners don&#x27;t need to visit a dealership/service center.
+• The agency is exploring more flexible recall notification requirements, including electronic notifications instead of traditional mail (I&#x27;ve been asking for this!)
+• NHTSA announced $1.5 million in grants to help states improve how vehicle owners are notified about outstanding recalls.
+• NHTSA is examining how recall requirements apply to autonomous vehicles and software-based fixes.</blockquote><p><a href="https://x.com/SawyerMerritt/status/2118441515341013460">查看原帖</a></p>]]></description></item>
+<item><title>[汽车] 多伦多见Waymo测试车：服务预计2028</title><link>https://x.com/niccruzpatane/status/2118437979777843518</link><guid isPermaLink="true">https://x.com/niccruzpatane/status/2118437979777843518</guid><category>汽车</category><author>@niccruzpatane</author><pubDate>Thu, 05 Nov 2026 20:19:07 +0000</pubDate><description><![CDATA[<p>Nic Cruz Patane在多伦多街拍到多辆Waymo，称它们已出现在市内各处；Waymo预计2028年在当地推出服务。</p><p>@niccruzpatane · 赞 24 · 转 0 · 浏览 2168</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118437758926553088/img/tAMmJWJURqKLQUlQ.jpg"/></p><blockquote>Waymos have arrived in Toronto. I saw them all over the city today.
+
+Can’t believe they’re here 😂
+
+Waymo is expected to launch service in 2028. https://t.co/3MEzDBzCYU</blockquote><p><a href="https://x.com/niccruzpatane/status/2118437979777843518">查看原帖</a></p>]]></description></item>
 <item><title>[汽车] IMC交付首辆Tesla Semi入加州港口</title><link>https://x.com/SawyerMerritt/status/2118374197273727126</link><guid isPermaLink="true">https://x.com/SawyerMerritt/status/2118374197273727126</guid><category>汽车</category><author>@SawyerMerritt</author><pubDate>Thu, 05 Nov 2026 16:05:40 +0000</pubDate><description><![CDATA[<p>美国最大海运集卡承运商IMC Logistics已接收首辆Tesla Semi，系其9月订购的50辆中的首台，将用于加州港口与内陆运输业务。</p><p>@SawyerMerritt · 赞 637 · 转 68 · 浏览 34983</p><blockquote>IMC Logistics, the largest marine drayage provider in the US, has just taken delivery of its first @Tesla Semi.
 
 The truck is the first to arrive from the 50 Tesla Semis IMC ordered in September for its California operations. https://t.co/80P5a4LOa2</blockquote><p><a href="https://x.com/SawyerMerritt/status/2118374197273727126">查看原帖</a></p>]]></description></item>
