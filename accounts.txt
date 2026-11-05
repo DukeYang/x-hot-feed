@@ -1,4 +1,4 @@
 # 重点账号（每次先看这些账号最近的帖子，再用关键词搜索补充；发现新的高互动账号可追加）
-汽车: elonmusk Tesla teslaeurope SawyerMerritt Teslarati niccruzpatane wholemars Waymo Rivian LucidMotors BYDCompany zoox CybercabSpotter RobotaxiRadar
+汽车: elonmusk Tesla teslaeurope SawyerMerritt Teslarati niccruzpatane wholemars Waymo Rivian LucidMotors BYDCompany zoox CybercabSpotter RobotaxiRadar TeslaNewswire wmorrill3
 AI: sama OpenAI AnthropicAI GoogleDeepMind demishassabis xai nvidia karpathy TestingCatalog kimmonismus AIatMeta MistralAI
 机器人: adcock_brett Figure_robot Tesla_Optimus UnitreeRobotics agilityrobotics TheHumanoidHub BostonDynamics 1x_tech apptronik

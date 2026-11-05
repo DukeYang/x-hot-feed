@@ -1,5 +1,188 @@
 [
  {
+  "id": "2118258897794261183",
+  "user": "wmorrill3",
+  "name": "Wes",
+  "category": "汽车",
+  "title": "特斯拉柏林工程中心正式启用",
+  "summary": "特斯拉车辆可靠性与测试负责人Wes宣布柏林工程中心正式开业，并与当地政府官员共同出席；该中心为继弗里蒙特、上海后的第三座同类研发枢纽。",
+  "text": "Berlin is awesome and I am excited to officially open our Berlin Engineering Center! \n\nIt was great to bring together the Tesla team with the local government officials as the start of this great partnership https://t.co/nrXRUo31vI https://t.co/Wfp9xshE6T",
+  "created_at": "2026-11-05T08:27:31.000Z",
+  "metrics": {
+   "likes": 396,
+   "retweets": 28,
+   "views": 8151
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWWRN6cX0AA0XDn.jpg",
+   "https://pbs.twimg.com/media/HWWROwyWsAAg6fG.jpg",
+   "https://pbs.twimg.com/media/HWWRPUdWUAA8_4m.jpg"
+  ],
+  "added_at": "2026-11-05T10:08:04.655958+00:00"
+ },
+ {
+  "id": "2118223053343855024",
+  "user": "TeslaNewswire",
+  "name": "The Tesla Newswire",
+  "category": "汽车",
+  "title": "奥兰多I-4高速现Cybercab路测",
+  "summary": "Tesla Newswire称佛罗里达奥兰多I-4高速公路上拍到Cybercab测试，或暗示当地Robotaxi服务区即将扩大。",
+  "text": "Cybercab spotted testing on I-4 highway in Orlando, Florida!\n\nThis may be a first, potentially hinting at an imminent expansion of the Robotaxi service area. https://t.co/o75RYoX48R https://t.co/7FENHBWFGV",
+  "created_at": "2026-11-05T06:05:05.000Z",
+  "metrics": {
+   "likes": 49,
+   "retweets": 5,
+   "views": 3338
+  },
+  "media": [],
+  "added_at": "2026-11-05T10:08:04.655958+00:00"
+ },
+ {
+  "id": "2118218981358080114",
+  "user": "TeslaNewswire",
+  "name": "The Tesla Newswire",
+  "category": "汽车",
+  "title": "Roadster推力与火箭版同台展示",
+  "summary": "博主晒出Boom Supersonic CEO分享的照片，特斯拉新Roadster的Thrust与Rocket两个版本同时展出，并请网友对比差异。",
+  "text": "Both the Tesla Roadster Thrust and Rocket versions on display.\n\nSpot the differences!\n\n(Photo shared by Boom Supersonic’s CEO) https://t.co/9EzJLQ5poL https://t.co/IoZzAKodN1",
+  "created_at": "2026-11-05T05:48:54.000Z",
+  "metrics": {
+   "likes": 51,
+   "retweets": 3,
+   "views": 5465
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWVs77pXUAAx5Ps.jpg"
+  ],
+  "added_at": "2026-11-05T10:08:04.655958+00:00"
+ },
+ {
+  "id": "2118246774640943280",
+  "user": "kimmonismus",
+  "name": "Chubby♨️",
+  "category": "AI",
+  "title": "GPT-6.2 Sol与Astra现已上云",
+  "summary": "博主称GPT-6.2 Sol与Astra已部署到Google Cloud，按以往惯例意味着发布临近，并预计当天可能推出。",
+  "text": "GPT-6.2 Sol and Astra have been deployed on google cloud and usually that means a release is imminent. \n\nI expect it today. https://t.co/BaJ6ZwoHnZ",
+  "created_at": "2026-11-05T07:39:20.000Z",
+  "metrics": {
+   "likes": 896,
+   "retweets": 20,
+   "views": 22573
+  },
+  "media": [],
+  "added_at": "2026-11-05T10:08:04.655958+00:00"
+ },
+ {
+  "id": "2118251808179323102",
+  "user": "elonmusk",
+  "name": "Elon Musk",
+  "category": "AI",
+  "title": "马斯克：Grok Bot可代打电话",
+  "summary": "埃隆·马斯克转发用户演示称，Grok Bot已能代用户致电牙医，例如查询是否接受其保险。",
+  "text": "Grok @Bot can call your dentist on the phone! https://t.co/mkvIuwTA2J",
+  "created_at": "2026-11-05T07:59:20.000Z",
+  "metrics": {
+   "likes": 2068,
+   "retweets": 272,
+   "views": 829546
+  },
+  "media": [],
+  "added_at": "2026-11-05T10:08:04.655958+00:00"
+ },
+ {
+  "id": "2118270595871973555",
+  "user": "kimmonismus",
+  "name": "Chubby♨️",
+  "category": "AI",
+  "title": "OpenAI模型发现948个内核漏洞",
+  "summary": "据OpenAI安全研究，即将推出的网络攻防模型在一次运行中协助发现948个Linux内核漏洞并生成可提权的利用与补丁草案；利用需已有本地访问权限。",
+  "text": "OpenAI’s latest security research shows how AI could make cyberattacks faster and cheaper.\n\nIn one run, an upcoming cyber model helped find 948 Linux kernel vulnerabilities and build working exploits that could give an ordinary user full control of a machine. The system also https://t.co/QiNtDsdO9h https://t.co/sNVZ8gEb36",
+  "created_at": "2026-11-05T09:14:00.000Z",
+  "metrics": {
+   "likes": 126,
+   "retweets": 10,
+   "views": 6905
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWWOD5HW4AACF1Y.png"
+  ],
+  "added_at": "2026-11-05T10:08:04.655958+00:00"
+ },
+ {
+  "id": "2118268779901628880",
+  "user": "testingcatalog",
+  "name": "🚨 AI News | TestingCatalog",
+  "category": "AI",
+  "title": "OpenAI上线Images 2.6与GIF",
+  "summary": "TestingCatalog日报：OpenAI在ChatGPT与Codex推出Images 2.6，支持GIF与参考图，并在API提供Flare、Sunburst模型；另有GPT-6.2配额现身等动态。",
+  "text": "DAILY AI BRIEF 🗞 — Nov 5\n\nOPENAI 🔥:\n- OpenAI launched Images 2.6 with GIFs and reference images in ChatGPT and Codex, plus the Flare and Sunburst models in the API.\n- GPT-6.2 Astra and Sol showed up on Google Cloud quotas, and The Information says they could ship as soon as https://t.co/sYDVoir2dI",
+  "created_at": "2026-11-05T09:06:47.000Z",
+  "metrics": {
+   "likes": 61,
+   "retweets": 5,
+   "views": 4813
+  },
+  "media": [],
+  "added_at": "2026-11-05T10:08:04.655958+00:00"
+ },
+ {
+  "id": "2118230548208636343",
+  "user": "XHNews",
+  "name": "China Xinhua News",
+  "category": "机器人",
+  "title": "智元A3人形机器人完成箱跳",
+  "summary": "新华社发布视频显示，中国制造的AGIBOT A3人形机器人完成一次干净利落的箱跳，展示其灵活性。",
+  "text": "Chinese-made AGIBOT A3 humanoid robot showed off its impressive agility by landing a clean box jump. #HumanoidRobot #Robotics #AGIBOT #BoxJump #ChinaTech https://t.co/eOy2EFThH9",
+  "created_at": "2026-11-05T06:34:52.000Z",
+  "metrics": {
+   "likes": 5,
+   "retweets": 2,
+   "views": 3494
+  },
+  "media": [],
+  "added_at": "2026-11-05T10:08:04.655958+00:00"
+ },
+ {
+  "id": "2118247440868626813",
+  "user": "XHscitech",
+  "name": "China Xinhua Sci-Tech",
+  "category": "机器人",
+  "title": "六台智元机器人进便利店试运营",
+  "summary": "新华社科技称六台AgiBot Genie G2人形机器人在上海便利店进行24小时试运营，负责迎宾、取餐倒饮、补货与擦桌子，并全程直播。",
+  "text": "Six AgiBot Genie G2 humanoid robots clocked in for a 24-hour trial at a Shanghai convenience store.\nThe robots greeted customers, served food and drinks, restocked shelves, and wiped down tables.\nStreamed live online in a real business setting, the trial showed how embodied AI https://t.co/DbTXJPuTpO",
+  "created_at": "2026-11-05T07:41:59.000Z",
+  "metrics": {
+   "likes": 5,
+   "retweets": 1,
+   "views": 471
+  },
+  "media": [],
+  "added_at": "2026-11-05T10:08:04.655958+00:00"
+ },
+ {
+  "id": "2118226097800085998",
+  "user": "yicaichina",
+  "name": "Yicai 第一财经",
+  "category": "机器人",
+  "title": "进博会人形机器人展示实用技能",
+  "summary": "第一财经报道，第九届进博会开幕，Sharpa拍摄人像、智元A3奉茶与打乒乓、特斯拉Optimus搬运行李等人形机器人实用演示受关注。",
+  "text": "Humanoid robots stole the spotlight at #CIIE2026 by performing practical tasks, including Sharpa capturing media portraits, AgiBot A3 serving tea and playing table tennis, and Tesla's Optimus handling luggage. The ninth CIIE opened in Shanghai today, gathering 4,142 overseas https://t.co/mdiiRNoSzS",
+  "created_at": "2026-11-05T06:17:11.000Z",
+  "metrics": {
+   "likes": 5,
+   "retweets": 0,
+   "views": 735
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWVzaR1XEAEz3kX.jpg",
+   "https://pbs.twimg.com/media/HWVzaSUW0AAwZV_.jpg",
+   "https://pbs.twimg.com/media/HWVzaSCWwAASyx9.jpg",
+   "https://pbs.twimg.com/media/HWVzaTwW8AEKlNE.jpg"
+  ],
+  "added_at": "2026-11-05T10:08:04.655958+00:00"
+ },
+ {
   "id": "2118153975451291696",
   "user": "wholemars",
   "name": "Whole Mars Catalog",
