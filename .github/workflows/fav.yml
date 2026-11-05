@@ -1,0 +1,65 @@
+name: fav-sync
+
+on:
+  issues:
+    types: [opened, reopened]
+
+concurrency:
+  group: fav-sync
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  sync:
+    if: >
+      github.event.issue.user.login == 'DukeYang' &&
+      (
+        contains(join(github.event.issue.labels.*.name, ','), 'fav') ||
+        startsWith(github.event.issue.title, '收藏') ||
+        startsWith(github.event.issue.title, '取消收藏')
+      )
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Configure git & gh
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Prefer HTTPS with token for push; gh uses GH_TOKEN
+          echo "GH_TOKEN set"
+
+      - name: Ensure fav label
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create fav -R "${{ github.repository }}" --description "收藏/取消收藏同步" --color "F2C94C" 2>/dev/null || true
+          # Attach label if missing (title-triggered)
+          NUM="${{ github.event.issue.number }}"
+          gh issue edit "$NUM" -R "${{ github.repository }}" --add-label fav 2>/dev/null || true
+
+      - name: Sync favorites & rebuild
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_WORKSPACE: ${{ github.workspace }}
+        run: |
+          python3 build_feed.py --sync-only
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "Fav sync finished for issue #${{ github.event.issue.number }}: ${{ github.event.issue.title }}"
