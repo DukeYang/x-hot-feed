@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · AI</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>每 3 小时整理的 X（推特）汽车、AI、机器人热帖，中文概括。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Thu, 05 Nov 2026 16:06:09 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Thu, 05 Nov 2026 19:13:06 +0000</lastBuildDate><ttl>180</ttl>
+<item><title>[AI] OpenAI发布GPT-6 Cyber安全研究模型</title><link>https://x.com/OpenAI/status/2118390190246879554</link><guid isPermaLink="true">https://x.com/OpenAI/status/2118390190246879554</guid><category>AI</category><author>@OpenAI</author><pubDate>Thu, 05 Nov 2026 17:09:13 +0000</pubDate><description><![CDATA[<p>OpenAI推出GPT-6 Cyber，强调更强安全研究能力与对齐；已支撑Linux内核研究，并向Mozilla、Palo Alto Networks、Cisco等安全团队开放，目前面向部分Daybreak Red客户逐步扩大。</p><p>@OpenAI · 赞 8768 · 转 736 · 浏览 702680</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118387217588465664/img/N2grMUmP0O_EMvS2.jpg"/></p><blockquote>Introducing GPT‑6 Cyber: a major advance in security research that pairs stronger capabilities with better model alignment.
+
+The model powered the Linux kernel research we announced yesterday, and security teams at companies like Mozilla, Palo Alto Networks, Calif, and Cisco—alongside our own at OpenAI—are already putting it to work.
+
+GPT-6 Cyber is available to select Daybreak Red customers and we are expanding access over time.
+
+https://t.co/Nzab3Z1Td6</blockquote><p><a href="https://x.com/OpenAI/status/2118390190246879554">查看原帖</a></p>]]></description></item>
+<item><title>[AI] Claude上线美国个人理财只读功能</title><link>https://x.com/claudeai/status/2118403114890137895</link><guid isPermaLink="true">https://x.com/claudeai/status/2118403114890137895</guid><category>AI</category><author>@claudeai</author><pubDate>Thu, 05 Nov 2026 18:00:35 +0000</pubDate><description><![CDATA[<p>Anthropic旗下Claude宣布在美国推出Personal Finance测试版，用户可只读连接所选账户，用日常语言询问余额与交易；Claude不能转账、管理或投资资金。</p><p>@claudeai · 赞 8579 · 转 377 · 浏览 431775</p><p><img src="https://pbs.twimg.com/media/HWYUk7ZWwAAcrVe.jpg"/></p><blockquote>Introducing Personal Finance in Claude, in beta in the US.
+
+Connect the accounts you choose, and Claude answers your money questions in everyday language, from your own balances and transactions. Access is read-only, and Claude can&#x27;t move, manage, or invest your money. https://t.co/V1JLYuWwrS</blockquote><p><a href="https://x.com/claudeai/status/2118403114890137895">查看原帖</a></p>]]></description></item>
+<item><title>[AI] Gemini Omni 1.2 Flash可生成15秒视频</title><link>https://x.com/GoogleAI/status/2118389961426874879</link><guid isPermaLink="true">https://x.com/GoogleAI/status/2118389961426874879</guid><category>AI</category><author>@GoogleAI</author><pubDate>Thu, 05 Nov 2026 17:08:19 +0000</pubDate><description><![CDATA[<p>Google AI发布Gemini Omni 1.2 Flash：视频生成与编辑最长15秒，场景一致性与角色语音提升，API端720p定价降至每秒0.07美元，较上代便宜30%。</p><p>@GoogleAI · 赞 1036 · 转 92 · 浏览 63368</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118387774378192896/img/dPbZ-qxFOtFSBnvZ.jpg"/></p><blockquote>Meet Gemini Omni 1.2 Flash ⚡️
+
+We’ve made the model more cost-effective, bumped the video generation and editing limit up to 15 seconds, and made updates to how scenes hold together over time. We&#x27;ve also given character speech an upgrade, reduced visual glitches like jump cuts, and made sure the model stays even truer to any reference assets you upload.
+
+So… what does all of that actually mean for you?
+
+It gives you more room to tell your story. With up to 15 seconds to work with, you have more flexibility to create what you need — videos look more cinematic and smooth, offering stronger consistency that keeps objects anchored from start to finish. And when characters speak, the dialogue sounds more fluid and natural.
+
+Creators and everyday users can start directing scenes and multi-turn edits in @FlowbyGoogle, generating 15-second clips at no additional cost in Google Vids, or creating 15-second videos in the @GeminiApp. Plus, for developers and businesses building with the API, we&#x27;ve dropped the price by 30% from the previous generation, making it available at just $0.07 per second for 720p video.
+
+Watch the model in action as it turns a single style frame into a 4-shot, 15-second macro science explainer of a living beehive ↓</blockquote><p><a href="https://x.com/GoogleAI/status/2118389961426874879">查看原帖</a></p>]]></description></item>
+<item><title>[AI] Perplexity推Teammates主动代理</title><link>https://x.com/perplexity_ai/status/2118389326459670825</link><guid isPermaLink="true">https://x.com/perplexity_ai/status/2118389326459670825</guid><category>AI</category><author>@perplexity_ai</author><pubDate>Thu, 05 Nov 2026 17:05:47 +0000</pubDate><description><![CDATA[<p>Perplexity推出Teammates主动代理，可接任务并用Computer任务、技能、记忆与工具工作，还能协作及在Slack发消息；现已向Max网页用户开放。</p><p>@perplexity_ai · 赞 485 · 转 46 · 浏览 49966</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118389256930660352/img/GPUe0mXgz4f2dJ6O.jpg"/></p><blockquote>Introducing teammates.
+
+Teammates work for you. They take on jobs, and work proactively using your Computer tasks, skills, memory, and tools. Teammates collaborate with other teammates and can message coworkers in Slack.
+
+Available now for Max subscribers on the web. https://t.co/I3Hf5RCdWC</blockquote><p><a href="https://x.com/perplexity_ai/status/2118389326459670825">查看原帖</a></p>]]></description></item>
+<item><title>[AI] Mistral Studio上线托管智能体与应用</title><link>https://x.com/MistralAI/status/2118370229466153299</link><guid isPermaLink="true">https://x.com/MistralAI/status/2118370229466153299</guid><category>AI</category><author>@MistralAI</author><pubDate>Thu, 05 Nov 2026 15:49:54 +0000</pubDate><description><![CDATA[<p>Mistral AI宣布Studio新增托管智能体与应用，并强化工作流、企业连接、可观测与评测能力，强调更快构建、自选部署位置并保持控制。</p><p>@MistralAI · 赞 451 · 转 59 · 浏览 21800</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118366149817589760/img/w-0uis_jH9k-FJib.jpg"/></p><blockquote>🆕 Le Chonk brings the brains. Mistral Studio gets it working.
+
+Introducing managed agents and apps, plus new capabilities for workflows, enterprise connections, observability and evaluations in Studio.
+
+Build faster. Deploy where you choose. Keep control.
+See what’s possible. 🧵</blockquote><p><a href="https://x.com/MistralAI/status/2118370229466153299">查看原帖</a></p>]]></description></item>
 <item><title>[AI] 反AI网红获重金邀约制作对立内容</title><link>https://x.com/kimmonismus/status/2118290150216094044</link><guid isPermaLink="true">https://x.com/kimmonismus/status/2118290150216094044</guid><category>AI</category><author>@kimmonismus</author><pubDate>Thu, 05 Nov 2026 10:31:42 +0000</pubDate><description><![CDATA[<p>Chubby称反AI情绪持续升温，已有反AI网红被开出大额报酬，邀请制作反对人工智能的内容，相关对抗进入新阶段。</p><p>@kimmonismus · 赞 714 · 转 55 · 浏览 27502</p><blockquote>Resistance to AI continues to gain momentum. Anti-AI influencers are now being offered significant sums of money to create content against AI.
 
 The battle enters the next round. Regrettably, the understanding that AI is of immense importance to humanity has yet to take hold. https://t.co/wDwwGx1AgB</blockquote><p><a href="https://x.com/kimmonismus/status/2118290150216094044">查看原帖</a></p>]]></description></item>

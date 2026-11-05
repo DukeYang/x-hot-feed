@@ -1,5 +1,215 @@
 [
  {
+  "id": "2118374197273727126",
+  "user": "SawyerMerritt",
+  "name": "Sawyer Merritt",
+  "category": "汽车",
+  "title": "IMC交付首辆Tesla Semi入加州港口",
+  "summary": "美国最大海运集卡承运商IMC Logistics已接收首辆Tesla Semi，系其9月订购的50辆中的首台，将用于加州港口与内陆运输业务。",
+  "text": "IMC Logistics, the largest marine drayage provider in the US, has just taken delivery of its first @Tesla Semi.\n\nThe truck is the first to arrive from the 50 Tesla Semis IMC ordered in September for its California operations. https://t.co/80P5a4LOa2",
+  "created_at": "2026-11-05T16:05:40.000Z",
+  "metrics": {
+   "likes": 637,
+   "retweets": 68,
+   "views": 34983
+  },
+  "media": [],
+  "added_at": "2026-11-05T19:13:06.543965+00:00"
+ },
+ {
+  "id": "2118368801850831267",
+  "user": "niccruzpatane",
+  "name": "Nic Cruz Patane",
+  "category": "汽车",
+  "title": "Roadster Rocket近照：10个冷气推进器",
+  "summary": "Nic Cruz Patane首次公开Tesla Roadster Rocket近照，称该车配备10个SpaceX冷气推进器及前后共600L气瓶，目前仅限邀请且未公布售价。",
+  "text": "First time seeing close-up photos of the Tesla Roadster Rocket. This is the one that flies! \n\nIt has 10 SpaceX Cold-Gas Thrusters all around the vehicle with two COPVs (200L in the rear, and 400L in the place of the passenger seat).\n\nPrice is not available, and it’s currently invite-only.",
+  "created_at": "2026-11-05T15:44:14.000Z",
+  "metrics": {
+   "likes": 299,
+   "retweets": 21,
+   "views": 13459
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWX1MkEXkAA3rAw.jpg"
+  ],
+  "added_at": "2026-11-05T19:13:06.543965+00:00"
+ },
+ {
+  "id": "2118375465262170456",
+  "user": "zoox",
+  "name": "Zoox",
+  "category": "汽车",
+  "title": "Zoox成拉斯维加斯F1官方自动驾驶伙伴",
+  "summary": "Zoox宣布与F1拉斯维加斯大奖赛达成多年合作，成为该赛事官方自动驾驶网约车合作伙伴。",
+  "text": "We’re the Official Autonomous Ride Hail Partner of the #LasVegasGP in a new multi-year partnership with @F1LasVegas. 🏎️🏁\n\nLearn more: https://t.co/4pHUNRe4dm https://t.co/NO9YqZh656",
+  "created_at": "2026-11-05T16:10:43.000Z",
+  "metrics": {
+   "likes": 27,
+   "retweets": 6,
+   "views": 974
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWX63Iqb0AArsbI.jpg"
+  ],
+  "added_at": "2026-11-05T19:13:06.543965+00:00"
+ },
+ {
+  "id": "2118363251599921650",
+  "user": "RobotaxiRadar",
+  "name": "Robotaxi Radar",
+  "category": "汽车",
+  "title": "中国车展展出Tesla Robovan展示车",
+  "summary": "Robotaxi Radar称中国一场展会展出了Tesla Robovan展示模型，并追问Robovan何时能上路。",
+  "text": "Robovan exhibition model was displayed at a fair in China 🇨🇳 👀\n\nHow “soon” will the Robovan be debuting on roads? 🤔 https://t.co/oh92rTCZIQ https://t.co/4zkg9wtHmA",
+  "created_at": "2026-11-05T15:22:11.000Z",
+  "metrics": {
+   "likes": 21,
+   "retweets": 1,
+   "views": 1382
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWXwI8DW0AAG9I2.jpg",
+   "https://pbs.twimg.com/media/HWXwI7eXQAAIKug.jpg"
+  ],
+  "added_at": "2026-11-05T19:13:06.543965+00:00"
+ },
+ {
+  "id": "2118390190246879554",
+  "user": "OpenAI",
+  "name": "OpenAI",
+  "category": "AI",
+  "title": "OpenAI发布GPT-6 Cyber安全研究模型",
+  "summary": "OpenAI推出GPT-6 Cyber，强调更强安全研究能力与对齐；已支撑Linux内核研究，并向Mozilla、Palo Alto Networks、Cisco等安全团队开放，目前面向部分Daybreak Red客户逐步扩大。",
+  "text": "Introducing GPT‑6 Cyber: a major advance in security research that pairs stronger capabilities with better model alignment.\n\nThe model powered the Linux kernel research we announced yesterday, and security teams at companies like Mozilla, Palo Alto Networks, Calif, and Cisco—alongside our own at OpenAI—are already putting it to work.\n\nGPT-6 Cyber is available to select Daybreak Red customers and we are expanding access over time.\n\nhttps://t.co/Nzab3Z1Td6",
+  "created_at": "2026-11-05T17:09:13.000Z",
+  "metrics": {
+   "likes": 8768,
+   "retweets": 736,
+   "views": 702680
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2118387217588465664/img/N2grMUmP0O_EMvS2.jpg"
+  ],
+  "added_at": "2026-11-05T19:13:06.543965+00:00"
+ },
+ {
+  "id": "2118403114890137895",
+  "user": "claudeai",
+  "name": "Claude",
+  "category": "AI",
+  "title": "Claude上线美国个人理财只读功能",
+  "summary": "Anthropic旗下Claude宣布在美国推出Personal Finance测试版，用户可只读连接所选账户，用日常语言询问余额与交易；Claude不能转账、管理或投资资金。",
+  "text": "Introducing Personal Finance in Claude, in beta in the US.\n\nConnect the accounts you choose, and Claude answers your money questions in everyday language, from your own balances and transactions. Access is read-only, and Claude can't move, manage, or invest your money. https://t.co/V1JLYuWwrS",
+  "created_at": "2026-11-05T18:00:35.000Z",
+  "metrics": {
+   "likes": 8579,
+   "retweets": 377,
+   "views": 431775
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWYUk7ZWwAAcrVe.jpg"
+  ],
+  "added_at": "2026-11-05T19:13:06.543965+00:00"
+ },
+ {
+  "id": "2118389961426874879",
+  "user": "GoogleAI",
+  "name": "Google AI",
+  "category": "AI",
+  "title": "Gemini Omni 1.2 Flash可生成15秒视频",
+  "summary": "Google AI发布Gemini Omni 1.2 Flash：视频生成与编辑最长15秒，场景一致性与角色语音提升，API端720p定价降至每秒0.07美元，较上代便宜30%。",
+  "text": "Meet Gemini Omni 1.2 Flash ⚡️\n\nWe’ve made the model more cost-effective, bumped the video generation and editing limit up to 15 seconds, and made updates to how scenes hold together over time. We've also given character speech an upgrade, reduced visual glitches like jump cuts, and made sure the model stays even truer to any reference assets you upload.\n\nSo… what does all of that actually mean for you?\n\nIt gives you more room to tell your story. With up to 15 seconds to work with, you have more flexibility to create what you need — videos look more cinematic and smooth, offering stronger consistency that keeps objects anchored from start to finish. And when characters speak, the dialogue sounds more fluid and natural.\n\nCreators and everyday users can start directing scenes and multi-turn edits in @FlowbyGoogle, generating 15-second clips at no additional cost in Google Vids, or creating 15-second videos in the @GeminiApp. Plus, for developers and businesses building with the API, we've dropped the price by 30% from the previous generation, making it available at just $0.07 per second for 720p video.\n\nWatch the model in action as it turns a single style frame into a 4-shot, 15-second macro science explainer of a living beehive ↓",
+  "created_at": "2026-11-05T17:08:19.000Z",
+  "metrics": {
+   "likes": 1036,
+   "retweets": 92,
+   "views": 63368
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2118387774378192896/img/dPbZ-qxFOtFSBnvZ.jpg"
+  ],
+  "added_at": "2026-11-05T19:13:06.543965+00:00"
+ },
+ {
+  "id": "2118389326459670825",
+  "user": "perplexity_ai",
+  "name": "Perplexity",
+  "category": "AI",
+  "title": "Perplexity推Teammates主动代理",
+  "summary": "Perplexity推出Teammates主动代理，可接任务并用Computer任务、技能、记忆与工具工作，还能协作及在Slack发消息；现已向Max网页用户开放。",
+  "text": "Introducing teammates.\n\nTeammates work for you. They take on jobs, and work proactively using your Computer tasks, skills, memory, and tools. Teammates collaborate with other teammates and can message coworkers in Slack.\n\nAvailable now for Max subscribers on the web. https://t.co/I3Hf5RCdWC",
+  "created_at": "2026-11-05T17:05:47.000Z",
+  "metrics": {
+   "likes": 485,
+   "retweets": 46,
+   "views": 49966
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2118389256930660352/img/GPUe0mXgz4f2dJ6O.jpg"
+  ],
+  "added_at": "2026-11-05T19:13:06.543965+00:00"
+ },
+ {
+  "id": "2118370229466153299",
+  "user": "MistralAI",
+  "name": "Mistral AI",
+  "category": "AI",
+  "title": "Mistral Studio上线托管智能体与应用",
+  "summary": "Mistral AI宣布Studio新增托管智能体与应用，并强化工作流、企业连接、可观测与评测能力，强调更快构建、自选部署位置并保持控制。",
+  "text": "🆕 Le Chonk brings the brains. Mistral Studio gets it working.\n\nIntroducing managed agents and apps, plus new capabilities for workflows, enterprise connections, observability and evaluations in Studio.\n\nBuild faster. Deploy where you choose. Keep control.\nSee what’s possible. 🧵",
+  "created_at": "2026-11-05T15:49:54.000Z",
+  "metrics": {
+   "likes": 451,
+   "retweets": 59,
+   "views": 21800
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2118366149817589760/img/w-0uis_jH9k-FJib.jpg"
+  ],
+  "added_at": "2026-11-05T19:13:06.543965+00:00"
+ },
+ {
+  "id": "2118382979592396904",
+  "user": "JoeTegtmeyer",
+  "name": "Joe Tegtmeyer 🚀 🤠🛸😎",
+  "category": "机器人",
+  "title": "德州超级工厂钢构约55%：年产千万Optimus",
+  "summary": "Joe Tegtmeyer称Giga Texas的Optimus工厂建设推进迅速，规划年产最高1000万台人形机器人、面积超700万平方英尺；主钢结构约55%已组装，目标2027年底极小规模投产。",
+  "text": "Want to know how the @Tesla Optimus factory under construction at  Giga Texas is progressing? I’d say it is moving along at warp speed!\n\nThis facility is to manufacture up to 10M/year humanoid robots & will be over 7 million sq ft (~3,500 ft long) once completed including a substantial part of the factory using 4 floors! This factory is in addition to the pilot line at Fremont that has reportedly already begun small-scale production.\n\nRight now, the main steel structure is ~55% assembled with a noticeable widening of the surrounding ground grading & reclamation of a large section of abandoned sand & gravel mining area on the E side of the new factory. \n\nAs I understand it, the target is to have the entire steel structure assembled with final topping ceremony held around the end of March 2027. This won’t be the end of construction as it will still need a lot more to complete the facility, install the production equipment & have utilities connected, particularly power, so massive construction work will continue throughout most of 2027.\n\nThe approach to construction of this factory differs significantly to the approach used for the  main Giga Texas factory in that it will be substantially closed in before major equipment is installed.\n\nThere are also some ground level utilities, footings and final perimeter grade beam work underway, with the E side of the building now taking shape with what appears to be a large open section about 4 column grids wide along this side of the facility.\n\nPer Tesla the goal will be to be able to begin some *very limited* production here sometime at the end of 2027 & then scale up production capability from there through 2028.",
+  "created_at": "2026-11-05T16:40:34.000Z",
+  "metrics": {
+   "likes": 225,
+   "retweets": 21,
+   "views": 7613
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWYBZ6GWMAET69U.jpg",
+   "https://pbs.twimg.com/media/HWYBZ6LWcAA7UzH.jpg",
+   "https://pbs.twimg.com/media/HWYBZ6NXIAA1CuG.jpg"
+  ],
+  "added_at": "2026-11-05T19:13:06.543965+00:00"
+ },
+ {
+  "id": "2118379824708239688",
+  "user": "BostonDynamics",
+  "name": "Boston Dynamics",
+  "category": "机器人",
+  "title": "波士顿动力：移动机器人可补强安防巡逻",
+  "summary": "Boston Dynamics称工业与商业园区安防面临高流动与疲劳问题，移动机器人可作为智能力量倍增器，自动化例行巡逻。",
+  "text": "Modern industrial sites and commercial facilities require oversight, but security teams face high turnover, worker fatigue, and expansive campuses. Mobile robots can serve as a intelligent force multiplier for security operations, automating routine patrols. https://t.co/xVZ9JKHQsR",
+  "created_at": "2026-11-05T16:28:02.000Z",
+  "metrics": {
+   "likes": 89,
+   "retweets": 11,
+   "views": 4955
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWX_OUZXQAA-h2j.jpg"
+  ],
+  "added_at": "2026-11-05T19:13:06.543965+00:00"
+ },
+ {
   "id": "2118367599767535878",
   "user": "SawyerMerritt",
   "name": "Sawyer Merritt",
