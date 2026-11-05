@@ -1,5 +1,116 @@
 [
  {
+  "id": "2118153975451291696",
+  "user": "wholemars",
+  "name": "Whole Mars Catalog",
+  "category": "汽车",
+  "title": "希望特斯拉CES前在维加斯开Robotaxi",
+  "summary": "博主表示，若特斯拉能在CES前于拉斯维加斯推出Robotaxi与Cybercab运营，会很理想。",
+  "text": "It would be great if Tesla got Robotaxi and Cybercab running in Vegas before CES",
+  "created_at": "2026-11-05T01:30:35.000Z",
+  "metrics": {
+   "likes": 389,
+   "retweets": 16,
+   "views": 26062
+  },
+  "media": [],
+  "added_at": "2026-11-05T07:08:49.306786+00:00"
+ },
+ {
+  "id": "2118158362709754350",
+  "user": "RobotaxiRadar",
+  "name": "Robotaxi Radar",
+  "category": "汽车",
+  "title": "维加斯枢纽现43辆Cybercab",
+  "summary": "博主称拉斯维加斯Robotaxi枢纽停车场当天出现43辆Cybercab与Model Y Robotaxi；按内华达AV许可规则，特斯拉须在11月24日或12月18日前启动商业运营，目前未见延期申请。",
+  "text": "Plenty of activity at the Vegas Robotaxi hub, with 43 Cybercabs and Model Y Robotaxis spotted in the lot today 👀\n\n🗓️ Under Nevada's AV permit rules, Tesla has to start commercial operations by either November 24 or December 18, depending on which permit date starts the 120-day clock\n\nNo extension request has shown up yet, so we've got 3 to 6 weeks to see if the Vegas rollout stays on schedule ✍️ https://t.co/7NaqgraKHC",
+  "created_at": "2026-11-05T01:48:01.000Z",
+  "metrics": {
+   "likes": 49,
+   "retweets": 6,
+   "views": 2496
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWUoFEubgAAJ3Ur.jpg"
+  ],
+  "added_at": "2026-11-05T07:08:49.306786+00:00"
+ },
+ {
+  "id": "2118154914572746958",
+  "user": "niccruzpatane",
+  "name": "Nic Cruz Patane",
+  "category": "汽车",
+  "title": "博主再购特斯拉主要为用FSD公路游",
+  "summary": "博主称将于12月底再提一辆新特斯拉，主要目的是使用FSD做全美公路旅行，以其替代乘机出行。",
+  "text": "Picking up another new Tesla at the end of December around Christmas. \n\nThe main reason I’m getting it is for FSD. I will be using this car for roadtrips all over the US. Instead of flying, FSD will just drive us to our destination. \n\nIt’s way better. https://t.co/Jmy93kJd01",
+  "created_at": "2026-11-05T01:34:19.000Z",
+  "metrics": {
+   "likes": 317,
+   "retweets": 15,
+   "views": 10843
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWUyqzuWMAAgNpO.jpg"
+  ],
+  "added_at": "2026-11-05T07:08:49.306786+00:00"
+ },
+ {
+  "id": "2118137612577968402",
+  "user": "_catwu",
+  "name": "cat",
+  "category": "AI",
+  "title": "Claude Code产品负责人加盟OpenAI",
+  "summary": "前Anthropic Claude Code产品负责人Cat Wu宣布加入OpenAI，负责Core Products产品管理，称将与团队打造让用户保持掌控的AI代理。",
+  "text": "Some news: I’m joining OpenAI to lead product management for Core Products!\n\nI have a lot of respect for OpenAI for showing the world that scaling works, for bringing AI to over a billion people, and for believing great products are core to the mission.\n\nI’m excited to work with @thsottiaux, an incredible PM team, and everyone across OpenAI. Together, we’ll build agents that have your back and your team’s, and keep you in control, so you get more time for the people and work you love.\n\nLots to learn, and lots to build. Please keep your feedback coming!",
+  "created_at": "2026-11-05T00:25:34.000Z",
+  "metrics": {
+   "likes": 12443,
+   "retweets": 549,
+   "views": 1895996
+  },
+  "media": [],
+  "added_at": "2026-11-05T07:08:49.306786+00:00"
+ },
+ {
+  "id": "2118217215132725303",
+  "user": "TheHumanoidHub",
+  "name": "The Humanoid Hub",
+  "category": "机器人",
+  "title": "Agility以SPAC上市募约4.65亿美元",
+  "summary": "Agility将以代号AGLT通过与Churchill Capital Corp XI的SPAC合并上市；SEC文件显示约募资4.65亿美元、估值25亿美元，2025年净销售额约180万美元、经营亏损约1.4亿美元，并称订单积压超3亿美元。",
+  "text": "Agility goes public tomorrow morning under the ticker $AGLT, via a SPAC merger with Churchill Capital Corp XI (not a traditional IPO).\n\nSome interesting facts from the recently filed SEC Form 425 and S-4:\n\n- Total gross capital raise of ~$465M, at a $2.5B pre-money valuation, with Foxconn anchoring a ~$201M PIPE (private investment)\n- 2025 net sales: ~$1.8M\n- 2025 operating loss: ~$140M\n- Company claims an order backlog of more than $300M in booked multi-year revenue",
+  "created_at": "2026-11-05T05:41:53.000Z",
+  "metrics": {
+   "likes": 14,
+   "retweets": 2,
+   "views": 3544
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWVqq4xakAAHldG.png"
+  ],
+  "added_at": "2026-11-05T07:08:49.306786+00:00"
+ },
+ {
+  "id": "2118206881399242791",
+  "user": "TheHumanoidHub",
+  "name": "The Humanoid Hub",
+  "category": "机器人",
+  "title": "RoboColosseum真实机器人评测上线",
+  "summary": "RoboColosseum在真实硬件上盲测机器人策略，覆盖150多场景并公开含失败在内的全部rollout；已测OpenAI、Anthropic、NVIDIA等30余策略，学术实验室可获1万小时免费评测。",
+  "text": "Robotics finally has its real-world arena.\n\nRoboColosseum is a real-world benchmark that tests robot policies on hundreds of actual robots across 150+ scenes, not cherry-picked demos. You bring a model, they run it blind on real hardware and publish every rollout (failures included) on Hugging Face.\n\nTwo ways models are tested:\n\n- Open track: two unnamed models get the same brand-new instruction in the same scene. A human judge watches both runs and picks the winner, or a tie. Think LMArena, but on real robots. It measures zero-shot performance on novel tasks.\n\n- Fine-tune track: every model is fine-tuned on one fixed task from the same open-source demos, then gets 25 attempts. An apples-to-apples test of how well a model learns a specific skill.\n\nOver 30 policies from OpenAI, Anthropic, NVIDIA, Galaxea, Ai2 and more are tested across Unitree G1, Franka, YAM and SO-101.\n\nWhy it matters: across 20,000+ real runs, no model won everywhere. Rankings flipped depending on the task and the robot body. That's the whole point: a single demo or benchmark tells you almost nothing about what a policy can actually do. This is the field finally getting honest, real robots, in the wild, every failure published.\n\nAnd 10,000 eval hours are free for academic labs.\n\nhttps://t.co/bRNf0LcD9R",
+  "created_at": "2026-11-05T05:00:49.000Z",
+  "metrics": {
+   "likes": 14,
+   "retweets": 3,
+   "views": 2288
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWVhOcKaMAERZy8.png",
+   "https://pbs.twimg.com/media/HWVhPBUbYAArZWE.png"
+  ],
+  "added_at": "2026-11-05T07:08:49.306786+00:00"
+ },
+ {
   "id": "2117777060739657854",
   "user": "niccruzpatane",
   "name": "Nic Cruz Patane",
