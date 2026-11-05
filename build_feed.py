@@ -25,8 +25,8 @@ def feed(name,title,its):
     x.append("</channel></rss>"); open(f"{R}/{name}","w").write("\n".join(x))
 feed("feed.xml","X 热帖精选 · 汽车 / AI / 机器人",items)
 for k,c in CAT.items(): feed(f"feed-{k}.xml",f"X 热帖精选 · {c}",[i for i in items if i["category"]==c])
-li="".join(f'<li>[{i["category"]}] <a href="https://x.com/{i["user"]}/status/{i["id"]}">{html.escape(i["title"])}</a> — {html.escape(i["summary"])}</li>' for i in items[:50])
-open(f"{R}/index.html","w").write(f'<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>X 热帖精选</title><body style="font-family:sans-serif;max-width:760px;margin:auto;padding:16px"><h1>X 热帖精选</h1><p>每 3 小时更新。订阅：<a href="feed.xml">全部</a> · <a href="feed-auto.xml">汽车</a> · <a href="feed-ai.xml">AI</a> · <a href="feed-robot.xml">机器人</a></p><ul>{li}</ul>')
+upd=datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8))).strftime("%m-%d %H:%M")+" 北京时间"
+open(f"{R}/index.html","w").write(open(f"{R}/index_template.html").read().replace("__DATA__",json.dumps(items[:150],ensure_ascii=False).replace("</","<\\/")).replace("__UPDATED__",upd))
 open(f"{R}/.nojekyll","w").close()
 subprocess.run(["git","-C",R,"add","-A"]); 
 c=subprocess.run(["git","-C",R,"commit","-qm",f"update {now[:16]} +{len(new)}"],capture_output=True,text=True)

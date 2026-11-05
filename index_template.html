@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>X 热帖精选 · 汽车 / AI / 机器人</title>
+<link rel="alternate" type="application/rss+xml" title="X 热帖精选" href="feed.xml">
+<style>
+:root{--bg:#f4f5f7;--card:#fff;--text:#14171a;--sub:#5b6573;--line:#e8eaee;--auto:#ff6b35;--ai:#6c5ce7;--robot:#00b894;--r:16px}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#181b21;--text:#e9ecf1;--sub:#9aa3b2;--line:#262a33}}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--text);font:15px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+header{position:sticky;top:0;z-index:5;backdrop-filter:saturate(180%) blur(16px);-webkit-backdrop-filter:saturate(180%) blur(16px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--line)}
+.bar{max-width:1280px;margin:auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+h1{font-size:20px;font-weight:800;letter-spacing:.2px}
+h1 small{font-size:12px;font-weight:500;color:var(--sub);margin-left:8px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tab{border:1px solid var(--line);background:var(--card);color:var(--sub);padding:6px 14px;border-radius:999px;font-size:13px;cursor:pointer;transition:.2s}
+.tab:hover{color:var(--text)}
+.tab.on{background:var(--text);color:var(--bg);border-color:var(--text)}
+.rss{font-size:13px;color:var(--sub);text-decoration:none;display:flex;gap:10px}
+.rss a{color:var(--sub);text-decoration:none;border-bottom:1px dashed var(--line)}
+.rss a:hover{color:var(--auto)}
+main{max-width:1280px;margin:auto;padding:20px;columns:4 280px;column-gap:16px}
+.card{break-inside:avoid;margin:0 0 16px;background:var(--card);border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:0 1px 2px rgba(0,0,0,.04);transition:transform .25s,box-shadow .25s;display:block;color:inherit;text-decoration:none;animation:in .4s ease both}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.10)}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
+.card img{width:100%;display:block;background:var(--line);max-height:420px;object-fit:cover}
+.body{padding:14px 16px 16px}
+.meta{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--sub);margin-bottom:8px}
+.tag{font-weight:700;padding:2px 9px;border-radius:999px;color:#fff;font-size:11px}
+.t-汽车{background:var(--auto)}.t-AI{background:var(--ai)}.t-机器人{background:var(--robot)}
+.card h2{font-size:16px;line-height:1.45;font-weight:700;margin-bottom:6px}
+.card p{font-size:14px;color:var(--sub)}
+.foot{display:flex;justify-content:space-between;align-items:center;margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;color:var(--sub)}
+.who{font-weight:600;color:var(--text);max-width:55%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.stats span{margin-left:10px}
+.empty{column-span:all;text-align:center;color:var(--sub);padding:60px 0}
+footer{text-align:center;color:var(--sub);font-size:12px;padding:10px 0 40px}
+@media (max-width:640px){main{padding:12px;column-gap:10px;columns:2 160px}.card h2{font-size:14px}.card p{font-size:13px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}.body{padding:10px 12px 12px}.stats span:nth-child(n+2){display:none}h1 small{display:none}}
+</style>
+</head>
+<body>
+<header><div class="bar">
+<h1>X 热帖精选<small>每 3 小时更新 · 更新于 <span id="upd"></span></small></h1>
+<div class="tabs" id="tabs"></div>
+<div class="rss">RSS 订阅：<a href="feed.xml">全部</a><a href="feed-auto.xml">汽车</a><a href="feed-ai.xml">AI</a><a href="feed-robot.xml">机器人</a></div>
+</div></header>
+<main id="feed"></main>
+<footer>内容整理自 X 公开帖子，版权归原作者所有</footer>
+<script>
+const DATA=__DATA__, UPD="__UPDATED__";
+document.getElementById("upd").textContent=UPD;
+const fmt=n=>n==null?"":n>=1e6?(n/1e6).toFixed(1)+"M":n>=1e3?(n/1e3).toFixed(1)+"k":n;
+const ago=s=>{const d=(Date.now()-new Date(s))/36e5;return d<1?"刚刚":d<24?Math.floor(d)+" 小时前":Math.floor(d/24)+" 天前"};
+const esc=s=>(s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const cats=["全部","汽车","AI","机器人"];let cur=location.hash?decodeURIComponent(location.hash.slice(1)):"全部";
+function tabs(){document.getElementById("tabs").innerHTML=cats.map(c=>`<button class="tab ${c==cur?"on":""}" data-c="${c}">${c}${c=="全部"?"":" "+DATA.filter(i=>i.category==c).length}</button>`).join("");
+ document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{cur=b.dataset.c;location.hash=cur;render()})}
+function render(){tabs();const it=DATA.filter(i=>cur=="全部"||i.category==cur);
+ document.getElementById("feed").innerHTML=it.length?it.map(i=>{const m=i.metrics||{},img=(i.media||[])[0];
+ return `<a class="card" href="https://x.com/${i.user}/status/${i.id}" target="_blank" rel="noopener">${img?`<img loading="lazy" src="${esc(img)}" alt="" onerror="this.remove()">`:""}<div class="body"><div class="meta"><span class="tag t-${i.category}">${i.category}</span><span>${ago(i.created_at||i.added_at)}</span></div><h2>${esc(i.title)}</h2><p>${esc(i.summary)}</p><div class="foot"><span class="who">@${esc(i.user)}</span><span class="stats">${m.likes!=null?`<span>♥ ${fmt(m.likes)}</span>`:""}${m.retweets!=null?`<span>⇄ ${fmt(m.retweets)}</span>`:""}${m.views!=null?`<span>◉ ${fmt(m.views)}</span>`:""}</span></div></div></a>`}).join(""):`<div class="empty">暂无内容</div>`}
+render();
+</script>
+</body></html>
