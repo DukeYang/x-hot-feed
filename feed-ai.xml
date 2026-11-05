@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · AI</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>每 3 小时整理的 X（推特）汽车、AI、机器人热帖，中文概括。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Thu, 05 Nov 2026 04:02:36 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Thu, 05 Nov 2026 04:05:36 +0000</lastBuildDate><ttl>180</ttl>
+<item><title>[AI] 奥特曼：人类应始终掌控未来</title><link>https://x.com/sama/status/2117794005165748448</link><guid isPermaLink="true">https://x.com/sama/status/2117794005165748448</guid><category>AI</category><author>@sama</author><pubDate>Wed, 04 Nov 2026 01:40:12 +0000</pubDate><description><![CDATA[<p>Sam Altman表示OpenAI反对让人类沦为执行“AI认为值得奖励之事”的角色，强调人不应把未来控制权让给AI。</p><p>@sama · 赞 18960 · 转 930 · 浏览 9372443</p><blockquote>People should always be in control of the future.
+
+OpenAI is against the notion that it would be acceptable for people to be relegated to a role of doing things that “AI systems think makes sense to reward in humans”.
+
+People should not cede control of the future to</blockquote><p><a href="https://x.com/sama/status/2117794005165748448">查看原帖</a></p>]]></description></item>
+<item><title>[AI] OpenAI发布ChatGPT Images 2.6</title><link>https://x.com/OpenAI/status/2118124944928432327</link><guid isPermaLink="true">https://x.com/OpenAI/status/2118124944928432327</guid><category>AI</category><author>@OpenAI</author><pubDate>Wed, 04 Nov 2026 23:35:14 +0000</pubDate><description><![CDATA[<p>ChatGPT Images 2.6新增GIF生成和参考图功能，API还将上线两款生成速度快50%的新图像模型。</p><p>@OpenAI · 赞 12539 · 转 1149 · 浏览 930763</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118124891572748288/img/ZSIlzNmSPQEK0Sfd.jpg"/></p><blockquote>Images, upgraded—introducing ChatGPT Images 2.6.
+
+Now with GIFs and reference images.
+
+Plus, two new models are coming to the API with 50% faster image generation. https://t.co/kcuOhTipYR</blockquote><p><a href="https://x.com/OpenAI/status/2118124944928432327">查看原帖</a></p>]]></description></item>
+<item><title>[AI] OpenAI自动化管线修补948个Linux漏洞</title><link>https://x.com/OpenAI/status/2118119451401048497</link><guid isPermaLink="true">https://x.com/OpenAI/status/2118119451401048497</guid><category>AI</category><author>@OpenAI</author><pubDate>Wed, 04 Nov 2026 23:13:24 +0000</pubDate><description><![CDATA[<p>OpenAI安全团队用即将推出的网络安全模型搭建自主漏洞发现、利用与修补管线，单次运行验证并修补948个Linux内核本地提权漏洞，显示AI用于防御的潜力。</p><p>@OpenAI · 赞 5414 · 转 552 · 浏览 687719</p><p><img src="https://pbs.twimg.com/media/HWUQl7QbwAAkznq.png"/></p><blockquote>Our security researchers built an autonomous cyber vulnerability discovery, exploitation, and patching pipeline.
+
+In a single run with an upcoming cyber model, it validated and generated patches for 948 local privilege escalation vulnerabilities in the Linux kernel at a total API https://t.co/Nu2I0n2ayI</blockquote><p><a href="https://x.com/OpenAI/status/2118119451401048497">查看原帖</a></p>]]></description></item>
+<item><title>[AI] Anthropic用Claude解析细菌Vault颗粒结构</title><link>https://x.com/AnthropicAI/status/2118073665296228863</link><guid isPermaLink="true">https://x.com/AnthropicAI/status/2118073665296228863</guid><category>AI</category><author>@AnthropicAI</author><pubDate>Wed, 04 Nov 2026 20:11:28 +0000</pubDate><description><![CDATA[<p>Anthropic生物研究团队借助Claude首次绘制出细菌中vault颗粒的3D结构，这类大型桶状蛋白结构长期是未解之谜，展示了AI辅助科研的能力。</p><p>@AnthropicAI · 赞 3210 · 转 342 · 浏览 333484</p><blockquote>We’re sharing how our biology research team worked with Claude to map the first 3D structure of a vault particle from bacterial life.
+
+Vault particles are a longstanding mystery. They are barrel-shaped objects, among the largest protein structures found in our cells. They were</blockquote><p><a href="https://x.com/AnthropicAI/status/2118073665296228863">查看原帖</a></p>]]></description></item>
+<item><title>[AI] 传OpenAI GPT-6.2最快周五发布</title><link>https://x.com/kimmonismus/status/2118022631593062686</link><guid isPermaLink="true">https://x.com/kimmonismus/status/2118022631593062686</guid><category>AI</category><author>@kimmonismus</author><pubDate>Wed, 04 Nov 2026 16:48:40 +0000</pubDate><description><![CDATA[<p>据The Information，OpenAI的GPT-6.2最快本周五发布，将包括Astra、Sol及面向网络安全的模型。</p><p>@kimmonismus · 赞 1153 · 转 50 · 浏览 66942</p><p><img src="https://pbs.twimg.com/media/HWS6QC8XAAAaGZ_.png"/></p><blockquote>OpenAIs GPT-6.2 could come as soon as Friday, per The Information.
+
+It will come in Astra, Sol and Cyber focused model. https://t.co/y8TY7HT4Aw</blockquote><p><a href="https://x.com/kimmonismus/status/2118022631593062686">查看原帖</a></p>]]></description></item>
+<item><title>[AI] 月之暗面开源Kimi K3.1 Pro权重</title><link>https://x.com/kimmonismus/status/2118017354403815899</link><guid isPermaLink="true">https://x.com/kimmonismus/status/2118017354403815899</guid><category>AI</category><author>@kimmonismus</author><pubDate>Wed, 04 Nov 2026 16:27:42 +0000</pubDate><description><![CDATA[<p>Moonshot AI在Hugging Face发布Kimi K3.1 Pro权重，参数2.8万亿、权重约1.56TB，本地部署可用8张NVIDIA B300的服务器。</p><p>@kimmonismus · 赞 1173 · 转 43 · 浏览 51314</p><blockquote>Moonshot AI just released the Kimi K3.1 Pro weights on Hugging Face.
+
+The model has 2.8 trillion parameters, and the weights alone reportedly take up around 1.56 TB.
+
+Want to run it locally? One possible setup is a server with 8 NVIDIA B300 GPUs and 2.3 TB of GPU memory. https://t.co/rpbi371BmR</blockquote><p><a href="https://x.com/kimmonismus/status/2118017354403815899">查看原帖</a></p>]]></description></item>
+<item><title>[AI] OpenAI将收购开发工具公司Pierre</title><link>https://x.com/kimmonismus/status/2117966987888312763</link><guid isPermaLink="true">https://x.com/kimmonismus/status/2117966987888312763</guid><category>AI</category><author>@kimmonismus</author><pubDate>Wed, 04 Nov 2026 13:07:34 +0000</pubDate><description><![CDATA[<p>据Axios，OpenAI将收购Pierre Computer，并把其代码存储技术整合进Codex，进入GitHub主导的领域。</p><p>@kimmonismus · 赞 485 · 转 26 · 浏览 31372</p><p><img src="https://pbs.twimg.com/media/HWSHgeaWoAAd4Y3.jpg"/></p><p><img src="https://pbs.twimg.com/media/HWSHq7mWEAAq6c2.jpg"/></p><blockquote>OpenAI will acquire developer tools startup Pierre Computer as it moves into territory long dominated by Microsoft’s GitHub, Axios reports.
+
+OpenAI plans to integrate Pierre&#x27;s code storage technology into Codex, expanding the AI coding tool into the infrastructure where https://t.co/KlPGNc3dEv</blockquote><p><a href="https://x.com/kimmonismus/status/2117966987888312763">查看原帖</a></p>]]></description></item>
+<item><title>[AI] 腾讯Hy4挑战顶级开源模型</title><link>https://x.com/kimmonismus/status/2117872974086697282</link><guid isPermaLink="true">https://x.com/kimmonismus/status/2117872974086697282</guid><category>AI</category><author>@kimmonismus</author><pubDate>Wed, 04 Nov 2026 06:53:59 +0000</pubDate><description><![CDATA[<p>腾讯自测中Hy4在APEX-Agents得分75.2，高于DeepSeek V4.1 Flash的72.1/72.9，两者在其他基准上互有胜负。</p><p>@kimmonismus · 赞 541 · 转 39 · 浏览 34613</p><p><img src="https://pbs.twimg.com/media/HWQx8epXsAAq9zk.jpg"/></p><blockquote>Tencents new Hy4 looks like a serious challenger to the strongest open-weight AI models.
+
+In Tencent’s own tests, Hy4 scores 75.2 on APEX-Agents, ahead of DeepSeek V4.1 Flash-1017 at 72.1/72.9, but the two trade wins across other benchmarks.
+
+Hy4 costs $0.834 per million input https://t.co/hTS41UMzAL https://t.co/WjCE7dgi07</blockquote><p><a href="https://x.com/kimmonismus/status/2117872974086697282">查看原帖</a></p>]]></description></item>
 </channel></rss>
