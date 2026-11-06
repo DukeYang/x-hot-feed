@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · AI</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>每 3 小时整理的 X（推特）汽车、AI、机器人热帖，中文概括。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Fri, 06 Nov 2026 01:12:28 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Fri, 06 Nov 2026 04:06:29 +0000</lastBuildDate><ttl>180</ttl>
 <item><title>[AI] Anthropic联合创始人回应METR报告</title><link>https://x.com/Sam_McCandlish/status/2118422266669371519</link><guid isPermaLink="true">https://x.com/Sam_McCandlish/status/2118422266669371519</guid><category>AI</category><author>@Sam_McCandlish</author><pubDate>Thu, 05 Nov 2026 19:16:41 +0000</pubDate><description><![CDATA[<p>Anthropic联合创始人Sam McCandlish称已向METR提供未发布模型基准等内部数据供其独立评估；他认同AI在加速自家研究，并预告数周内将发布Anthropic自身的进度与安全举措分析。</p><p>@Sam_McCandlish · 赞 1617 · 转 128 · 浏览 173206</p><blockquote>I&#x27;m Sam, one of Anthropic&#x27;s co-founders, and I lead much of our safety work. I&#x27;m going to have more to share on that work over the coming months.
 
 I thought I&#x27;d start by sharing a few thoughts on the latest report from @METR_Evals.

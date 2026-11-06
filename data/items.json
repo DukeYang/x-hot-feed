@@ -1,5 +1,117 @@
 [
  {
+  "id": "2118481390677221407",
+  "user": "Waymo",
+  "name": "Waymo",
+  "category": "汽车",
+  "title": "Waymo介绍冬季抗恶劣天气能力",
+  "summary": "Waymo发帖介绍其自动驾驶车队如何应对冬季恶劣天气，并附说明材料。",
+  "text": "What does Waymo do to fight winter weather? \n\nHere’s what you need to know. 👇 https://t.co/6InPZlw5RG",
+  "created_at": "2026-11-05T23:11:37.000Z",
+  "metrics": {
+   "likes": 98,
+   "retweets": 10,
+   "views": 6792
+  },
+  "media": [
+   "https://pbs.twimg.com/tweet_video_thumb/HWZbjj3WkAA5QKU.jpg"
+  ],
+  "added_at": "2026-11-06T04:06:29.292824+00:00"
+ },
+ {
+  "id": "2118474060317565355",
+  "user": "wholemars",
+  "name": "Whole Mars Catalog",
+  "category": "汽车",
+  "title": "催特斯拉追上Waymo德州车队规模",
+  "summary": "Whole Mars Catalog引用Waymo在德州DMV新注册26辆Robotaxi、德州车队达1285辆的消息，喊话特斯拉也要把车队规模加上去。",
+  "text": "Come on Tesla… add 42 https://t.co/H3iMBXbzFT",
+  "created_at": "2026-11-05T22:42:29.000Z",
+  "metrics": {
+   "likes": 220,
+   "retweets": 2,
+   "views": 17452
+  },
+  "media": [],
+  "added_at": "2026-11-06T04:06:29.292824+00:00"
+ },
+ {
+  "id": "2118490493394784751",
+  "user": "RobotaxiRadar",
+  "name": "Robotaxi Radar",
+  "category": "汽车",
+  "title": "特斯拉德州多城招Robotaxi技师",
+  "summary": "Robotaxi Radar称，特斯拉在尚未正式开通Robotaxi的多个德州城市发布夜间班Robotaxi服务技师岗位，覆盖圣安东尼奥、Plano、科珀斯克里斯蒂、埃尔帕索等地，显示扩张前的运维备员。",
+  "text": "More Robotaxi support roles are opening in Texas cities that Robotaxi hasn’t launched yet 🔍\n\nRobotaxi Service Technician (Night Shift) roles are now posted in:\n\n📍 San Antonio 📍 Plano 📍 Flower Mound 📍 The Woodlands 📍 League City 📍 Corpus Christi 📍 Lubbock 📍 El Paso https://t.co/wAR4eYOVTb https://t.co/d7re5kogXn",
+  "created_at": "2026-11-05T23:47:47.000Z",
+  "metrics": {
+   "likes": 31,
+   "retweets": 3,
+   "views": 1546
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWZj3-fXoAATOcc.jpg"
+  ],
+  "added_at": "2026-11-06T04:06:29.292824+00:00"
+ },
+ {
+  "id": "2118507428534989056",
+  "user": "CyberRobooo",
+  "name": "CyberRobo",
+  "category": "机器人",
+  "title": "苹果HALO纯仿真训Unitree G1",
+  "summary": "CyberRobo称苹果发布机器人大脑HALO：仅用约300小时、1000个程序生成家居的纯仿真数据、零遥操作训练；Unitree G1进入从未见过的真实住宅，单任务试验成功率约91%，算力板载运行。",
+  "text": "wow,…Apple just locked in another piece of the physical AI / humanoid puzzle\n\nThey put out a robot brain--HALO (Humanoid Autonomy, Learned in simulation, running Onboard).Pure sim data, ~300 hours across 1,000 procedurally generated homes, zero teleop. Unitree G1 then walks into six real homes it’s never seen, no map, and does the basics on command: sit, go to an object, side-step a half-open door, crouch, crawl, push a box…\n\n360 single-task trials, 91% success. Whole stack onboard (Mac mini M4 Pro for the VLM side, Jetson for the tracker).\n\nLooks like they’re quietly mapping the path into actual living rooms. Still early on chained tasks and contact, but the data path is compute, not human hours.",
+  "created_at": "2026-11-06T00:55:05.000Z",
+  "metrics": {
+   "likes": 34,
+   "retweets": 7,
+   "views": 2194
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2118507290198462464/img/U-nYKB33oGF0dt99.jpg"
+  ],
+  "added_at": "2026-11-06T04:06:29.292824+00:00"
+ },
+ {
+  "id": "2118535167631638981",
+  "user": "CyberRobooo",
+  "name": "CyberRobo",
+  "category": "机器人",
+  "title": "英伟达上线SimReady仿真资产库",
+  "summary": "CyberRobo称英伟达推出SimReady Central，提供3500余个开放OpenUSD资产（含FANUC/UR机械臂、Robotiq夹爪等），并强调经真实硬件校准的碰撞、质量、摩擦与关节限位物理质检。",
+  "text": "This is huge.\n\nNVIDIA just launched SimReady Central: 3,500+ open OpenUSD assets, from FANUC and UR arms to Robotiq grippers and LG appliances.  Most of them trace back to one team,@LightwheelAI .\n\nThe important part is physics QA. Collision, mass, friction and joint limits are calibrated against real hardware. Without that, a 3D model can look right while teaching a robot contacts that don't exist.\n\nLightwheel also packages assets with explicit profiles, validation requirements and hash manifests, then adapts the physics for PhysX, Newton and MuJoCo.\n\nThat’s the harder work: making assets reliable and reusable across simulation engines, instead of forcing every robot team to rebuild and revalidate them.\n\nIf this scales, teams can spend less time preparing simulations and more time training and testing robots.",
+  "created_at": "2026-11-06T02:45:19.000Z",
+  "metrics": {
+   "likes": 15,
+   "retweets": 6,
+   "views": 738
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2118530281665933312/img/S6B5cn8ayUsPe2jK.jpg"
+  ],
+  "added_at": "2026-11-06T04:06:29.292824+00:00"
+ },
+ {
+  "id": "2118500482473939078",
+  "user": "MTSlive",
+  "name": "MTS",
+  "category": "机器人",
+  "title": "Agility高管：要能干活别只会炫技",
+  "summary": "MTS引述Agility Robotics首席商务官Daniel Diez：没人会为后空翻或武术表演机器人买单，人形机器人须在工业场景中足够强壮、可靠地多班次工作，并通过安全认证与IT集成。",
+  "text": "\"No one's paying for a back-flipping robot or a robot performing martial arts.\"\n\nAgility Robotics CBO Daniel Diez argues humanoid companies need to prove their robots can do useful work, not just produce impressive demos:\n\n\"It takes a robot that can be strong enough, robust enough to work in industrial settings, perform that work eight hours a day, multiple eight-hour shifts a day, consistently well, and reliably, and that is very different than a great demo video.\"\n\n\"That's ignoring integrating into IT security infrastructure, passing nationally recognized safety testing laboratories to actually get into these facilities, proving that your robot is safe enough to operate.\"\n\n\"What is their safety strategy, how do they plan to scale their technology, and what useful work are they able to do, and what ROI are they delivering to the customers?\"\n@agilityrobotics",
+  "created_at": "2026-11-06T00:27:29.000Z",
+  "metrics": {
+   "likes": 10,
+   "retweets": 0,
+   "views": 2781
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2118500361157959681/img/Osj6kIxzXZYBTe9q.jpg"
+  ],
+  "added_at": "2026-11-06T04:06:29.292824+00:00"
+ },
+ {
   "id": "2118461196689199107",
   "user": "niccruzpatane",
   "name": "Nic Cruz Patane",
