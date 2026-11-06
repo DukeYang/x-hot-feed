@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · AI</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>每 3 小时整理的 X（推特）汽车、AI、机器人热帖，中文概括。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Thu, 05 Nov 2026 22:12:57 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Fri, 06 Nov 2026 01:12:28 +0000</lastBuildDate><ttl>180</ttl>
+<item><title>[AI] Anthropic联合创始人回应METR报告</title><link>https://x.com/Sam_McCandlish/status/2118422266669371519</link><guid isPermaLink="true">https://x.com/Sam_McCandlish/status/2118422266669371519</guid><category>AI</category><author>@Sam_McCandlish</author><pubDate>Thu, 05 Nov 2026 19:16:41 +0000</pubDate><description><![CDATA[<p>Anthropic联合创始人Sam McCandlish称已向METR提供未发布模型基准等内部数据供其独立评估；他认同AI在加速自家研究，并预告数周内将发布Anthropic自身的进度与安全举措分析。</p><p>@Sam_McCandlish · 赞 1617 · 转 128 · 浏览 173206</p><blockquote>I&#x27;m Sam, one of Anthropic&#x27;s co-founders, and I lead much of our safety work. I&#x27;m going to have more to share on that work over the coming months.
+
+I thought I&#x27;d start by sharing a few thoughts on the latest report from @METR_Evals.
+
+The speed of progress in model capabilities is one of the most important questions in AI safety, and METR’s work here provides the public with an independent, external view into how this is happening inside Anthropic. I’ll talk more about some of the details below, but first some context for those new to this work.
+
+How quickly AI progress is accelerating has many important safety implications, since it determines how quickly the risks from advanced models increase. But, because most research happens within the frontier labs, it’s difficult for external observers and policy makers to get a strong sense of what that rate is. We kicked off the process with METR that led to this report earlier in the year, in anticipation of progress continuing to accelerate.
+
+For this report, we gave METR access to a range of sensitive internal data, including benchmark scores for unreleased models, estimates of how models are progressing, and interviews with our researchers. They had complete independence to form their own conclusions.
+
+Many of their conclusions match my own. AI is speeding up our research, but it’s hard to say exactly how much. While they conclude AI can&#x27;t yet make the most important contributions to model training on its own, they think the pace of development could, by default, accelerate further.
+
+This work began well before and is separate from the embedded third-party evaluators that are part of our commitment to pacing the frontier, but it’s a good illustration of why we think evaluators are a good idea. The more access reviewers have, the clearer a picture they can form of the situation and the better-positioned they are to highlight situations like this one.
+
+We redacted a lot, and I accept that this makes it harder for others to check METR’s work. But we determined that sharing exactly what is driving the speedup isn’t the right thing to do, both because it’s commercially sensitive and because it risks handing out a roadmap for others to go faster. That would make the risks METR is worried about worse. That’s a tradeoff. I think we made the right call, though we’re continuing to assess the pros and cons here.
+
+In the coming weeks, we plan to share a report with our own analysis of the speed of AI progress within Anthropic, including where we stand against our Responsible Scaling Policy, plus new steps we’re taking to strengthen our safety and security practices as AI keeps improving quickly.</blockquote><p><a href="https://x.com/Sam_McCandlish/status/2118422266669371519">查看原帖</a></p>]]></description></item>
+<item><title>[AI] 称周四未见GPT-6.2发布</title><link>https://x.com/kimmonismus/status/2118476452249153730</link><guid isPermaLink="true">https://x.com/kimmonismus/status/2118476452249153730</guid><category>AI</category><author>@kimmonismus</author><pubDate>Thu, 05 Nov 2026 22:52:00 +0000</pubDate><description><![CDATA[<p>kimmonismus称此前关于周四无GPT-6.2的信息属实，并猜测次日可能是发布日。</p><p>@kimmonismus · 赞 368 · 转 11 · 浏览 11370</p><p><img src="https://pbs.twimg.com/media/HWZJYyMWgAA-k_r.jpg"/></p><blockquote>The information was correct as always. No GPT-6.2 on Thursday. So tomorrow is probably the big day. Fingers crossed, see you tomorrow!</blockquote><p><a href="https://x.com/kimmonismus/status/2118476452249153730">查看原帖</a></p>]]></description></item>
+<item><title>[AI] 开源Hyperkernel加速GPU推理</title><link>https://x.com/hyperstition_cc/status/2118432349352595528</link><guid isPermaLink="true">https://x.com/hyperstition_cc/status/2118432349352595528</guid><category>AI</category><author>@hyperstition_cc</author><pubDate>Thu, 05 Nov 2026 19:56:45 +0000</pubDate><description><![CDATA[<p>Hyperstition发布递归megakernel生成器Hyperkernel，称在DeepSeek/Kimi/GLM推理、预训练、机器人与FSD等11个领域达到SOTA，并开源相关megakernel与后续完整栈。</p><p>@hyperstition_cc · 赞 326 · 转 42 · 浏览 28696</p><p><img src="https://pbs.twimg.com/media/HWYitJxasAAayvc.png"/></p><blockquote>We invented a recursive megakernel generator called Hyperkernel, the most complete solution to megakernels and GPU efficiency.
+
+Hyperkernel-generated megakernels achieve state of the art performance on 11 different domains: inference (DeepSeek, Kimi and GLM), pretraining (Qwen), hardware fault recovery, robotics (π₀-FAST, ACT) diffusion and real time world models (Matrix-Game), full self driving (OpenPilot), voice models (Moshi), genomics (Evo 2) and protein folding (ESMFold).
+
+All of this in a single kernel launch.
+
+For context, Hyperkernel generated fully optimized megakernels for robotics, genomics and voice in under 50 minutes, and doubled the efficiency for &gt;5 models generally using only about 60-100 lines of code per megakernel. This speaks to the unparalleled standard for code quality in the automated generations.
+
+Our first release today open sources the megakernels themselves. Over the next couple weeks, we will release the entire Hyperkernel stack, along with the complete serving stack for Kimi and GLM (20-30% inference efficiency gains across all concurrencies).
+
+Out of the box GPU machinery performs terribly for unorthodox research. We built Hyperkernel only 20 days ago for internal use; but given its multi-modality, we have decided to open source it.
+
+Creative research should not be bottlenecked by the lack of dedicated infra teams. Hyperkernels offer a one stop shop infra stack for all research. We would love for the open source community to add to it :)
+
+GitHub repo:  https://t.co/sfPt4S4BJN</blockquote><p><a href="https://x.com/hyperstition_cc/status/2118432349352595528">查看原帖</a></p>]]></description></item>
+<item><title>[AI] Meta Muse上线语音与表情Avatar</title><link>https://x.com/testingcatalog/status/2118469389452271860</link><guid isPermaLink="true">https://x.com/testingcatalog/status/2118469389452271860</guid><category>AI</category><author>@testingcatalog</author><pubDate>Thu, 05 Nov 2026 22:23:56 +0000</pubDate><description><![CDATA[<p>TestingCatalog称Meta向美国Muse用户推送Voice语音与会随对话做出表情手势的Avatar，并提到Muse同时在墨西哥上线。</p><p>@testingcatalog · 赞 153 · 转 2 · 浏览 6074</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118400683942477824/img/8Nq_kxkL9PZTDlo7.jpg"/></p><blockquote>META 🔥: Muse Voice and expressive avatars are rolling out for Muse users in the US.  
+
+&gt; Voice helps users think out loud, making tasks like brainstorming, trip planning, and interview prep easier.
+
+&gt; Your Muse’s avatar reacts as it listens and speaks, with expressions and gestures that match the conversation.
+
+Additionally, Muse is rolling out in Mexico 🇲🇽</blockquote><p><a href="https://x.com/testingcatalog/status/2118469389452271860">查看原帖</a></p>]]></description></item>
 <item><title>[AI] METR发布Anthropic AI研发加速评估报告</title><link>https://x.com/METR_Evals/status/2118412183860351084</link><guid isPermaLink="true">https://x.com/METR_Evals/status/2118412183860351084</guid><category>AI</category><author>@METR_Evals</author><pubDate>Thu, 05 Nov 2026 18:36:37 +0000</pubDate><description><![CDATA[<p>独立评估机构METR称自8月起基于Anthropic内部信息评估“AI是否在加速AI研发”，并发布相关风险评估报告。</p><p>@METR_Evals · 赞 1882 · 转 226 · 浏览 258043</p><blockquote>Since August, a team within METR has worked with internal Anthropic information to assess whether AI itself is accelerating AI development.
 
 We are now publishing a report summarizing the results of this risk assessment.</blockquote><p><a href="https://x.com/METR_Evals/status/2118412183860351084">查看原帖</a></p>]]></description></item>

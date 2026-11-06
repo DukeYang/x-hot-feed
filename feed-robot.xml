@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · 机器人</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>每 3 小时整理的 X（推特）汽车、AI、机器人热帖，中文概括。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-robot.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Thu, 05 Nov 2026 22:12:57 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-robot.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Fri, 06 Nov 2026 01:12:28 +0000</lastBuildDate><ttl>180</ttl>
+<item><title>[机器人] Apple HALO驱动Unitree G1室内导航</title><link>https://x.com/humanoidsdaily/status/2118438883721420830</link><guid isPermaLink="true">https://x.com/humanoidsdaily/status/2118438883721420830</guid><category>机器人</category><author>@humanoidsdaily</author><pubDate>Thu, 05 Nov 2026 20:22:43 +0000</pubDate><description><![CDATA[<p>Humanoids daily称苹果研究员发布HALO，使Unitree G1在未见过的房间内按指令找椅坐下、下蹲钻桌、过半开房门等；机背Mac mini本地推理，约300小时仿真数据、零遥操作，360次真实试验成功率91%。</p><p>@humanoidsdaily · 赞 35 · 转 3 · 浏览 1489</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118438689231519744/img/I4jI_sYE9_waiMXA.jpg"/></p><blockquote>Apple is building humanoid robot brains.
+
+Apple researchers have published HALO, a system that lets a Unitree G1 humanoid move around rooms it has never seen before. Tell it to “go sit on the chair” and it finds the chair, walks over and sits down. It can also crouch or crawl under tables, step through half-open doors and push boxes.
+
+The robot carries an Apple Mac mini with an M4 Pro chip on its back. That computer runs the models that decide what to do and plan each movement. Nothing runs in the cloud, and nobody steers the robot remotely.
+
+Most of the training data came from simulation: about 300 hours of humanlike movement, placed in 1,000 computer-generated living rooms, offices and bedrooms. Nobody teleoperated the robot to collect it.
+
+The robot succeeded in 91% of 360 real-world trials across six skills.
+
+All eight authors work at Apple, and the code is on GitHub.</blockquote><p><a href="https://x.com/humanoidsdaily/status/2118438883721420830">查看原帖</a></p>]]></description></item>
+<item><title>[机器人] Agility CEO亮相彭博电视访谈</title><link>https://x.com/agilityrobotics/status/2118464143212908601</link><guid isPermaLink="true">https://x.com/agilityrobotics/status/2118464143212908601</guid><category>机器人</category><author>@agilityrobotics</author><pubDate>Thu, 05 Nov 2026 22:03:05 +0000</pubDate><description><![CDATA[<p>Agility Robotics发帖称CEO Peggy Johnson当天早间上Bloomberg TV接受访谈，并附上节目链接。</p><p>@agilityrobotics · 赞 40 · 转 5 · 浏览 1796</p><p><img src="https://pbs.twimg.com/media/HWZL1ZpbsAEZdts.jpg"/></p><blockquote>Watch Agility CEO Peggy Johnson on @BloombergTV  this morning with @timsteno. 🤖 
+
+📺: https://t.co/IlhijHHMN9</blockquote><p><a href="https://x.com/agilityrobotics/status/2118464143212908601">查看原帖</a></p>]]></description></item>
+<item><title>[机器人] Agility以AGLT登陆纳斯达克</title><link>https://x.com/MTSlive/status/2118435573144969366</link><guid isPermaLink="true">https://x.com/MTSlive/status/2118435573144969366</guid><category>机器人</category><author>@MTSlive</author><pubDate>Thu, 05 Nov 2026 20:09:33 +0000</pubDate><description><![CDATA[<p>MTS称Agility经SPAC合并成为美国首家上市人形机器人公司，代码AGLT，融资约4.65亿美元；Digit已在GXO、Schaeffler、丰田加拿大工厂运行超6.5万小时。</p><p>@MTSlive · 赞 14 · 转 3 · 浏览 3254</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118435542815883264/img/MW02a9wAhw7_b6th.jpg"/></p><blockquote>SITUATION EXPLAINED: Agility just became the first humanoid robot company to go public in the US.
+
+• Agility went public by merging with the SPAC Churchill Capital Corp XI and started trading as AGLT on November 5
+• The roughly $465M includes a $201M private investment led by Foxconn, and earlier backers include Nvidia, Amazon and SoftBank Vision Fund II
+• Its $300M+ in multi-year Digit orders are committed but tied to contractual milestones
+• Digit already works at GXO, Schaeffler and Toyota Motor Manufacturing Canada, with over 65,000 hours of real-world operation
+• GXO is adding Digit to 2 more US sites in early 2027, and farm equipment maker AGCO starts a pilot in Kansas in 2027
+• Its RoboFab factory in Salem, Oregon is designed to build up to 10,000 robots a year</blockquote><p><a href="https://x.com/MTSlive/status/2118435573144969366">查看原帖</a></p>]]></description></item>
 <item><title>[机器人] Agility Robotics登纳斯达克成美首家</title><link>https://x.com/Polymarket/status/2118402121976648062</link><guid isPermaLink="true">https://x.com/Polymarket/status/2118402121976648062</guid><category>机器人</category><author>@Polymarket</author><pubDate>Thu, 05 Nov 2026 17:56:38 +0000</pubDate><description><![CDATA[<p>Nvidia支持的Agility Robotics成为美国首家专门做人形机器人并上市的公司，已在纳斯达克挂牌交易。</p><p>@Polymarket · 赞 123 · 转 19 · 浏览 25940</p><p><img src="https://pbs.twimg.com/media/HWYTWByW8AADgOU.jpg"/></p><blockquote>JUST IN: Nvidia-backed Agility Robotics becomes the first dedicated humanoid robot company to go public in the United States, debuting on Nasdaq. https://t.co/MXhhAzfT0B</blockquote><p><a href="https://x.com/Polymarket/status/2118402121976648062">查看原帖</a></p>]]></description></item>
 <item><title>[机器人] Agility Digit已在真实场景作业并上市</title><link>https://x.com/davidpattersonx/status/2118381642230399166</link><guid isPermaLink="true">https://x.com/davidpattersonx/status/2118381642230399166</guid><category>机器人</category><author>@davidpattersonx</author><pubDate>Thu, 05 Nov 2026 16:35:15 +0000</pubDate><description><![CDATA[<p>帖文称Agility Robotics成为美国首家专门做人形机器人并上市的公司，其Digit人形机器人已在真实场景工作，并配有相关视频。</p><p>@davidpattersonx · 赞 45 · 转 3 · 浏览 1661</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118380715997888512/img/GR7rXTCdVBaHBzWc.jpg"/></p><blockquote>Agility Robotics has become the first dedicated humanoid robotics company to go public in the US.
 

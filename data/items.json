@@ -1,5 +1,234 @@
 [
  {
+  "id": "2118461196689199107",
+  "user": "niccruzpatane",
+  "name": "Nic Cruz Patane",
+  "category": "汽车",
+  "title": "Roadster原型可见侧裙与推进器",
+  "summary": "Nic Cruz Patane称这是可飞行、可倒驶的特斯拉Roadster原型，车底可见可展开侧裙吸力系统，并称该吸力方案将可合法上路；推进器也从车身各处露出。",
+  "text": "This is the actual Tesla Roadster that can fly, and drive upside down. \n\nYou can see the deployable side skirts underneath the car, which aren’t present on the other prototype. This suction system will be street legal. \n\nAlso cool to see all of the thrusters poking out around the car.",
+  "created_at": "2026-11-05T21:51:23.000Z",
+  "metrics": {
+   "likes": 193,
+   "retweets": 10,
+   "views": 9156
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWZJOrVXgAAGvmA.jpg"
+  ],
+  "added_at": "2026-11-06T01:12:28.106480+00:00"
+ },
+ {
+  "id": "2118494380831224213",
+  "user": "wholemars",
+  "name": "Whole Mars Catalog",
+  "category": "汽车",
+  "title": "FSD自主找车位能力明显提升",
+  "summary": "Whole Mars Catalog发视频称，特斯拉自动驾驶在自行寻找合适停车位方面进步明显。",
+  "text": "Tesla Self-Driving is getting a lot better at finding a good place to park on its own",
+  "created_at": "2026-11-06T00:03:14.000Z",
+  "metrics": {
+   "likes": 134,
+   "retweets": 4,
+   "views": 5393
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2118494143593029632/img/Ea8rX_QXZsvfS-aT.jpg"
+  ],
+  "added_at": "2026-11-06T01:12:28.106480+00:00"
+ },
+ {
+  "id": "2118498032631078959",
+  "user": "Rivian",
+  "name": "Rivian",
+  "category": "汽车",
+  "title": "Rivian展示涉水越野能力",
+  "summary": "Rivian发帖强调车辆面向户外设计，即使路面积水也能继续行程，并提醒车主查阅说明书中的涉水（Water Fording）注意事项。",
+  "text": "Designed for the outdoors, so you can focus on the journey ahead. Even when the trail gets flooded.\n\n*Always consult your Rivian Owner’s Guide for information and best practices on Water Fording.",
+  "created_at": "2026-11-06T00:17:45.000Z",
+  "metrics": {
+   "likes": 89,
+   "retweets": 5,
+   "views": 5216
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWZqtywXEAA4U6V.jpg",
+   "https://pbs.twimg.com/media/HWZquMYXMAACuep.jpg",
+   "https://pbs.twimg.com/media/HWZqufyXIAAlGyQ.jpg",
+   "https://pbs.twimg.com/media/HWZquyhWsAEzrv2.jpg"
+  ],
+  "added_at": "2026-11-06T01:12:28.106480+00:00"
+ },
+ {
+  "id": "2118459781451235820",
+  "user": "TeslaNewswire",
+  "name": "The Tesla Newswire",
+  "category": "汽车",
+  "title": "特斯拉预告即将进入阿根廷",
+  "summary": "Tesla Newswire称特斯拉官方预热将登陆阿根廷，并指公司此前已在智利、哥伦比亚、乌拉圭开业，继续南美扩张。",
+  "text": "🔥🇦🇷 Tesla officially teases its upcoming launch in Argentina!\n\n“Something is coming”\n\nThe company continues expanding across South America after launching in Chile, Colombia and Uruguay.",
+  "created_at": "2026-11-05T21:45:45.000Z",
+  "metrics": {
+   "likes": 49,
+   "retweets": 5,
+   "views": 3411
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2118452639763759104/img/TNwrRsFrRQ3fXJy6.jpg"
+  ],
+  "added_at": "2026-11-06T01:12:28.106480+00:00"
+ },
+ {
+  "id": "2118483402035011924",
+  "user": "alexgkendall",
+  "name": "Alex Kendall",
+  "category": "汽车",
+  "title": "Wayve发布Learned Safety策略",
+  "summary": "Wayve联合创始人Alex Kendall称，团队发布历时十年研究的Learned Safety策略，回应自2017年以来“端到端AI无法保证自动驾驶安全、须依赖规则系统”的质疑。",
+  "text": "Since 2017, I've been repeatedly told that end-to-end AI can't be safe, and traditional rule-based systems are required for autonomous driving.\n\nBut we persevered. Today we are releasing our strategy for Learned Safety, the result of a decade of research.\nhttps://t.co/WHOslJ5sZx",
+  "created_at": "2026-11-05T23:19:37.000Z",
+  "metrics": {
+   "likes": 26,
+   "retweets": 5,
+   "views": 1676
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2118479211459645440/img/KIrPAjWk78iL5ZoO.jpg"
+  ],
+  "added_at": "2026-11-06T01:12:28.106480+00:00"
+ },
+ {
+  "id": "2118422266669371519",
+  "user": "Sam_McCandlish",
+  "name": "Sam McCandlish",
+  "category": "AI",
+  "title": "Anthropic联合创始人回应METR报告",
+  "summary": "Anthropic联合创始人Sam McCandlish称已向METR提供未发布模型基准等内部数据供其独立评估；他认同AI在加速自家研究，并预告数周内将发布Anthropic自身的进度与安全举措分析。",
+  "text": "I'm Sam, one of Anthropic's co-founders, and I lead much of our safety work. I'm going to have more to share on that work over the coming months.\n\nI thought I'd start by sharing a few thoughts on the latest report from @METR_Evals.\n\nThe speed of progress in model capabilities is one of the most important questions in AI safety, and METR’s work here provides the public with an independent, external view into how this is happening inside Anthropic. I’ll talk more about some of the details below, but first some context for those new to this work.\n\nHow quickly AI progress is accelerating has many important safety implications, since it determines how quickly the risks from advanced models increase. But, because most research happens within the frontier labs, it’s difficult for external observers and policy makers to get a strong sense of what that rate is. We kicked off the process with METR that led to this report earlier in the year, in anticipation of progress continuing to accelerate.\n\nFor this report, we gave METR access to a range of sensitive internal data, including benchmark scores for unreleased models, estimates of how models are progressing, and interviews with our researchers. They had complete independence to form their own conclusions.\n\nMany of their conclusions match my own. AI is speeding up our research, but it’s hard to say exactly how much. While they conclude AI can't yet make the most important contributions to model training on its own, they think the pace of development could, by default, accelerate further.\n\nThis work began well before and is separate from the embedded third-party evaluators that are part of our commitment to pacing the frontier, but it’s a good illustration of why we think evaluators are a good idea. The more access reviewers have, the clearer a picture they can form of the situation and the better-positioned they are to highlight situations like this one.\n\nWe redacted a lot, and I accept that this makes it harder for others to check METR’s work. But we determined that sharing exactly what is driving the speedup isn’t the right thing to do, both because it’s commercially sensitive and because it risks handing out a roadmap for others to go faster. That would make the risks METR is worried about worse. That’s a tradeoff. I think we made the right call, though we’re continuing to assess the pros and cons here.\n\nIn the coming weeks, we plan to share a report with our own analysis of the speed of AI progress within Anthropic, including where we stand against our Responsible Scaling Policy, plus new steps we’re taking to strengthen our safety and security practices as AI keeps improving quickly.",
+  "created_at": "2026-11-05T19:16:41.000Z",
+  "metrics": {
+   "likes": 1617,
+   "retweets": 128,
+   "views": 173206
+  },
+  "media": [],
+  "added_at": "2026-11-06T01:12:28.106480+00:00"
+ },
+ {
+  "id": "2118476452249153730",
+  "user": "kimmonismus",
+  "name": "Chubby♨️",
+  "category": "AI",
+  "title": "称周四未见GPT-6.2发布",
+  "summary": "kimmonismus称此前关于周四无GPT-6.2的信息属实，并猜测次日可能是发布日。",
+  "text": "The information was correct as always. No GPT-6.2 on Thursday. So tomorrow is probably the big day. Fingers crossed, see you tomorrow!",
+  "created_at": "2026-11-05T22:52:00.000Z",
+  "metrics": {
+   "likes": 368,
+   "retweets": 11,
+   "views": 11370
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWZJYyMWgAA-k_r.jpg"
+  ],
+  "added_at": "2026-11-06T01:12:28.106480+00:00"
+ },
+ {
+  "id": "2118432349352595528",
+  "user": "hyperstition_cc",
+  "name": "Hyperstition",
+  "category": "AI",
+  "title": "开源Hyperkernel加速GPU推理",
+  "summary": "Hyperstition发布递归megakernel生成器Hyperkernel，称在DeepSeek/Kimi/GLM推理、预训练、机器人与FSD等11个领域达到SOTA，并开源相关megakernel与后续完整栈。",
+  "text": "We invented a recursive megakernel generator called Hyperkernel, the most complete solution to megakernels and GPU efficiency.\n\nHyperkernel-generated megakernels achieve state of the art performance on 11 different domains: inference (DeepSeek, Kimi and GLM), pretraining (Qwen), hardware fault recovery, robotics (π₀-FAST, ACT) diffusion and real time world models (Matrix-Game), full self driving (OpenPilot), voice models (Moshi), genomics (Evo 2) and protein folding (ESMFold).\n\nAll of this in a single kernel launch.\n\nFor context, Hyperkernel generated fully optimized megakernels for robotics, genomics and voice in under 50 minutes, and doubled the efficiency for >5 models generally using only about 60-100 lines of code per megakernel. This speaks to the unparalleled standard for code quality in the automated generations.\n\nOur first release today open sources the megakernels themselves. Over the next couple weeks, we will release the entire Hyperkernel stack, along with the complete serving stack for Kimi and GLM (20-30% inference efficiency gains across all concurrencies).\n\nOut of the box GPU machinery performs terribly for unorthodox research. We built Hyperkernel only 20 days ago for internal use; but given its multi-modality, we have decided to open source it.\n\nCreative research should not be bottlenecked by the lack of dedicated infra teams. Hyperkernels offer a one stop shop infra stack for all research. We would love for the open source community to add to it :)\n\nGitHub repo:  https://t.co/sfPt4S4BJN",
+  "created_at": "2026-11-05T19:56:45.000Z",
+  "metrics": {
+   "likes": 326,
+   "retweets": 42,
+   "views": 28696
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWYitJxasAAayvc.png"
+  ],
+  "added_at": "2026-11-06T01:12:28.106480+00:00"
+ },
+ {
+  "id": "2118469389452271860",
+  "user": "testingcatalog",
+  "name": "🚨 AI News | TestingCatalog",
+  "category": "AI",
+  "title": "Meta Muse上线语音与表情Avatar",
+  "summary": "TestingCatalog称Meta向美国Muse用户推送Voice语音与会随对话做出表情手势的Avatar，并提到Muse同时在墨西哥上线。",
+  "text": "META 🔥: Muse Voice and expressive avatars are rolling out for Muse users in the US.  \n\n> Voice helps users think out loud, making tasks like brainstorming, trip planning, and interview prep easier.\n\n> Your Muse’s avatar reacts as it listens and speaks, with expressions and gestures that match the conversation.\n\nAdditionally, Muse is rolling out in Mexico 🇲🇽",
+  "created_at": "2026-11-05T22:23:56.000Z",
+  "metrics": {
+   "likes": 153,
+   "retweets": 2,
+   "views": 6074
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2118400683942477824/img/8Nq_kxkL9PZTDlo7.jpg"
+  ],
+  "added_at": "2026-11-06T01:12:28.106480+00:00"
+ },
+ {
+  "id": "2118438883721420830",
+  "user": "humanoidsdaily",
+  "name": "Humanoids daily",
+  "category": "机器人",
+  "title": "Apple HALO驱动Unitree G1室内导航",
+  "summary": "Humanoids daily称苹果研究员发布HALO，使Unitree G1在未见过的房间内按指令找椅坐下、下蹲钻桌、过半开房门等；机背Mac mini本地推理，约300小时仿真数据、零遥操作，360次真实试验成功率91%。",
+  "text": "Apple is building humanoid robot brains.\n\nApple researchers have published HALO, a system that lets a Unitree G1 humanoid move around rooms it has never seen before. Tell it to “go sit on the chair” and it finds the chair, walks over and sits down. It can also crouch or crawl under tables, step through half-open doors and push boxes.\n\nThe robot carries an Apple Mac mini with an M4 Pro chip on its back. That computer runs the models that decide what to do and plan each movement. Nothing runs in the cloud, and nobody steers the robot remotely.\n\nMost of the training data came from simulation: about 300 hours of humanlike movement, placed in 1,000 computer-generated living rooms, offices and bedrooms. Nobody teleoperated the robot to collect it.\n\nThe robot succeeded in 91% of 360 real-world trials across six skills.\n\nAll eight authors work at Apple, and the code is on GitHub.",
+  "created_at": "2026-11-05T20:22:43.000Z",
+  "metrics": {
+   "likes": 35,
+   "retweets": 3,
+   "views": 1489
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2118438689231519744/img/I4jI_sYE9_waiMXA.jpg"
+  ],
+  "added_at": "2026-11-06T01:12:28.106480+00:00"
+ },
+ {
+  "id": "2118464143212908601",
+  "user": "agilityrobotics",
+  "name": "Agility",
+  "category": "机器人",
+  "title": "Agility CEO亮相彭博电视访谈",
+  "summary": "Agility Robotics发帖称CEO Peggy Johnson当天早间上Bloomberg TV接受访谈，并附上节目链接。",
+  "text": "Watch Agility CEO Peggy Johnson on @BloombergTV  this morning with @timsteno. 🤖 \n\n📺: https://t.co/IlhijHHMN9",
+  "created_at": "2026-11-05T22:03:05.000Z",
+  "metrics": {
+   "likes": 40,
+   "retweets": 5,
+   "views": 1796
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWZL1ZpbsAEZdts.jpg"
+  ],
+  "added_at": "2026-11-06T01:12:28.106480+00:00"
+ },
+ {
+  "id": "2118435573144969366",
+  "user": "MTSlive",
+  "name": "MTS",
+  "category": "机器人",
+  "title": "Agility以AGLT登陆纳斯达克",
+  "summary": "MTS称Agility经SPAC合并成为美国首家上市人形机器人公司，代码AGLT，融资约4.65亿美元；Digit已在GXO、Schaeffler、丰田加拿大工厂运行超6.5万小时。",
+  "text": "SITUATION EXPLAINED: Agility just became the first humanoid robot company to go public in the US.\n\n• Agility went public by merging with the SPAC Churchill Capital Corp XI and started trading as AGLT on November 5\n• The roughly $465M includes a $201M private investment led by Foxconn, and earlier backers include Nvidia, Amazon and SoftBank Vision Fund II\n• Its $300M+ in multi-year Digit orders are committed but tied to contractual milestones\n• Digit already works at GXO, Schaeffler and Toyota Motor Manufacturing Canada, with over 65,000 hours of real-world operation\n• GXO is adding Digit to 2 more US sites in early 2027, and farm equipment maker AGCO starts a pilot in Kansas in 2027\n• Its RoboFab factory in Salem, Oregon is designed to build up to 10,000 robots a year",
+  "created_at": "2026-11-05T20:09:33.000Z",
+  "metrics": {
+   "likes": 14,
+   "retweets": 3,
+   "views": 3254
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2118435542815883264/img/MW02a9wAhw7_b6th.jpg"
+  ],
+  "added_at": "2026-11-06T01:12:28.106480+00:00"
+ },
+ {
   "id": "2118448973988151407",
   "user": "Waymo",
   "name": "Waymo",
