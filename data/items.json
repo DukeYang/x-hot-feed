@@ -1,5 +1,135 @@
 [
  {
+  "id": "2118591788701421573",
+  "user": "elonmusk",
+  "name": "Elon Musk",
+  "category": "汽车",
+  "title": "特斯拉中止Cybertruck为Cybercab腾产能",
+  "summary": "马斯克宣布，得州超级工厂将在明年年中前后逐步停止Cybertruck生产，以便腾出产能扩大Cybercab产量。",
+  "text": "Tesla will be winding down production of the Cybertruck at Gigafactory Texas around the middle of next year to make room for increased Cybercab production",
+  "created_at": "2026-11-06T06:30:18.000Z",
+  "metrics": {
+   "likes": 11726,
+   "retweets": 914,
+   "views": 966136
+  },
+  "media": [],
+  "added_at": "2026-11-06T07:25:11.367175+00:00"
+ },
+ {
+  "id": "2118571031455470067",
+  "user": "SawyerMerritt",
+  "name": "Sawyer Merritt",
+  "category": "汽车",
+  "title": "美版Cybertruck再涨价并暂停入门订单",
+  "summary": "Sawyer Merritt称特斯拉再次上调美国Cybertruck售价，Premium AWD至92490美元（涨约9%），Cyberbeast至102490美元；约7.5万美元的入门双电机车型新订单已暂停。",
+  "text": "Tesla has just increased Cybertruck prices in the U.S. by up to 9% and has paused new orders for the base $75k Dual-Motor AWD trim.\n\nNew prices:\n• Cybertruck Premium AWD: $92,490 (from $84,990, 9% increase)\n• Cybertruck Cyberbeast: $102,490 (from $99,990, 2.5% increase)\n\nThese price increases are on top of the up to 7% Cybertruck price increases back in August 2026. The Premium AWD trim, which started at $79,990 earlier this year, now starts at $92,490. That’s a $12,500 increase, or nearly 16%.\n\nInterestingly, while new orders for the base trim have just been paused, this trim is showing a price increase to $82,490 (from $74,990), a 10% increase, but it’s grayed out 🧐",
+  "created_at": "2026-11-06T05:07:49.000Z",
+  "metrics": {
+   "likes": 513,
+   "retweets": 44,
+   "views": 65492
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWas9-QX0AAIU3Y.jpg"
+  ],
+  "added_at": "2026-11-06T07:25:11.367175+00:00"
+ },
+ {
+  "id": "2118588019230056525",
+  "user": "elonmusk",
+  "name": "Elon Musk",
+  "category": "汽车",
+  "title": "马斯克转发特斯拉韩国进口车连续登顶",
+  "summary": "马斯克转发并附言庆祝特斯拉韩国：10月进口车注册量同比大增，连续第9个月位居韩国进口车品牌第一，Model Y Premium领跑。",
+  "text": "🇰🇷 Tesla Korea 🇰🇷",
+  "created_at": "2026-11-06T06:15:19.000Z",
+  "metrics": {
+   "likes": 3709,
+   "retweets": 523,
+   "views": 585648
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2118337520140443648/img/kxYBme7vaqKq_Jb1.jpg"
+  ],
+  "added_at": "2026-11-06T07:25:11.367175+00:00"
+ },
+ {
+  "id": "2118549679319515303",
+  "user": "RobotaxiRadar",
+  "name": "Robotaxi Radar",
+  "category": "汽车",
+  "title": "芝加哥再拍到Cybercab路测",
+  "summary": "Robotaxi Radar称24小时内第三次在芝加哥地区拍到Cybercab，此次在伊利诺伊州Melrose Park的North Avenue行驶，测试仍在继续。",
+  "text": "3rd Chicago-area Cybercab sighting in 24 hours 👀\n\n📍 Spotted driving on North Avenue in Melrose Park, IL\n\nPlenty of cabs continue testing in the Windy City 💨",
+  "created_at": "2026-11-06T03:42:58.000Z",
+  "metrics": {
+   "likes": 22,
+   "retweets": 2,
+   "views": 996
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWaZtIfXkAAFA5u.jpg",
+   "https://pbs.twimg.com/media/HWaZtIjXMAA6KKZ.jpg"
+  ],
+  "added_at": "2026-11-06T07:25:11.367175+00:00"
+ },
+ {
+  "id": "2118585457076248628",
+  "user": "kimmonismus",
+  "name": "Chubby♨️",
+  "category": "AI",
+  "title": "传GPT-6.2今日或将发布",
+  "summary": "AI博主Chubby引用相关线索称「我们又回来了」，判断今天可能迎来GPT-6.2发布。",
+  "text": "We are so back. Looks like today is the day: GPT-6.2 incoming",
+  "created_at": "2026-11-06T06:05:09.000Z",
+  "metrics": {
+   "likes": 259,
+   "retweets": 3,
+   "views": 9836
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWa6PlHXUAA58fb.jpg"
+  ],
+  "added_at": "2026-11-06T07:25:11.367175+00:00"
+ },
+ {
+  "id": "2118532494500692352",
+  "user": "codexresets_",
+  "name": "Codex Updates",
+  "category": "AI",
+  "title": "称GPT-6.2今日发布窗口或已过",
+  "summary": "Codex Updates认为已过太平洋时间上午11点这一OpenAI常见大模型发布窗口，且当天已有GPT-6 Cyber，故GPT-6.2 Astra当天再发可能性较低，或看明天。",
+  "text": "GPT-6.2 Astra probably isn't dropping today. 😭\n\nWe're already past 11 AM PT, which has historically been OpenAI's usual cutoff for major model launches.\n\nWith GPT-6 Cyber already out, I wouldn't expect another model to follow on the same day.\n\nTomorrow could be our next shot.",
+  "created_at": "2026-11-06T02:34:41.000Z",
+  "metrics": {
+   "likes": 203,
+   "retweets": 7,
+   "views": 53825
+  },
+  "media": [],
+  "added_at": "2026-11-06T07:25:11.367175+00:00"
+ },
+ {
+  "id": "2118588755187781980",
+  "user": "CyberRobooo",
+  "name": "CyberRobo",
+  "category": "机器人",
+  "title": "新华社启用优必选人形主播",
+  "summary": "CyberRobo称新华社启用优必选UWORLD U1仿生人形机器人担任新闻主播主持报道，认为数字人开始有实体身体并可走下屏幕互动。",
+  "text": "Future still got here too fast.\n\nXinhua News just hired two biomimetic humanoid news anchors from UBTECH’s UWORLD U1. They’ll host the reports.\n\nChinese media has used AI digital hosts for years --daily news, short-video anchors. \n\nNow those digital people have bodies...Personality and memory can be loaded in, they can step off the screen and talk to people.\n\nWell, I suppose we’ll have to get used to humanoid robots serving as news anchors and even hosting forum events...",
+  "created_at": "2026-11-06T06:18:15.000Z",
+  "metrics": {
+   "likes": 12,
+   "retweets": 1,
+   "views": 738
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2118585674748334080/img/WuRiXg03P0cx6EFs.jpg"
+  ],
+  "added_at": "2026-11-06T07:25:11.367175+00:00"
+ },
+ {
   "id": "2118481390677221407",
   "user": "Waymo",
   "name": "Waymo",

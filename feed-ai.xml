@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · AI</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>每 3 小时整理的 X（推特）汽车、AI、机器人热帖，中文概括。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Fri, 06 Nov 2026 04:06:29 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Fri, 06 Nov 2026 07:25:11 +0000</lastBuildDate><ttl>180</ttl>
+<item><title>[AI] 传GPT-6.2今日或将发布</title><link>https://x.com/kimmonismus/status/2118585457076248628</link><guid isPermaLink="true">https://x.com/kimmonismus/status/2118585457076248628</guid><category>AI</category><author>@kimmonismus</author><pubDate>Fri, 06 Nov 2026 06:05:09 +0000</pubDate><description><![CDATA[<p>AI博主Chubby引用相关线索称「我们又回来了」，判断今天可能迎来GPT-6.2发布。</p><p>@kimmonismus · 赞 259 · 转 3 · 浏览 9836</p><p><img src="https://pbs.twimg.com/media/HWa6PlHXUAA58fb.jpg"/></p><blockquote>We are so back. Looks like today is the day: GPT-6.2 incoming</blockquote><p><a href="https://x.com/kimmonismus/status/2118585457076248628">查看原帖</a></p>]]></description></item>
+<item><title>[AI] 称GPT-6.2今日发布窗口或已过</title><link>https://x.com/codexresets_/status/2118532494500692352</link><guid isPermaLink="true">https://x.com/codexresets_/status/2118532494500692352</guid><category>AI</category><author>@codexresets_</author><pubDate>Fri, 06 Nov 2026 02:34:41 +0000</pubDate><description><![CDATA[<p>Codex Updates认为已过太平洋时间上午11点这一OpenAI常见大模型发布窗口，且当天已有GPT-6 Cyber，故GPT-6.2 Astra当天再发可能性较低，或看明天。</p><p>@codexresets_ · 赞 203 · 转 7 · 浏览 53825</p><blockquote>GPT-6.2 Astra probably isn&#x27;t dropping today. 😭
+
+We&#x27;re already past 11 AM PT, which has historically been OpenAI&#x27;s usual cutoff for major model launches.
+
+With GPT-6 Cyber already out, I wouldn&#x27;t expect another model to follow on the same day.
+
+Tomorrow could be our next shot.</blockquote><p><a href="https://x.com/codexresets_/status/2118532494500692352">查看原帖</a></p>]]></description></item>
 <item><title>[AI] Anthropic联合创始人回应METR报告</title><link>https://x.com/Sam_McCandlish/status/2118422266669371519</link><guid isPermaLink="true">https://x.com/Sam_McCandlish/status/2118422266669371519</guid><category>AI</category><author>@Sam_McCandlish</author><pubDate>Thu, 05 Nov 2026 19:16:41 +0000</pubDate><description><![CDATA[<p>Anthropic联合创始人Sam McCandlish称已向METR提供未发布模型基准等内部数据供其独立评估；他认同AI在加速自家研究，并预告数周内将发布Anthropic自身的进度与安全举措分析。</p><p>@Sam_McCandlish · 赞 1617 · 转 128 · 浏览 173206</p><blockquote>I&#x27;m Sam, one of Anthropic&#x27;s co-founders, and I lead much of our safety work. I&#x27;m going to have more to share on that work over the coming months.
 
 I thought I&#x27;d start by sharing a few thoughts on the latest report from @METR_Evals.
