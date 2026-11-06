@@ -1,5 +1,147 @@
 [
  {
+  "id": "2118598887258644883",
+  "user": "wmorrill3",
+  "name": "Wes",
+  "category": "汽车",
+  "title": "Cybertruck工程负责人致谢并送别",
+  "summary": "特斯拉Cybertruck工程负责人Wes发帖称，Cybertruck是出色的技术验证平台，其成果将延续到Cybercab；感谢团队与车主社区，并表示会继续关注车主故事。",
+  "text": "Cybertruck was an incredible technology development platform and lives on through Cybercab. Thanks to everyone who contributed to making the future looking like the future\n\nAs well to the community of owners whose adventures I've enjoyed and will continue to follow ❤️",
+  "created_at": "2026-11-06T06:58:31.000Z",
+  "metrics": {
+   "likes": 2318,
+   "retweets": 187,
+   "views": 239124
+  },
+  "media": [],
+  "added_at": "2026-11-06T10:20:14.346152+00:00"
+ },
+ {
+  "id": "2118599530841072066",
+  "user": "SawyerMerritt",
+  "name": "Sawyer Merritt",
+  "category": "汽车",
+  "title": "解读中止Cybertruck：产能让给Cybercab",
+  "summary": "Sawyer Merritt称马斯克已宣布约2027年中停产Cybertruck；同空间可生产远更多Cybercab，且Q3仅售约8000辆，认为转向自动驾驶、机器人与能源在财务上更合理。",
+  "text": "Elon Musk has officially announced that Tesla will be discontinuing Cybertruck production in mid-2027.\n\nConsidering Tesla can make many times more Cybercabs than Cybertrucks in that space, this move makes financial sense. Tesla sold ~8k Cybertrucks in Q3. \n\nThe future of Tesla is autonomy, robots and energy.",
+  "created_at": "2026-11-06T07:01:04.000Z",
+  "metrics": {
+   "likes": 1271,
+   "retweets": 85,
+   "views": 84331
+  },
+  "media": [],
+  "added_at": "2026-11-06T10:20:14.346152+00:00"
+ },
+ {
+  "id": "2118614404400898243",
+  "user": "SawyerMerritt",
+  "name": "Sawyer Merritt",
+  "category": "汽车",
+  "title": "特斯拉年末可购车型阵容对照图",
+  "summary": "Sawyer Merritt发布图表，对比特斯拉近年年末可供消费者购买的车型阵容变化。",
+  "text": "Tesla’s consumer vehicle lineup available for purchase at the end of each year:",
+  "created_at": "2026-11-06T08:00:10.000Z",
+  "metrics": {
+   "likes": 523,
+   "retweets": 30,
+   "views": 49984
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWbUbanWgAAfp7b.jpg"
+  ],
+  "added_at": "2026-11-06T10:20:14.346152+00:00"
+ },
+ {
+  "id": "2118620837020406098",
+  "user": "SawyerMerritt",
+  "name": "Sawyer Merritt",
+  "category": "汽车",
+  "title": "上海超级工厂零部件本土化达98%",
+  "summary": "Sawyer Merritt称特斯拉表示上海超级工厂供应商本土化已从95%升至98%，签约超400家中国一级供应商，其中60多家进入全球供应链；产线平均约30多秒下线一台车。",
+  "text": "Tesla says it has pushed its Giga Shanghai factory supplier localization to 98% (up from 95%).\n\nTesla has currently signed up more than 400 local tier-1 suppliers in China, with more than 60 of them having entered its global supply chain system.\n\nThe factory currently maintains a production pace of rolling one vehicle off the line every 30-plus seconds on average, with an industrial waste utilization rate kept above 94%. https://t.co/TdNx8QctpJ",
+  "created_at": "2026-11-06T08:25:44.000Z",
+  "metrics": {
+   "likes": 245,
+   "retweets": 15,
+   "views": 14202
+  },
+  "media": [],
+  "added_at": "2026-11-06T10:20:14.346152+00:00"
+ },
+ {
+  "id": "2118619303134249115",
+  "user": "BYDCompany",
+  "name": "BYD",
+  "category": "汽车",
+  "title": "仰望U9 Xtreme刷新503.17km/h纪录",
+  "summary": "比亚迪官方称仰望U9 Xtreme在阿布扎比创下503.17km/h新世界纪录，获多项吉尼斯纪录并获FIA认可，为量产电动车速度新高。",
+  "text": "A new world record for the YANGWANG U9 Xtreme. 503.17km/h.\n\nYANGWANG U9 Xtreme has done the impossible, surpassing 500km/h to set a new world speed record in Abu Dhabi. Four Guinness World Records. FIA-recognised. All-electric.\n\nThe fastest production car on the planet just got faster.\n\n#YANGWANG #U9Xtreme #WorldRecord",
+  "created_at": "2026-11-06T08:19:38.000Z",
+  "metrics": {
+   "likes": 146,
+   "retweets": 33,
+   "views": 4880
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWbYukDbQAAz_GZ.jpg"
+  ],
+  "added_at": "2026-11-06T10:20:14.346152+00:00"
+ },
+ {
+  "id": "2118620772268990966",
+  "user": "elonmusk",
+  "name": "Elon Musk",
+  "category": "AI",
+  "title": "马斯克称特斯拉Terafab推进迅速",
+  "summary": "马斯克转发并评价「Terafab is moving fast」，呼应关于得州超级工厂相关芯片/Fab实验室昼夜赶工、供应商快速响应的进展报道。",
+  "text": "Terafab is moving fast",
+  "created_at": "2026-11-06T08:25:28.000Z",
+  "metrics": {
+   "likes": 3201,
+   "retweets": 386,
+   "views": 814626
+  },
+  "media": [],
+  "added_at": "2026-11-06T10:20:14.346152+00:00"
+ },
+ {
+  "id": "2118635663746867631",
+  "user": "kimmonismus",
+  "name": "Chubby♨️",
+  "category": "AI",
+  "title": "Anthropic年化收入超800亿但IPO遇疑",
+  "summary": "Chubby援引WSJ称Anthropic 10月年化经常性收入超800亿美元，但投资者质疑其1.5万亿美元IPO估值，有人预期更接近1万亿；对比OpenAI 9月据报道接近500亿美元。",
+  "text": "Anthropic's annualized revenue run rate topped $80 billion in October but investors are questioning its $1.5 trillion IPO valuation: one expects it could be closer to $1 trillion, according to the WSJ.\n\nIn comparison: OpenAI reportedly approached $50 billion in September.",
+  "created_at": "2026-11-06T09:24:39.000Z",
+  "metrics": {
+   "likes": 60,
+   "retweets": 3,
+   "views": 4994
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWbn5_rWEAAHPmC.png"
+  ],
+  "added_at": "2026-11-06T10:20:14.346152+00:00"
+ },
+ {
+  "id": "2118644436917793116",
+  "user": "testingcatalog",
+  "name": "🚨 AI News | TestingCatalog",
+  "category": "AI",
+  "title": "11月6日AI日报：多模型与产品更新",
+  "summary": "TestingCatalog汇总：OpenAI面向授权安全研究推出GPT-6 Cyber并将于11月12日直播；Gemini Omni 1.2 Flash已普遍可用；Claude Personal Finance美国beta上线；另有Thinking Machines、Perplexity、Meta Muse等动态。",
+  "text": "DAILY AI BRIEF 🗞 — Nov 6\n\nMODEL FORECAST 👀:\n- GPT-6.2 Sol, today?\n- GPT-6.2 Astra, today?\n- Claude Fable 5.5, soon\n- Claude Mythos 5.5, never?\n- Gemini 4 Carbon, soon\n- Gemini 4 Hydrogen (Flash), soon\n- Grok 4.8, not soon???\n\nOPENAI 🔥:\n- OpenAI launched GPT-6 Cyber for authorized security research on Daybreak Red, with a Cyber livestream on Nov 12.\n- Cat Wu is joining OpenAI to lead product management for Core Products after leaving Anthropic.\n\nGOOGLE 🔥:\n- Gemini Omni 1.2 Flash is generally available on AI Studio and the Gemini API with 15-second video and 30% lower pricing.\n\nANTHROPIC 🔥:\n- Claude Personal Finance is rolling out in beta to US Pro, Max, and Ultra users with read-only bank connections via Plaid.\n- METR says Anthropic’s model progress accelerated about 1.9x since October 2025, citing internal Model 3 and Model 4.\n\nTHINKING MACHINES 🔥:\n- Thinking Machines released Inkling 2 Small on Tinker at 31 on the AA Intelligence Index, with open weights planned next week.\n\nPERPLEXITY 🔥:\n- Perplexity Teammates are rolling out to Max subscribers on the web as proactive agents that use Computer tasks, skills, memory, and tools.\n\nMETA 🔥:\n- Muse Voice and expressive avatars are rolling out to US users, and Muse launched in Mexico.\n\nSPACEXSI 🔥:\n- Cursor can now build live apps with hosting, auth, and a shareable link on paid plans with cloud agents.\n- Grok Bot is testing SMS texting, with WhatsApp and Telegram integrations in early preview (via alexmichael).\n\nCOGNITION 🔥:\n- Cognition released Devin Review 2.0, now up to 5× cheaper and 1.5× faster for PR reviews.\n\n* Used Grok to compose this brief, cherry-picking the news and doing some post-editing.",
+  "created_at": "2026-11-06T09:59:30.000Z",
+  "metrics": {
+   "likes": 27,
+   "retweets": 0,
+   "views": 2235
+  },
+  "media": [],
+  "added_at": "2026-11-06T10:20:14.346152+00:00"
+ },
+ {
   "id": "2118591788701421573",
   "user": "elonmusk",
   "name": "Elon Musk",
