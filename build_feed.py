@@ -490,7 +490,7 @@ def write_feed(name, title, its):
          f"<title>{html.escape(title)}</title><link>{BASE}/</link><description>X 热帖精选与汽车、AI、机器人每日简报。</description><language>zh-cn</language>",
          f'<atom:link href="{BASE}/{name}" rel="self" type="application/rss+xml"/><lastBuildDate>{email.utils.format_datetime(now_utc())}</lastBuildDate><ttl>180</ttl>']
     for i in its[:RSS_LIMIT]:
-        u = item_link(i)
+        u = html.escape(item_link(i), quote=True)
         if is_brief(i):
             body = md_to_html(i.get("text") or "")
             body = body.replace("]]>", "]]&gt;")
