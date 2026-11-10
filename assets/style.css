@@ -13,8 +13,11 @@ h1 small{font-size:12px;font-weight:500;color:var(--sub);margin-left:8px}
 .navlinks{font-size:13px;color:var(--sub);text-decoration:none;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .navlinks a{color:var(--sub);text-decoration:none;border-bottom:1px dashed var(--line)}
 .navlinks a:hover{color:var(--auto)}
-main{max-width:1280px;margin:auto;padding:20px;columns:4 280px;column-gap:16px}
-.card{position:relative;break-inside:avoid;margin:0 0 16px;background:var(--card);border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:0 1px 2px rgba(0,0,0,.04);transition:transform .25s,box-shadow .25s;display:block;color:inherit;text-decoration:none;animation:in .4s ease both}
+main#feed{max-width:1280px;margin:auto;padding:20px;display:flex;gap:16px;align-items:flex-start}
+main#feed .col{flex:1;min-width:0;display:flex;flex-direction:column;gap:16px}
+main#feed:not(:has(.col)){display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));align-items:start}
+main#feed:has(.empty){display:block}
+.card{position:relative;margin:0;background:var(--card);border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:0 1px 2px rgba(0,0,0,.04);transition:transform .25s,box-shadow .25s;display:block;color:inherit;text-decoration:none;animation:in .4s ease both}
 .card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.10)}
 @keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
 .card img{width:100%;display:block;background:var(--line);max-height:420px;object-fit:cover}
@@ -32,7 +35,7 @@ main{max-width:1280px;margin:auto;padding:20px;columns:4 280px;column-gap:16px}
 .fav-btn.on{color:var(--star);background:color-mix(in srgb,var(--star) 18%,var(--card))}
 .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:var(--text);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:13px;opacity:0;pointer-events:none;transition:.25s;z-index:20;max-width:90vw;text-align:center}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-.empty{column-span:all;text-align:center;color:var(--sub);padding:60px 0}
+.empty{text-align:center;color:var(--sub);padding:60px 0}
 footer{text-align:center;color:var(--sub);font-size:12px;padding:10px 0 40px}
 .page{max-width:900px;margin:auto;padding:20px}
 .page h2{font-size:18px;margin:28px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
@@ -46,7 +49,7 @@ footer{text-align:center;color:var(--sub);font-size:12px;padding:10px 0 40px}
 .text-row h3{font-size:15px;font-weight:700;margin-bottom:4px}
 .text-row .sum{font-size:13px;color:var(--sub);margin-bottom:4px}
 .text-row .who{font-size:12px;color:var(--sub);font-weight:500}
-@media (max-width:640px){main{padding:12px;column-gap:10px;columns:2 160px}.card h2{font-size:14px}.card p{font-size:13px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}.body{padding:10px 12px 12px}.stats span:nth-child(n+2){display:none}h1 small{display:none}.fav-btn{width:32px;height:32px;font-size:16px;top:8px;right:8px}}
+@media (max-width:640px){main#feed{padding:12px;gap:10px}main#feed:not(:has(.col)){grid-template-columns:repeat(2,minmax(0,1fr))}.card h2{font-size:14px}.card p{font-size:13px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}.body{padding:10px 12px 12px}.stats span:nth-child(n+2){display:none}h1 small{display:none}.fav-btn{width:32px;height:32px;font-size:16px;top:8px;right:8px}}
 
 .t-简报{background:#2d3436}
 .brief-mark{font-weight:700;font-size:11px;color:var(--sub);border:1px solid var(--line);border-radius:999px;padding:1px 7px}

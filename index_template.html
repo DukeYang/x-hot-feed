@@ -55,7 +55,8 @@ function toggleFav(ev,id){
   render();
 }
 function itemHref(i){
-  if(i.kind==="brief") return i.url||("#");
+  if(i.url) return i.url;
+  if(i.kind==="brief"||i.kind==="brief-item") return "#";
   return "https://x.com/"+esc(i.user)+"/status/"+esc(i.id);
 }
 function cardHtml(i){
@@ -104,15 +105,40 @@ function tabs(){
     b.onclick=function(){cur=b.getAttribute("data-c");location.hash=cur;render()};
   });
 }
+function colCount(){
+  const w=window.innerWidth;
+  const pad=w<=640?24:40;
+  const gap=w<=640?10:16;
+  const minW=w<=640?160:280;
+  const inner=Math.min(1280,w)-pad;
+  var n=Math.floor((inner+gap)/(minW+gap));
+  if(n<1)n=1;
+  if(n>4)n=4;
+  return n;
+}
 function render(){
   tabs();
   const it=filterItems();
   const feed=document.getElementById("feed");
-  feed.innerHTML=it.length?it.map(cardHtml).join(""):'<div class="empty">暂无内容</div>';
+  if(!it.length){
+    feed.innerHTML='<div class="empty">暂无内容</div>';
+    return;
+  }
+  const n=colCount();
+  const cols=[];
+  for(var i=0;i<n;i++)cols.push([]);
+  it.forEach(function(item,idx){cols[idx%n].push(cardHtml(item))});
+  feed.innerHTML=cols.map(function(c){return '<div class="col">'+c.join("")+"</div>"}).join("");
   Array.prototype.forEach.call(feed.querySelectorAll("[data-fav-id]"),function(btn){
     btn.addEventListener("click",function(ev){toggleFav(ev,btn.getAttribute("data-fav-id"))});
   });
 }
+var _cols=0;
+window.addEventListener("resize",function(){
+  const n=colCount();
+  if(n!==_cols){_cols=n;render()}
+});
+_cols=colCount();
 render();
 </script>
 </body></html>
