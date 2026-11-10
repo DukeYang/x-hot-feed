@@ -23,8 +23,8 @@ RSS_LIMIT = 100
 
 BRIEF_CAT = {"ai": "AI", "auto": "汽车", "robot": "机器人"}
 BRIEF_TITLE = {"ai": "AI 每日简报", "auto": "汽车每日简报", "robot": "机器人每日简报"}
-# 北京时间，贴近三份简报的惯常生成时刻
-BRIEF_CLOCK = {"robot": (7, 45), "ai": (7, 52), "auto": (8, 0)}
+# 同一天按 汽车、AI、机器人 交错，避免整组扎堆
+BRIEF_SLOT = {"auto": 0, "ai": 1, "robot": 2}
 SHANGHAI = datetime.timezone(datetime.timedelta(hours=8))
 
 def is_brief(i):
@@ -164,8 +164,9 @@ def first_source_url(body, fallback):
 
 def brief_item_time(cat_key, date_s, seq):
     y, mo, d = [int(x) for x in date_s.split("-")]
-    hh, mm = BRIEF_CLOCK.get(cat_key, (8, 0))
-    dt = datetime.datetime(y, mo, d, hh, mm, 0, tzinfo=SHANGHAI) + datetime.timedelta(minutes=max(0, seq - 1))
+    base = datetime.datetime(y, mo, d, 8, 0, 0, tzinfo=SHANGHAI)
+    slot = BRIEF_SLOT.get(cat_key, 0)
+    dt = base - datetime.timedelta(seconds=max(0, seq - 1) * 60 + slot * 20)
     return dt.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
 
 def make_brief_items(cat_key, path, date_s=None):
