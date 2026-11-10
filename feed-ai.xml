@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · AI</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>X 热帖精选与汽车、AI、机器人每日简报。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Tue, 10 Nov 2026 23:58:33 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Tue, 10 Nov 2026 23:59:46 +0000</lastBuildDate><ttl>180</ttl>
 <item><title>[AI] 【进展】OpenAI 上线 Businesses in ChatGPT：商家可以认领主页，并配置商务智能体</title><link>https://openai.com/index/introducing-businesses-chatgpt</link><guid isPermaLink="true">https://openai.com/index/introducing-businesses-chatgpt</guid><category>AI</category><author>每日简报</author><pubDate>Wed, 11 Nov 2026 00:01:38 +0000</pubDate><description><![CDATA[<p>此前：11 月 8 日简报已报道，分析人士晒出尚未上线的“商业中心”界面，功能包括统计品牌被提及次数和点击。<br>
 这次新增：11 月 10 日 OpenAI 正式宣布公测 Businesses in ChatGPT。官方称 ChatGPT 每周使用者已达 12 亿。商家可通过 Business Hub 认领并验证自己的业务、更新信息和商品源（含价格与库存），并查看被提及次数、网站点击，以及回答里引用其网站时的常见主题；这些洞察是汇总数据，官方强调不会把用户对话或商务智能体聊天原文交给商家。完成认领后，符合条件的美国电商和在线服务商家可以配置 Business Agent，在独立、带标注的对话里回答顾客问题、介绍商品。该智能体也可作为 ChatGPT 广告的落地页，赞助位置会单独标注。Shopify 商家已可从 Business Hub 或 Shopify 后台接入。<br>
 选题角度：对话里“被提到”从监测工具变成了可运营的入口，品牌和创作者要开始经营自己的 ChatGPT 主页了。<br>
