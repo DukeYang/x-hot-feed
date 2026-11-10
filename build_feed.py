@@ -7,7 +7,7 @@
   python3 build_feed.py --briefs-dir /path/to/briefs   # 其下 ai|auto|robot/YYYY-MM-DD.md
 CAT 只能是 ai、auto、robot。同一天同一分类的旧条目会被覆盖。
 """
-import sys, json, os, html, subprocess, datetime, email.utils, re, urllib.request, urllib.error, shutil, pathlib
+import sys, json, os, html, subprocess, datetime, email.utils, re, urllib.request, urllib.error, shutil, pathlib, hashlib
 
 R = "/home/box/x-hot-feed"
 if os.environ.get("GITHUB_WORKSPACE"):
@@ -23,8 +23,7 @@ RSS_LIMIT = 100
 
 BRIEF_CAT = {"ai": "AI", "auto": "汽车", "robot": "机器人"}
 BRIEF_TITLE = {"ai": "AI 每日简报", "auto": "汽车每日简报", "robot": "机器人每日简报"}
-# 同一天按 汽车、AI、机器人 交错，避免整组扎堆
-BRIEF_SLOT = {"auto": 0, "ai": 1, "robot": 2}
+# 同一天三类条目的时间在 8:00 前后约 8 分钟内随机错开（按日期稳定，重复生成不变）
 SHANGHAI = datetime.timezone(datetime.timedelta(hours=8))
 
 def is_brief(i):
@@ -165,8 +164,9 @@ def first_source_url(body, fallback):
 def brief_item_time(cat_key, date_s, seq):
     y, mo, d = [int(x) for x in date_s.split("-")]
     base = datetime.datetime(y, mo, d, 8, 0, 0, tzinfo=SHANGHAI)
-    slot = BRIEF_SLOT.get(cat_key, 0)
-    dt = base - datetime.timedelta(seconds=max(0, seq - 1) * 60 + slot * 20)
+    n = int(hashlib.sha256(f"{date_s}:{cat_key}:{seq}".encode()).hexdigest()[:8], 16)
+    offset = (n % (16 * 60 + 1)) - 8 * 60  # -8 到 +8 分钟
+    dt = base + datetime.timedelta(seconds=offset)
     return dt.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
 
 def make_brief_items(cat_key, path, date_s=None):
