@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日简报 · 2026-11-11</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header><div class="bar">
+<h1>AI 每日简报 · 2026-11-11</h1>
+<div class="navlinks">
+<a href="../../index.html">首页</a>
+
+</div>
+</div></header>
+<div class="article-wrap"><p class="lead">AI · 2026-11-11</p>
+<h2 id="item-07">Google Cloud 推出 Gemini for healthcare：在美国预览，对接病历和保险流程</h2>
+<article class="article"><p>11 月 10 日，Google Cloud 首席执行官 Thomas Kurian 宣布推出面向医疗行业的 Gemini for healthcare，即日起在美国预览。官方定位它不是又一个通用聊天模型，而是把临床、财务和行政系统串起来的编排层：可以在问诊前整理患者病史和待完成检查，按赔付政策准备授权材料，并按计划书向成员解释保障和费用；全程强调人工审阅。系统通过连接器只读接入 Epic、Oracle Health 等电子病历，官方称不会回写病历。产品按支持 HIPAA 合规来设计，临床数据、提示词和生成结果留在机构受治理的环境中，不用于训练或微调谷歌的基础模型，输出需带可追溯引文。HCA Healthcare、Northwell Health、Highmark Health、麻省蓝十字蓝盾和美国临床肿瘤学会等机构出现在官方案例中。谷歌还写道，临床人员每周约花 28 小时手工核对分散信息——这是官方给出的背景数字，不是独立审计结果。<br>
+选题角度：医疗 AI 的胜负手不在“会不会看病”，而在授权、病历和费用能不能在现有系统里跑完，还留得下审计痕迹。<br>
+来源：<a href="https://cloud.google.com/blog/products/ai-machine-learning/gemini-for-healthcare" target="_blank" rel="noopener">Google Cloud 官方博客</a></p></article>
+<h2 id="item-06">台积电董事会核准：分别不超过 5 亿美元投资 Anthropic 与 OpenAI</h2>
+<article class="article"><p>11 月 10 日，台积电公告董事会决议：以 Anthropic IPO 发行价认购其普通股，金额不超过 5 亿美元；同时以不超过 5 亿美元认购 OpenAI Group PBC 的特别股。对 OpenAI 的投资将通过子公司 TSMC Partners, Ltd. 进行。台积电相关公告称，该特别股具有转换权和剩余财产优先分配权，预计每股约 992 美元，持股数量不超过 50.4 万股，持股比例预计不超过 0.04%，最终比例取决于 OpenAI 的募集规模。这与上方第 1 条中七家公司合计 260 亿美元私募配售的方向一致，台积电给 Anthropic 的额度是其中已公开的一笔上限；对 OpenAI 的这笔特别股投资是单独的董事会核准，并不等于 OpenAI 即将上市。<br>
+选题角度：晶圆厂不再只靠卖产能赚钱，开始直接持有下游模型公司的股份。<br>
+来源：<a href="https://pr.tsmc.com/system/files/newspdf/attachment/e05987700f76438755c64d950b3b0b99369aeed2/1110%20board%20meeting%20%28E%29_final_wmn.pdf" target="_blank" rel="noopener">台积电董事会决议</a>｜<a href="https://tw.stock.yahoo.com/news/%E5%85%AC%E5%91%8A-%E4%BB%A3%E5%AD%90%E5%85%AC%E5%8F%B8tsmc-partners-ltd-%E5%85%AC%E5%91%8A%E6%93%AC%E6%8A%95%E8%B3%87openai-140312889.html" target="_blank" rel="noopener">台积电投资 OpenAI 公告（中央社转载）</a></p></article>
+<h2 id="item-03">DeepMind 发布 AlphaProof Code：四周内形式化验证 Signal 协议实现的关键安全性质</h2>
+<article class="article"><p>11 月 10 日，Google DeepMind 宣布推出用于深度形式化验证的智能体框架 AlphaProof Code，并把它用在一项长期被视为高难度的安全问题上：对保护 Signal、Google Messages 等应用里海量私密对话的 Signal 协议，就其实际代码的关键安全性质给出机器可检查的数学证明。官方称，这是首次用 AI 在这一深度上形式化验证被广泛部署的密码协议，也是该协议的实现本身首次被任何方法（含或不含 AI）完成这一级别的验证。流程是：人类专家与模型一起把安全目标写成形式化规范并逐条审阅，再由 Gemini Carbon 等模型驱动的智能体在 Lean 中写出超过 600 万行证明；智能体还会标出约 1% 需要人工复看的代码，其余由 Lean 自动检查。整个验证用了四周，官方称这类工作过去往往需要专家团队数年。为了确认系统能区分正确与有缺陷的代码，研究者把两个此前已修复的真实漏洞重新放回隔离版本，系统都给出了“该有漏洞版本不安全”的机器检查证明。Signal 首席技术官 Ehren Kret 称，用 AI 智能体把线上代码翻译成有效的 Lean 定理是一项重要突破。研究产物将开源。<br>
+选题角度：AI 不仅更会挖漏洞，也开始给出“这段关键代码确实符合规范”的证明——信任从评测分数转向可检查的数学。<br>
+来源：<a href="https://deepmind.google/blog/introducing-alphaproof-code/" target="_blank" rel="noopener">Google DeepMind 官方</a></p></article>
+<h2 id="item-02">谷歌发布 Gemini 4 Carbon：面向超长程 Agent，并预览 /swarm 多智能体协作</h2>
+<article class="article"><p>11 月 10 日，Google DeepMind 首席 AI 架构师 Koray Kavukcuoglu 宣布，Gemini 4 Carbon 向付费开发者、企业，以及 Google AI Ultra 用户开放。官方把它定位为目前最强的模型，侧重网络安全和跨知识工作、软件工程、科学推理的长程 Agent 任务；日常编程和知识工作仍建议优先用 Gemini 4 Argon，Carbon 会花更多 token 做更彻底的探索和验证。官方称它在 CursorBench 4.0、Perplexity 的 WANDR、Zapier 的 AutomationBench 上排第一，且每任务成本不到下一名外部模型的一半；与 Artificial Analysis 合作的多模态知识 Agent 基准 MKA 上排第二，每任务平均成本不到第一名的六分之一。这些分数均为官方披露。同期，Agent 开发平台 Google Antigravity 预览 /swarm：一次提示可调度一组分工明确的智能体，Carbon 适合做架构、协调和对抗式核验，更轻的模型并行改代码。API 导入价与 Argon 相同，为每百万 token 输入 2 美元、输出 10 美元；11 月 30 日导入期结束后调整为输入 4 美元、输出 20 美元。付费用户可在 Google AI Studio 和 Gemini for business 使用，Ultra 用户还可在 Antigravity、Gemini 应用和搜索的 AI 模式中使用。两周前，Carbon 已通过 Fairwind 计划向部分网络安全防守方开放。<br>
+选题角度：模型开始按“日常干活”和“极限验证”分档卖，创作者和开发者要会算的是每任务成本，而不只是每百万 token 报价。<br>
+来源：<a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/" target="_blank" rel="noopener">Google 官方博客</a>｜<a href="https://www.theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout" target="_blank" rel="noopener">The Verge</a>｜<a href="https://antigravity.google/blog/gemini-4-carbon-in-google-antigravity/" target="_blank" rel="noopener">Antigravity 博客</a></p></article>
+<h2 id="item-05">Anthropic 推出 Claude 办公套件：会议、白板、表格，数据看板转正</h2>
+<article class="article"><p>11 月 10 日，Anthropic 在旧金山发布面向非技术知识工作者的一组办公能力。Claude Whiteboards 和 Claude Sheets 对所有付费方案开放公测：前者是可多人实时协作的白板，Claude 能把讨论整理成带负责人和日期的计划，并导出到文档、幻灯片或 Lucid、Miro 等工具；后者可生成带标签页、公式、格式和下拉菜单的表格，并在单元格里改内容、标明每处修改。原先公测的 Claude Dashboards 即日起正式商用，并更名为 Claude Data，可连接数仓或 CRM，支持认证指标、数据故事和（公测中的）实时分享。Claude Meetings 对 Team 和 Enterprise 方案开放公测，首批支持 Google Meet：Claude 会作为可见的与会者加入，边听边起草计划、在白板排期、在会议聊天里回答问题；除非管理员授权，否则不会加入有外部客人的会议，外部客人进入时会自动退出。同期还上线交互式连接器，可在对话旁打开 Adobe、Atlassian、Notion 等应用的完整界面。The Verge 报道，公司产品人员把这组工具定位为补上“非开发者用 AI 仍然很费劲”的缺口。<br>
+选题角度：上市前把 Claude 从“会写代码的助手”推向“开会就能直接出表格和计划”的办公入口，打的是微软和谷歌的腹地。<br>
+来源：<a href="https://claude.com/resources/articles/sheets-whiteboards-data" target="_blank" rel="noopener">Anthropic 产品说明</a>｜<a href="https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/" target="_blank" rel="noopener">TechCrunch</a>｜<a href="https://www.theverge.com/ai-artificial-intelligence/1030709/anthropic-has-its-own-ai-powered-office-suite-now" target="_blank" rel="noopener">The Verge</a></p></article>
+<h2 id="item-01">【进展】Anthropic 正式启动 IPO 路演：拟发行 8.25 亿股，定价 70–78 美元，股票代码 ANT</h2>
+<article class="article"><p>此前：11 月 5 日、11 月 8 日简报已报道修订版招股书中的三季度收入、算力承诺，以及投资者转述的“感恩节前上市、融资 800–1000 亿美元、估值约 1.25–1.75 万亿美元”。<br>
+这次新增：11 月 10 日公司官方宣布启动路演。拟发行 8.25 亿股 A 类普通股，其中公司发行约 8.01 亿股，现有股东出售约 2365 万股（公司不会从老股转让中获得资金），并计划授予承销商 30 天内超额配售最多约 1.24 亿股的期权。发行价预计为每股 70.00–78.00 美元，已申请在纳斯达克全球精选市场上市，股票代码 ANT。按发行价上限计算，基础发行规模约 643.5 亿美元（含老股转让）。CNBC 称，修订后的发行文件还显示，AMD、博通、谷歌、美光、微软、英伟达和台积电已约定以发行价私募认购合计 260 亿美元 N 类普通股，这部分不在此次注册发行之内、也不受承销商锁定协议约束；按完全稀释口径，估值上限约 1.405 万亿美元。同一份修订文件还写到，公司 10 月底的年化收入约 810 亿美元，比上个月再高约 100 亿美元。另有知情人士对 CNBC 称，计划 11 月 18 日定价、19 日交易，并希望约 20% 分配给零售投资者——这两项日程和比例尚未出现在公司官方路演公告里。<br>
+选题角度：先前传闻的“融 800–1000 亿”落成了更低的公开发行规模，真正抬高筹码的是芯片和云厂商的 260 亿美元配售。<br>
+来源：<a href="https://www.anthropic.com/news/roadshow-launch" target="_blank" rel="noopener">Anthropic 官方公告</a>｜<a href="https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html" target="_blank" rel="noopener">CNBC（转述修订文件与知情人士）</a></p></article>
+<h2 id="item-04">【进展】OpenAI 上线 Businesses in ChatGPT：商家可以认领主页，并配置商务智能体</h2>
+<article class="article"><p>此前：11 月 8 日简报已报道，分析人士晒出尚未上线的“商业中心”界面，功能包括统计品牌被提及次数和点击。<br>
+这次新增：11 月 10 日 OpenAI 正式宣布公测 Businesses in ChatGPT。官方称 ChatGPT 每周使用者已达 12 亿。商家可通过 Business Hub 认领并验证自己的业务、更新信息和商品源（含价格与库存），并查看被提及次数、网站点击，以及回答里引用其网站时的常见主题；这些洞察是汇总数据，官方强调不会把用户对话或商务智能体聊天原文交给商家。完成认领后，符合条件的美国电商和在线服务商家可以配置 Business Agent，在独立、带标注的对话里回答顾客问题、介绍商品。该智能体也可作为 ChatGPT 广告的落地页，赞助位置会单独标注。Shopify 商家已可从 Business Hub 或 Shopify 后台接入。<br>
+选题角度：对话里“被提到”从监测工具变成了可运营的入口，品牌和创作者要开始经营自己的 ChatGPT 主页了。<br>
+来源：<a href="https://openai.com/index/introducing-businesses-chatgpt" target="_blank" rel="noopener">OpenAI 官方</a></p></article>
+</div>
+<footer>内容来自每日简报整理，供选题与素材使用</footer>
+</body></html>
