@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · AI</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>X 热帖精选与汽车、AI、机器人每日简报。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Tue, 10 Nov 2026 10:20:42 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Tue, 10 Nov 2026 10:21:12 +0000</lastBuildDate><ttl>180</ttl>
 <item><title>[AI] AI 每日简报 · 2026-11-10</title><link>https://dukeyang.github.io/x-hot-feed/briefs/ai/2026-11-10.html</link><guid isPermaLink="true">https://dukeyang.github.io/x-hot-feed/briefs/ai/2026-11-10.html</guid><category>AI</category><author>每日简报</author><pubDate>Mon, 09 Nov 2026 23:52:00 +0000</pubDate><description><![CDATA[<p><strong>今日主线：</strong> 11 月 9 日模型与算力同天加码——Anthropic 升级 Claude Fable / Mythos 5.2，Google 把第八代 TPU 扩到四套系统，Meta 推出面向 Agent 高频任务的轻量模型 Muse Ember；国内则是字节 Seedream 5.5 和阿里云 Token Plan 大幅提额。</p>
 <p><strong>1. Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2：同一底座、两套访问</strong><br>
 11 月 9 日 Anthropic 宣布升级面向高难度技术任务的 Fable / Mythos 线。两者为同一底层模型：Fable 5.2 面向全体用户，带有更强的网络安全与生物安全分类器；Mythos 5.2 面向通过网络与生命科学核验计划的机构。官方称输出速度最多比 5.1 快约 30%，标准定价为每百万 token 输入 8 美元、输出 40 美元；可选 fast mode 为输入 16 / 输出 80 美元。官方评测显示，Fable 5.2 在 FrontierCode 2.0（Xhigh）达 49.1%，高于 Opus 5.5 的 45.5%；约 1000 个 Agent 在约 30 小时内形式化证明了费马大定理，而同设置的 Opus 5.5 约 18 小时只完成约 26%。公司称超过 90% 合入 Anthropic 核心代码库的改动现由 Claude 在人类指导下写出。上述分数与案例均为官方披露。<br>

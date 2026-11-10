@@ -684,12 +684,23 @@ def merge_new(items, path):
         seen.add(i["id"])
     return new + items, len(new)
 
+def pick_rss(items, category=None):
+    """Keep all briefs from the last 30 days in the feed; fill the rest with posts up to RSS_LIMIT."""
+    pool = [i for i in items if category is None or i.get("category") == category]
+    now = now_utc()
+    briefs = [i for i in pool if is_brief(i) and age_days(i, now) <= AGE_DAYS]
+    posts = [i for i in pool if not is_brief(i)]
+    if len(briefs) >= RSS_LIMIT:
+        return sort_items(list(briefs))[:RSS_LIMIT]
+    chosen = list(briefs) + posts[: max(0, RSS_LIMIT - len(briefs))]
+    return sort_items(chosen)
+
 def build_all(items):
     sort_items(items)
     write_brief_pages(items)
-    write_feed("feed.xml", "X 热帖精选 · 汽车 / AI / 机器人", items)
+    write_feed("feed.xml", "X 热帖精选 · 汽车 / AI / 机器人", pick_rss(items))
     for k, c in CAT.items():
-        write_feed(f"feed-{k}.xml", f"X 热帖精选 · {c}", [i for i in items if i["category"] == c])
+        write_feed(f"feed-{k}.xml", f"X 热帖精选 · {c}", pick_rss(items, c))
     write_archive_pages(items)
     payload = index_payload(items)
     # For main page JS: local media paths need no prefix (site root)

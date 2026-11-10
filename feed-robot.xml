@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · 机器人</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>X 热帖精选与汽车、AI、机器人每日简报。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-robot.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Tue, 10 Nov 2026 10:20:42 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-robot.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Tue, 10 Nov 2026 10:21:12 +0000</lastBuildDate><ttl>180</ttl>
 <item><title>[机器人] 机器人每日简报 · 2026-11-10</title><link>https://dukeyang.github.io/x-hot-feed/briefs/robot/2026-11-10.html</link><guid isPermaLink="true">https://dukeyang.github.io/x-hot-feed/briefs/robot/2026-11-10.html</guid><category>机器人</category><author>每日简报</author><pubDate>Mon, 09 Nov 2026 23:45:00 +0000</pubDate><description><![CDATA[<h2><strong>机器人每日简报 · 2026-11-10</strong></h2>
 <p>上一期之后的主线，是“怎么证明机器人真的在干活”。波士顿动力给 Atlas 换上滑板车轮子，不是为了出一款轮式产品，而是把执行器推到极限；英伟达在机器人学习顶会上放出 GR00T 2，强调从人类视频迁移到灵巧操作。国内这边，智元、启元、优必选集中拿出上岗数字、下线速度和渠道目标，上纬新材却同步提示：消费机器人收入占比仍然很低。</p>
 <p><strong>1. 波士顿动力给 Atlas 换上滑板车轮子：不是新产品，是拿执行器做极限测试</strong><br>
