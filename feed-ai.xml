@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · AI</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>X 热帖精选与汽车、AI、机器人每日简报。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Tue, 10 Nov 2026 10:30:17 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Tue, 10 Nov 2026 10:33:17 +0000</lastBuildDate><ttl>180</ttl>
 <item><title>[AI] 英伟达在韩国宣布投资 Point2，并计划加码 Motif、RLWRLD、Upstage</title><link>https://blogs.nvidia.com/blog/korean-startup-investments-msit/</link><guid isPermaLink="true">https://blogs.nvidia.com/blog/korean-startup-investments-msit/</guid><category>AI</category><author>每日简报</author><pubDate>Mon, 09 Nov 2026 23:59:00 +0000</pubDate><description><![CDATA[<p>11 月 9 日，在韩国科技部与英伟达合办的 AI 初创伙伴论坛上，英伟达宣布已投资互联初创公司 Point2 Technology，并计划投资 Motif Technologies（开源权重基础模型）、RLWRLD（机器人基础模型）与 Upstage（企业文档 AI / Solar 模型）。覆盖从机柜互联、基础模型到实体 AI 与企业应用的栈。金额未披露；此前英伟达已完成对 Naver 约 10 亿美元投资（11 月 8 日简报已报道）。<br>
 选题角度：英伟达在韩国不只买平台股权，还在按“互联—模型—机器人”铺本地生态。<br>
 来源：<a href="https://blogs.nvidia.com/blog/korean-startup-investments-msit/" target="_blank" rel="noopener">NVIDIA 官方博客</a></p>]]></description></item>

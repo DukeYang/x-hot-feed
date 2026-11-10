@@ -688,24 +688,35 @@ def write_archive_pages(items):
 </body></html>
 """)
 
+CARD_KEYS = ("id", "kind", "user", "category", "title", "summary",
+             "created_at", "added_at", "metrics", "media", "url", "fav")
+
+def slim_card(i, archive_only=False):
+    """Homepage cards only need title/summary; drop article body and empty fields."""
+    row = {}
+    for k in CARD_KEYS:
+        v = i.get(k)
+        if v in (None, "", [], {}):
+            continue
+        if k == "fav" and not v:
+            continue
+        row[k] = v
+    if archive_only:
+        row["_archive_only"] = True
+    return row
+
 def index_payload(items):
-    """Items for main page: last 30 days + all fav (any age). Mark aged fav as _archive_only=False still shown in 收藏 tab.
-    For category tabs, exclude items older than 30 days unless viewing 收藏 (client filters).
-    Pass _archive_only=True for fav items older than 30d so category tabs hide them but 收藏 tab shows them.
+    """Items for main page: last 30 days + all fav (any age).
+    Aged favs are marked _archive_only so category tabs hide them but 收藏 shows them.
     """
     now = now_utc()
     out = []
     for i in items:
         aged = age_days(i, now) > AGE_DAYS
         if not aged:
-            row = dict(i)
-            row.pop("_archive_only", None)
-            out.append(row)
+            out.append(slim_card(i))
         elif i.get("fav"):
-            row = dict(i)
-            row["_archive_only"] = True  # hide from 全部/分类, show in 收藏
-            out.append(row)
-        # non-fav aged: not on main page
+            out.append(slim_card(i, archive_only=True))
     return out
 
 def git_push(msg):
@@ -770,7 +781,7 @@ def build_all(items):
     upd = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8))).strftime("%m-%d %H:%M") + " 北京时间"
     tpl = open(f"{R}/index_template.html").read()
     html_out = (tpl
-                .replace("__DATA__", json.dumps(payload, ensure_ascii=False).replace("</", "<\\/"))
+                .replace("__DATA__", json.dumps(payload, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/"))
                 .replace("__UPDATED__", upd)
                 .replace("__BASE_PATH__", ""))
     open(f"{R}/index.html", "w").write(html_out)

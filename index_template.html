@@ -116,6 +116,13 @@ function colCount(){
   if(n>4)n=4;
   return n;
 }
+function bindFav(root){
+  Array.prototype.forEach.call(root.querySelectorAll("[data-fav-id]"),function(btn){
+    if(btn._bound)return;
+    btn._bound=true;
+    btn.addEventListener("click",function(ev){toggleFav(ev,btn.getAttribute("data-fav-id"))});
+  });
+}
 function render(){
   tabs();
   const it=filterItems();
@@ -125,13 +132,21 @@ function render(){
     return;
   }
   const n=colCount();
+  const first=Math.min(it.length,n*6);
   const cols=[];
   for(var i=0;i<n;i++)cols.push([]);
-  it.forEach(function(item,idx){cols[idx%n].push(cardHtml(item))});
+  it.slice(0,first).forEach(function(item,idx){cols[idx%n].push(cardHtml(item))});
   feed.innerHTML=cols.map(function(c){return '<div class="col">'+c.join("")+"</div>"}).join("");
-  Array.prototype.forEach.call(feed.querySelectorAll("[data-fav-id]"),function(btn){
-    btn.addEventListener("click",function(ev){toggleFav(ev,btn.getAttribute("data-fav-id"))});
-  });
+  bindFav(feed);
+  if(it.length>first){
+    requestAnimationFrame(function(){
+      it.slice(first).forEach(function(item,idx){
+        const col=feed.children[(first+idx)%n];
+        if(col)col.insertAdjacentHTML("beforeend",cardHtml(item));
+      });
+      bindFav(feed);
+    });
+  }
 }
 var _cols=0;
 window.addEventListener("resize",function(){
