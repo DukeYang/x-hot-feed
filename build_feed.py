@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
-"""build_feed.py [new_items.json | --sync-only]
-合并新条目、同步收藏 Issue、应用 30 天老化规则、生成 RSS/首页/归档页，然后 git push。
+"""build_feed.py [new_items.json | --sync-only | --brief CAT FILE | --briefs-dir DIR]
+合并新条目或每日简报、同步收藏 Issue、应用 30 天老化规则、生成 RSS/首页/归档页/简报页，然后 git push。
+
+简报入库：
+  python3 build_feed.py --brief ai /path/to/2026-11-10.md
+  python3 build_feed.py --briefs-dir /path/to/briefs   # 其下 ai|auto|robot/YYYY-MM-DD.md
+CAT 只能是 ai、auto、robot。同一天同一分类已存在则跳过。
 """
 import sys, json, os, html, subprocess, datetime, email.utils, re, urllib.request, urllib.error, shutil, pathlib
 
@@ -14,6 +19,226 @@ CAT = {"auto": "汽车", "ai": "AI", "robot": "机器人"}
 OWNER = "DukeYang"
 AGE_DAYS = 30
 RSS_LIMIT = 100
+
+
+BRIEF_CAT = {"ai": "AI", "auto": "汽车", "robot": "机器人"}
+BRIEF_TITLE = {"ai": "AI 每日简报", "auto": "汽车每日简报", "robot": "机器人每日简报"}
+# 北京时间，贴近三份简报的惯常生成时刻
+BRIEF_CLOCK = {"robot": (7, 45), "ai": (7, 52), "auto": (8, 0)}
+SHANGHAI = datetime.timezone(datetime.timedelta(hours=8))
+
+def is_brief(i):
+    return i.get("kind") == "brief"
+
+def item_link(i):
+    if i.get("url"):
+        return i["url"]
+    if is_brief(i):
+        key = i.get("brief_key") or {v: k for k, v in BRIEF_CAT.items()}.get(i.get("category"), "ai")
+        date = i.get("brief_date") or ""
+        return f"{BASE}/briefs/{key}/{date}.html"
+    return f"https://x.com/{i['user']}/status/{i['id']}"
+
+def inline_md(s):
+    codes, links = [], []
+    def code_ph(m):
+        codes.append(m.group(1))
+        return f"\x00C{len(codes)-1}\x00"
+    s = re.sub(r"`([^`]+)`", code_ph, s)
+    def link_ph(m):
+        links.append((m.group(1), m.group(2)))
+        return f"\x00L{len(links)-1}\x00"
+    s = re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)", link_ph, s)
+    s = html.escape(s)
+    s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
+    def bare(m):
+        u = m.group(0).rstrip(").,，。；;")
+        return f'<a href="{u}" target="_blank" rel="noopener">{u}</a>'
+    s = re.sub(r"https?://[^\s<]+", bare, s)
+    for i, (label, url) in enumerate(links):
+        s = s.replace(f"\x00L{i}\x00", f'<a href="{html.escape(url)}" target="_blank" rel="noopener">{html.escape(label)}</a>')
+    for i, c in enumerate(codes):
+        s = s.replace(f"\x00C{i}\x00", f"<code>{html.escape(c)}</code>")
+    return s
+
+def md_to_html(md):
+    lines = (md or "").replace("\r\n", "\n").strip().split("\n")
+    out, buf, items, mode = [], [], [], None
+    def flush():
+        nonlocal mode, buf, items
+        if mode == "ul" and items:
+            out.append("<ul>" + "".join(f"<li>{inline_md(x)}</li>" for x in items) + "</ul>")
+        elif mode == "ol" and items:
+            out.append("<ol>" + "".join(f"<li>{inline_md(x)}</li>" for x in items) + "</ol>")
+        elif buf:
+            if len(buf) == 1 and re.match(r"^\*\*.+\*\*\s*$", buf[0].strip()):
+                out.append(f"<h2>{inline_md(buf[0].strip())}</h2>")
+            else:
+                out.append("<p>" + "<br>\n".join(inline_md(x) for x in buf) + "</p>")
+        mode, buf, items = None, [], []
+    for ln in lines:
+        if not ln.strip():
+            flush()
+            continue
+        um = re.match(r"^[-*]\s+(.*)$", ln)
+        om = re.match(r"^(\d+)\.\s+(.*)$", ln)
+        if um:
+            if mode != "ul":
+                flush()
+                mode = "ul"
+            items.append(um.group(1))
+        elif om:
+            if mode != "ol":
+                flush()
+                mode = "ol"
+            items.append(om.group(2))
+        else:
+            if mode in ("ul", "ol"):
+                flush()
+            mode = "p"
+            buf.append(ln)
+    flush()
+    return "\n".join(out)
+
+def extract_summary(md):
+    text = (md or "").strip()
+    paras = [p.strip() for p in re.split(r"\n\s*\n", text) if p.strip()]
+    for para in paras:
+        plain = re.sub(r"\s+", " ", re.sub(r"\*\*", "", para)).strip()
+        if re.match(r"^(AI|汽车|机器人)?每日简报\s*·\s*20\d{2}-\d{2}-\d{2}$", plain):
+            continue
+        plain = re.sub(r"^(?:今日主线|今天的主线)[：:]\s*", "", plain)
+        if plain:
+            return plain[:180] + ("…" if len(plain) > 180 else "")
+    return ""
+
+def brief_created_at(cat_key, date_s):
+    y, m, d = [int(x) for x in date_s.split("-")]
+    hh, mm = BRIEF_CLOCK.get(cat_key, (8, 0))
+    dt = datetime.datetime(y, m, d, hh, mm, 0, tzinfo=SHANGHAI)
+    return dt.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+
+def make_brief_item(cat_key, path, date_s=None):
+    cat_key = cat_key.lower()
+    if cat_key not in BRIEF_CAT:
+        raise ValueError(f"unknown brief category: {cat_key}")
+    path = str(path)
+    if not date_s:
+        m = re.search(r"(20\d{2}-\d{2}-\d{2})", pathlib.Path(path).name)
+        if not m:
+            raise ValueError(f"cannot parse date from {path}")
+        date_s = m.group(1)
+    text = open(path, encoding="utf-8").read().strip()
+    if not text:
+        raise ValueError(f"empty brief: {path}")
+    title = f"{BRIEF_TITLE[cat_key]} · {date_s}"
+    url = f"{BASE}/briefs/{cat_key}/{date_s}.html"
+    return {
+        "id": f"brief-{cat_key}-{date_s}",
+        "kind": "brief",
+        "user": "每日简报",
+        "name": "每日简报",
+        "category": BRIEF_CAT[cat_key],
+        "title": title,
+        "summary": extract_summary(text),
+        "text": text,
+        "created_at": brief_created_at(cat_key, date_s),
+        "metrics": {},
+        "media": [],
+        "url": url,
+        "brief_date": date_s,
+        "brief_key": cat_key,
+    }
+
+def collect_briefs_from_dir(root):
+    root = pathlib.Path(root)
+    items = []
+    for key in ("ai", "auto", "robot"):
+        d = root / key
+        if not d.is_dir():
+            continue
+        for fp in sorted(d.glob("20??-??-??.md")):
+            items.append(make_brief_item(key, fp, fp.stem))
+    return items
+
+def sort_items(items):
+    items.sort(key=lambda i: i.get("created_at") or i.get("added_at") or "", reverse=True)
+    return items
+
+def page_shell(title, body, extra_nav=""):
+    return f"""<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{html.escape(title)}</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header><div class="bar">
+<h1>{html.escape(title)}</h1>
+<div class="navlinks">
+<a href="../../index.html">首页</a>
+<a href="../index.html">每日简报</a>
+{extra_nav}
+</div>
+</div></header>
+{body}
+<footer>每日简报由机器大熊整理，供选题与素材使用</footer>
+</body></html>
+"""
+
+def write_brief_pages(items):
+    briefs = [i for i in items if is_brief(i)]
+    os.makedirs(f"{R}/briefs", exist_ok=True)
+    by_date = {}
+    for i in briefs:
+        key = i.get("brief_key")
+        date = i.get("brief_date")
+        if not key or not date:
+            continue
+        os.makedirs(f"{R}/briefs/{key}", exist_ok=True)
+        article = f'<div class="article-wrap"><p class="lead">{html.escape(i.get("category") or "")} · {html.escape(date)}</p><article class="article">{md_to_html(i.get("text") or "")}</article></div>'
+        # brief pages live at briefs/ai/DATE.html so css is ../../assets
+        open(f"{R}/briefs/{key}/{date}.html", "w").write(
+            page_shell(i.get("title") or "每日简报", article)
+        )
+        by_date.setdefault(date, []).append(i)
+    # index at briefs/index.html — css is ../assets, so write a slightly different shell
+    parts = []
+    for date in sorted(by_date.keys(), reverse=True):
+        parts.append(f"<h2>{html.escape(date)}</h2><ul>")
+        for i in sorted(by_date[date], key=lambda x: x.get("created_at") or ""):
+            rel = f"{i['brief_key']}/{i['brief_date']}.html"
+            sum_ = html.escape(i.get("summary") or "")
+            parts.append(f'<li><a href="{rel}"><strong>{html.escape(i.get("title") or "")}</strong><small>{sum_}</small></a></li>')
+        parts.append("</ul>")
+    if not parts:
+        parts.append('<p style="color:var(--sub);padding:40px 0;text-align:center">暂无简报</p>')
+    open(f"{R}/briefs/index.html", "w").write(f"""<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日简报</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header><div class="bar">
+<h1>每日简报</h1>
+<div class="navlinks">
+<a href="../index.html">首页</a>
+<a href="../archive/index.html">收藏归档</a>
+</div>
+</div></header>
+<div class="brief-index">
+<p class="lead" style="color:var(--sub);margin-bottom:8px">汽车、AI、机器人每日简报，按日期排列。</p>
+{''.join(parts)}
+</div>
+<footer>每日简报由机器大熊整理，供选题与素材使用</footer>
+</body></html>
+""")
+
 
 os.makedirs(f"{R}/data", exist_ok=True)
 os.makedirs(f"{R}/archive/img", exist_ok=True)
@@ -192,19 +417,24 @@ def rfc(s):
 
 def write_feed(name, title, its):
     x = [f'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>',
-         f"<title>{html.escape(title)}</title><link>{BASE}/</link><description>每 3 小时整理的 X（推特）汽车、AI、机器人热帖，中文概括。</description><language>zh-cn</language>",
+         f"<title>{html.escape(title)}</title><link>{BASE}/</link><description>X 热帖精选与汽车、AI、机器人每日简报。</description><language>zh-cn</language>",
          f'<atom:link href="{BASE}/{name}" rel="self" type="application/rss+xml"/><lastBuildDate>{email.utils.format_datetime(now_utc())}</lastBuildDate><ttl>180</ttl>']
     for i in its[:RSS_LIMIT]:
-        u = f"https://x.com/{i['user']}/status/{i['id']}"
-        m = i.get("metrics", {})
-        mt = " · ".join(f"{k} {v}" for k, v in (("赞", m.get("likes")), ("转", m.get("retweets")), ("浏览", m.get("views"))) if v is not None)
-        # RSS: prefer remote-looking URLs; local paths get absolute site URL
-        imgs = ""
-        for p in (i.get("media") or [])[:4]:
-            src = p if str(p).startswith("http") else f"{BASE}/{p}"
-            imgs += f'<p><img src="{html.escape(src)}"/></p>'
-        body = f"<p>{html.escape(i['summary'])}</p><p>@{html.escape(i['user'])}{(' · '+mt) if mt else ''}</p>{imgs}<blockquote>{html.escape(i.get('text',''))}</blockquote><p><a href=\"{u}\">查看原帖</a></p>"
-        x.append(f"<item><title>[{i['category']}] {html.escape(i['title'])}</title><link>{u}</link><guid isPermaLink=\"true\">{u}</guid><category>{i['category']}</category><author>@{html.escape(i['user'])}</author><pubDate>{rfc(i.get('created_at') or i['added_at'])}</pubDate><description><![CDATA[{body}]]></description></item>")
+        u = item_link(i)
+        if is_brief(i):
+            body = md_to_html(i.get("text") or "")
+            body = body.replace("]]>", "]]&gt;")
+            author = html.escape(i.get("name") or "每日简报")
+        else:
+            m = i.get("metrics", {})
+            mt = " · ".join(f"{k} {v}" for k, v in (("赞", m.get("likes")), ("转", m.get("retweets")), ("浏览", m.get("views"))) if v is not None)
+            imgs = ""
+            for pth in (i.get("media") or [])[:4]:
+                src = pth if str(pth).startswith("http") else f"{BASE}/{pth}"
+                imgs += f'<p><img src="{html.escape(src)}"/></p>'
+            body = f"<p>{html.escape(i['summary'])}</p><p>@{html.escape(i['user'])}{(' · '+mt) if mt else ''}</p>{imgs}<blockquote>{html.escape(i.get('text',''))}</blockquote><p><a href=\"{u}\">查看原帖</a></p>"
+            author = "@" + html.escape(i['user'])
+        x.append(f"<item><title>[{i['category']}] {html.escape(i['title'])}</title><link>{u}</link><guid isPermaLink=\"true\">{u}</guid><category>{i['category']}</category><author>{author}</author><pubDate>{rfc(i.get('created_at') or i['added_at'])}</pubDate><description><![CDATA[{body}]]></description></item>")
     x.append("</channel></rss>")
     open(f"{R}/{name}", "w").write("\n".join(x))
 
@@ -229,13 +459,18 @@ def card_static(i, img_prefix=""):
     if m.get("retweets") is not None: stats += f"<span>⇄ {fmt(m['retweets'])}</span>"
     if m.get("views") is not None: stats += f"<span>◉ {fmt(m['views'])}</span>"
     img_html = f'<img loading="lazy" src="{esc(img)}" alt="" onerror="this.remove()">' if img else ""
+    href = item_link(i)
+    who = "每日简报" if is_brief(i) else f'@{esc(i["user"])}'
+    mark = '<span class="brief-mark">简报</span>' if is_brief(i) else ""
+    fav_btn = "" if is_brief(i) else '<span class="fav-btn on" title="已收藏">★</span>'
+    fav_meta = "" if is_brief(i) else '<span title="已收藏">★</span>'
     return (
-        f'<a class="card" href="https://x.com/{esc(i["user"])}/status/{esc(i["id"])}" target="_blank" rel="noopener">'
-        f'<span class="fav-btn on" title="已收藏">★</span>'
-        f'{img_html}<div class="body"><div class="meta"><span class="tag t-{esc(i["category"])}">{esc(i["category"])}</span>'
-        f'<span>{when}</span><span title="已收藏">★</span></div>'
+        f'<a class="card" href="{esc(href)}" target="_blank" rel="noopener">'
+        f'{fav_btn}'
+        f'{img_html}<div class="body"><div class="meta"><span class="tag t-{esc(i["category"])}">{esc(i["category"])}</span>{mark}'
+        f'<span>{when}</span>{fav_meta}</div>'
         f'<h2>{esc(i["title"])}</h2><p>{esc(i["summary"])}</p>'
-        f'<div class="foot"><span class="who">@{esc(i["user"])}</span><span class="stats">{stats}</span></div></div></a>'
+        f'<div class="foot"><span class="who">{who}</span><span class="stats">{stats}</span></div></div></a>'
     )
 
 def write_archive_pages(items):
@@ -347,14 +582,15 @@ def write_archive_pages(items):
         for i in groups[k]:
             dt = parse_dt(i.get("created_at") or i.get("added_at"))
             day = dt.strftime("%m-%d") if dt else ""
-            link = f"https://x.com/{html.escape(i['user'])}/status/{html.escape(i['id'])}"
+            link = html.escape(item_link(i))
+            who = "每日简报" if is_brief(i) else f"@{html.escape(i.get('user') or '')}"
             parts.append(
                 f'<a class="text-row" href="{link}" target="_blank" rel="noopener">'
                 f'<div class="meta"><span class="tag t-{html.escape(i["category"])}">{html.escape(i["category"])}</span>'
                 f'<span>{day}</span></div>'
                 f'<h3>{html.escape(i.get("title") or "")}</h3>'
                 f'<div class="sum">{html.escape(i.get("summary") or "")}</div>'
-                f'<div class="who">@{html.escape(i.get("user") or "")} · 查看原帖</div></a>'
+                f'<div class="who">{who} · 查看原文</div></a>'
             )
     if not parts:
         parts.append('<p style="color:var(--sub);padding:40px 0;text-align:center">暂无更早内容</p>')
@@ -449,6 +685,8 @@ def merge_new(items, path):
     return new + items, len(new)
 
 def build_all(items):
+    sort_items(items)
+    write_brief_pages(items)
     write_feed("feed.xml", "X 热帖精选 · 汽车 / AI / 机器人", items)
     for k, c in CAT.items():
         write_feed(f"feed-{k}.xml", f"X 热帖精选 · {c}", [i for i in items if i["category"] == c])
@@ -464,11 +702,36 @@ def build_all(items):
     open(f"{R}/index.html", "w").write(html_out)
     open(f"{R}/.nojekyll", "w").close()
 
-def main():
-    args = sys.argv[1:]
+def parse_cli(argv):
+    args = list(argv)
     sync_only = "--sync-only" in args
     args = [a for a in args if a != "--sync-only"]
-    new_path = args[0] if args else None
+    brief_items = []
+    new_path = None
+    i = 0
+    while i < len(args):
+        a = args[i]
+        if a == "--brief":
+            if i + 2 >= len(args):
+                raise SystemExit("usage: --brief <ai|auto|robot> <file.md>")
+            brief_items.append(make_brief_item(args[i + 1], args[i + 2]))
+            i += 3
+        elif a == "--briefs-dir":
+            if i + 1 >= len(args):
+                raise SystemExit("usage: --briefs-dir <dir>")
+            brief_items.extend(collect_briefs_from_dir(args[i + 1]))
+            i += 2
+        elif a.startswith("-"):
+            raise SystemExit(f"unknown flag: {a}")
+        else:
+            if new_path:
+                raise SystemExit(f"unexpected extra argument: {a}")
+            new_path = a
+            i += 1
+    return sync_only, new_path, brief_items
+
+def main():
+    sync_only, new_path, brief_items = parse_cli(sys.argv[1:])
 
     items = load_items()
     # Keep forever — no 300 cap
@@ -482,14 +745,27 @@ def main():
     n_new = 0
     if not sync_only:
         items, n_new = merge_new(items, new_path)
+        if brief_items:
+            import tempfile
+            tmp = tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8")
+            json.dump(brief_items, tmp, ensure_ascii=False)
+            tmp.close()
+            items, n_brief = merge_new(items, tmp.name)
+            n_new += n_brief
+            os.unlink(tmp.name)
         # re-apply aging after merge
         apply_aging(items)
+        sort_items(items)
 
     save_items(items)
     build_all(items)
 
     now = now_utc().isoformat()
     msg = f"update {now[:16]} +{n_new} fav={len(applied)}"
+    if brief_items and n_new:
+        dates = sorted({i.get("brief_date") for i in brief_items if i.get("brief_date")})
+        span = f"{dates[0]}..{dates[-1]}" if len(dates) > 1 else (dates[0] if dates else "")
+        msg = f"briefs +{n_new} {span}".strip()
     if sync_only and applied:
         msg = f"fav-sync {now[:16]} {applied}"
     elif sync_only:

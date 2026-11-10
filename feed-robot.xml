@@ -1,7 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
-<title>X 热帖精选 · 机器人</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>每 3 小时整理的 X（推特）汽车、AI、机器人热帖，中文概括。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-robot.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Fri, 06 Nov 2026 10:20:14 +0000</lastBuildDate><ttl>180</ttl>
+<title>X 热帖精选 · 机器人</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>X 热帖精选与汽车、AI、机器人每日简报。</description><language>zh-cn</language>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-robot.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Tue, 10 Nov 2026 10:20:42 +0000</lastBuildDate><ttl>180</ttl>
+<item><title>[机器人] 机器人每日简报 · 2026-11-10</title><link>https://dukeyang.github.io/x-hot-feed/briefs/robot/2026-11-10.html</link><guid isPermaLink="true">https://dukeyang.github.io/x-hot-feed/briefs/robot/2026-11-10.html</guid><category>机器人</category><author>每日简报</author><pubDate>Mon, 09 Nov 2026 23:45:00 +0000</pubDate><description><![CDATA[<h2><strong>机器人每日简报 · 2026-11-10</strong></h2>
+<p>上一期之后的主线，是“怎么证明机器人真的在干活”。波士顿动力给 Atlas 换上滑板车轮子，不是为了出一款轮式产品，而是把执行器推到极限；英伟达在机器人学习顶会上放出 GR00T 2，强调从人类视频迁移到灵巧操作。国内这边，智元、启元、优必选集中拿出上岗数字、下线速度和渠道目标，上纬新材却同步提示：消费机器人收入占比仍然很低。</p>
+<p><strong>1. 波士顿动力给 Atlas 换上滑板车轮子：不是新产品，是拿执行器做极限测试</strong><br>
+11 月 9 日（美国时间），波士顿动力在官网和 YouTube 发布《Atlas On a Roll》。控制工程师 Xiaoyu（Andy）Wu 写道：技术人员只用一个定制转接件，把现成的滑板车轮圈装到 Atlas 原有的踝关节执行器上，软件里把每个轮子建模成可以连续旋转的“脚踝”。团队没有另写一套控制器，只对已有全身强化学习策略的奖励权重、指令范围和姿态约束做了针对性调整，平滑滚动就自己出现了；一段 360 度跳跃来自人体动作捕捉，真机第一次就成功。Wu 明确说：“带轮子的 Atlas 不是产品，是研究试验台。”换轮子是为了让电机在持续承受整机重量的同时，长时间跑在高扭矩、高转速区间——走路往往只是短脉冲，起步、转向和急停才会把执行器推到极限。公司称仿真到真机的迁移“基本完美”，相关经验已经回到标准双足 Atlas，面向现代汽车工厂部署；下一步课题是执行器失效时策略如何应对。公开材料未给出轮上持续运行时长或具体扭矩数据。<br>
+选题角度：看起来像在玩漂移，实际在回答工厂最关心的问题——执行器在极限工况下稳不稳、坏了怎么办。<br>
+来源：<a href="https://bostondynamics.com/blog/atlas-on-a-roll/" target="_blank" rel="noopener">波士顿动力官网博客</a>｜<a href="https://www.humanoidsdaily.com/news/boston-dynamics-atlas-wheels-rl-actuator-test" target="_blank" rel="noopener">Humanoids Daily</a>｜<a href="https://www.theverge.com/tech/1029779/boston-dynamics-atlas-robot-balance-wheels" target="_blank" rel="noopener">The Verge</a></p>
+<p><strong>2. 英伟达在 CoRL 发布 GR00T 2：5 条示范平均成功率称达 95%，富士康用于服务器产线</strong><br>
+11 月 9 日，英伟达在奥斯汀举行的机器人学习会议（CoRL）上发布开放的世界动作模型 GR00T 2，并同步推出仿真框架 Isaac Lab 3.0。官方博客称，模型基于 Cosmos，训练数据包含机器人与人类数据，其中包括 10 万小时英伟达开源的第一人称人类视频；在 50 项评测任务中，有 40 项至少零样本成功一次；每个任务只需 1 条示范时平均成功率 71%，5 条示范时升至 95%。技能可从人类示范迁移到不同机器人本体。合作方方面，富士康正把 GR00T 2 用于服务器制造的工厂自动化，西门子在评估工业用例，Nexuni 在测试洗衣任务。Isaac Lab 3.0 与开源物理引擎 Newton 更紧结合后，官方称在一项视觉灵巧操作基准上，训练吞吐比上一版搭配 PhysX 最高提升约 2.5 倍。<br>
+选题角度：机器人大模型的胜负手，正在从“会不会看懂指令”，变成“看人做一遍，能不能换一只手、换一个身体接着干”。<br>
+来源：<a href="https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/" target="_blank" rel="noopener">英伟达官方博客</a>｜<a href="https://www.therobotreport.com/nvidia-launches-gr00t-2-isaac-lab-3-0-corl/" target="_blank" rel="noopener">The Robot Report</a></p>
+<p><strong>3. 亚马逊重组家庭机器人团队：Astro 没走出内测，现在要做“全新机器人产品”</strong><br>
+CNBC 11 月 8 日（美东时间）根据招聘信息报道，亚马逊已组建新的家庭机器人团队，并招聘“new-to-world robot product”（全新品类机器人产品）相关岗位。一则后来被撤下的工程师招聘启事写道，产品要能在“动态家庭环境”中导航，并“与家人一起自主运行”。背景是：2021 年发布、定价 1450 美元的家用机器人 Astro 始终停留在邀请制内测，只送到数千名用户手中；面向企业的版本 2023 年推出后不到一年就停掉。今年 3 月，亚马逊收购纽约公司 Fauna Robotics，其 3.5 英尺高的 Sprout 人形机器人并入新成立的 Personal Robotics Group；原 Astro 团队不少人被重新调配，部分成员来自做过 Kindle、Echo 的 Lab126。10 月的招聘还提到现场维修，以及“定义和 Fauna 机器人一起生活是什么感觉”。亚马逊发言人 Brad Glasser 对 CNBC 表示，收购 Fauna 是因为公司“致力于解决能打开个人机器人品类的那些难题”，同时承认实验室能力与客厅、大堂之间仍有明显差距。形态、能做什么、价格和上市时间均未公布。<br>
+选题角度：仓库里已经有上百万台机器人的亚马逊，为什么第二次走进家庭仍然这么谨慎？<br>
+来源：<a href="https://www.cnbc.com/2026/11/08/amazon-home-robot-fauna-sprout.html" target="_blank" rel="noopener">CNBC</a></p>
+<p><strong>4. 优必选联手中国电信子公司：三年内推动超仿生和轮式人形“行业规模”突破十万台</strong><br>
+11 月 9 日，中国电信全资子公司天翼电信终端与优必选签署全面战略合作协议。IT之家援引协议表述称，未来三年双方将共同推动家庭陪伴机器人终端行业规模突破百万台，推动超仿生人形机器人、轮式人形机器人等终端行业规模突破十万台；合作覆盖规模化推广、联合创新、商业模式、应用场景和产业生态，并揭牌“天翼电信终端-优必选机器人联合创新实验室”。天翼电信终端副总经理桂烜提到的落地抓手包括：机器人品类的统筹集采与营销推广，以及租赁服务、“AI 权益 + 终端”、营业厅创新体验等试点，场景上先打磨家庭陪伴和商业服务。实验室方向包括场景挖掘、产品定制、应用验证和标准制定，并计划把机器人的语音、视觉、情感计算等能力，与电信云网、大模型、安全和 eSIM 等能力双向封装。需要读准措辞：这是双方力争推动的行业/销售规模目标，不是已经签署的 10 万台采购订单，也未披露分成、包销数量和交付时间表。<br>
+选题角度：运营商出渠道、出营业厅、出租赁之后，人形机器人缺的还是产品，还是一套普通用户敢买、坏了有人修的服务？<br>
+来源：<a href="https://www.ithome.com/1/024/340.htm" target="_blank" rel="noopener">IT之家</a>｜<a href="https://www.nbd.com.cn/articles/2026-11-09/4642341.html" target="_blank" rel="noopener">每日经济新闻</a></p>
+<p><strong>5. 智元进博会发布会：用“有效智能工时”重新定义价值，并给出长隆、产线和医院数字</strong><br>
+11 月 8 日，智元在进博会新闻中心举行专场发布会，公共事务总经理姚荪对外介绍“Worken 有效智能工时”：由活跃设备规模、自主工作时长、产出效能比综合核算，并剔除待机、调试和人工接管，用来衡量“上岗之后干了多少活”。这一概念智元在 10 月底的创新日已提出，此次是面向进博会再推成产业标尺。发布会同时给出一组落地数字：珠海长隆近 500 台智元机器人常态化在岗，覆盖七大核心场景；精灵 G2 在龙旗工业产线 6 天完成 64828 次作业，作业成功率达 99.99%。现场还首发两个部署场景：灵犀 X2 在北京大学人民医院提供导诊咨询和路线指引；世界人工智能大会“镇馆之宝”远征 A3 Ultra 进入高端酒店，承担迎宾、咨询和物品递送，进博会临港展区复刻了智慧酒店全流程。公司还称业务已覆盖全球数十个国家和地区。上述工时、成功率和在岗台数均为企业在发布会上披露，公开报道未说明人工介入次数、统计口径和第三方验收结果。<br>
+选题角度：智元把尺子从“出货多少台”拧向“干了多少有效工时”，接下来要看这把尺子有没有可复核的算法和现场记录。<br>
+来源：<a href="http://www.ce.cn/cysc/newmain/yc/jsxw/202611/t20261109_3288358.shtml" target="_blank" rel="noopener">中国经济网</a></p>
+<p><strong>6. 启元第 10000 台个人机器人下线，上纬新材却提示：收入占比仍低、股价存在过热风险</strong><br>
+11 月 8 日，上纬新材（688585.SH）旗下启元机器人（对外也称 PrimeBOT）第 10000 台个人机器人下线。10 月 25 日刚到 5000 台，第二批 5000 台只用了 14 天；联席总裁刘东方称整机工厂 10 月正式量产，日产能已到 240 台。Q1、T1 两款产品 9 月 20 日起售，基础款均为 19999 元，10 月 1 日起在上海、深圳、杭州等城市交付；编号 10000 的 Q1 当场交给财经作家吴晓波。蓝思科技参与共研和代工。公司给出的使用数据是：月活超过 98%、日均在线率峰值超过 40%、日均在线 3 小时、人均每天交互 100 多次。这些是企业口径，未说明统计样本、周期，以及“在线”和“交互”如何定义；下线台数也不等于已售出或已交付台数。11 月 9 日晚，上纬新材公告：最近 18 个交易日累计涨幅超过 100%，11 月 9 日以 216.02 元涨停、市值约 871 亿元，最新市盈率 1767.36 倍，远高于化工行业近一个月平均约 19.57 倍，公司提示短期过热风险。公告强调消费级具身智能机器人业务仍处早期，相关收入占总营收比例较低，尚不能预测对 2026 年业绩的影响；并提示需求、订单转化、产能爬坡、良率和供应链等不确定性。2026 年前三季度公司营收 12.09 亿元、同比下降 5.51%，归母净利润亏损 4.22 亿元；传统新材料主业仍盈利约 6352 万元，但整体研发费用 3.84 亿元，其中机器人业务研发就达 3.60 亿元。<br>
+选题角度：14 天再造 5000 台，证明的是工厂爬坡；上市公司自己出来喊“收入占比低”，才是消费级人形现在的财务底色。<br>
+来源：<a href="https://www.humanoidsdaily.com/news/primebot-10000th-personal-robot-production" target="_blank" rel="noopener">Humanoids Daily</a>｜<a href="https://feng.ifeng.com/c/8xukUx6Uxin" target="_blank" rel="noopener">南都·湾财社（凤凰转载）</a>｜<a href="https://www.nbd.com.cn/articles/2026-11-09/4643017.html" target="_blank" rel="noopener">每日经济新闻（上纬公告）</a></p>
+<p><strong>7. 拓斯达发布全尺寸工业双足 Star：172 厘米、双臂负载 10 公斤，量产时间未公布</strong><br>
+11 月 7 日，A 股公司拓斯达在东莞“TOPS DAY 2026”全球开放日发布全尺寸工业双足人形机器人 Star。公开参数为：身高 172 厘米、重 72 公斤，双臂负载 10 公斤，配备 7 轴仿人手臂和十字轴手腕，面向工厂物料搬运、分拣等作业，并在运行中采集物理场景数据。这是公司在已有轮式产品和今年 1 月四足机器人“星仔”之后，补齐的双足形态。同一场合，子公司埃弗米发布面向关节、臂杆、壳体等复杂曲面的五轴加工机床 S400；公司还披露 2026 年前三季度营收 19.69 亿元、同比增长 16.68%，归母净利润 1.46 亿元、同比增长 196.38%，人形机器人相关零部件加工签单约 390 台、同比增长约 35.89%。报道称其具身智能工作站已商业交付，AI 柔性分拣工作站进入多家头部企业车间，核心客户包括华为、富士康、华勤、歌尔等。Star 本身的量产时间、售价和首批整机客户名单尚未披露。<br>
+选题角度：做注塑机和加工机床的公司下场做人形整机，卖点是自己手里本就有工厂场景，还是先把零部件订单做实？<br>
+来源：<a href="https://www.cs.com.cn/ssgs/01/2026/11/09/detail_2026110910050789.html" target="_blank" rel="noopener">中国证券报·中证网</a>｜<a href="https://www.gasgoo.com/robot/news/70477379-%E6%8B%93%E6%96%AF%E8%BE%BE%E5%8F%91%E5%B8%83%E5%B7%A5%E4%B8%9A%E5%8F%8C%E8%B6%B3%E4%BA%BA%E5%BD%A2%E6%9C%BA%E5%99%A8%E4%BA%BAstar/" target="_blank" rel="noopener">盖世汽车</a></p>
+<p><strong>8. 重庆摩西智能发布“塞伯坦 003”：首批订单来自电控电驱产线</strong><br>
+11 月 9 日，中新网重庆报道，两江新区企业摩西智能在上海举行的第一届中国工业视觉人工智能大会上，发布第三代工业场景高精度具身机器人“塞伯坦 003”，并称已实现真实产线交付，首批订单来自电控电驱产线；首批量产订单来自半导体和汽车行业。公开参数：身高 175 厘米、重 150 公斤，双 7 自由度机械臂，单臂负载 7 公斤，全关节力控，可选配触觉手，防护等级 IP54，重复精度 ±0.1 毫米；自带算力平台和自研 VLA 模型，支持语音控制和数字孪生，平板拖拽编排、无需写代码。优先场景是分拣、齐套、视觉检测、打螺丝拧紧和涂胶。文中另外提到的装配成功率 ≥99.8%、单件节拍 28 秒、一次通过率 99.2%，出自摩西智能的“AI 精密装配解决方案”举例，不能直接写成这款人形机器人的现场成绩。公司在两江新区的生产基地占地 110 亩，预计 2027 年投产，一期规划年产能 5000 台。订单金额、交付台数和具体客户名称未披露。<br>
+选题角度：地方“专精特新”厂商不讲跳舞，直接把验收标准写成节拍、良率和可复制的产线方案。<br>
+来源：<a href="https://www.cq.chinanews.com.cn/fgs/2026/1109/16-15296.html" target="_blank" rel="noopener">中新网重庆</a></p>
+<h2><strong>X 上的动态</strong></h2>
+<ul><li><strong>一条家政机器人视频在 X 上爆了：Tau Robotics 的 Sergey 能打扫旧金山的家，但背后是人在远程开。</strong> 11 月 9 日上午（北京时间），@sciencegirl 写道：“Sergey is a robot from Tau Robotics that will do the housework so you don’t have to.” 并配上清洁视频，随后约 988 赞、17 万次曝光、153 次转发。值得关注的不是“机器人已经会做家务”，而是商业模式：MIT Technology Review 记者 11 月 6 日亲测后写道，机器人仍主要由总部人员通过头部和手腕相机遥操作；部分任务（铺床、叠衣服）需要把人的动作映射到机器上，吸尘和拖地据创始人 Cornelia Weinzierl 称已能无人辅助。现价是两台机器人每周订阅 60 美元，或一次性上门 100 美元；公司用每次上门采集的数据训练更自主的后续机型，目前只完成了大约两三百次清洁。视频很好看，条款里写明了“不是全自主”。</li></ul>
+<p><a href="https://x.com/sciencegirl/status/2119565913011929222" target="_blank" rel="noopener">https://x.com/sciencegirl/status/2119565913011929222</a></p>
+<ul><li><strong>蚂蚁灵波（Robbyant）开源触觉基础模型 LingBot-Touch。</strong> 11 月 10 日凌晨（北京时间）官方账号 @robbyant_brain 宣布：模型在近 5000 小时真实触觉数据上预训练，目标是让机器人“能感觉，而不只是看见”，权重和代码开源，Hugging Face 上已提供 Tiny 和 Small 两个尺寸。官方后续帖称，评测覆盖 26 项真机任务、Sharpa Wave 与 XHand 两款灵巧手，以及 LingBot-VLA、π0.5、Diffusion Policy、T-Rex 四种动作模型。转述论文的账号指出：在 XHand1 上，π0.5 无触觉成功率 49.71%，输入原始触觉信号为 48.00%，换成 LingBot-Touch 的 token 后到 74.17%；八组“灵巧手 × 策略”组合里，该模型的平均成功率都最高。值得关注：原信号几乎帮不上忙、编码后的触觉 token 才能拉高成功率，说明“装了触觉传感器”和“模型会用触觉”不是一回事。这是官方与论文口径，独立复现结果尚未看到。</li></ul>
+<p><a href="https://x.com/robbyant_brain/status/2119870554056651004" target="_blank" rel="noopener">https://x.com/robbyant_brain/status/2119870554056651004</a></p>
+<ul><li><strong>英伟达研究员 Yuke Zhu 亲自拆解 GR00T 2：他最兴奋的不是分数，是“人做一遍、机器人没练过也能跟上”。</strong> 11 月 10 日凌晨他发长帖，把 GR00T 2 称作新一代世界动作模型（WAM）：先想象物理世界接下来会怎样，再生成相应动作，同一套模型可跑平行夹爪、灵巧手和人形。他写道，自己最看重的能力是 X-Adapt——技能只由人用手或可穿戴设备演示，就能迁移到从未练习过这些动作的机器人上；数据则呈金字塔：超过 40 万小时第一人称人类视频、1 万小时 UMI 示范、2.35 万小时机器人遥操作。他还说模型代码计划 12 月放出，并已在 Hugging Face 开源 10 万小时人类视频数据和采集硬件设计。值得关注：这和上面的新闻条目侧重点不同——新闻看的是官方成功率和富士康工厂测试，这条帖子看的是“人类视频如何变成机器人技能”。</li></ul>
+<p><a href="https://x.com/yukez/status/2119880324075377094" target="_blank" rel="noopener">https://x.com/yukez/status/2119880324075377094</a></p>
+<h2><strong>推荐选题</strong></h2>
+<ol><li>《给 Atlas 装上滑板车轮子：波士顿动力到底在测电机，还是在试一条更像工厂的路？》</li><li>《14 天再下线 5000 台，股价却被自家公告泼冷水：消费级人形的量产和赚钱不是一回事》</li><li>《运营商要推十万台人形机器人：渠道来了，家庭和营业厅真的准备好了吗？》</li></ol>]]></description></item>
+<item><title>[机器人] 机器人每日简报 · 2026-11-08</title><link>https://dukeyang.github.io/x-hot-feed/briefs/robot/2026-11-08.html</link><guid isPermaLink="true">https://dukeyang.github.io/x-hot-feed/briefs/robot/2026-11-08.html</guid><category>机器人</category><author>每日简报</author><pubDate>Sat, 07 Nov 2026 23:45:00 +0000</pubDate><description><![CDATA[<h2><strong>机器人每日简报 · 2026-11-08</strong></h2>
+<p>周末的焦点不再是谁更会跳舞，而是谁能把机器人送进真实产线、撑过一个完整班次。汽车零部件巨头安波福把“年底前百台级部署”写进了进博会签约；智元便利店挑战则补上了另一面——6 台里有 2 台没通过考核。供应链这边，Atlas 的电池规格和专为人形关节设计的连接器也开始露出细节。</p>
+<p><strong>1. 它石智航与安波福进博会签约：年底前部署百台级工业具身机器人</strong><br>
+11 月 6 日，它石智航与安波福在第九届进博会签约，相关报道于 11 月 7 日刊出。协议称，安波福将在今年年底前完成百台级它石 A 系列工业具身智能机器人规模部署，覆盖 8 大生产工艺、33 类应用场景，包括柔性组装、检测协同、生产管理等；首批机器人已在安波福智能工厂的真实产线投入应用。同时，面向工业具身智能的算力底座计划于 2026 年内量产。双方此前已在上海嘉定合作推进“千台级工业具身机器人集群”，首期落地安波福生产基地；此次签约被描述为从适配产线工艺，走向更系统的规模化部署。进博会安波福展位还展示了由它石通用具身大模型 AWE 驱动的 A3 机器人，演示“取料—连接器装配—投料”循环。公开稿未披露已上岗台数、节拍、人工介入次数和具体工厂地点。<br>
+选题角度：汽车零部件厂自己当“考场”，百台部署比展台连招更接近采购语言。<br>
+来源：<a href="https://finance.sina.com.cn/tob/2026-11-07/doc-inixwhsk8404468.shtml" target="_blank" rel="noopener">新浪科技</a>｜<a href="https://finance.sina.com.cn/roll/2026-11-07/doc-inixwnyk5140010.shtml" target="_blank" rel="noopener">环球网（新浪转载）</a></p>
+<p><strong>2. 【进展】智元便利店 24 小时考核：6 台完成 1730 项任务，2 台未通过</strong><br>
+此前：2026-11-05 补发已报道 6 台精灵 G2 在上海徐汇营业中便利店连续直播 24 小时，完成 1730 项任务（接待 683 次、送货 369 次、做咖啡 147 杯等），并提示官方未说明人工介入次数。<br>
+这次新增：Interesting Engineering 11 月 7 日援引考核结果称，4 台通过最终评估，负责清洁和货架巡检补货的 2 台未达标，被放入观察改进组。据其转述 IT之家：清洁机器人遇到堵住路线的满垃圾桶后偏离路径、离开店铺且未回到岗位；补货机器人则跟不上商品售出后的主动识别与补货节奏。活动还设置了刻意加难项，例如区分普通与无糖可口可乐、把被挪乱的口香糖摆回原位、用人和纸箱堵住过道。挑战时段覆盖午餐高峰、晚高峰、通宵和次日早餐，全网观看超 200 万人。这说明“任务总数好看”和“每个岗位都过关”不是一回事。<br>
+选题角度：看进店演示，别只盯完成了多少单，更要看哪类任务挂了、挂在什么意外上。<br>
+来源：<a href="https://interestingengineering.com/ai-robotics/six-agibot-humanoid-robots-complete" target="_blank" rel="noopener">Interesting Engineering</a></p>
+<p><strong>3. 韩媒：Atlas 电池包将采用 70 颗三星 SDI 2170 电芯，容量约 1.3 度电</strong><br>
+韩国媒体 The Elec 援引 11 月 6 日行业消息称，现代汽车已确定波士顿动力 Atlas 的电池规格，三星 SDI 与 LG 新能源入选供应商，初期绝大多数供货预计由三星 SDI 承担。报道称每台 Atlas 使用 70 颗圆柱 2170 电芯（直径 21 毫米、高 70 毫米），单芯容量 5000mAh，组成约 1.3kWh 的电池包，大约相当于 Ioniq 5 长续航版 84kWh 电池的 1.6%。文中提到人形机器人常见作业时长约 2–4 小时，并称 Atlas 量产时间表仍指向 2028 年或更晚。这是行业消息而非三星或波士顿动力的官方规格书；电芯容量也不等于一个班次能连续干多久，还取决于负载、动作和机载算力。波士顿动力此前已介绍 Atlas 可自行前往充电位并更换电池。<br>
+选题角度：工厂要的不是“能走两小时”，而是换电、充电和备包能不能撑住一个班次。<br>
+来源：<a href="https://www.thelec.net/news/articleView.html?idxno=15385" target="_blank" rel="noopener">The Elec</a>｜<a href="https://www.humanoidsdaily.com/news/samsung-sdi-atlas-battery-70-cells-1-3-kwh" target="_blank" rel="noopener">Humanoids Daily 整理</a></p>
+<p><strong>4. 德国 NEURA 联合 E.ON、enviaM：做人形机器人电网巡检，2027 年试运行</strong><br>
+NEURA Robotics 11 月 5 日宣布与欧洲能源公司 E.ON 及东德公用事业集团 enviaM 合作，为电网运维开发 Physical AI，覆盖设备巡检、变电站等关键资产监测，以及辅助高危、重体力或重复性工作。技能将先在慕尼黑机场 LabCampus 的 TUM RoboGym（面积超过 2300 平方米）训练，结合人员示范、真机数据和仿真，再由 enviaM 旗下电网公司 MITNETZ STROM 放到真实电网环境测试，预计 2027 年获得初步现场经验。合作方提到，电网设施按人的尺度建造，未来希望 NEURA 的 4NE1 等机型无需改造现场即可进出。公告未披露试点台数、具体场站和商业化时间表。<br>
+选题角度：欧洲为什么先让人形去巡电网，而不是先去仓库——因为楼梯、柜门和原有工具改起来更贵。<br>
+来源：<a href="https://neura-robotics.com/physical-ai-energy-infrastructure-eon-enviam/" target="_blank" rel="noopener">NEURA 官方公告</a>｜<a href="https://www.humanoidsdaily.com/news/neura-eon-enviam-grid-robotics-2027" target="_blank" rel="noopener">Humanoids Daily</a></p>
+<p><strong>5. 六部门发文：加快具身智能、外骨骼等技术进入养老场景</strong><br>
+民政部、国家发展改革委、工业和信息化部、商务部、市场监管总局、全国老龄办 11 月 4 日印发《关于培育多元场景 促进适老用品产品消费的若干措施》，11 月 6 日公开报道。文件提出，以国家重大科技项目为牵引，加快推进具身智能、大语言模型、脑机接口、外骨骼等前沿技术在养老领域应用，研发升级失能照护、康复护理、精神陪护等智能设备；并鼓励二便护理、康复支持、生活照料等智能养老服务机器人加快落地，提供生活协助、安全防护、健康监测和应急救助。文件同时推广“以租代售”“租售结合”，降低适老家居、康复辅具和智慧养老设备的使用门槛。这是场景方向和使用方式，不是整机采购订单或出货目标。<br>
+选题角度：政策把养老写成应用出口之后，真正的产品门槛是安全和长期陪护，不是会不会鞠躬问好。<br>
+来源：<a href="https://www.news.cn/politics/20261106/d5f604ecae1f4886aa53f166d65c453d/c.html" target="_blank" rel="noopener">新华网（文件全文）</a>｜<a href="https://www.nbd.com.cn/articles/2026-11-06/4640560.html" target="_blank" rel="noopener">每日经济新闻</a></p>
+<p><strong>6. 北京人形发布 Hi-WBC 全身控制模型：从“跟着做动作”转向“搬得动、走得稳”</strong><br>
+北京人形机器人创新中心 11 月 2 日在「慧思开物」平台发布 Hi-WBC 通用全身控制模型，官方通稿 11 月 7 日对外发布。模型把人体动作参考当作“运动先验”，再结合负载、外力和地形约束调整执行方式，而不是逐帧复现示范动作。技术路径包括：用 MoE 与策略蒸馏持续扩展技能；用接触感知学习估计外力并保持平衡；用地形感知控制调整落脚和步态。通稿称，天工机器人凭借该技术在机器人运动会“综合五项”包揽金银，并成为场景赛中唯一获得金牌的双足人形；应用演示则是会议室长程整理，包括移椅、搬白板、提垃圾袋和下蹲拾物。公开材料以能力说明和演示为主，未给出统一的真机成功率和部署规模。<br>
+选题角度：全身控制如果只能跳舞，采到的数据也很难教机器人干活。<br>
+来源：<a href="https://www.prnasia.com/story/555228-1.shtml" target="_blank" rel="noopener">美通社通稿</a></p>
+<p><strong>7. Molex 推出 MiniMix 混合连接器：专攻人形关节里“线塞不进去”的量产瓶颈</strong><br>
+Molex 11 月 8 日发布 MiniMix 混合电源与信号连接器，面向人形机器人、AMR 和工业自动化的紧凑关节与执行器。产品把最高 15.0A 电源和 1Gbps 的 1000BASE-T1 以太网做进同一个接口，走线剖面 5.65 毫米，称可比现有方案节省最多约 50% 的布线空间，从而让预制成线束穿过手腕、肘、膝、踝等狭窄通道，减少现场手工穿线和焊接。公司引用麦肯锡 2026 年供应链分析称，关节执行器系统约占人形机器人物料清单的 40%–60%，并提到下一代机型可能拥有约 50 个关节执行器。样品和评估组件现已提供，完整商业量产计划在 2026 年底。这是零部件发布，不代表已有整机厂宣布导入。<br>
+选题角度：人形要量产，卡点不一定在模型，也可能在关节里那一把塞不进去的线。<br>
+来源：<a href="https://www.pandct.com/news/molex-introduces-mini-mix-hybrid-power-and-signal-connectors-to-accelerate-humanoid-robotics-mass-production-scaling/" target="_blank" rel="noopener">Process and Control Today（Molex 新闻稿）</a></p>
+<p><strong>8. 投资者探访宇树杭州工厂：执行器产线仍以人工绕线为主</strong><br>
+美国硬件投资者 Josef Chen 11 月 4 日参观宇树杭州工厂，11 月 5 日发表笔记，11 月 7 日被 Humanoids Daily 等详细转述。他写道：执行器厂房里只有“一两条”新自动化产线，其余仍是人工操作传统绕线设备；整机装配在招股书中也被写为“目前仍以人工为主”。他引用宇树文件称，截至 2025 年底全部机器设备账面价值约 170 万美元，当年生产近 3.2 万台机器人，相当于每台机器设备投入约 50 美元；2025 年直接人工（含外包装配）约占营业成本 8.1%，材料约占 81.7%。2025 年前三季度，宇树人形收入约四分之三来自科研与教育，来自工厂等工业场景的不足 5%。作者认为，产品年年改、人工又相对便宜，所以中国整机厂眼下更愿意用手装，而美国更高的人工成本和部件本地化要求，会让“造机器人的机器”更值钱。需注意：这是个人参访笔记，作者披露自己投资了多家美国自动化和人形公司。<br>
+选题角度：会自己装电机的演示视频很震撼，但招股书和厂房里的绕线工人，才是当前产能的底色。<br>
+来源：<a href="https://josef.cn/blog/unitree" target="_blank" rel="noopener">Josef Chen 原文</a>｜<a href="https://www.humanoidsdaily.com/news/unitree-hangzhou-factory-manual-assembly-josef-chen" target="_blank" rel="noopener">Humanoids Daily</a></p>
+<h2><strong>X 上的动态</strong></h2>
+<ul><li><strong>Figure 创始人 Brett Adcock 再发总部 Figure 03 视频。</strong> 11 月 7 日他只配了一句 “F.03 humanoid robots”，又放出一段园区巡拍，互动很高（发帖后约 3200 赞、21 万次曝光）。和前一天那条“One day the entire world will look like this”不同，这条是新素材；画面里机器人大多在草坪、大厅和充电垫附近走动或站立，员工端着咖啡从旁边经过。值得关注：能把几十台机器人放到日常空间里，说明本体稳定性和产能都过了某一道关，但“站得满”还不等于“在给客户干活”。</li></ul>
+<p><a href="https://x.com/adcock_brett/status/2119127304265949511" target="_blank" rel="noopener">https://x.com/adcock_brett/status/2119127304265949511</a></p>
+<ul><li><strong>Adcock 评论特斯拉造车优势：先造一堆没智能的机器人，只是在“制造尸体”。</strong> 11 月 7 日他回复讨论时写道：“Intelligence will pick the winner. Manufacturing cars gives you almost no benefit / Making a lot of robots before intelligence, is just making dead bodies.” 值得关注：这是对“整车厂最会造机器人”叙事的直接反驳，也和他自己总部放满机器人的视频形成对照——他强调的胜负手是智能，不是先把产量铺上去。</li></ul>
+<p><a href="https://x.com/adcock_brett/status/2119164388607406248" target="_blank" rel="noopener">https://x.com/adcock_brett/status/2119164388607406248</a></p>
+<ul><li><strong>东京观察账号长文：日本不是没有机器人传统，而是丢掉了“杀手级应用”。</strong> 11 月 7 日 @anshuman1tiwari 回顾：早稻田实验室的幻灯片写明，2011 年东日本大地震后日本人形机器人势头下降，ASIMO 未能承担福岛救灾任务，Honda 和软银后来分别停掉 ASIMO 与 Pepper；如今日本 2026 年 3 月的 AI 机器人战略，把目标放到 2040 年占据全球市场 20 万亿日元。值得关注：这不是新产品发布，而是一个对照视角——养老需求最强的国家，为什么没先跑出消费级人形。</li></ul>
+<p><a href="https://x.com/anshuman1tiwari/status/2118935830853296445" target="_blank" rel="noopener">https://x.com/anshuman1tiwari/status/2118935830853296445</a></p>
+<ul><li><strong>一条科普帖把“机器人为何要跟人一样高”讲清楚了。</strong> 11 月 7 日 @CRYPTIC_X0 写道：门、楼梯、货架、开关都是按成人身体建的，机器人复制人类身高是为了适配已有建筑，而不是为了看起来像人。帖中对比了 Digit、Optimus、Figure 03、1X NEO、Atlas 和宇树 G1 的身高体重定位。值得关注：这类解释很适合做短视频开头，提醒观众人形路线卖的是“不用改建现场”。</li></ul>
+<p><a href="https://x.com/CRYPTIC_X0/status/2119032084836630903" target="_blank" rel="noopener">https://x.com/CRYPTIC_X0/status/2119032084836630903</a></p>
+<h2><strong>推荐选题</strong></h2>
+<ol><li>《百台进安波福产线，两台便利店挂科：人形机器人的“上岗”到底看什么？》</li><li>《70 颗电芯、1.3 度电：Atlas 的续航账，工厂一个班次撑得住吗？》</li><li>《宇树工厂还在人工绕线：造机器人的机器，为什么还没到来？》</li></ol>]]></description></item>
+<item><title>[机器人] 机器人每日简报 · 2026-11-07</title><link>https://dukeyang.github.io/x-hot-feed/briefs/robot/2026-11-07.html</link><guid isPermaLink="true">https://dukeyang.github.io/x-hot-feed/briefs/robot/2026-11-07.html</guid><category>机器人</category><author>每日简报</author><pubDate>Fri, 06 Nov 2026 23:45:00 +0000</pubDate><description><![CDATA[<p><strong>今日主线：</strong> 人形机器人的叙事从“会不会想”转向“站得稳、做得准、能不能租出去”。欧洲出现不装腿也能进厂的协作机型，国内公司把全身控制当“小脑”开源预告；美股这边，Agility 挂牌第二天就考验投资者耐心，马斯克则把 Optimus 说成更可能先租后卖。</p>
+<p><strong>1. 【进展】Agility（AGLT）第二交易日收跌约 14%，收于 9.86 美元</strong><br>
+此前：2026-11-05 / 11-06 存档已报道合并完成、11 月 5 日挂牌、约 4.65 亿美元融资、Digit 累计作业超 6.5 万小时，以及 Digit 5 超 3 亿美元附条件多年订单。<br>
+这次新增：据 StockAnalysis 行情，11 月 6 日开盘 11.24 美元，盘中低见 8.80，收盘 9.86 美元，较前收跌约 14.34%，成交约 539 万股；11 月 5 日收盘为 11.51 美元。公司同日还推送了联合创始人 Jonathan Hurst 谈平衡机器人如何安全走出围栏、参与标准制定的访谈。股价波动不改其“有真实部署的美股人形标的”身份，但上市后两天的走势会成为后续估值讨论的对照。<br>
+选题角度：有订单、有工时的“第一股”，开板后怎么定价才算合理？<br>
+来源：<a href="https://stockanalysis.com/stocks/aglt/history/" target="_blank" rel="noopener">StockAnalysis 行情</a>｜<a href="https://x.com/agilityrobotics/status/2118749029404492143" target="_blank" rel="noopener">Agility GeekWire 访谈帖</a></p>
+<p><strong>2. 马斯克：Optimus 初期更可能“租”而不是“卖”，造机成本约 3 万美元起</strong><br>
+11 月 6 日，马斯克在第 33 届 Baron 投资年会上被问到 Optimus 是租还是卖时回答“I think probably rent them”。他同时表示造一台初期成本和一辆车差不多，并认同约 3 万美元、长期可降到约 2 万美元的造机成本区间。报道同时提到：对外交付仍指向约 2027 年底；租用价格、条款、面向哪类客户均未公布。另有转述称其日后也可能“可租可买”，目前以会议上的“probably rent”为准。<br>
+选题角度：不卖硬件只租劳动力，特斯拉想锁住的到底是现金流，还是现场数据？<br>
+来源：<a href="https://www.notateslaapp.com/news/4959/musk-tesla-will-rent-optimus-robots-instead-of-selling-them" target="_blank" rel="noopener">Not a Tesla App</a></p>
+<p><strong>3. 瑞士 Embodied AI 发布轮式双臂机 AIR：不装护栏、先遥操再自学</strong><br>
+11 月 6 日，从 EPFL 分拆、约 25 人的 Embodied AI 在慕尼黑 Humanoid Europe 发布 AIR：轮式底盘加躯干与双臂，重件放躯干、轻量柔顺臂用腱驱，宣称可与产线工人共线、无需安全笼。部署路径是首班由远程操作员干活，约一个月内用班次数据切到自主；公司称付费试点平均任务成功率约 95%，客户包括未具名的消费电子与汽车/工业技术供应商。计划 2027 年做 CE 认证以对接欧盟新机械法规；价格、载荷、交付时间未公布。<br>
+选题角度：欧洲工厂为什么宁可先要“能共线的轮式上半身”，也不急着上双足人形？<br>
+来源：<a href="https://www.humanoidsdaily.com/news/embodied-ai-air-wheeled-humanoid-factory-humanoid-europe" target="_blank" rel="noopener">Humanoids Daily</a></p>
+<p><strong>4. 源策未来发布全身控制模型 Anchor 1：遥操作采数效率显著抬升</strong><br>
+具身智能公司源策未来（Archon Robotics）公开全身控制模型 Anchor 1（论文 arXiv:2611.00193，项目页标注 10 月 30 日发布，中文媒体 11 月 6 日集中报道）。系统只用骨盆、左右手腕、左右脚踝五个稀疏目标，在宇树 G1 真机上，72 段全身操作动作的手腕/脚踝全局位置误差较此前最好对比方法约低 28%/39%；踢纸箱遥操作采数成功率从 37.5% 提到 98.0%，每小时成功示范从 9 条增到 43 条。公司称计划 2026 年底分阶段开放权重与部署代码。需注意：目前主要在单一本体上评测，动作跟得准不等于抓稳物体。<br>
+选题角度：大模型再聪明，如果“小脑”跟不准，采到的示范数据是不是都在教坏上层？<br>
+来源：<a href="https://www.archon.tech/research/anchor1" target="_blank" rel="noopener">项目页</a>｜<a href="https://arxiv.org/abs/2611.00193" target="_blank" rel="noopener">arXiv 论文</a>｜<a href="https://finance.sina.cn/tech/2026-11-06/detail-inixucth5595454.d.html" target="_blank" rel="noopener">机器之心报道</a></p>
+<p><strong>5. 迪拜开出阿联酋首家人形机器人展厅，对标 2032 年 20 万台机器人</strong><br>
+11 月 6 日，Lootah Robotics 在谢赫扎耶德路靠近迪拜国际金融中心处开出阿联酋首家专用人形机器人展厅，开业日陈列 28 台，现场有演示与儿童互动，直播观看超 4,000 人。展厅售价区间约 5 万–300 万迪拉姆，也可租赁。背景是迪拜机器人与自动化计划：到 2032 年部署 20 万台机器人、机器人贡献 GDP 约 9%。文中还援引 IDC：2026 上半年全球人形出货同比增约 432%，近 2.5 万台、营收超 7.4 亿美元——数字来自二手转述，宜对照 IDC 原文。<br>
+选题角度：中东买的是“科技名片”，还是真的在为油田、工地和酒店备货？<br>
+来源：<a href="https://www.thenationalnews.com/news/uae/2026/11/06/uae-opens-its-first-humanoid-robotics-showroom-as-dubai-races-to-200000-robots/" target="_blank" rel="noopener">The National</a></p>
+<p><strong>6. 智元发布灵犀 X2 焕新版：服务场景向导览、零售、商演加码</strong><br>
+11 月 6 日，智元发布灵犀 X2 焕新版：本体 31 自由度（头 2、臂 14、腰 3、腿 12），选配灵巧手可达 47 自由度；膝关节峰值扭矩 120Nm，电池约 500Wh，支持 UWB、Wi-Fi、4G/5G、蓝牙、GPS 等。定位展馆文旅、导览导购、服务零售、文娱商演，以及科研教育与数据采集。公开稿未披露价格、产能和已部署数量。<br>
+选题角度：同一家公司既做工厂演示又推服务机型，产品线是在找场景，还是在找现金流？<br>
+来源：<a href="https://www.ithome.com/1/023/497.htm" target="_blank" rel="noopener">IT之家</a></p>
+<p><strong>7. 韩国 T-ROBOTICS 参与约 77 亿韩元项目，做人形热插拔换电</strong><br>
+11 月 6 日公司称，将作为联合研发机构参与韩国产业通商资源部主导、总经费约 77.04 亿韩元的政府项目（KEIT 专项机构），研发人形机器人长时间连续运行所需的电池与电源管理技术，周期至 2030 年 3 月。核心是热插拔：不断电更换电池，目标让人形机器人约 5 分钟内自行换电。项目还引入汽车电池企业，计划把成果延伸到 AMR/AGV；公司另在与国内显示企业、KAIST 等做人形进产线的现场测试。<br>
+选题角度：换电比快充更重要？工厂人形的“续航问题”其实是班次利用率问题。<br>
+来源：<a href="https://en.fnnews.com/news/202611061529172596" target="_blank" rel="noopener">Financial News</a></p>
+<p><strong>8. 新华社联合优必选发布仿生人形新闻主播，强调“辅助而非独立写稿”</strong><br>
+11 月 5 日在北京世界媒体峰会相关论坛上，新华社发布其与优必选联合研制的仿生人形新闻主播（一男一女），新华社称拥有完整产权；女主播“新颜”登台播报。内容接入新华社智能体“新华御点”，优必选负责仿生皮肤、操作系统与情感大模型等。官方明确：机器人做信息呈现、多语种与实时互动等辅助工作，不独立撰写新闻，记者编辑仍是采编主体。形象总设计邀张艺谋参与。<br>
+选题角度：仿生主播是媒体技术秀，还是人形在“强交互、弱操作”场景的真实切口？<br>
+来源：<a href="http://www.beijing.xinhua.org/20261106/6c9c72e030a14fd39f2df241a679c82d/c.html" target="_blank" rel="noopener">新华网</a>｜<a href="https://interestingengineering.com/ai-robotics/chinese-media-world-first-bionic-humanoid-anchor" target="_blank" rel="noopener">Interesting Engineering</a></p>
+<h2><strong>X 上的动态</strong></h2>
+<ul><li><strong>Hugging Face CEO Clement Delangue：开源对机器人 AI 至关重要。</strong> 11 月 6 日长帖给出一组平台数据：公开机器人数据集近 10 万（半年约 +48%）、公开机器人模型超 3 万（约 +41%）；开源本体 Microduck、Reachy mini 称有望成为 2026 最畅销机器人（年销展望 5 万+、已发货 2 万+）；LeRobot 下载超 100 万次并发布 v0.7.0。值得关注：把“黑盒整机”对标成“可复用的开源底座”，是和闭源大脑路线的直接对照。</li></ul>
+<p><a href="https://x.com/ClementDelangue/status/2118751330927780154" target="_blank" rel="noopener">https://x.com/ClementDelangue/status/2118751330927780154</a></p>
+<ul><li><strong>Agility 官方：Jonathan Hurst 谈如何让平衡机器人安全走出围栏。</strong> 11 月 6 日推送 GeekWire 访谈，焦点是安全标准与协作部署，而不是新订单数字。值得关注：上市后的沟通重心，开始从“敲钟”转向“能不能合法地跟人共线”。</li></ul>
+<p><a href="https://x.com/agilityrobotics/status/2118749029404492143" target="_blank" rel="noopener">https://x.com/agilityrobotics/status/2118749029404492143</a></p>
+<ul><li><strong>Figure 创始人 Brett Adcock 发未来城市机器人愿景视频。</strong> 11 月 6 日帖文“One day the entire world will look like this”，附约 86 秒视频，互动很高（约 1,000+ 赞、5 万+ 曝光）。值得关注：不是产品规格公告，而是资本与舆论场仍在用强视觉叙事争夺“未来默认画面”；引用时需与可验证订单、工时分开看。</li></ul>
+<p><a href="https://x.com/adcock_brett/status/2118830039710285953" target="_blank" rel="noopener">https://x.com/adcock_brett/status/2118830039710285953</a></p>
+<ul><li><strong>市场账号拆解 AGLT：美股第一个纯人形标的的关键数字。</strong> 11 月 6 日帖汇总约 25 亿美元估值、4.65 亿美元融资、3 亿美元+ Digit 5 多年订单、6.5 万+ 真实工时等。值得关注：和当日股价回撤放在一起，适合做“叙事 vs 报价”对照素材；具体财务仍以交易所文件为准。</li></ul>
+<p><a href="https://x.com/WallStreetB0Ts/status/2118728355209941191" target="_blank" rel="noopener">https://x.com/WallStreetB0Ts/status/2118728355209941191</a></p>
+<h2><strong>推荐选题</strong></h2>
+<ol><li>《先租后卖：马斯克把 Optimus 说成订阅，Tutor 和 Agility 谁更像未来的卖法？》</li><li>《不装腿也能进厂：瑞士 AIR 的柔顺臂，是不是欧洲工厂的现实答案？》</li><li>《大脑再强也怕小脑抖：Anchor 1 把采数成功率从 37% 拉到 98%，说明了什么？》</li></ol>
+<p>——<br>
+去重说明：已对照 2026-11-05.md、2026-11-06.md。剔除已发过且无新进展的条目（Apple HALO、MUSE、KIMM 数据工厂、普渡欧洲峰会、王兴兴 GPT-6 画画下棋、Tutor 融资确认、智元便利店 24 小时、杭州中试基地等）。Agility 仅保留第二交易日行情与安全访谈增量。Cosmos/大模型基建、车企智驾类内容不写入本篇。</p>]]></description></item>
 <item><title>[机器人] 新华社启用优必选人形主播</title><link>https://x.com/CyberRobooo/status/2118588755187781980</link><guid isPermaLink="true">https://x.com/CyberRobooo/status/2118588755187781980</guid><category>机器人</category><author>@CyberRobooo</author><pubDate>Fri, 06 Nov 2026 06:18:15 +0000</pubDate><description><![CDATA[<p>CyberRobo称新华社启用优必选UWORLD U1仿生人形机器人担任新闻主播主持报道，认为数字人开始有实体身体并可走下屏幕互动。</p><p>@CyberRobooo · 赞 12 · 转 1 · 浏览 738</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118585674748334080/img/WuRiXg03P0cx6EFs.jpg"/></p><blockquote>Future still got here too fast.
 
 Xinhua News just hired two biomimetic humanoid news anchors from UBTECH’s UWORLD U1. They’ll host the reports.
@@ -11,13 +147,6 @@ Chinese media has used AI digital hosts for years --daily news, short-video anch
 Now those digital people have bodies...Personality and memory can be loaded in, they can step off the screen and talk to people.
 
 Well, I suppose we’ll have to get used to humanoid robots serving as news anchors and even hosting forum events...</blockquote><p><a href="https://x.com/CyberRobooo/status/2118588755187781980">查看原帖</a></p>]]></description></item>
-<item><title>[机器人] 苹果HALO纯仿真训Unitree G1</title><link>https://x.com/CyberRobooo/status/2118507428534989056</link><guid isPermaLink="true">https://x.com/CyberRobooo/status/2118507428534989056</guid><category>机器人</category><author>@CyberRobooo</author><pubDate>Fri, 06 Nov 2026 00:55:05 +0000</pubDate><description><![CDATA[<p>CyberRobo称苹果发布机器人大脑HALO：仅用约300小时、1000个程序生成家居的纯仿真数据、零遥操作训练；Unitree G1进入从未见过的真实住宅，单任务试验成功率约91%，算力板载运行。</p><p>@CyberRobooo · 赞 34 · 转 7 · 浏览 2194</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118507290198462464/img/U-nYKB33oGF0dt99.jpg"/></p><blockquote>wow,…Apple just locked in another piece of the physical AI / humanoid puzzle
-
-They put out a robot brain--HALO (Humanoid Autonomy, Learned in simulation, running Onboard).Pure sim data, ~300 hours across 1,000 procedurally generated homes, zero teleop. Unitree G1 then walks into six real homes it’s never seen, no map, and does the basics on command: sit, go to an object, side-step a half-open door, crouch, crawl, push a box…
-
-360 single-task trials, 91% success. Whole stack onboard (Mac mini M4 Pro for the VLM side, Jetson for the tracker).
-
-Looks like they’re quietly mapping the path into actual living rooms. Still early on chained tasks and contact, but the data path is compute, not human hours.</blockquote><p><a href="https://x.com/CyberRobooo/status/2118507428534989056">查看原帖</a></p>]]></description></item>
 <item><title>[机器人] 英伟达上线SimReady仿真资产库</title><link>https://x.com/CyberRobooo/status/2118535167631638981</link><guid isPermaLink="true">https://x.com/CyberRobooo/status/2118535167631638981</guid><category>机器人</category><author>@CyberRobooo</author><pubDate>Fri, 06 Nov 2026 02:45:19 +0000</pubDate><description><![CDATA[<p>CyberRobo称英伟达推出SimReady Central，提供3500余个开放OpenUSD资产（含FANUC/UR机械臂、Robotiq夹爪等），并强调经真实硬件校准的碰撞、质量、摩擦与关节限位物理质检。</p><p>@CyberRobooo · 赞 15 · 转 6 · 浏览 738</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118530281665933312/img/S6B5cn8ayUsPe2jK.jpg"/></p><blockquote>This is huge.
 
 NVIDIA just launched SimReady Central: 3,500+ open OpenUSD assets, from FANUC and UR arms to Robotiq grippers and LG appliances.  Most of them trace back to one team,@LightwheelAI .
@@ -29,6 +158,13 @@ Lightwheel also packages assets with explicit profiles, validation requirements 
 That’s the harder work: making assets reliable and reusable across simulation engines, instead of forcing every robot team to rebuild and revalidate them.
 
 If this scales, teams can spend less time preparing simulations and more time training and testing robots.</blockquote><p><a href="https://x.com/CyberRobooo/status/2118535167631638981">查看原帖</a></p>]]></description></item>
+<item><title>[机器人] 苹果HALO纯仿真训Unitree G1</title><link>https://x.com/CyberRobooo/status/2118507428534989056</link><guid isPermaLink="true">https://x.com/CyberRobooo/status/2118507428534989056</guid><category>机器人</category><author>@CyberRobooo</author><pubDate>Fri, 06 Nov 2026 00:55:05 +0000</pubDate><description><![CDATA[<p>CyberRobo称苹果发布机器人大脑HALO：仅用约300小时、1000个程序生成家居的纯仿真数据、零遥操作训练；Unitree G1进入从未见过的真实住宅，单任务试验成功率约91%，算力板载运行。</p><p>@CyberRobooo · 赞 34 · 转 7 · 浏览 2194</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118507290198462464/img/U-nYKB33oGF0dt99.jpg"/></p><blockquote>wow,…Apple just locked in another piece of the physical AI / humanoid puzzle
+
+They put out a robot brain--HALO (Humanoid Autonomy, Learned in simulation, running Onboard).Pure sim data, ~300 hours across 1,000 procedurally generated homes, zero teleop. Unitree G1 then walks into six real homes it’s never seen, no map, and does the basics on command: sit, go to an object, side-step a half-open door, crouch, crawl, push a box…
+
+360 single-task trials, 91% success. Whole stack onboard (Mac mini M4 Pro for the VLM side, Jetson for the tracker).
+
+Looks like they’re quietly mapping the path into actual living rooms. Still early on chained tasks and contact, but the data path is compute, not human hours.</blockquote><p><a href="https://x.com/CyberRobooo/status/2118507428534989056">查看原帖</a></p>]]></description></item>
 <item><title>[机器人] Agility高管：要能干活别只会炫技</title><link>https://x.com/MTSlive/status/2118500482473939078</link><guid isPermaLink="true">https://x.com/MTSlive/status/2118500482473939078</guid><category>机器人</category><author>@MTSlive</author><pubDate>Fri, 06 Nov 2026 00:27:29 +0000</pubDate><description><![CDATA[<p>MTS引述Agility Robotics首席商务官Daniel Diez：没人会为后空翻或武术表演机器人买单，人形机器人须在工业场景中足够强壮、可靠地多班次工作，并通过安全认证与IT集成。</p><p>@MTSlive · 赞 10 · 转 0 · 浏览 2781</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118500361157959681/img/Osj6kIxzXZYBTe9q.jpg"/></p><blockquote>&quot;No one&#x27;s paying for a back-flipping robot or a robot performing martial arts.&quot;
 
 Agility Robotics CBO Daniel Diez argues humanoid companies need to prove their robots can do useful work, not just produce impressive demos:
@@ -39,6 +175,45 @@ Agility Robotics CBO Daniel Diez argues humanoid companies need to prove their r
 
 &quot;What is their safety strategy, how do they plan to scale their technology, and what useful work are they able to do, and what ROI are they delivering to the customers?&quot;
 @agilityrobotics</blockquote><p><a href="https://x.com/MTSlive/status/2118500482473939078">查看原帖</a></p>]]></description></item>
+<item><title>[机器人] 机器人每日简报 · 2026-11-06</title><link>https://dukeyang.github.io/x-hot-feed/briefs/robot/2026-11-06.html</link><guid isPermaLink="true">https://dukeyang.github.io/x-hot-feed/briefs/robot/2026-11-06.html</guid><category>机器人</category><author>每日简报</author><pubDate>Thu, 05 Nov 2026 23:45:00 +0000</pubDate><description><![CDATA[<p><strong>今日主线：</strong> 机器人“大脑”有两条相反但互补的路线：用仿真放大数据，或建真机数据工厂。商业化端，零售多任务平台继续拿钱，资本市场则开始要求人形机器人兑现先前的上市和交付承诺。</p>
+<p><strong>1. Apple HALO：约 300 小时合成数据，陌生真实环境单任务成功率 91%</strong><br>
+11 月 4 日公开的论文提出 HALO，在 1,000 个程序生成的室内环境构造视觉—语言—动作数据；部署到改装宇树 G1，在 6 个未建图真实环境进行 360 次单任务测试，平均成功率 91%。三组组合任务平均为 70%，且仅在一个真实环境测试。系统运行在机载 Mac mini 与 Jetson 上；这不是“家务通才”，技能扩充仍需人设计任务和关键帧。<br>
+选题角度：单任务 91% 与连续任务 70% 的落差，正是家庭机器人的现实门槛。<br>
+来源：<a href="https://arxiv.org/abs/2611.06908" target="_blank" rel="noopener">原始论文</a>｜<a href="https://www.humanoidsdaily.com/news/apple-halo-humanoid-synthetic-data-unitree-g1" target="_blank" rel="noopener">技术细节核读</a></p>
+<p><strong>2. 【进展】Agility 宣布 11 月 5 日以 AGLT 开始纳斯达克交易</strong><br>
+此前：2026-11-05 存档已报道合并完成、预计 11 月 5 日挂牌，以及收入和融资数据。新增：官方 11 月 5 日发布“Today, Agility begins trading”，确认进入挂牌日。此条只更新上市里程碑，不重复融资金额，也不将旧交易估值写成当天实际市值；本次未核验首日收盘价。<br>
+选题角度：从路演到上市后披露，人形机器人企业接下来必须交哪些可验证的经营答卷？<br>
+来源：<a href="https://x.com/agilityrobotics/status/2118313713396793615" target="_blank" rel="noopener">Agility 官方原帖</a></p>
+<p><strong>3. MUSE 融资 17.5 亿日元，用于 Armo 量产和美国扩张</strong><br>
+11 月 5 日公司公告：从企业、VC 与金融机构共 15 家获得总计 17.5 亿日元融资，新领投方为 ALPHA，东芝泰格、乐天资本等参与。Armo 同一台机器人可支援补货搬运、缺货检测、促销及导购；资金将用于外部制造合作、美国导入与维护体系、AI 和软件升级。公告未披露商业部署总量和当前产能。<br>
+选题角度：不追求“像人”，靠提高一台机器每天的利用率，能否先跑通账？<br>
+来源：<a href="https://www.muse-gr.com/post/pressrelease_20261105" target="_blank" rel="noopener">MUSE 原始公告</a></p>
+<p><strong>4. 韩国 KIMM 开设人形数据工厂，当前由人遥操作 12 台机器人采数</strong><br>
+KIMM 11 月 4 日公告：与 ETRI 建设的数据工厂于 11 月 3 日揭幕，目前运行 12 台人形机器人，记录手臂、腿部及全身任务数据；示范包括取冰箱物品、处理衣物，以及操作车内按钮和控制杆。计划从 2027 年末起逐步向韩国产学研开放。现阶段“数据工厂”不是 12 台机器人完全自主干活。<br>
+选题角度：仿真路线之外，为什么国家级机构仍要投入真机遥操作数据产线？<br>
+来源：<a href="https://www.kimm.re.kr/eng/sub011001/view/id/1605" target="_blank" rel="noopener">KIMM 原始公告</a></p>
+<p><strong>5. 普渡在欧洲集中展示 6 条产品线，共用 AI 底座而非共用身体</strong><br>
+11 月 4 日阿姆斯特丹伙伴峰会，普渡首次在欧洲同场展示 6 条产品线，提出“One Brain, Multiple Embodiments”，以 PuduFM 与 PuduAgent OS 复用感知、导航和交互。现场包括 D7 轮式半人形及工业搬运产品；MP2000 标称载重 2,000 公斤。不同本体的机械结构与运动控制仍需分别适配，降低开发成本的效果尚待验证。<br>
+选题角度：机器人平台化的关键是哪些能力可复用，哪些绝不能一套模型包打天下？<br>
+来源：<a href="https://www.rockingrobots.nl/pudu-presenteert-in-amsterdam-strategie-voor-robots-met-gedeelde-ai-technologie/" target="_blank" rel="noopener">现场原报道</a>｜<a href="https://www.pudurobotics.com/en/news/pudu-robotics-european-partner-summit-2026" target="_blank" rel="noopener">普渡官方页面</a></p>
+<p><strong>6. 王兴兴：接入 GPT-6 的宇树机器人可实时推理画画、下棋</strong><br>
+《南华早报》11 月 5 日现场报道，王兴兴在进博会称，机器人可由前沿模型引导执行换洗笔水、调色等动作，不依赖针对这些任务的预先训练。这里的“零训练”是任务层面表述，不代表模型或运动控制从未训练；目前看到的是负责人说法，未公布统一成功率、延迟和人工介入数据。<br>
+选题角度：大模型能规划“下一步”之后，最后一毫米的机械执行为何仍是瓶颈？<br>
+来源：<a href="https://www.scmp.com/tech/tech-trends/article/3373423/powered-gpt-6-unitree-humanoid-robots-master-painting-chess-without-training-says-ceo" target="_blank" rel="noopener">南华早报原报道</a></p>
+<h2><strong>X 上的动态</strong></h2>
+<ul><li><strong>Boston Dynamics：移动机器人可增强工业和商业园区安保巡逻。</strong> 官方 11 月 5 日强调安保人员流动、疲劳和园区面积带来的压力，主张把例行巡逻自动化。值得关注：非人形机器人的明确任务边界和利用率，仍是商业落地的重要对照；帖子不是新订单公告。</li></ul>
+<p><a href="https://x.com/BostonDynamics/status/2118379824708239688" target="_blank" rel="noopener">https://x.com/BostonDynamics/status/2118379824708239688</a></p>
+<ul><li><strong>新华社：展示智元 A3 完成跳箱。</strong> 11 月 5 日发布动作视频，没有在帖中给出跳箱高度或重复成功率。值得关注：动态运动和落地稳定性可作为本体控制观察窗口，但不能由一次视频推导工厂可用性。</li></ul>
+<p><a href="https://x.com/XHNews/status/2118230548208636343" target="_blank" rel="noopener">https://x.com/XHNews/status/2118230548208636343</a></p>
+<ul><li><strong>新华社：进博会第一视角挑战乒乓球机器人。</strong> 11 月 5 日以三分对抗展示自主机器人。值得关注：快速来球响应有助观察感知—决策—执行闭环；该帖未给出标准化延迟或胜率，不能外推人形通用操作能力。</li></ul>
+<p><a href="https://x.com/XHNews/status/2118178368009154726" target="_blank" rel="noopener">https://x.com/XHNews/status/2118178368009154726</a></p>
+<h2><strong>推荐选题</strong></h2>
+<ol><li>仿真与真机数据：《苹果造 1,000 个虚拟房间，韩国开 12 台真机：机器人学干活的两条路》</li><li>能力边界：《单项 91%，连做只剩 70%：家庭机器人离“好用”还有多远？》</li><li>商业化路线：《拿到 17.5 亿日元，MUSE 为什么不做人形机器人？》</li></ol>
+<p>——<br>
+去重说明：已检索近 30 天目录，历史只有 2026-11-05.md（含补发），已全文比对。小米 8 小时工厂班、智元便利店、Tutor 融资、KAPEX、ETRI 模型等无实质新增项剔除；Agility 仅更新挂牌里程碑。Cosmos 模型放 AI 篇，车企 AI 研发放汽车篇。普渡官方页标注 11 月 6 日，峰会发生日期依据 11 月 5 日现场报道，未将旧活动伪装为今天举行。</p>]]></description></item>
+<item><title>[机器人] Agility CEO亮相彭博电视访谈</title><link>https://x.com/agilityrobotics/status/2118464143212908601</link><guid isPermaLink="true">https://x.com/agilityrobotics/status/2118464143212908601</guid><category>机器人</category><author>@agilityrobotics</author><pubDate>Thu, 05 Nov 2026 22:03:05 +0000</pubDate><description><![CDATA[<p>Agility Robotics发帖称CEO Peggy Johnson当天早间上Bloomberg TV接受访谈，并附上节目链接。</p><p>@agilityrobotics · 赞 40 · 转 5 · 浏览 1796</p><p><img src="https://pbs.twimg.com/media/HWZL1ZpbsAEZdts.jpg"/></p><blockquote>Watch Agility CEO Peggy Johnson on @BloombergTV  this morning with @timsteno. 🤖 
+
+📺: https://t.co/IlhijHHMN9</blockquote><p><a href="https://x.com/agilityrobotics/status/2118464143212908601">查看原帖</a></p>]]></description></item>
 <item><title>[机器人] Apple HALO驱动Unitree G1室内导航</title><link>https://x.com/humanoidsdaily/status/2118438883721420830</link><guid isPermaLink="true">https://x.com/humanoidsdaily/status/2118438883721420830</guid><category>机器人</category><author>@humanoidsdaily</author><pubDate>Thu, 05 Nov 2026 20:22:43 +0000</pubDate><description><![CDATA[<p>Humanoids daily称苹果研究员发布HALO，使Unitree G1在未见过的房间内按指令找椅坐下、下蹲钻桌、过半开房门等；机背Mac mini本地推理，约300小时仿真数据、零遥操作，360次真实试验成功率91%。</p><p>@humanoidsdaily · 赞 35 · 转 3 · 浏览 1489</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118438689231519744/img/I4jI_sYE9_waiMXA.jpg"/></p><blockquote>Apple is building humanoid robot brains.
 
 Apple researchers have published HALO, a system that lets a Unitree G1 humanoid move around rooms it has never seen before. Tell it to “go sit on the chair” and it finds the chair, walks over and sits down. It can also crouch or crawl under tables, step through half-open doors and push boxes.
@@ -50,9 +225,6 @@ Most of the training data came from simulation: about 300 hours of humanlike mov
 The robot succeeded in 91% of 360 real-world trials across six skills.
 
 All eight authors work at Apple, and the code is on GitHub.</blockquote><p><a href="https://x.com/humanoidsdaily/status/2118438883721420830">查看原帖</a></p>]]></description></item>
-<item><title>[机器人] Agility CEO亮相彭博电视访谈</title><link>https://x.com/agilityrobotics/status/2118464143212908601</link><guid isPermaLink="true">https://x.com/agilityrobotics/status/2118464143212908601</guid><category>机器人</category><author>@agilityrobotics</author><pubDate>Thu, 05 Nov 2026 22:03:05 +0000</pubDate><description><![CDATA[<p>Agility Robotics发帖称CEO Peggy Johnson当天早间上Bloomberg TV接受访谈，并附上节目链接。</p><p>@agilityrobotics · 赞 40 · 转 5 · 浏览 1796</p><p><img src="https://pbs.twimg.com/media/HWZL1ZpbsAEZdts.jpg"/></p><blockquote>Watch Agility CEO Peggy Johnson on @BloombergTV  this morning with @timsteno. 🤖 
-
-📺: https://t.co/IlhijHHMN9</blockquote><p><a href="https://x.com/agilityrobotics/status/2118464143212908601">查看原帖</a></p>]]></description></item>
 <item><title>[机器人] Agility以AGLT登陆纳斯达克</title><link>https://x.com/MTSlive/status/2118435573144969366</link><guid isPermaLink="true">https://x.com/MTSlive/status/2118435573144969366</guid><category>机器人</category><author>@MTSlive</author><pubDate>Thu, 05 Nov 2026 20:09:33 +0000</pubDate><description><![CDATA[<p>MTS称Agility经SPAC合并成为美国首家上市人形机器人公司，代码AGLT，融资约4.65亿美元；Digit已在GXO、Schaeffler、丰田加拿大工厂运行超6.5万小时。</p><p>@MTSlive · 赞 14 · 转 3 · 浏览 3254</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118435542815883264/img/MW02a9wAhw7_b6th.jpg"/></p><blockquote>SITUATION EXPLAINED: Agility just became the first humanoid robot company to go public in the US.
 
 • Agility went public by merging with the SPAC Churchill Capital Corp XI and started trading as AGLT on November 5
@@ -62,9 +234,6 @@ All eight authors work at Apple, and the code is on GitHub.</blockquote><p><a hr
 • GXO is adding Digit to 2 more US sites in early 2027, and farm equipment maker AGCO starts a pilot in Kansas in 2027
 • Its RoboFab factory in Salem, Oregon is designed to build up to 10,000 robots a year</blockquote><p><a href="https://x.com/MTSlive/status/2118435573144969366">查看原帖</a></p>]]></description></item>
 <item><title>[机器人] Agility Robotics登纳斯达克成美首家</title><link>https://x.com/Polymarket/status/2118402121976648062</link><guid isPermaLink="true">https://x.com/Polymarket/status/2118402121976648062</guid><category>机器人</category><author>@Polymarket</author><pubDate>Thu, 05 Nov 2026 17:56:38 +0000</pubDate><description><![CDATA[<p>Nvidia支持的Agility Robotics成为美国首家专门做人形机器人并上市的公司，已在纳斯达克挂牌交易。</p><p>@Polymarket · 赞 123 · 转 19 · 浏览 25940</p><p><img src="https://pbs.twimg.com/media/HWYTWByW8AADgOU.jpg"/></p><blockquote>JUST IN: Nvidia-backed Agility Robotics becomes the first dedicated humanoid robot company to go public in the United States, debuting on Nasdaq. https://t.co/MXhhAzfT0B</blockquote><p><a href="https://x.com/Polymarket/status/2118402121976648062">查看原帖</a></p>]]></description></item>
-<item><title>[机器人] Agility Digit已在真实场景作业并上市</title><link>https://x.com/davidpattersonx/status/2118381642230399166</link><guid isPermaLink="true">https://x.com/davidpattersonx/status/2118381642230399166</guid><category>机器人</category><author>@davidpattersonx</author><pubDate>Thu, 05 Nov 2026 16:35:15 +0000</pubDate><description><![CDATA[<p>帖文称Agility Robotics成为美国首家专门做人形机器人并上市的公司，其Digit人形机器人已在真实场景工作，并配有相关视频。</p><p>@davidpattersonx · 赞 45 · 转 3 · 浏览 1661</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118380715997888512/img/GR7rXTCdVBaHBzWc.jpg"/></p><blockquote>Agility Robotics has become the first dedicated humanoid robotics company to go public in the US.
-
-Their Digit humanoid robot is already doing real-world work. https://t.co/16VVvt2qhH</blockquote><p><a href="https://x.com/davidpattersonx/status/2118381642230399166">查看原帖</a></p>]]></description></item>
 <item><title>[机器人] 德州超级工厂钢构约55%：年产千万Optimus</title><link>https://x.com/JoeTegtmeyer/status/2118382979592396904</link><guid isPermaLink="true">https://x.com/JoeTegtmeyer/status/2118382979592396904</guid><category>机器人</category><author>@JoeTegtmeyer</author><pubDate>Thu, 05 Nov 2026 16:40:34 +0000</pubDate><description><![CDATA[<p>Joe Tegtmeyer称Giga Texas的Optimus工厂建设推进迅速，规划年产最高1000万台人形机器人、面积超700万平方英尺；主钢结构约55%已组装，目标2027年底极小规模投产。</p><p>@JoeTegtmeyer · 赞 225 · 转 21 · 浏览 7613</p><p><img src="https://pbs.twimg.com/media/HWYBZ6GWMAET69U.jpg"/></p><p><img src="https://pbs.twimg.com/media/HWYBZ6LWcAA7UzH.jpg"/></p><p><img src="https://pbs.twimg.com/media/HWYBZ6NXIAA1CuG.jpg"/></p><blockquote>Want to know how the @Tesla Optimus factory under construction at  Giga Texas is progressing? I’d say it is moving along at warp speed!
 
 This facility is to manufacture up to 10M/year humanoid robots &amp; will be over 7 million sq ft (~3,500 ft long) once completed including a substantial part of the factory using 4 floors! This factory is in addition to the pilot line at Fremont that has reportedly already begun small-scale production.
@@ -78,6 +247,9 @@ The approach to construction of this factory differs significantly to the approa
 There are also some ground level utilities, footings and final perimeter grade beam work underway, with the E side of the building now taking shape with what appears to be a large open section about 4 column grids wide along this side of the facility.
 
 Per Tesla the goal will be to be able to begin some *very limited* production here sometime at the end of 2027 &amp; then scale up production capability from there through 2028.</blockquote><p><a href="https://x.com/JoeTegtmeyer/status/2118382979592396904">查看原帖</a></p>]]></description></item>
+<item><title>[机器人] Agility Digit已在真实场景作业并上市</title><link>https://x.com/davidpattersonx/status/2118381642230399166</link><guid isPermaLink="true">https://x.com/davidpattersonx/status/2118381642230399166</guid><category>机器人</category><author>@davidpattersonx</author><pubDate>Thu, 05 Nov 2026 16:35:15 +0000</pubDate><description><![CDATA[<p>帖文称Agility Robotics成为美国首家专门做人形机器人并上市的公司，其Digit人形机器人已在真实场景工作，并配有相关视频。</p><p>@davidpattersonx · 赞 45 · 转 3 · 浏览 1661</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118380715997888512/img/GR7rXTCdVBaHBzWc.jpg"/></p><blockquote>Agility Robotics has become the first dedicated humanoid robotics company to go public in the US.
+
+Their Digit humanoid robot is already doing real-world work. https://t.co/16VVvt2qhH</blockquote><p><a href="https://x.com/davidpattersonx/status/2118381642230399166">查看原帖</a></p>]]></description></item>
 <item><title>[机器人] 波士顿动力：移动机器人可补强安防巡逻</title><link>https://x.com/BostonDynamics/status/2118379824708239688</link><guid isPermaLink="true">https://x.com/BostonDynamics/status/2118379824708239688</guid><category>机器人</category><author>@BostonDynamics</author><pubDate>Thu, 05 Nov 2026 16:28:02 +0000</pubDate><description><![CDATA[<p>Boston Dynamics称工业与商业园区安防面临高流动与疲劳问题，移动机器人可作为智能力量倍增器，自动化例行巡逻。</p><p>@BostonDynamics · 赞 89 · 转 11 · 浏览 4955</p><p><img src="https://pbs.twimg.com/media/HWX_OUZXQAA-h2j.jpg"/></p><blockquote>Modern industrial sites and commercial facilities require oversight, but security teams face high turnover, worker fatigue, and expansive campuses. Mobile robots can serve as a intelligent force multiplier for security operations, automating routine patrols. https://t.co/xVZ9JKHQsR</blockquote><p><a href="https://x.com/BostonDynamics/status/2118379824708239688">查看原帖</a></p>]]></description></item>
 <item><title>[机器人] CMU推出低成本轮式人形Pixel</title><link>https://x.com/CyberRobooo/status/2118317212964626615</link><guid isPermaLink="true">https://x.com/CyberRobooo/status/2118317212964626615</guid><category>机器人</category><author>@CyberRobooo</author><pubDate>Thu, 05 Nov 2026 12:19:14 +0000</pubDate><description><![CDATA[<p>CyberRobo介绍卡内基梅隆大学Pixel轮式人形机器人，整机售价低于1.5万美元，配套传感器化UMI数据采集系统低于1千美元，可用自然语言切换倒垃圾、吸尘等家务任务。</p><p>@CyberRobooo · 赞 27 · 转 4 · 浏览 1207</p><blockquote>Another American version of Unitree G1
 
@@ -97,10 +269,10 @@ Read the announcement: https://t.co/PLXMtCrbgG https://t.co/gcRzzW1JWi</blockquo
 The company has completed its SPAC merger and is expected to begin trading today under $AGLT.
 
 The company reports over 65,000 hours of real-world robot operation and more than $300M in committed multiyear Digit orders.</blockquote><p><a href="https://x.com/roboticomarket/status/2118297534087274522">查看原帖</a></p>]]></description></item>
-<item><title>[机器人] 智元A3人形机器人完成箱跳</title><link>https://x.com/XHNews/status/2118230548208636343</link><guid isPermaLink="true">https://x.com/XHNews/status/2118230548208636343</guid><category>机器人</category><author>@XHNews</author><pubDate>Thu, 05 Nov 2026 06:34:52 +0000</pubDate><description><![CDATA[<p>新华社发布视频显示，中国制造的AGIBOT A3人形机器人完成一次干净利落的箱跳，展示其灵活性。</p><p>@XHNews · 赞 5 · 转 2 · 浏览 3494</p><blockquote>Chinese-made AGIBOT A3 humanoid robot showed off its impressive agility by landing a clean box jump. #HumanoidRobot #Robotics #AGIBOT #BoxJump #ChinaTech https://t.co/eOy2EFThH9</blockquote><p><a href="https://x.com/XHNews/status/2118230548208636343">查看原帖</a></p>]]></description></item>
 <item><title>[机器人] 六台智元机器人进便利店试运营</title><link>https://x.com/XHscitech/status/2118247440868626813</link><guid isPermaLink="true">https://x.com/XHscitech/status/2118247440868626813</guid><category>机器人</category><author>@XHscitech</author><pubDate>Thu, 05 Nov 2026 07:41:59 +0000</pubDate><description><![CDATA[<p>新华社科技称六台AgiBot Genie G2人形机器人在上海便利店进行24小时试运营，负责迎宾、取餐倒饮、补货与擦桌子，并全程直播。</p><p>@XHscitech · 赞 5 · 转 1 · 浏览 471</p><blockquote>Six AgiBot Genie G2 humanoid robots clocked in for a 24-hour trial at a Shanghai convenience store.
 The robots greeted customers, served food and drinks, restocked shelves, and wiped down tables.
 Streamed live online in a real business setting, the trial showed how embodied AI https://t.co/DbTXJPuTpO</blockquote><p><a href="https://x.com/XHscitech/status/2118247440868626813">查看原帖</a></p>]]></description></item>
+<item><title>[机器人] 智元A3人形机器人完成箱跳</title><link>https://x.com/XHNews/status/2118230548208636343</link><guid isPermaLink="true">https://x.com/XHNews/status/2118230548208636343</guid><category>机器人</category><author>@XHNews</author><pubDate>Thu, 05 Nov 2026 06:34:52 +0000</pubDate><description><![CDATA[<p>新华社发布视频显示，中国制造的AGIBOT A3人形机器人完成一次干净利落的箱跳，展示其灵活性。</p><p>@XHNews · 赞 5 · 转 2 · 浏览 3494</p><blockquote>Chinese-made AGIBOT A3 humanoid robot showed off its impressive agility by landing a clean box jump. #HumanoidRobot #Robotics #AGIBOT #BoxJump #ChinaTech https://t.co/eOy2EFThH9</blockquote><p><a href="https://x.com/XHNews/status/2118230548208636343">查看原帖</a></p>]]></description></item>
 <item><title>[机器人] 进博会人形机器人展示实用技能</title><link>https://x.com/yicaichina/status/2118226097800085998</link><guid isPermaLink="true">https://x.com/yicaichina/status/2118226097800085998</guid><category>机器人</category><author>@yicaichina</author><pubDate>Thu, 05 Nov 2026 06:17:11 +0000</pubDate><description><![CDATA[<p>第一财经报道，第九届进博会开幕，Sharpa拍摄人像、智元A3奉茶与打乒乓、特斯拉Optimus搬运行李等人形机器人实用演示受关注。</p><p>@yicaichina · 赞 5 · 转 0 · 浏览 735</p><p><img src="https://pbs.twimg.com/media/HWVzaR1XEAEz3kX.jpg"/></p><p><img src="https://pbs.twimg.com/media/HWVzaSUW0AAwZV_.jpg"/></p><p><img src="https://pbs.twimg.com/media/HWVzaSCWwAASyx9.jpg"/></p><p><img src="https://pbs.twimg.com/media/HWVzaTwW8AEKlNE.jpg"/></p><blockquote>Humanoid robots stole the spotlight at #CIIE2026 by performing practical tasks, including Sharpa capturing media portraits, AgiBot A3 serving tea and playing table tennis, and Tesla&#x27;s Optimus handling luggage. The ninth CIIE opened in Shanghai today, gathering 4,142 overseas https://t.co/mdiiRNoSzS</blockquote><p><a href="https://x.com/yicaichina/status/2118226097800085998">查看原帖</a></p>]]></description></item>
 <item><title>[机器人] Agility以SPAC上市募约4.65亿美元</title><link>https://x.com/TheHumanoidHub/status/2118217215132725303</link><guid isPermaLink="true">https://x.com/TheHumanoidHub/status/2118217215132725303</guid><category>机器人</category><author>@TheHumanoidHub</author><pubDate>Thu, 05 Nov 2026 05:41:53 +0000</pubDate><description><![CDATA[<p>Agility将以代号AGLT通过与Churchill Capital Corp XI的SPAC合并上市；SEC文件显示约募资4.65亿美元、估值25亿美元，2025年净销售额约180万美元、经营亏损约1.4亿美元，并称订单积压超3亿美元。</p><p>@TheHumanoidHub · 赞 14 · 转 2 · 浏览 3544</p><p><img src="https://pbs.twimg.com/media/HWVqq4xakAAHldG.png"/></p><blockquote>Agility goes public tomorrow morning under the ticker $AGLT, via a SPAC merger with Churchill Capital Corp XI (not a traditional IPO).
 
@@ -127,13 +299,127 @@ Why it matters: across 20,000+ real runs, no model won everywhere. Rankings flip
 And 10,000 eval hours are free for academic labs.
 
 https://t.co/bRNf0LcD9R</blockquote><p><a href="https://x.com/TheHumanoidHub/status/2118206881399242791">查看原帖</a></p>]]></description></item>
-<item><title>[机器人] Figure CEO晒办公室：像科幻电影</title><link>https://x.com/adcock_brett/status/2117828573172240509</link><guid isPermaLink="true">https://x.com/adcock_brett/status/2117828573172240509</guid><category>机器人</category><author>@adcock_brett</author><pubDate>Wed, 04 Nov 2026 03:57:33 +0000</pubDate><description><![CDATA[<p>Figure创始人Brett Adcock称Figure办公室就像一部科幻电影，展示其人形机器人在办公环境中的场景。</p><p>@adcock_brett · 赞 622 · 转 25 · 浏览 29159</p><blockquote>Figure office is a sci-fi movie https://t.co/BmcJck8ukc</blockquote><p><a href="https://x.com/adcock_brett/status/2117828573172240509">查看原帖</a></p>]]></description></item>
-<item><title>[机器人] 马斯克：Optimus成本或低于2万美元</title><link>https://x.com/chiidex277/status/2117904693728788913</link><guid isPermaLink="true">https://x.com/chiidex277/status/2117904693728788913</guid><category>机器人</category><author>@chiidex277</author><pubDate>Wed, 04 Nov 2026 09:00:02 +0000</pubDate><description><![CDATA[<p>帖子称马斯克预测Optimus年产量超100万台后单台制造成本可降至2万美元以下，意味着人形机器人可能比汽车还便宜。</p><p>@chiidex277 · 赞 250 · 转 228 · 浏览 22256</p><blockquote>Elon Musk thinks Tesla’s Optimus robot could eventually cost less than a car. The numbers are worth looking at.
+<item><title>[机器人] 机器人每日简报 · 2026-11-05</title><link>https://dukeyang.github.io/x-hot-feed/briefs/robot/2026-11-05.html</link><guid isPermaLink="true">https://dukeyang.github.io/x-hot-feed/briefs/robot/2026-11-05.html</guid><category>机器人</category><author>每日简报</author><pubDate>Wed, 04 Nov 2026 23:45:00 +0000</pubDate><description><![CDATA[<p><strong>今日主线</strong>：人形机器人进入“上岗考核期”。小米、奥迪在汽车工厂跑真实工位，Agility 明天（11月5日）在纳斯达克上市；国内融资降温，高工下调全年出货预测，行业洗牌的说法越来越多。</p>
+<p><strong>1. 小米人形机器人在汽车工厂连续干满 8 小时</strong><br>
+小米 11月3日在世界互联网大会上披露：人形机器人在小米汽车总装车间的中控侧盖分拣工位，第一次连续完成 8 小时作业，能自己检测并纠正异常。另一项家庭测试中，基于 Xiaomi-Robotics-1 的机器人在三个房间连续完成 50 多项任务。需要注意：小米没有公布节拍和人工干预次数。<br>
+选题角度：“干满 8 小时”离“顶替一个工人”还差哪些指标？<br>
+来源：<a href="https://theroboticsmedia.com/article/xiaomi-humanoid-robot-8-hour-factory-shift" target="_blank" rel="noopener">The Robotics Media</a>｜<a href="https://newsletter.humanoidsdaily.com/p/meta-fourier-max-factory-robots-november-3" target="_blank" rel="noopener">Humanoids Daily（二手汇总）</a></p>
+<p><strong>2. Agility 股东投票通过，预计 11月5日以 AGLT 登陆纳斯达克</strong><br>
+Churchill XI（CCXI）股东 11月2日批准与 Agility Robotics 合并，赞成票超过 84%。交易预计 11月4日完成，11月5日开始交易。约 4.65 亿美元的总资金里，包括 1.64 亿美元信托资金、富士康领投的 2.01 亿美元 PIPE，以及 Agility 已经收到的 1 亿美元。另外，GXO 新签了两处美国仓库部署 Digit；Digit 在佐治亚仓库已累计搬运超过 10 万个料箱，Agility 称有 30 多家潜在客户。<br>
+选题角度：美股“人形机器人第一股”之一，Digit 的真实订单撑得起估值吗？<br>
+来源：<a href="https://x.com/agilityrobotics/status/2117385924820775003" target="_blank" rel="noopener">Agility 官方 X</a>｜<a href="https://roboticsandautomationnews.com/category/humanoid/" target="_blank" rel="noopener">Robotics &amp; Automation News</a></p>
+<p><strong>3. 报道称 Meta 与傅利叶合作，三个月造出人形样机“Max”</strong><br>
+据 The Information 报道，Max 身高约 1.5 米、重 48 公斤，搭载英伟达 Jetson Thor。8 月在内部演示，9 月开始做 Max 2。Meta 表示合作只用于内部研究，没有销售计划。<br>
+选题角度：大模型公司为什么找中国本体厂“借身体”？<br>
+来源：<a href="https://www.zaobao.com.sg/news/china/story20261102-9931333" target="_blank" rel="noopener">联合早报</a>｜<a href="https://newsletter.humanoidsdaily.com/p/meta-fourier-max-factory-robots-november-3" target="_blank" rel="noopener">Humanoids Daily（二手汇总）</a></p>
+<p><strong>4. 高工下调国内人形机器人出货预测：全年 5 万台以上，三年内超 15% 企业出局</strong><br>
+高工咨询 11月3日在高工人形机器人年会上表示：今年国内整机出货预计超过 5 万台，年初的预测是超过 6 万台。今年关节模组价格同比下降约 30%，前三季度本体融资 818.2 亿元。另据 IT 桔子数据（金融界报道），10 月具身智能融资 33 起、101.05 亿元，9 月是 60 起。<br>
+选题角度：融资是零售额的数倍，价格战会不会先把“腰部玩家”淘汰掉？<br>
+来源：<a href="https://robrief.com/zh/articles/ggii-china-humanoid-shipments-50000-forecast-cut" target="_blank" rel="noopener">Robrief（援引第一财经）</a>｜<a href="https://finance.jrj.com.cn/2026/11/03084058982869.shtml" target="_blank" rel="noopener">金融界</a></p>
+<p><strong>5. 奥迪联合 Agile Robots 测试人形机器人做零件排序</strong><br>
+奥迪的概念验证让机器人从料箱里拣零件，再按装配顺序排好，达索系统和英伟达提供虚拟测试支持。奥迪现有物料供应每天约有 100 万次拣选，但这个数字说的是市场空间，不是机器人的实际产能。<br>
+选题角度：汽车厂的“物料排序”为什么成了人形机器人的第一个现实工位？<br>
+来源：<a href="https://newsletter.humanoidsdaily.com/p/meta-fourier-max-factory-robots-november-3" target="_blank" rel="noopener">Humanoids Daily（二手汇总）</a></p>
+<p><strong>6. 宇树第三季度营收 6.65 亿元、同比增约 70%，研发投入翻了 2.5 倍</strong><br>
+宇树第三季度归母净利润同比下降 17.4%，为 1.127 亿元；研发投入增长 249.6%，达 1.27 亿元。前三季度累计营收 18.17 亿元。智元披露上半年营收接近 20 亿元，9 月第 2 万台机器人下线。<br>
+选题角度：从“卖硬件赚钱”转向“砸模型和算力”，两家头部公司各自怎么押注？<br>
+来源：<a href="https://www.evchanye.com/2026/1102/55676.shtml" target="_blank" rel="noopener">新能源汽车产业网</a>｜<a href="https://newsletter.humanoidsdaily.com/p/meta-fourier-max-factory-robots-november-3" target="_blank" rel="noopener">Humanoids Daily（二手汇总）</a></p>
+<p><strong>7. 彭博：Physical Intelligence 正以 200 亿美元估值洽谈融资</strong><br>
+彭博报道，现有投资方 Avenir 和 Lux 正在商谈领投，融资尚未宣布完成。PI 此前已经开放 API 测试版，开发者可以微调模型、使用托管推理。<br>
+选题角度：机器人“大脑”公司估值超过多数本体公司，模型层会不会成为新的“安卓”？<br>
+来源：<a href="https://newsletter.humanoidsdaily.com/p/meta-fourier-max-factory-robots-november-3" target="_blank" rel="noopener">Humanoids Daily（转述彭博，二手）</a></p>
+<p><strong>8. 欧洲物流公司试用宇树 G1 分拣包裹</strong><br>
+ID Logistics 和 Terra Robotics 11月1日宣布合作。两台装有五指触觉手的 Unitree G1 EDU6 会先在两地测试四五个用例，计划 6 个月内进入真实仓库试点。ID Logistics 在全球有 450 个物流站点。<br>
+选题角度：中国人形机器人出海，第一站为什么是欧洲仓库？<br>
+来源：<a href="https://theroboticsmedia.com/article/id-logistics-terra-robotics-humanoid-pilot-germany" target="_blank" rel="noopener">The Robotics Media</a></p>
+<p><strong>9. LiberAI 发布世界动作模型 Liber-0</strong><br>
+Liber-0 用超过 220 万小时的人类经验数据预训练，结合人类视频和直接采集的手部动作数据，目标是让机器人获得能泛化的操作能力。LiberAI 2025 年 12 月才成立。<br>
+选题角度：“看人类视频学干活”能不能绕过真机数据瓶颈？<br>
+来源：<a href="https://roboticsandautomationnews.com/category/humanoid/" target="_blank" rel="noopener">Robotics &amp; Automation News</a></p>
+<p><strong>10. 韩国 IL 在注塑产线验证人形机器人，RoboWorld 2026 开幕</strong><br>
+RoboWorld 2026 于 11月4–7日在 KINTEX 举行，IL 展示了 ILBOT H2、Y1 在汽车电子注塑产线做概念验证的成果。IL 第三季度营收 334 亿韩元，其中约 27 亿韩元来自人形机器人业务。<br>
+选题角度：韩国人形机器人走的是“集团内部产线先练兵”路线。<br>
+来源：<a href="https://theroboticsmedia.com/article/il-corp-humanoid-robots-roboworld-2026-injection-molding" target="_blank" rel="noopener">The Robotics Media</a></p>
+<h2><strong>X 上的动态</strong></h2>
+<ul><li><strong>Boston Dynamics 发布 Stretch Gen 2</strong>（11月3日）：第二代自主卸货机器人，官方强调降低停机时间。这条帖子约 500 赞，是近几天机器人官方账号里互动较高的。值得关注，因为非人形的专用机器人仍是仓储落地的主力。</li></ul>
+<p><a href="https://x.com/BostonDynamics/status/2117663862564573240" target="_blank" rel="noopener">https://x.com/BostonDynamics/status/2117663862564573240</a></p>
+<ul><li><strong>宇树官方力挺 RoboColosseum 基准</strong>（11月4日）：宇树称 G1 是 RoboColosseum 人形类别的主要测试本体，这是一个大规模真实环境的机器人评测项目。同一基准引发了一个讨论：有用户贴出结果，称通用大模型在部分盲测中超过 π0.5、GR00T 等机器人 VLA。这个说法来自个人账号，数据还没核实。</li></ul>
+<p><a href="https://x.com/UnitreeRobotics/status/2117996574584574130｜https://x.com/kdnbmb/status/2117883112692539627" target="_blank" rel="noopener">https://x.com/UnitreeRobotics/status/2117996574584574130｜https://x.com/kdnbmb/status/2117883112692539627</a></p>
+<ul><li><strong>Tutor Intelligence 发长文讲“按小时租机器人”</strong>（11月2日）：官方 X 长文，约 2.9 万次浏览。另一条转发的文章标题称其融资 7500 万美元，这个数字没有找到原始报道核实。</li></ul>
+<p><a href="https://x.com/tutorintel/status/2117285673145434555" target="_blank" rel="noopener">https://x.com/tutorintel/status/2117285673145434555</a></p>
+<ul><li><strong>RoboScience 获数亿元新融资</strong>（11月4日，行业账号 Robotico 转述）：资金用于 Visics 基础模型、RoboMirage 仿真平台和 REX G1 轮式人形机器人。这是二手信息，以官方公告为准。</li></ul>
+<p><a href="https://x.com/roboticomarket/status/2117935144019669027" target="_blank" rel="noopener">https://x.com/roboticomarket/status/2117935144019669027</a></p>
+<h2><strong>推荐选题</strong></h2>
+<ol><li>人形机器人“上岗考核”：小米、奥迪的汽车工厂实测，到底测了什么？</li></ol>
+<p>标题建议：《干满8小时≠能顶一个工人：人形机器人进厂的真实成绩单》</p>
+<ol><li>资本分层：Agility 上市、PI 谈 200 亿美元估值，国内融资却腰斩</li></ol>
+<p>标题建议：《一边上市一边出清：人形机器人进入“挤泡沫”时刻》</p>
+<ol><li>大模型公司“借身体”：Meta × 傅利叶、DeepSeek 投机器人大脑</li></ol>
+<p>标题建议：《Meta 为什么找中国公司造机器人？大模型的“身体焦虑”》</p>
+<p>---</p>
+<p>（补发）</p>
+<p><strong>今日主线：</strong> 美国“人形机器人第一股”Agility 今晚（北京时间）开始交易，但招股文件里去年收入只有 180 万美元。国内这边，智元让 6 台机器人连续 24 小时“开便利店”；财务投资人在退场，产业资本则开始抢中试平台和灵巧手。</p>
+<p><strong>1. 【进展】Agility 完成合并，11 月 5 日以 AGLT 登陆纳斯达克</strong><br>
+此前：11-05 报道过 CCXI 股东投票通过合并、约 4.65 亿美元融资，以及 GXO 新增仓库部署。<br>
+这次新增的内容：11 月 4 日官方宣布交易完成，股票和认股权证分别以 AGLT、AGLTW 交易，老股东和发起人股份锁定 180 天。新披露 AGCO 将在 2027 年于堪萨斯工厂试点 Digit，Digit 累计真实作业超过 6.5 万小时。合并文件显示，Agility 2025 年收入仅 180 万美元，净亏损 1.381 亿美元，一半以上收入来自一位投资方买的 5 台机器人（Business Insider）。俄勒冈当地媒体称上市后预计市值约 25 亿美元。<br>
+选题角度：180 万美元收入撑起 25 亿美元市值，人形机器人的估值靠什么？<br>
+来源：<a href="https://www.globenewswire.com/news-release/2026/11/04/3395899/0/en/agility-robotics-and-churchill-capital-corp-xi-complete-business-combination.html" target="_blank" rel="noopener">GlobeNewswire 官方公告</a>｜<a href="https://www.businessinsider.com/agility-robotics-heads-to-wall-street-tough-road-to-profit-2026-11" target="_blank" rel="noopener">Business Insider</a>｜<a href="https://www.oregonlive.com/silicon-forest/2026/11/oregon-robotics-company-closes-deal-to-go-public-will-start-trading-thursday-on-nasdaq.html" target="_blank" rel="noopener">OregonLive</a></p>
+<p><strong>2. 智元 6 台 G2 在上海便利店连续直播营业 24 小时</strong><br>
+新华社 11 月 4 日报道：6 台精灵 G2 在一家真实营业的便利店里迎客、做饮品、补货、擦桌子，全程在线直播。ShanghaiEye 公布的数据是 24 小时完成 1,730 项任务，其中接待顾客 683 次、送货 369 次、做咖啡 147 杯。<strong>官方没有说明人工介入了多少次。</strong><br>
+选题角度：“24 小时直播”不等于“24 小时独立上班”，看这类演示要盯哪些指标？<br>
+来源：<a href="https://english.news.cn/20261104/38d3010af9c3490d8bb666623bd72bce/c.html" target="_blank" rel="noopener">新华社</a>｜<a href="https://x.com/ShanghaiEye/status/2117943924102754357" target="_blank" rel="noopener">ShanghaiEye 数据帖</a></p>
+<p><strong>3. 杭州国家具身智能中试基地增资 2 亿元，17 家产业方入股</strong><br>
+据 OFweek 11 月 4 日报道，增资后注册资本从 1 亿元增至 3 亿元。新股东持股平台“具身无限”出资 6,000 万元，背后有银河通用、沐曦、杭叉等 16 家企业，宇树出资 2,000 万元、持股维持 10%。这个基地前三季度营收不到 45 万元，净亏损 1,500 多万元。文章观点是：财务投资人在撤，产业资本在买“验证排期和场景数据”的入场券。<br>
+选题角度：营收 45 万的平台为什么值得 17 家公司抢着交钱？<br>
+来源：<a href="https://robot.ofweek.com/2026-11/ART-898890-12001-30710329.html" target="_blank" rel="noopener">OFweek 机器人网</a></p>
+<p><strong>4. 灵巧手赛道：灵心巧手据报目标估值约 60 亿美元，逼近宇树</strong><br>
+据一篇 11 月 4 日的行业分析：灵心巧手新一轮融资的目标估值约 60 亿美元（约 410 亿元），宇树的 IPO 估值约 420 亿元。文章援引《上海证券报》称灵心巧手 2025 年营收 2.6 亿元，援引高工称今年一季度灵巧手行业融资接近 50 亿元。同期，机本智能（做灵巧操作模型）成立两个月内连续两轮融资近千万美元，由 Alphaist Partners 和耀途资本领投。<strong>估值数字为二手转述，以公司官方为准。</strong><br>
+选题角度：灵巧手会成为“机器人里的宁德时代”，还是被整机厂自研挤压？<br>
+来源：<a href="http://www.mfbz.cn/news/350648/" target="_blank" rel="noopener">行业分析（转载）</a>｜<a href="https://www.tengnews.com/a/shezhi/2026/1104/17394.html" target="_blank" rel="noopener">TengNews：机本智能融资</a></p>
+<p><strong>5. 【进展】Tutor Intelligence 7,500 万美元 B 轮已获官方确认，a16z 领投</strong><br>
+此前：11-05 的 X 板块提到其“按小时租机器人”的长文，当时 7,500 万美元融资“未找到原始报道核实”。<br>
+这次新增的内容：官方新闻稿确认，B 轮 7,500 万美元由 Andreessen Horowitz 领投，累计融资 1.17 亿美元。资金用于机器人基础模型训练、制造，以及 Sonny、Cassie 两款机器人在美国工厂和物流场景的部署。<br>
+选题角度：不卖机器人、按小时卖劳动力，这套“机器人即服务”模式为什么能拿到 a16z 的钱？<br>
+来源：<a href="https://www.businesswire.com/news/home/20261102314852/en/Tutor-Intelligence-Raises-%2475-Million-Series-B-Led-by-Andreessen-Horowitz-to-Scale-Frontier-Robotics-Model-Training-Manufacturing-and-Deployment" target="_blank" rel="noopener">BusinessWire 官方新闻稿</a>｜<a href="https://a16z.com/announcement/investing-in-tutor-intelligence/" target="_blank" rel="noopener">a16z</a></p>
+<p><strong>6. 韩国 KIST 人形机器人 KAPEX 能负重 20 公斤以上，技术已转给 LG</strong><br>
+11 月 4 日，KIST 人形研究团队负责人李钟元获得韩国 11 月“科学技术奖”。KAPEX 的关节执行器最高能输出 300 Nm 扭矩，腿部有 7 个自由度，负重超过 20 公斤时仍能保持平衡，整机能效是上一代的两倍多。核心技术 2025 年 9 月已转让给 LG 电子，并联合 LG AI 研究院、LG 新能源和 Robostar 推进量产。<br>
+选题角度：韩国的人形机器人走“国家队研发加财阀量产”路线。<br>
+来源：<a href="https://www.ajupress.com/view/20261104120470808" target="_blank" rel="noopener">Aju Press</a></p>
+<p><strong>7. 韩国 ETRI 今天发布人形机器人基础模型，数据集含 140 万段视频</strong><br>
+ETRI 11 月 5 日在 KINTEX 举办“物理 AI Playground”，展示 10 项技术。其中人形机器人基础模型把“理解任务”和“实时控制”拆开，通信有延迟时也能稳定运行。数据平台 ROJI-Hub 收录了覆盖 14 万项任务的 140 多万段作业视频。另有带电子皮肤、能感知纹理的机械手。<br>
+选题角度：机器人大模型的“分层架构”正在成为共识。<br>
+来源：<a href="https://en.sedaily.com/technology/2026/11/04/etri-unveils-physical-ai-technologies-for-humanoids-and" target="_blank" rel="noopener">首尔经济日报</a></p>
+<p><strong>8. 蚂蚁灵波 LingBot 开源 9 个月，下载量超过 220 万</strong><br>
+在乌镇世界互联网大会（11 月 2–5 日）上，蚂蚁灵波称 LingBot 系列 GitHub 星标超过 3.3 万；LingBot-VLA 和 LingBot-VA 已适配 LeRobot，LingBot-World 被英伟达集成进 FlashDreams。<br>
+选题角度：开源机器人大脑，蚂蚁想做具身智能里的“安卓”？<br>
+来源：<a href="https://sflood.com/zh/daily/ai-2026-11-04" target="_blank" rel="noopener">Stillflood AI 前沿日报（转引凤凰网财经）</a></p>
+<p><strong>9. 特斯拉 Optimus 预订传闻：马斯克只回了一个 “No”</strong><br>
+有报道称 Optimus 可能在 12 月 1–2 日的 Humanoids Summit 前后开放预订，消息源是这个峰会的主办人 Modar Alaoui。11 月 1 日，马斯克在 X 上回应“12 月能不能下单”时只回了 “No”。2 万美元的价格同样没有得到证实。马斯克确认的时间表是 2027 年底开始对外交付。<br>
+选题角度：Optimus 的每一个传闻都能上热搜，怎么分辨哪些可信？<br>
+来源：<a href="https://www.motor1.com/news/814187/tesla-optimus-reservation-confusion-explained/" target="_blank" rel="noopener">Motor1</a></p>
+<p><strong>10. 研究速递：人形机器人学会“用力”、在仿真里练手、长出“反射弧”</strong><br>
+FLoRe 让 Unitree G1 同时复现动作和力，成功率 24/30，只学动作的基线是 8/30。Zero-HLM 用仿真数据训练，真机成功率 66.7%，用 100 条真机演示训练的对照组是 46.7%。VLA-Stem 在基础模型下面加了一层快速反射，无碰撞成功率从 23.7% 提到 52.8%。<br>
+选题角度：机器人大脑不会只有一个大模型，规划、感知和“小脑反射”要分层协作。<br>
+来源：<a href="https://www.rockingrobots.com/robotics-research-briefing-physical-ai-grows-a-body/" target="_blank" rel="noopener">Rockingrobots</a></p>
+<h2><strong>X 上的动态</strong></h2>
+<ul><li><strong>CIX（@cixliv）在旧金山清仓一批人形机器人</strong>：清单包括宇树 R1、G1、H1、H2，智元 X2、A3，众擎 PM01 和 Booster K1，“任何最低价都可以匹配”。帖子约 5,700 次浏览。买来的人形机器人没用上就转手，这是需求端的一个小信号。</li></ul>
+<p><a href="https://x.com/cixliv/status/2118105096915734837" target="_blank" rel="noopener">https://x.com/cixliv/status/2118105096915734837</a></p>
+<ul><li><strong>behindrobotics 提醒“看文件，别看视频”</strong>：Figure 称造了 1,000 台，智元称 2 万台（含轮式），都是公司口径；唯一写进交易所文件的数字，是宇树招股书里 2025 年出货 5,511 台。各家统计口径不同，不能直接相加。</li></ul>
+<p><a href="https://x.com/behindrobotics/status/2117932810313040036" target="_blank" rel="noopener">https://x.com/behindrobotics/status/2117932810313040036</a></p>
+<ul><li><strong>Dan Inge 发布开源权重机器人基础模型 V0.5</strong>：他点名对标 Physical Intelligence 的 π0.5，称“效果很好”。帖子互动不多，所属团队和评测细节要看原帖链接，<strong>尚未核实</strong>。</li></ul>
+<p><a href="https://x.com/just_dan_inge/status/2118034860912894390" target="_blank" rel="noopener">https://x.com/just_dan_inge/status/2118034860912894390</a></p>
+<ul><li><strong>Muskan Kalra 长帖：机器人还没有迎来“ChatGPT 时刻”</strong>：她认为模型在进步，但还没有一个能在不同本体上稳定完成多种任务的基础模型。帖子约 5,700 次浏览、74 次收藏，可以当作行业冷思考的素材。</li></ul>
+<p><a href="https://x.com/muskan_kalra24/status/2117996502077632794" target="_blank" rel="noopener">https://x.com/muskan_kalra24/status/2117996502077632794</a></p>
+<h2><strong>推荐选题</strong></h2>
+<ol><li>Agility 上市解读：《收入 180 万美元、市值 25 亿：美国“人形机器人第一股”敲钟，华尔街在买什么？》</li><li>演示与真实：《24 小时便利店、8 小时工厂班：人形机器人的“上岗秀”该怎么看？》</li><li>产业资本换打法：《财务投资人撤了，产业资本来了：具身智能的下半场拼中试和灵巧手》</li></ol>]]></description></item>
+<item><title>[机器人] Agility Robotics完成SPAC合并将上市</title><link>https://x.com/agilityrobotics/status/2118097240791339141</link><guid isPermaLink="true">https://x.com/agilityrobotics/status/2118097240791339141</guid><category>机器人</category><author>@agilityrobotics</author><pubDate>Wed, 04 Nov 2026 21:45:09 +0000</pubDate><description><![CDATA[<p>Agility Robotics完成与Churchill Capital Corp XI的合并，股票预计11月5日在纳斯达克以AGLT代码交易，人形机器人公司登陆资本市场。</p><p>@agilityrobotics · 赞 107 · 转 8 · 浏览 4587</p><p><img src="https://pbs.twimg.com/media/HWT-MgWaQAAFleE.png"/></p><blockquote>Agility Robotics has completed its business combination with Churchill Capital Corp XI. Our common stock and warrants are expected to begin trading on Nasdaq on November 5 under the ticker symbols AGLT and AGLTW.
 
-Musk has projected that once Tesla reaches production of more than one million Optimus robots annually, manufacturing costs could fall below $20,000 per unit.
+Read the full announcement: https://t.co/J3R79lrQ3y https://t.co/KZNGBm6GOP</blockquote><p><a href="https://x.com/agilityrobotics/status/2118097240791339141">查看原帖</a></p>]]></description></item>
+<item><title>[机器人] Perceptron推出第一视角视频标注API</title><link>https://x.com/TheHumanoidHub/status/2118059948936696023</link><guid isPermaLink="true">https://x.com/TheHumanoidHub/status/2118059948936696023</guid><category>机器人</category><author>@TheHumanoidHub</author><pubDate>Wed, 04 Nov 2026 19:16:58 +0000</pubDate><description><![CDATA[<p>Perceptron Egocentric 1.0可将第一视角人类与机器人视频自动转为结构化训练数据，瞄准机器人训练数据瓶颈。</p><p>@TheHumanoidHub · 赞 114 · 转 10 · 浏览 10673</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118059608619261952/img/vlWmwE1DPgvOBpPE.jpg"/></p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118059630073110528/img/QwpZBM84yBnodJ7h.jpg"/></p><blockquote>One of the biggest data bottlenecks in robotics is turning raw human video into high-quality training labels.
 
-At that</blockquote><p><a href="https://x.com/chiidex277/status/2117904693728788913">查看原帖</a></p>]]></description></item>
-<item><title>[机器人] 宇树G1成RoboColosseum人形主力机型</title><link>https://x.com/UnitreeRobotics/status/2117996574584574130</link><guid isPermaLink="true">https://x.com/UnitreeRobotics/status/2117996574584574130</guid><category>机器人</category><author>@UnitreeRobotics</author><pubDate>Wed, 04 Nov 2026 15:05:08 +0000</pubDate><description><![CDATA[<p>宇树宣布支持大型真实场景机器人基准项目RoboColosseum，其G1是人形类别的主要测试机型。</p><p>@UnitreeRobotics · 赞 180 · 转 24 · 浏览 11760</p><blockquote>Excited to support RoboColosseum, one of the largest in-the-wild real-world robotics benchmark project!  Great to see Unitree G1s being used as the primary embodiment used in the humanoid benchmark category on RoboColosseum. https://t.co/Zbtngi3T2B</blockquote><p><a href="https://x.com/UnitreeRobotics/status/2117996574584574130">查看原帖</a></p>]]></description></item>
+Perceptron Egocentric 1.0 is a self-service API that turns first-person human and robot video into structured training data:
+
+- Timestamped subtask timelines, down to https://t.co/POnV1enxF2</blockquote><p><a href="https://x.com/TheHumanoidHub/status/2118059948936696023">查看原帖</a></p>]]></description></item>
 <item><title>[机器人] PNDbotics展示机器人像拼乐高组装</title><link>https://x.com/XRoboHub/status/2118054446068642045</link><guid isPermaLink="true">https://x.com/XRoboHub/status/2118054446068642045</guid><category>机器人</category><author>@XRoboHub</author><pubDate>Wed, 04 Nov 2026 18:55:06 +0000</pubDate><description><![CDATA[<p>RoboHub分享PNDbotics组装机器人视频，过程像拼乐高，组装完成后机器人开始展示动作。</p><p>@XRoboHub · 赞 157 · 转 21 · 浏览 6352</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118053543047581696/img/WoEvTFHa6PD1HLrp.jpg"/></p><blockquote>This is so cool… 🤖
 
 How many steps does it take to assemble a robot?
@@ -141,22 +427,21 @@ How many steps does it take to assemble a robot?
 @PNDbotics makes it look almost like putting together a LEGO set.
 
 Then the finished build starts showing off, haha. https://t.co/MBRU5bReuE</blockquote><p><a href="https://x.com/XRoboHub/status/2118054446068642045">查看原帖</a></p>]]></description></item>
-<item><title>[机器人] Perceptron推出第一视角视频标注API</title><link>https://x.com/TheHumanoidHub/status/2118059948936696023</link><guid isPermaLink="true">https://x.com/TheHumanoidHub/status/2118059948936696023</guid><category>机器人</category><author>@TheHumanoidHub</author><pubDate>Wed, 04 Nov 2026 19:16:58 +0000</pubDate><description><![CDATA[<p>Perceptron Egocentric 1.0可将第一视角人类与机器人视频自动转为结构化训练数据，瞄准机器人训练数据瓶颈。</p><p>@TheHumanoidHub · 赞 114 · 转 10 · 浏览 10673</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118059608619261952/img/vlWmwE1DPgvOBpPE.jpg"/></p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118059630073110528/img/QwpZBM84yBnodJ7h.jpg"/></p><blockquote>One of the biggest data bottlenecks in robotics is turning raw human video into high-quality training labels.
-
-Perceptron Egocentric 1.0 is a self-service API that turns first-person human and robot video into structured training data:
-
-- Timestamped subtask timelines, down to https://t.co/POnV1enxF2</blockquote><p><a href="https://x.com/TheHumanoidHub/status/2118059948936696023">查看原帖</a></p>]]></description></item>
-<item><title>[机器人] Agility Robotics完成SPAC合并将上市</title><link>https://x.com/agilityrobotics/status/2118097240791339141</link><guid isPermaLink="true">https://x.com/agilityrobotics/status/2118097240791339141</guid><category>机器人</category><author>@agilityrobotics</author><pubDate>Wed, 04 Nov 2026 21:45:09 +0000</pubDate><description><![CDATA[<p>Agility Robotics完成与Churchill Capital Corp XI的合并，股票预计11月5日在纳斯达克以AGLT代码交易，人形机器人公司登陆资本市场。</p><p>@agilityrobotics · 赞 107 · 转 8 · 浏览 4587</p><p><img src="https://pbs.twimg.com/media/HWT-MgWaQAAFleE.png"/></p><blockquote>Agility Robotics has completed its business combination with Churchill Capital Corp XI. Our common stock and warrants are expected to begin trading on Nasdaq on November 5 under the ticker symbols AGLT and AGLTW.
-
-Read the full announcement: https://t.co/J3R79lrQ3y https://t.co/KZNGBm6GOP</blockquote><p><a href="https://x.com/agilityrobotics/status/2118097240791339141">查看原帖</a></p>]]></description></item>
-<item><title>[机器人] 宇树王兴兴：2027或成机器人拐点</title><link>https://x.com/nexta_tv/status/2117944950193291626</link><guid isPermaLink="true">https://x.com/nexta_tv/status/2117944950193291626</guid><category>机器人</category><author>@nexta_tv</author><pubDate>Wed, 04 Nov 2026 11:40:00 +0000</pubDate><description><![CDATA[<p>宇树CEO王兴兴称经专门训练的机器人在固定工位执行单项任务效率已接近100%，2027年可能是机器人与AI产业的转折点。</p><p>@nexta_tv · 赞 42 · 转 5 · 浏览 24371</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2117944753568309248/img/i_BLYX3oX2qX9h7O.jpg"/></p><blockquote>Unitree Robotics chief: 2027 could be a turning point for the robotics and AI industries
-
-According to Wang Xingxing, after specialised training, robots are already capable of performing individual tasks at fixed workstations with close to 100% efficiency. 
-
-However, their https://t.co/S85XQVn0xr</blockquote><p><a href="https://x.com/nexta_tv/status/2117944950193291626">查看原帖</a></p>]]></description></item>
 <item><title>[机器人] 东京大学3D打印仿生肌肉骨骼机器人</title><link>https://x.com/XRoboHub/status/2118051050573979739</link><guid isPermaLink="true">https://x.com/XRoboHub/status/2118051050573979739</guid><category>机器人</category><author>@XRoboHub</author><pubDate>Wed, 04 Nov 2026 18:41:36 +0000</pubDate><description><![CDATA[<p>东京大学研究者用3D打印制造带人工肌肉、肌腱和韧带的仿生腿部机器人，通过改变打印结构调节软硬，探索类人机器人新路径。</p><p>@XRoboHub · 赞 42 · 转 6 · 浏览 2067</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2117934814498324480/img/5AAQ07gUr5XSJxef.jpg"/></p><blockquote>This is so cool... University of Tokyo researchers have built a biomimetic musculoskeletal robot using 3D printing!
 
 Its legs have artificial muscles, tendons and ligaments. By changing the printed structure, the team made some parts softer and others stiffer.
 
 Motors pull on https://t.co/quuv2axodV</blockquote><p><a href="https://x.com/XRoboHub/status/2118051050573979739">查看原帖</a></p>]]></description></item>
+<item><title>[机器人] 宇树G1成RoboColosseum人形主力机型</title><link>https://x.com/UnitreeRobotics/status/2117996574584574130</link><guid isPermaLink="true">https://x.com/UnitreeRobotics/status/2117996574584574130</guid><category>机器人</category><author>@UnitreeRobotics</author><pubDate>Wed, 04 Nov 2026 15:05:08 +0000</pubDate><description><![CDATA[<p>宇树宣布支持大型真实场景机器人基准项目RoboColosseum，其G1是人形类别的主要测试机型。</p><p>@UnitreeRobotics · 赞 180 · 转 24 · 浏览 11760</p><blockquote>Excited to support RoboColosseum, one of the largest in-the-wild real-world robotics benchmark project!  Great to see Unitree G1s being used as the primary embodiment used in the humanoid benchmark category on RoboColosseum. https://t.co/Zbtngi3T2B</blockquote><p><a href="https://x.com/UnitreeRobotics/status/2117996574584574130">查看原帖</a></p>]]></description></item>
+<item><title>[机器人] 宇树王兴兴：2027或成机器人拐点</title><link>https://x.com/nexta_tv/status/2117944950193291626</link><guid isPermaLink="true">https://x.com/nexta_tv/status/2117944950193291626</guid><category>机器人</category><author>@nexta_tv</author><pubDate>Wed, 04 Nov 2026 11:40:00 +0000</pubDate><description><![CDATA[<p>宇树CEO王兴兴称经专门训练的机器人在固定工位执行单项任务效率已接近100%，2027年可能是机器人与AI产业的转折点。</p><p>@nexta_tv · 赞 42 · 转 5 · 浏览 24371</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2117944753568309248/img/i_BLYX3oX2qX9h7O.jpg"/></p><blockquote>Unitree Robotics chief: 2027 could be a turning point for the robotics and AI industries
+
+According to Wang Xingxing, after specialised training, robots are already capable of performing individual tasks at fixed workstations with close to 100% efficiency. 
+
+However, their https://t.co/S85XQVn0xr</blockquote><p><a href="https://x.com/nexta_tv/status/2117944950193291626">查看原帖</a></p>]]></description></item>
+<item><title>[机器人] 马斯克：Optimus成本或低于2万美元</title><link>https://x.com/chiidex277/status/2117904693728788913</link><guid isPermaLink="true">https://x.com/chiidex277/status/2117904693728788913</guid><category>机器人</category><author>@chiidex277</author><pubDate>Wed, 04 Nov 2026 09:00:02 +0000</pubDate><description><![CDATA[<p>帖子称马斯克预测Optimus年产量超100万台后单台制造成本可降至2万美元以下，意味着人形机器人可能比汽车还便宜。</p><p>@chiidex277 · 赞 250 · 转 228 · 浏览 22256</p><blockquote>Elon Musk thinks Tesla’s Optimus robot could eventually cost less than a car. The numbers are worth looking at.
+
+Musk has projected that once Tesla reaches production of more than one million Optimus robots annually, manufacturing costs could fall below $20,000 per unit.
+
+At that</blockquote><p><a href="https://x.com/chiidex277/status/2117904693728788913">查看原帖</a></p>]]></description></item>
+<item><title>[机器人] Figure CEO晒办公室：像科幻电影</title><link>https://x.com/adcock_brett/status/2117828573172240509</link><guid isPermaLink="true">https://x.com/adcock_brett/status/2117828573172240509</guid><category>机器人</category><author>@adcock_brett</author><pubDate>Wed, 04 Nov 2026 03:57:33 +0000</pubDate><description><![CDATA[<p>Figure创始人Brett Adcock称Figure办公室就像一部科幻电影，展示其人形机器人在办公环境中的场景。</p><p>@adcock_brett · 赞 622 · 转 25 · 浏览 29159</p><blockquote>Figure office is a sci-fi movie https://t.co/BmcJck8ukc</blockquote><p><a href="https://x.com/adcock_brett/status/2117828573172240509">查看原帖</a></p>]]></description></item>
 </channel></rss>

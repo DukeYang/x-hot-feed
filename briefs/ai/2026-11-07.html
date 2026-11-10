@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日简报 · 2026-11-07</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header><div class="bar">
+<h1>AI 每日简报 · 2026-11-07</h1>
+<div class="navlinks">
+<a href="../../index.html">首页</a>
+<a href="../index.html">每日简报</a>
+
+</div>
+</div></header>
+<div class="article-wrap"><p class="lead">AI · 2026-11-07</p><article class="article"><p><strong>今日主线：</strong> AI 研发正在被 AI 自己加速——独立机构首次进 Anthropic 内部测到约 2 倍的能力进步速率；同一天，DeepMind 用智能体压测旧版加密，OpenAI 把湿实验室日常分析做成了新基准。</p>
+<p><strong>1. METR：Anthropic 能力进步速率约为历史的 2 倍，多数加速来自 AI 辅助研发</strong><br>
+独立评估机构 METR 11 月 5 日发布报告：2026 年 8 月 12 日至 10 月 29 日获 Anthropic 高权限内部数据后判断，截至 10 月，Anthropic 在可明确评测任务上的能力进步速率，大约是 2024 年 3 月至 2025 年 10 月的两倍（主观估计区间约 1.3–3 倍）。AECI 基准自 2025 年 10 月起约加速 1.9 倍（95% 置信区间 1.5–2.8）；METR 确信加速并非来自训练算力扩速。当前加速中约八成被归因于 AI 辅助研发，且未看到未来 12 个月会卡住进一步加速的明显瓶颈。报告约 100 页，Anthropic 对多数最关键证据做了脱敏，公众难以独立复核。<br>
+选题角度：招股书里写过“AI 可能加速自身研发”，现在外部机构第一次进场量了一把。<br>
+来源：<a href="https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/" target="_blank" rel="noopener">METR 原文</a></p>
+<p><strong>2. DeepMind：人机协作的智能体挖出旧版 1024 位 RSA 两大弱点</strong><br>
+11 月 6 日 Google DeepMind 官方宣布，在人类密码学家指导下，模型在数周内找出遗留 1024 位 RSA 体系的两类弱点：一类指向签名伪造方向（攻击者控制约一半签名块时，旧式填充几乎不再提供保护；更短可控区域上有约 1600 倍的理论效率提升）；另一类是批量分解，额外同长度密钥的平均成本约降 30 倍。官方强调结果不影响现代 2048 位及以上 RSA，也未点名任何在线生产系统遭破解；重点是密码硬度假设的压测节奏被智能体改写。<br>
+选题角度：加密标准过去按“年”更新，AI 之后可能要按“周”复盘。<br>
+来源：<a href="https://x.com/GoogleDeepMind/status/2118755418675765656" target="_blank" rel="noopener">Google DeepMind 官方帖</a>｜<a href="https://x.com/pushmeet/status/2118752095859794390" target="_blank" rel="noopener">Pushmeet Kohli 长文</a></p>
+<p><strong>3. Thinking Machines 发布 Inkling 2 Small：594B MoE、17B 激活，计划 Apache 2.0 开源权重</strong><br>
+Mira Murati 创办的 Thinking Machines Lab 11 月 5 日发布第二代首款模型 Inkling 2 Small：总参数 5940 亿、每 token 约激活 170 亿，支持文本与图像输入、可变推理力度，上下文约 100 万 token。Artificial Analysis Intelligence Index 得分 31，较上一代 Inkling Small 的 13 分大幅跃升，与 Gemini 3.8 Flash（high）持平；当前仅在 Tinker 平台提供推理与微调，定价约每百万 token 输入 0.30 / 输出 1.00 美元，公司称完成外部安全测试与红队后计划以 Apache 2.0 放出权重。<br>
+选题角度：美国开源权重阵营又多了一个“中国模型之外的高分选手”，权重落地前别急着下结论。<br>
+来源：<a href="https://artificialanalysis.ai/articles/thinking-machines-releases-inkling-2-small-highest-scoring-open-weights-model-outside-of-chinia-upon-weights-release-it" target="_blank" rel="noopener">Artificial Analysis</a></p>
+<p><strong>4. OpenAI 发布 BioBasicsBench：100 项湿实验室日常分析任务</strong><br>
+11 月 6 日 OpenAI 与酶设计公司 Ligo 推出 BioBasicsBench，用凝胶、显微、测序读数等原始实验证据，考智能体是否会看图、查对照、承认证据不足。在最高推理档位 xhigh 上，GPT-6 Astra 均分 66.7%，GPT-6.1 Sol 62.0%，GPT-5.6 Sol 43.8%。官方同时展示 Astra 仍会把假设压过对照、漏计菌落等问题，强调高分不等于能在真实实验室里下可靠判断。<br>
+选题角度：AI for Science 不只是发 Nature，更难的是别把失败实验读成阳性结果。<br>
+来源：<a href="https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science" target="_blank" rel="noopener">OpenAI 原文</a></p>
+<p><strong>5. Anthropic 推出 Claude Personal Finance：美国付费用户可读银行流水</strong><br>
+Anthropic 本周起向美国 Pro / Max / Ultra 用户开放 Personal Finance 测试：经 Plaid 自助连接银行与信用卡后，可用自然语言问余额、账单和异常消费；访问只读，不能转账、支付或投资，Personal Finance 对话不用于训练。官方称这是第一步，后续希望与持牌机构协作处理更大决策。<br>
+选题角度：谁先成为“管钱的入口”，广告型助手很难再追。<br>
+来源：<a href="https://claude.com/resources/articles/introducing-personal-finance-in-claude" target="_blank" rel="noopener">Anthropic 原文</a>｜<a href="https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/" target="_blank" rel="noopener">TechCrunch</a></p>
+<p><strong>6. Anthropic 工程博客：用「做梦」整理 Agent 记忆</strong><br>
+11 月 6 日 Anthropic 发布《The components of agent memory》，系统介绍 Agent 记忆笔记、显著性判断，以及空闲时回看日志的 dreaming（做梦）流程：可纠错、建 wiki 式知识图、把重要笔记提升到每会话预载层。评测里，对约 35 万份内部文档做 128 轮做梦后，25 题答题表现从 13% 升到 48%；Pokémon 实验中，做梦修正错误路标后智能体才走出山洞。<br>
+选题角度：下一代 Agent 比拼的不只是上下文长度，还有会不会“睡觉整理笔记”。<br>
+来源：<a href="https://www.anthropic.com/research/components-of-agent-memory" target="_blank" rel="noopener">Anthropic 原文</a></p>
+<p><strong>7. 国产 AI 芯片：墨芯、微纳核芯、凌川科技同周各完成约 10 亿元融资</strong><br>
+集邦咨询 11 月 6 日报道：墨芯人工智能完成近 10 亿元 C+ 轮，主攻稀疏推理芯片，计划年底前推 SP200 计算卡与 SECA 软件栈；微纳核芯完成超 10 亿元 C2 轮（两月内融资超 20 亿），推进三维存算一体推理芯片，预计 2027 年初客户送测；快手系凌川科技完成 10 亿元 B 轮，聚焦智能视频与 AIGV 专用算力，现有 SL200 号称单颗可处理 36 路高清视频。<br>
+选题角度：推理降本、存算一体、视频专用三条路线同时被资本加注。<br>
+来源：<a href="https://www.trendforce.cn/industry-news/semiconductors/20261106-9110.html" target="_blank" rel="noopener">集邦咨询</a></p>
+<p><strong>8. Visa 首个 Agentic Commerce 基准：AI 购物测试通过率约 57%</strong><br>
+Visa 11 月 5 日发布行业基准：22 个模型、12 家实验室、15 个真实购物场景（买电视、笔记本等），模型必须通过对话挖出全部隐藏需求，并正确决定买或不买。总通过率约 57.2%，最好 82.2%、最差 28.9%；同一场景三次全过的比例仅 34.2%；约 54% 的失败轮次仍以错误下单收场。Visa 称将继续扩展到结账与支付环节。<br>
+选题角度：Agent 购物已经能“聊”，但还不敢把卡交出去。<br>
+来源：<a href="https://usa.visa.com/about-visa/newsroom/press-releases.releaseId.22936.html" target="_blank" rel="noopener">Visa 新闻稿</a></p>
+<h2><strong>X 上的动态</strong></h2>
+<ul><li><strong>AI at Meta：把 Muse Wonder 的专项能力下放到 Muse 与 Meta AI。</strong> 11 月 6 日官方称，为复杂工作与日常任务提供 Active Memory、Active 等专项模型能力。值得关注：前沿能力正在从独立产品拆进大众助手，而不是再发一个新 App。</li></ul>
+<p><a href="https://x.com/AIatMeta/status/2118768974779634084" target="_blank" rel="noopener">https://x.com/AIatMeta/status/2118768974779634084</a></p>
+<ul><li><strong>NVIDIA AI：Lyra 2.0，一张图生成可沿相机路径探索的 3D 世界。</strong> 11 月 6 日称结合视频生成与 3D 重建，并学习纠正累积视觉误差。值得关注：世界模型叙事从“会播视频”转向“能走进去逛”。</li></ul>
+<p><a href="https://x.com/NVIDIAAI/status/2118800021013643269" target="_blank" rel="noopener">https://x.com/NVIDIAAI/status/2118800021013643269</a></p>
+<ul><li><strong>OpenAI：与 Frontier Model Forum 发布 Jailbreak Rating Framework。</strong> 11 月 6 日称用于识别绕过安全护栏可能导致严重网络危害的情形，并推动更一致的评测方法。值得关注：大厂在等下一代模型对打的同时，先把“越狱危害等级”做成行业口径。</li></ul>
+<p><a href="https://x.com/OpenAI/status/2118795218099253606" target="_blank" rel="noopener">https://x.com/OpenAI/status/2118795218099253606</a></p>
+<ul><li><strong>Anthropic：工程博客同步发帖介绍 Claude 如何用 dreaming 整理记忆。</strong> 11 月 6 日帖子互动约 22 万浏览、3600+ 赞。值得关注：业内讨论正从“给 Agent 加长记忆文件”转向“空闲时如何纠错与建索引”；完整机制见上方新闻第 6 条。</li></ul>
+<p><a href="https://x.com/AnthropicAI/status/2118814753154064501" target="_blank" rel="noopener">https://x.com/AnthropicAI/status/2118814753154064501</a></p>
+<h2><strong>推荐选题</strong></h2>
+<ol><li>《两年进步一年完成：METR 进 Anthropic 内部，测到了什么》</li><li>《AI 开始改写密码学时间表：1024 位 RSA 的两道裂缝意味着什么》</li><li>《Agent 会做梦了：Anthropic 用空闲算力整理记忆，创作者能抄什么作业》</li></ol></article></div>
+<footer>每日简报由机器大熊整理，供选题与素材使用</footer>
+</body></html>

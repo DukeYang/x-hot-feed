@@ -47,3 +47,22 @@ footer{text-align:center;color:var(--sub);font-size:12px;padding:10px 0 40px}
 .text-row .sum{font-size:13px;color:var(--sub);margin-bottom:4px}
 .text-row .who{font-size:12px;color:var(--sub);font-weight:500}
 @media (max-width:640px){main{padding:12px;column-gap:10px;columns:2 160px}.card h2{font-size:14px}.card p{font-size:13px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}.body{padding:10px 12px 12px}.stats span:nth-child(n+2){display:none}h1 small{display:none}.fav-btn{width:32px;height:32px;font-size:16px;top:8px;right:8px}}
+
+.t-简报{background:#2d3436}
+.brief-mark{font-weight:700;font-size:11px;color:var(--sub);border:1px solid var(--line);border-radius:999px;padding:1px 7px}
+.article-wrap{max-width:760px;margin:auto;padding:8px 20px 80px}
+.article-wrap .lead{color:var(--sub);font-size:13px;margin:0 0 20px}
+.article h2{font-size:18px;line-height:1.45;margin:28px 0 10px}
+.article p{margin:0 0 12px}
+.article ul,.article ol{margin:0 0 16px;padding-left:1.35em}
+.article li{margin:0 0 8px}
+.article a{color:#6c5ce7;word-break:break-word}
+@media (prefers-color-scheme:dark){.article a{color:#a29bfe}}
+.article code{font-size:13px;background:var(--line);padding:1px 5px;border-radius:4px}
+.brief-index{max-width:760px;margin:auto;padding:8px 20px 80px}
+.brief-index h2{font-size:16px;margin:24px 0 8px}
+.brief-index ul{list-style:none;padding:0}
+.brief-index li{margin:0 0 8px}
+.brief-index a{display:block;padding:12px 14px;background:var(--card);border:1px solid var(--line);border-radius:12px;color:inherit;text-decoration:none}
+.brief-index a:hover{border-color:var(--auto)}
+.brief-index a small{display:block;color:var(--sub);font-size:13px;margin-top:4px;font-weight:400}
