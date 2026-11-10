@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · AI</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>X 热帖精选与汽车、AI、机器人每日简报。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Tue, 10 Nov 2026 10:36:27 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Tue, 10 Nov 2026 23:53:13 +0000</lastBuildDate><ttl>180</ttl>
 <item><title>[AI] Meta 发布 Muse Ember：为 Agent 高频小步骤做的最小高效模型</title><link>https://research.meta.ai/blog/muse-ember</link><guid isPermaLink="true">https://research.meta.ai/blog/muse-ember</guid><category>AI</category><author>每日简报</author><pubDate>Tue, 10 Nov 2026 00:06:04 +0000</pubDate><description><![CDATA[<p>11 月 9 日 Meta Superintelligence Labs 推出 Muse Ember，定位于工具调用、编码子任务、路由、抽取与长文档解析等高频 Agent 步骤。官方称在 Artificial Analysis Intelligence Index 上，以约三分之一任务成本达到与 Claude Haiku 5.5 相当的成绩，并在 Luna 各推理档位上更高；API 定价为每百万 token 输入 0.10 美元、输出 0.50 美元（提示超过约 20 万 token 时更高），上下文 100 万、输出最长约 51.2 万 token，支持文本、图像、音频与视频。今日起可在 Muse Code 与 Meta Model API（<code>muse-ember-1.0</code>）使用，并上线 Google Cloud 与 Oracle Cloud。公司称 Ember 是首个用 Muse Wonder Full 训练出的专用模型；分数来自官方与 Artificial Analysis，需自行复核。<br>
 选题角度：不是又一个“旗舰”，而是“子 Agent 专用廉价大脑”——编排贵模型、执行用 Ember。<br>
 来源：<a href="https://research.meta.ai/blog/muse-ember" target="_blank" rel="noopener">Meta 研究博客</a>｜<a href="https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/" target="_blank" rel="noopener">TechCrunch</a></p>]]></description></item>
