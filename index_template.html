@@ -12,7 +12,6 @@
 <h1>X 热帖精选<small>每 3 小时更新 · 更新于 <span id="upd"></span></small></h1>
 <div class="tabs" id="tabs"></div>
 <div class="navlinks">
-<a href="briefs/index.html">每日简报</a>
 <a href="archive/index.html">收藏归档</a>
 <a href="archive/text.html">更早内容</a>
 <span>·</span>
@@ -36,7 +35,7 @@ function saveLocal(m){localStorage.setItem(LS_KEY,JSON.stringify(m))}
 (function syncLocal(){const m=loadLocal();let ch=false;DATA.forEach(i=>{if(m[i.id]===true&&i.fav){delete m[i.id];ch=true}if(m[i.id]===false&&!i.fav){delete m[i.id];ch=true}});if(ch)saveLocal(m)})();
 function isStarred(i){if(i.fav)return true;const m=loadLocal();return m[i.id]===true}
 function mediaSrc(u){if(!u)return"";if(/^https?:\/\//i.test(u))return u;return (BASE_PATH||"")+u}
-const cats=["全部","汽车","AI","机器人","简报","收藏"];
+const cats=["全部","汽车","AI","机器人","收藏"];
 let cur=location.hash?decodeURIComponent(location.hash.slice(1)):"全部";
 if(cats.indexOf(cur)<0)cur="全部";
 function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");clearTimeout(toast._t);toast._t=setTimeout(function(){t.classList.remove("show")},3200)}
@@ -60,7 +59,7 @@ function itemHref(i){
   return "https://x.com/"+esc(i.user)+"/status/"+esc(i.id);
 }
 function cardHtml(i){
-  const isBrief=i.kind==="brief";
+  const isBrief=i.kind==="brief"||i.kind==="brief-item";
   const m=i.metrics||{};
   const img=(i.media||[])[0];
   const star=isStarred(i);
@@ -90,7 +89,6 @@ function cardHtml(i){
 }
 function filterItems(){
   if(cur==="收藏")return DATA.filter(function(i){return isStarred(i)});
-  if(cur==="简报")return DATA.filter(function(i){return !i._archive_only&&i.kind==="brief"});
   if(cur==="全部")return DATA.filter(function(i){return !i._archive_only});
   return DATA.filter(function(i){return !i._archive_only&&i.category===cur});
 }
@@ -99,7 +97,6 @@ function tabs(){
   document.getElementById("tabs").innerHTML=cats.map(function(c){
     var n="";
     if(c==="收藏")n=" "+favN;
-    else if(c==="简报")n=" "+DATA.filter(function(i){return !i._archive_only&&i.kind==="brief"}).length;
     else if(c!=="全部")n=" "+DATA.filter(function(i){return !i._archive_only&&i.category===c}).length;
     return '<button class="tab'+(c===cur?" on":"")+'" data-c="'+c+'">'+c+n+"</button>";
   }).join("");

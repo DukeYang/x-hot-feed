@@ -2,10 +2,10 @@
 """build_feed.py [new_items.json | --sync-only | --brief CAT FILE | --briefs-dir DIR]
 合并新条目或每日简报、同步收藏 Issue、应用 30 天老化规则、生成 RSS/首页/归档页/简报页，然后 git push。
 
-简报入库：
+简报入库（按新闻条目拆开，写入对应分类，不把整份简报当成一条）：
   python3 build_feed.py --brief ai /path/to/2026-11-10.md
   python3 build_feed.py --briefs-dir /path/to/briefs   # 其下 ai|auto|robot/YYYY-MM-DD.md
-CAT 只能是 ai、auto、robot。同一天同一分类已存在则跳过。
+CAT 只能是 ai、auto、robot。同一天同一分类的旧条目会被覆盖。
 """
 import sys, json, os, html, subprocess, datetime, email.utils, re, urllib.request, urllib.error, shutil, pathlib
 
@@ -28,7 +28,7 @@ BRIEF_CLOCK = {"robot": (7, 45), "ai": (7, 52), "auto": (8, 0)}
 SHANGHAI = datetime.timezone(datetime.timedelta(hours=8))
 
 def is_brief(i):
-    return i.get("kind") == "brief"
+    return i.get("kind") in ("brief", "brief-item")
 
 def item_link(i):
     if i.get("url"):
@@ -36,7 +36,10 @@ def item_link(i):
     if is_brief(i):
         key = i.get("brief_key") or {v: k for k, v in BRIEF_CAT.items()}.get(i.get("category"), "ai")
         date = i.get("brief_date") or ""
-        return f"{BASE}/briefs/{key}/{date}.html"
+        iid = i.get("id") or ""
+        m = re.search(r"-(\d+)$", iid)
+        anchor = f"#item-{m.group(1)}" if m else ""
+        return f"{BASE}/briefs/{key}/{date}.html{anchor}"
     return f"https://x.com/{i['user']}/status/{i['id']}"
 
 def inline_md(s):
@@ -100,25 +103,72 @@ def md_to_html(md):
     flush()
     return "\n".join(out)
 
-def extract_summary(md):
-    text = (md or "").strip()
-    paras = [p.strip() for p in re.split(r"\n\s*\n", text) if p.strip()]
-    for para in paras:
-        plain = re.sub(r"\s+", " ", re.sub(r"\*\*", "", para)).strip()
-        if re.match(r"^(AI|汽车|机器人)?每日简报\s*·\s*20\d{2}-\d{2}-\d{2}$", plain):
+ITEM_HEAD = re.compile(r"^\*\*(\d+)\.\s*(.+?)\*\*\s*$")
+STOP_HEAD = re.compile(r"^\*\*(X 上的动态|推荐选题)\*\*\s*$")
+
+def parse_brief_news(md):
+    """Split a daily brief into numbered news items. Skip 今日主线, X 动态 and 推荐选题."""
+    found = []
+    cur = None
+    skipping = False
+    for ln in (md or "").replace("\r\n", "\n").split("\n"):
+        s = ln.strip()
+        if STOP_HEAD.match(s):
+            if cur:
+                found.append(cur)
+                cur = None
+            skipping = True
             continue
-        plain = re.sub(r"^(?:今日主线|今天的主线)[：:]\s*", "", plain)
+        m = ITEM_HEAD.match(s)
+        if m:
+            skipping = False
+            if cur:
+                found.append(cur)
+            cur = {"title": m.group(2).strip(), "lines": []}
+            continue
+        if cur and not skipping:
+            cur["lines"].append(ln)
+    if cur:
+        found.append(cur)
+    for it in found:
+        it["text"] = "\n".join(it["lines"]).strip()
+        del it["lines"]
+    return found
+
+def item_summary(title, body):
+    for para in re.split(r"\n\s*\n", body or ""):
+        p = para.strip()
+        if not p or p.startswith("来源") or p.startswith("选题角度"):
+            continue
+        if p.startswith("此前"):
+            continue
+        plain = re.sub(r"\s+", " ", re.sub(r"\*\*", "", p)).strip()
+        plain = re.sub(r"^新增[：:]\s*", "", plain)
         if plain:
             return plain[:180] + ("…" if len(plain) > 180 else "")
-    return ""
+    m = re.search(r"选题角度[：:]\s*(.+)", body or "")
+    if m:
+        return m.group(1).strip()[:180]
+    return title
 
-def brief_created_at(cat_key, date_s):
-    y, m, d = [int(x) for x in date_s.split("-")]
+def first_source_url(body, fallback):
+    block = body or ""
+    m = re.search(r"来源[：:][^\n]+", block)
+    if m:
+        block = m.group(0)
+    m = re.search(r"\[([^\]]+)\]\((https?://[^)\s]+)\)", block)
+    if m:
+        return m.group(2)
+    m = re.search(r"https?://[^\s)\]>]+", block)
+    return m.group(0) if m else fallback
+
+def brief_item_time(cat_key, date_s, seq):
+    y, mo, d = [int(x) for x in date_s.split("-")]
     hh, mm = BRIEF_CLOCK.get(cat_key, (8, 0))
-    dt = datetime.datetime(y, m, d, hh, mm, 0, tzinfo=SHANGHAI)
+    dt = datetime.datetime(y, mo, d, hh, mm, 0, tzinfo=SHANGHAI) + datetime.timedelta(minutes=max(0, seq - 1))
     return dt.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
 
-def make_brief_item(cat_key, path, date_s=None):
+def make_brief_items(cat_key, path, date_s=None):
     cat_key = cat_key.lower()
     if cat_key not in BRIEF_CAT:
         raise ValueError(f"unknown brief category: {cat_key}")
@@ -131,24 +181,28 @@ def make_brief_item(cat_key, path, date_s=None):
     text = open(path, encoding="utf-8").read().strip()
     if not text:
         raise ValueError(f"empty brief: {path}")
-    title = f"{BRIEF_TITLE[cat_key]} · {date_s}"
-    url = f"{BASE}/briefs/{cat_key}/{date_s}.html"
-    return {
-        "id": f"brief-{cat_key}-{date_s}",
-        "kind": "brief",
-        "user": "每日简报",
-        "name": "每日简报",
-        "category": BRIEF_CAT[cat_key],
-        "title": title,
-        "summary": extract_summary(text),
-        "text": text,
-        "created_at": brief_created_at(cat_key, date_s),
-        "metrics": {},
-        "media": [],
-        "url": url,
-        "brief_date": date_s,
-        "brief_key": cat_key,
-    }
+    news = parse_brief_news(text)
+    out = []
+    for seq, it in enumerate(news, 1):
+        sid = f"{seq:02d}"
+        fallback = f"{BASE}/briefs/{cat_key}/{date_s}.html#item-{sid}"
+        out.append({
+            "id": f"brief-{cat_key}-{date_s}-{sid}",
+            "kind": "brief-item",
+            "user": "每日简报",
+            "name": "每日简报",
+            "category": BRIEF_CAT[cat_key],
+            "title": it["title"],
+            "summary": item_summary(it["title"], it["text"]),
+            "text": it["text"],
+            "created_at": brief_item_time(cat_key, date_s, seq),
+            "metrics": {},
+            "media": [],
+            "url": first_source_url(it["text"], fallback),
+            "brief_date": date_s,
+            "brief_key": cat_key,
+        })
+    return out
 
 def collect_briefs_from_dir(root):
     root = pathlib.Path(root)
@@ -158,8 +212,19 @@ def collect_briefs_from_dir(root):
         if not d.is_dir():
             continue
         for fp in sorted(d.glob("20??-??-??.md")):
-            items.append(make_brief_item(key, fp, fp.stem))
+            items.extend(make_brief_items(key, fp, fp.stem))
     return items
+
+def drop_replaced_briefs(items, incoming):
+    keys = {(i.get("brief_key"), i.get("brief_date")) for i in incoming if i.get("brief_key") and i.get("brief_date")}
+    def keep(i):
+        iid = i.get("id") or ""
+        if re.fullmatch(r"brief-(ai|auto|robot)-\d{4}-\d{2}-\d{2}", iid):
+            return False
+        if is_brief(i) and (i.get("brief_key"), i.get("brief_date")) in keys:
+            return False
+        return True
+    return [i for i in items if keep(i)]
 
 def sort_items(items):
     items.sort(key=lambda i: i.get("created_at") or i.get("added_at") or "", reverse=True)
@@ -179,66 +244,71 @@ def page_shell(title, body, extra_nav=""):
 <h1>{html.escape(title)}</h1>
 <div class="navlinks">
 <a href="../../index.html">首页</a>
-<a href="../index.html">每日简报</a>
 {extra_nav}
 </div>
 </div></header>
 {body}
-<footer>每日简报由机器大熊整理，供选题与素材使用</footer>
+<footer>内容来自每日简报整理，供选题与素材使用</footer>
 </body></html>
 """
 
 def write_brief_pages(items):
-    briefs = [i for i in items if is_brief(i)]
+    groups = {}
+    for i in items:
+        if not is_brief(i):
+            continue
+        key, date = i.get("brief_key"), i.get("brief_date")
+        if key and date:
+            groups.setdefault((key, date), []).append(i)
     os.makedirs(f"{R}/briefs", exist_ok=True)
     by_date = {}
-    for i in briefs:
-        key = i.get("brief_key")
-        date = i.get("brief_date")
-        if not key or not date:
-            continue
+    for (key, date), its in groups.items():
+        its = sorted(its, key=lambda x: x.get("created_at") or "")
         os.makedirs(f"{R}/briefs/{key}", exist_ok=True)
-        article = f'<div class="article-wrap"><p class="lead">{html.escape(i.get("category") or "")} · {html.escape(date)}</p><article class="article">{md_to_html(i.get("text") or "")}</article></div>'
-        # brief pages live at briefs/ai/DATE.html so css is ../../assets
-        open(f"{R}/briefs/{key}/{date}.html", "w").write(
-            page_shell(i.get("title") or "每日简报", article)
-        )
-        by_date.setdefault(date, []).append(i)
-    # index at briefs/index.html — css is ../assets, so write a slightly different shell
+        parts = [f'<div class="article-wrap"><p class="lead">{html.escape(BRIEF_CAT.get(key, key))} · {html.escape(date)}</p>']
+        for i in its:
+            m = re.search(r"-(\d+)$", i.get("id") or "")
+            sid = m.group(1) if m else ""
+            parts.append(f'<h2 id="item-{sid}">{html.escape(i.get("title") or "")}</h2>')
+            parts.append(f'<article class="article">{md_to_html(i.get("text") or "")}</article>')
+        parts.append("</div>")
+        title = f"{BRIEF_TITLE.get(key, '简报')} · {date}"
+        open(f"{R}/briefs/{key}/{date}.html", "w").write(page_shell(title, "\n".join(parts)))
+        by_date.setdefault(date, []).extend(its)
     parts = []
     for date in sorted(by_date.keys(), reverse=True):
         parts.append(f"<h2>{html.escape(date)}</h2><ul>")
         for i in sorted(by_date[date], key=lambda x: x.get("created_at") or ""):
             rel = f"{i['brief_key']}/{i['brief_date']}.html"
-            sum_ = html.escape(i.get("summary") or "")
-            parts.append(f'<li><a href="{rel}"><strong>{html.escape(i.get("title") or "")}</strong><small>{sum_}</small></a></li>')
+            m = re.search(r"-(\d+)$", i.get("id") or "")
+            if m:
+                rel += f"#item-{m.group(1)}"
+            parts.append(f'<li><a href="{rel}"><strong>{html.escape(i.get("title") or "")}</strong><small>{html.escape(i.get("summary") or "")}</small></a></li>')
         parts.append("</ul>")
     if not parts:
-        parts.append('<p style="color:var(--sub);padding:40px 0;text-align:center">暂无简报</p>')
+        parts.append('<p style="color:var(--sub);padding:40px 0;text-align:center">暂无条目</p>')
     open(f"{R}/briefs/index.html", "w").write(f"""<!doctype html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>每日简报</title>
+<title>简报条目</title>
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
 <header><div class="bar">
-<h1>每日简报</h1>
+<h1>按日期查看</h1>
 <div class="navlinks">
 <a href="../index.html">首页</a>
 <a href="../archive/index.html">收藏归档</a>
 </div>
 </div></header>
 <div class="brief-index">
-<p class="lead" style="color:var(--sub);margin-bottom:8px">汽车、AI、机器人每日简报，按日期排列。</p>
 {''.join(parts)}
 </div>
-<footer>每日简报由机器大熊整理，供选题与素材使用</footer>
+<footer>内容来自每日简报整理，供选题与素材使用</footer>
 </body></html>
 """)
-
 
 os.makedirs(f"{R}/data", exist_ok=True)
 os.makedirs(f"{R}/archive/img", exist_ok=True)
@@ -685,15 +755,8 @@ def merge_new(items, path):
     return new + items, len(new)
 
 def pick_rss(items, category=None):
-    """Keep all briefs from the last 30 days in the feed; fill the rest with posts up to RSS_LIMIT."""
     pool = [i for i in items if category is None or i.get("category") == category]
-    now = now_utc()
-    briefs = [i for i in pool if is_brief(i) and age_days(i, now) <= AGE_DAYS]
-    posts = [i for i in pool if not is_brief(i)]
-    if len(briefs) >= RSS_LIMIT:
-        return sort_items(list(briefs))[:RSS_LIMIT]
-    chosen = list(briefs) + posts[: max(0, RSS_LIMIT - len(briefs))]
-    return sort_items(chosen)
+    return sort_items(list(pool))[:RSS_LIMIT]
 
 def build_all(items):
     sort_items(items)
@@ -725,7 +788,7 @@ def parse_cli(argv):
         if a == "--brief":
             if i + 2 >= len(args):
                 raise SystemExit("usage: --brief <ai|auto|robot> <file.md>")
-            brief_items.append(make_brief_item(args[i + 1], args[i + 2]))
+            brief_items.extend(make_brief_items(args[i + 1], args[i + 2]))
             i += 3
         elif a == "--briefs-dir":
             if i + 1 >= len(args):
@@ -757,6 +820,7 @@ def main():
     if not sync_only:
         items, n_new = merge_new(items, new_path)
         if brief_items:
+            items = drop_replaced_briefs(items, brief_items)
             import tempfile
             tmp = tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8")
             json.dump(brief_items, tmp, ensure_ascii=False)

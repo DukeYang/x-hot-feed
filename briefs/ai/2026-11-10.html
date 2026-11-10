@@ -11,53 +11,42 @@
 <h1>AI 每日简报 · 2026-11-10</h1>
 <div class="navlinks">
 <a href="../../index.html">首页</a>
-<a href="../index.html">每日简报</a>
 
 </div>
 </div></header>
-<div class="article-wrap"><p class="lead">AI · 2026-11-10</p><article class="article"><p><strong>今日主线：</strong> 11 月 9 日模型与算力同天加码——Anthropic 升级 Claude Fable / Mythos 5.2，Google 把第八代 TPU 扩到四套系统，Meta 推出面向 Agent 高频任务的轻量模型 Muse Ember；国内则是字节 Seedream 5.5 和阿里云 Token Plan 大幅提额。</p>
-<p><strong>1. Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2：同一底座、两套访问</strong><br>
-11 月 9 日 Anthropic 宣布升级面向高难度技术任务的 Fable / Mythos 线。两者为同一底层模型：Fable 5.2 面向全体用户，带有更强的网络安全与生物安全分类器；Mythos 5.2 面向通过网络与生命科学核验计划的机构。官方称输出速度最多比 5.1 快约 30%，标准定价为每百万 token 输入 8 美元、输出 40 美元；可选 fast mode 为输入 16 / 输出 80 美元。官方评测显示，Fable 5.2 在 FrontierCode 2.0（Xhigh）达 49.1%，高于 Opus 5.5 的 45.5%；约 1000 个 Agent 在约 30 小时内形式化证明了费马大定理，而同设置的 Opus 5.5 约 18 小时只完成约 26%。公司称超过 90% 合入 Anthropic 核心代码库的改动现由 Claude 在人类指导下写出。上述分数与案例均为官方披露。<br>
+<div class="article-wrap"><p class="lead">AI · 2026-11-10</p>
+<h2 id="item-01">Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2：同一底座、两套访问</h2>
+<article class="article"><p>11 月 9 日 Anthropic 宣布升级面向高难度技术任务的 Fable / Mythos 线。两者为同一底层模型：Fable 5.2 面向全体用户，带有更强的网络安全与生物安全分类器；Mythos 5.2 面向通过网络与生命科学核验计划的机构。官方称输出速度最多比 5.1 快约 30%，标准定价为每百万 token 输入 8 美元、输出 40 美元；可选 fast mode 为输入 16 / 输出 80 美元。官方评测显示，Fable 5.2 在 FrontierCode 2.0（Xhigh）达 49.1%，高于 Opus 5.5 的 45.5%；约 1000 个 Agent 在约 30 小时内形式化证明了费马大定理，而同设置的 Opus 5.5 约 18 小时只完成约 26%。公司称超过 90% 合入 Anthropic 核心代码库的改动现由 Claude 在人类指导下写出。上述分数与案例均为官方披露。<br>
 选题角度：日常用 Opus，硬活上 Fable——模型产品线开始按“任务难度”分层卖。<br>
-来源：<a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener">Anthropic 原文</a></p>
-<p><strong>2. Google 发布 TPU 8tx 与 TPU 8i Max：一年四套第八代系统</strong><br>
-11 月 9 日 Google 官方博客宣布扩展第八代 TPU 组合：TPU 8tx 面向机密推理与小规模训练，把硬件级机密计算做进系统，并配第五代 AMD EPYC 主机与 Boardfly 低延迟网络，官方称相对 TPU 8t 延迟最多可降约一半；TPU 8i Max 把两颗 TPU 8i 封装在一起，计算、SRAM、HBM 带宽均为 8i 的约两倍，主打超大上下文与机架密度。它们与今年 4 月发布的 TPU 8t（大规模训练）、TPU 8i（低延迟推理）一起，构成一年内四套第八代系统。同期开源 TorchTPU、TPU Sync 等软件栈，并称在 InferenceX / AgentX 等生产向基准上取得价格性能领先；具体客户份额与对标英伟达的独立第三方对比未在该文给出。<br>
+来源：<a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener">Anthropic 原文</a></p></article>
+<h2 id="item-02">Google 发布 TPU 8tx 与 TPU 8i Max：一年四套第八代系统</h2>
+<article class="article"><p>11 月 9 日 Google 官方博客宣布扩展第八代 TPU 组合：TPU 8tx 面向机密推理与小规模训练，把硬件级机密计算做进系统，并配第五代 AMD EPYC 主机与 Boardfly 低延迟网络，官方称相对 TPU 8t 延迟最多可降约一半；TPU 8i Max 把两颗 TPU 8i 封装在一起，计算、SRAM、HBM 带宽均为 8i 的约两倍，主打超大上下文与机架密度。它们与今年 4 月发布的 TPU 8t（大规模训练）、TPU 8i（低延迟推理）一起，构成一年内四套第八代系统。同期开源 TorchTPU、TPU Sync 等软件栈，并称在 InferenceX / AgentX 等生产向基准上取得价格性能领先；具体客户份额与对标英伟达的独立第三方对比未在该文给出。<br>
 选题角度：Agent 时代的芯片战争，已经从“训练卡更大”变成“机密推理 + 百万上下文各自成套”。<br>
-来源：<a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/" target="_blank" rel="noopener">Google 官方博客</a>｜<a href="https://www.theverge.com/ai-artificial-intelligence/1029670/google-announced-two-new-versions-of-its-eighth-gen-ai-chips" target="_blank" rel="noopener">The Verge</a></p>
-<p><strong>3. Meta 发布 Muse Ember：为 Agent 高频小步骤做的最小高效模型</strong><br>
-11 月 9 日 Meta Superintelligence Labs 推出 Muse Ember，定位于工具调用、编码子任务、路由、抽取与长文档解析等高频 Agent 步骤。官方称在 Artificial Analysis Intelligence Index 上，以约三分之一任务成本达到与 Claude Haiku 5.5 相当的成绩，并在 Luna 各推理档位上更高；API 定价为每百万 token 输入 0.10 美元、输出 0.50 美元（提示超过约 20 万 token 时更高），上下文 100 万、输出最长约 51.2 万 token，支持文本、图像、音频与视频。今日起可在 Muse Code 与 Meta Model API（<code>muse-ember-1.0</code>）使用，并上线 Google Cloud 与 Oracle Cloud。公司称 Ember 是首个用 Muse Wonder Full 训练出的专用模型；分数来自官方与 Artificial Analysis，需自行复核。<br>
+来源：<a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/" target="_blank" rel="noopener">Google 官方博客</a>｜<a href="https://www.theverge.com/ai-artificial-intelligence/1029670/google-announced-two-new-versions-of-its-eighth-gen-ai-chips" target="_blank" rel="noopener">The Verge</a></p></article>
+<h2 id="item-03">Meta 发布 Muse Ember：为 Agent 高频小步骤做的最小高效模型</h2>
+<article class="article"><p>11 月 9 日 Meta Superintelligence Labs 推出 Muse Ember，定位于工具调用、编码子任务、路由、抽取与长文档解析等高频 Agent 步骤。官方称在 Artificial Analysis Intelligence Index 上，以约三分之一任务成本达到与 Claude Haiku 5.5 相当的成绩，并在 Luna 各推理档位上更高；API 定价为每百万 token 输入 0.10 美元、输出 0.50 美元（提示超过约 20 万 token 时更高），上下文 100 万、输出最长约 51.2 万 token，支持文本、图像、音频与视频。今日起可在 Muse Code 与 Meta Model API（<code>muse-ember-1.0</code>）使用，并上线 Google Cloud 与 Oracle Cloud。公司称 Ember 是首个用 Muse Wonder Full 训练出的专用模型；分数来自官方与 Artificial Analysis，需自行复核。<br>
 选题角度：不是又一个“旗舰”，而是“子 Agent 专用廉价大脑”——编排贵模型、执行用 Ember。<br>
-来源：<a href="https://research.meta.ai/blog/muse-ember" target="_blank" rel="noopener">Meta 研究博客</a>｜<a href="https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/" target="_blank" rel="noopener">TechCrunch</a></p>
-<p><strong>4. SoftBank、Grab 与 PETROS：马来西亚 AI 基础设施拟投 18.5 亿美元种子资本</strong><br>
-11 月 9 日 SoftBank Group 与 Grab 宣布签署联合开发协议，连同 PETROS 计划为马来西亚 AI 基础设施提供合计约 18.5 亿美元初始种子资本：SoftBank 10 亿、Grab 7.5 亿、PETROS 1 亿；项目覆盖砂拉越与马来半岛，长期目标是 5 吉瓦以上算力。资金将按开发与客户合同里程碑分阶段投放，并寻求超大规模云厂商与更多投资人。砂拉越项目拟初始投资约 10 亿美元，半岛项目约 8.5 亿美元。公告含大量前瞻性表述，合资实体成立与最终投资条款仍取决于确定性协议与监管条件。<br>
+来源：<a href="https://research.meta.ai/blog/muse-ember" target="_blank" rel="noopener">Meta 研究博客</a>｜<a href="https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/" target="_blank" rel="noopener">TechCrunch</a></p></article>
+<h2 id="item-04">SoftBank、Grab 与 PETROS：马来西亚 AI 基础设施拟投 18.5 亿美元种子资本</h2>
+<article class="article"><p>11 月 9 日 SoftBank Group 与 Grab 宣布签署联合开发协议，连同 PETROS 计划为马来西亚 AI 基础设施提供合计约 18.5 亿美元初始种子资本：SoftBank 10 亿、Grab 7.5 亿、PETROS 1 亿；项目覆盖砂拉越与马来半岛，长期目标是 5 吉瓦以上算力。资金将按开发与客户合同里程碑分阶段投放，并寻求超大规模云厂商与更多投资人。砂拉越项目拟初始投资约 10 亿美元，半岛项目约 8.5 亿美元。公告含大量前瞻性表述，合资实体成立与最终投资条款仍取决于确定性协议与监管条件。<br>
 选题角度：东南亚主权算力竞赛里，出行超级 App 开始下场建机房。<br>
-来源：<a href="https://group.softbank/en/news/press/20261109_0" target="_blank" rel="noopener">SoftBank 官方新闻稿</a></p>
-<p><strong>5. 字节跳动发布 Seedream 5.5：百轮编辑更稳，原生透明素材</strong><br>
-11 月 9 日字节 Seed 团队发布图像创作模型 Seedream 5.5。重点升级包括：非编辑区域像素级保持，支持围绕同一作品最多约 100 轮连续修改；原生输出带 Alpha 通道的 RGBA 透明 / 半透明素材；改善光照、材质与皮肤质感，并加强复杂字形与密集小字渲染。官方称相较 Seedream 5.0 Pro，电商、营销、影视等场景可用率提升，影视与办公可用率达上一版两倍以上；严重文字崩坏率降至约 0.4%。豆包、豆包工作、即梦已接入，火山方舟 API 即将上线；2K 方图编辑单张成本约 0.28 元，不到 5.0 Pro 一半。评测数字均为官方公布。<br>
+来源：<a href="https://group.softbank/en/news/press/20261109_0" target="_blank" rel="noopener">SoftBank 官方新闻稿</a></p></article>
+<h2 id="item-05">字节跳动发布 Seedream 5.5：百轮编辑更稳，原生透明素材</h2>
+<article class="article"><p>11 月 9 日字节 Seed 团队发布图像创作模型 Seedream 5.5。重点升级包括：非编辑区域像素级保持，支持围绕同一作品最多约 100 轮连续修改；原生输出带 Alpha 通道的 RGBA 透明 / 半透明素材；改善光照、材质与皮肤质感，并加强复杂字形与密集小字渲染。官方称相较 Seedream 5.0 Pro，电商、营销、影视等场景可用率提升，影视与办公可用率达上一版两倍以上；严重文字崩坏率降至约 0.4%。豆包、豆包工作、即梦已接入，火山方舟 API 即将上线；2K 方图编辑单张成本约 0.28 元，不到 5.0 Pro 一半。评测数字均为官方公布。<br>
 选题角度：创作者真正卡的不是“一键出图”，而是改到第 80 轮还稳不稳、能不能直接出可进设计稿的透明层。<br>
-来源：<a href="https://seed.bytedance.com/zh/blog/more-realistic-images-more-stable-editing-across-100-rounds-introducing-seedream-5-5" target="_blank" rel="noopener">字节 Seed 官方</a>｜<a href="https://www.ithome.com/1/024/379.htm" target="_blank" rel="noopener">IT之家</a></p>
-<p><strong>6. Adobe 成为迪士尼“官方 AI 创新合作伙伴”，共研定制生成模型</strong><br>
-11 月 9 日 Adobe MAX 上，Adobe 与华特迪士尼公司宣布多年期战略联盟：Adobe 成为迪士尼官方 AI 创新合作伙伴，提供 Firefly、Firefly Foundry、Premiere、Photoshop 的早期访问，以及工程与研究支持。双方将用 Firefly Foundry 基于迪士尼 IP 知识共研“创作者主导”的专有生成模型；迪士尼幻想工程研发已在用草图转概念图等定制模型加速乐园管线。合作也覆盖 StudioLAB 与 ESPN Edge。金额与排他范围未在新闻稿披露。<br>
+来源：<a href="https://seed.bytedance.com/zh/blog/more-realistic-images-more-stable-editing-across-100-rounds-introducing-seedream-5-5" target="_blank" rel="noopener">字节 Seed 官方</a>｜<a href="https://www.ithome.com/1/024/379.htm" target="_blank" rel="noopener">IT之家</a></p></article>
+<h2 id="item-06">Adobe 成为迪士尼“官方 AI 创新合作伙伴”，共研定制生成模型</h2>
+<article class="article"><p>11 月 9 日 Adobe MAX 上，Adobe 与华特迪士尼公司宣布多年期战略联盟：Adobe 成为迪士尼官方 AI 创新合作伙伴，提供 Firefly、Firefly Foundry、Premiere、Photoshop 的早期访问，以及工程与研究支持。双方将用 Firefly Foundry 基于迪士尼 IP 知识共研“创作者主导”的专有生成模型；迪士尼幻想工程研发已在用草图转概念图等定制模型加速乐园管线。合作也覆盖 StudioLAB 与 ESPN Edge。金额与排他范围未在新闻稿披露。<br>
 选题角度：好莱坞开始公开说“我们要用自己的模型”，版权安全叙事进入采购合同。<br>
-来源：<a href="https://news.adobe.com/news/2026/11/adobe-and-the-walt-disney-company-alliance" target="_blank" rel="noopener">Adobe 官方新闻稿</a></p>
-<p><strong>7. 阿里云 Token Plan 个人版额度上调七成以上，月费不变</strong><br>
-11 月 9 日起，阿里云上调 Token Plan 个人版额度：Lite / Essential / Standard 月费仍为 39 / 79 / 139 元，额度分别由约 1.15 万、2.55 万、4.5 万 Credits 提到 2 万、4.5 万、8 万；Pro 额度由 18 万提到 20 万，月费由 499 元降至 312 元。IT之家测算四档单位额度成本降幅均超过约 40%；存量用户当期额度按新标准补齐，Pro 新价格下一周期生效。<br>
+来源：<a href="https://news.adobe.com/news/2026/11/adobe-and-the-walt-disney-company-alliance" target="_blank" rel="noopener">Adobe 官方新闻稿</a></p></article>
+<h2 id="item-07">阿里云 Token Plan 个人版额度上调七成以上，月费不变</h2>
+<article class="article"><p>11 月 9 日起，阿里云上调 Token Plan 个人版额度：Lite / Essential / Standard 月费仍为 39 / 79 / 139 元，额度分别由约 1.15 万、2.55 万、4.5 万 Credits 提到 2 万、4.5 万、8 万；Pro 额度由 18 万提到 20 万，月费由 499 元降至 312 元。IT之家测算四档单位额度成本降幅均超过约 40%；存量用户当期额度按新标准补齐，Pro 新价格下一周期生效。<br>
 选题角度：国内 API 价格战已经打到订阅套餐的“同等月费更多量”。<br>
-来源：<a href="https://www.ithome.com/1/024/250.htm" target="_blank" rel="noopener">IT之家</a></p>
-<p><strong>8. 英伟达在韩国宣布投资 Point2，并计划加码 Motif、RLWRLD、Upstage</strong><br>
-11 月 9 日，在韩国科技部与英伟达合办的 AI 初创伙伴论坛上，英伟达宣布已投资互联初创公司 Point2 Technology，并计划投资 Motif Technologies（开源权重基础模型）、RLWRLD（机器人基础模型）与 Upstage（企业文档 AI / Solar 模型）。覆盖从机柜互联、基础模型到实体 AI 与企业应用的栈。金额未披露；此前英伟达已完成对 Naver 约 10 亿美元投资（11 月 8 日简报已报道）。<br>
+来源：<a href="https://www.ithome.com/1/024/250.htm" target="_blank" rel="noopener">IT之家</a></p></article>
+<h2 id="item-08">英伟达在韩国宣布投资 Point2，并计划加码 Motif、RLWRLD、Upstage</h2>
+<article class="article"><p>11 月 9 日，在韩国科技部与英伟达合办的 AI 初创伙伴论坛上，英伟达宣布已投资互联初创公司 Point2 Technology，并计划投资 Motif Technologies（开源权重基础模型）、RLWRLD（机器人基础模型）与 Upstage（企业文档 AI / Solar 模型）。覆盖从机柜互联、基础模型到实体 AI 与企业应用的栈。金额未披露；此前英伟达已完成对 Naver 约 10 亿美元投资（11 月 8 日简报已报道）。<br>
 选题角度：英伟达在韩国不只买平台股权，还在按“互联—模型—机器人”铺本地生态。<br>
-来源：<a href="https://blogs.nvidia.com/blog/korean-startup-investments-msit/" target="_blank" rel="noopener">NVIDIA 官方博客</a></p>
-<h2><strong>X 上的动态</strong></h2>
-<ul><li><strong>Anthropic 官方：Fable 5.2 / Mythos 5.2 现已可用。</strong> 11 月 9 日短帖在抓取时约有 48.8 万次浏览、1.1 万赞。值得关注：在 IPO 窗口临近时，公司选择用“更难技术任务专用模型”而不是又一个日常对话模型来抢注意力；完整规格见上方第 1 条。</li></ul>
-<p><a href="https://x.com/AnthropicAI/status/2119867707546071125" target="_blank" rel="noopener">https://x.com/AnthropicAI/status/2119867707546071125</a></p>
-<ul><li><strong>Alexandr Wang：Muse Ember 主打“单位美元智能”高于 Haiku / Luna 等 flash 模型。</strong> 11 月 9 日开帖在抓取时约有 24.1 万次浏览、4500+ 赞，强调面向 Agent 整天重复的小步骤。值得关注：Meta 把叙事从“最大开源”切到“最便宜的可编排执行层”，和上方第 3 条产品定位一致，但帖子本身是社区传播主入口。</li></ul>
-<p><a href="https://x.com/alexandr_wang/status/2119853374158032950" target="_blank" rel="noopener">https://x.com/alexandr_wang/status/2119853374158032950</a></p>
-<ul><li><strong>Google AI Studio：一句话就能用 Google Maps 搭应用。</strong> 11 月 9 日官方称支持一键接入地图瓦片、地点、天气、路线与 3D，用自然语言描述即可生成地图类应用；抓取时约 17 万浏览、1100+ 收藏。值得关注：不是新模型发布，而是把地图能力塞进 AI 编程工作台——本地生活、出行类 Demo 的门槛又降了一截。</li></ul>
-<p><a href="https://x.com/GoogleAIStudio/status/2119837788937896234" target="_blank" rel="noopener">https://x.com/GoogleAIStudio/status/2119837788937896234</a></p>
-<ul><li><strong>Google 官方同步介绍 TPU 8i Max / 8tx。</strong> 11 月 9 日帖子在抓取时约有 19 万浏览、1175 赞，强调一年内推出四套第八代系统。值得关注：硬件新闻的传播节奏已经和模型发布同一天抢热度；细节见上方第 2 条。</li></ul>
-<p><a href="https://x.com/Google/status/2119788086490001906" target="_blank" rel="noopener">https://x.com/Google/status/2119788086490001906</a></p>
-<h2><strong>推荐选题</strong></h2>
-<ol><li>《Fable 管硬活、Ember 跑杂活：Agent 编排开始按“难度”买模型》</li><li>《一年四套 TPU：Google 在用系统组合拳，而不是一张更大的训练卡》</li><li>《改图改到第 100 轮：Seedream 5.5 和迪士尼定制 Firefly，创作者真正要的是可控》</li></ol></article></div>
-<footer>每日简报由机器大熊整理，供选题与素材使用</footer>
+来源：<a href="https://blogs.nvidia.com/blog/korean-startup-investments-msit/" target="_blank" rel="noopener">NVIDIA 官方博客</a></p></article>
+</div>
+<footer>内容来自每日简报整理，供选题与素材使用</footer>
 </body></html>

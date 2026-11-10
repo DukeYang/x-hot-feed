@@ -1,144 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · AI</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>X 热帖精选与汽车、AI、机器人每日简报。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Tue, 10 Nov 2026 10:21:12 +0000</lastBuildDate><ttl>180</ttl>
-<item><title>[AI] AI 每日简报 · 2026-11-10</title><link>https://dukeyang.github.io/x-hot-feed/briefs/ai/2026-11-10.html</link><guid isPermaLink="true">https://dukeyang.github.io/x-hot-feed/briefs/ai/2026-11-10.html</guid><category>AI</category><author>每日简报</author><pubDate>Mon, 09 Nov 2026 23:52:00 +0000</pubDate><description><![CDATA[<p><strong>今日主线：</strong> 11 月 9 日模型与算力同天加码——Anthropic 升级 Claude Fable / Mythos 5.2，Google 把第八代 TPU 扩到四套系统，Meta 推出面向 Agent 高频任务的轻量模型 Muse Ember；国内则是字节 Seedream 5.5 和阿里云 Token Plan 大幅提额。</p>
-<p><strong>1. Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2：同一底座、两套访问</strong><br>
-11 月 9 日 Anthropic 宣布升级面向高难度技术任务的 Fable / Mythos 线。两者为同一底层模型：Fable 5.2 面向全体用户，带有更强的网络安全与生物安全分类器；Mythos 5.2 面向通过网络与生命科学核验计划的机构。官方称输出速度最多比 5.1 快约 30%，标准定价为每百万 token 输入 8 美元、输出 40 美元；可选 fast mode 为输入 16 / 输出 80 美元。官方评测显示，Fable 5.2 在 FrontierCode 2.0（Xhigh）达 49.1%，高于 Opus 5.5 的 45.5%；约 1000 个 Agent 在约 30 小时内形式化证明了费马大定理，而同设置的 Opus 5.5 约 18 小时只完成约 26%。公司称超过 90% 合入 Anthropic 核心代码库的改动现由 Claude 在人类指导下写出。上述分数与案例均为官方披露。<br>
-选题角度：日常用 Opus，硬活上 Fable——模型产品线开始按“任务难度”分层卖。<br>
-来源：<a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener">Anthropic 原文</a></p>
-<p><strong>2. Google 发布 TPU 8tx 与 TPU 8i Max：一年四套第八代系统</strong><br>
-11 月 9 日 Google 官方博客宣布扩展第八代 TPU 组合：TPU 8tx 面向机密推理与小规模训练，把硬件级机密计算做进系统，并配第五代 AMD EPYC 主机与 Boardfly 低延迟网络，官方称相对 TPU 8t 延迟最多可降约一半；TPU 8i Max 把两颗 TPU 8i 封装在一起，计算、SRAM、HBM 带宽均为 8i 的约两倍，主打超大上下文与机架密度。它们与今年 4 月发布的 TPU 8t（大规模训练）、TPU 8i（低延迟推理）一起，构成一年内四套第八代系统。同期开源 TorchTPU、TPU Sync 等软件栈，并称在 InferenceX / AgentX 等生产向基准上取得价格性能领先；具体客户份额与对标英伟达的独立第三方对比未在该文给出。<br>
-选题角度：Agent 时代的芯片战争，已经从“训练卡更大”变成“机密推理 + 百万上下文各自成套”。<br>
-来源：<a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/" target="_blank" rel="noopener">Google 官方博客</a>｜<a href="https://www.theverge.com/ai-artificial-intelligence/1029670/google-announced-two-new-versions-of-its-eighth-gen-ai-chips" target="_blank" rel="noopener">The Verge</a></p>
-<p><strong>3. Meta 发布 Muse Ember：为 Agent 高频小步骤做的最小高效模型</strong><br>
-11 月 9 日 Meta Superintelligence Labs 推出 Muse Ember，定位于工具调用、编码子任务、路由、抽取与长文档解析等高频 Agent 步骤。官方称在 Artificial Analysis Intelligence Index 上，以约三分之一任务成本达到与 Claude Haiku 5.5 相当的成绩，并在 Luna 各推理档位上更高；API 定价为每百万 token 输入 0.10 美元、输出 0.50 美元（提示超过约 20 万 token 时更高），上下文 100 万、输出最长约 51.2 万 token，支持文本、图像、音频与视频。今日起可在 Muse Code 与 Meta Model API（<code>muse-ember-1.0</code>）使用，并上线 Google Cloud 与 Oracle Cloud。公司称 Ember 是首个用 Muse Wonder Full 训练出的专用模型；分数来自官方与 Artificial Analysis，需自行复核。<br>
-选题角度：不是又一个“旗舰”，而是“子 Agent 专用廉价大脑”——编排贵模型、执行用 Ember。<br>
-来源：<a href="https://research.meta.ai/blog/muse-ember" target="_blank" rel="noopener">Meta 研究博客</a>｜<a href="https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/" target="_blank" rel="noopener">TechCrunch</a></p>
-<p><strong>4. SoftBank、Grab 与 PETROS：马来西亚 AI 基础设施拟投 18.5 亿美元种子资本</strong><br>
-11 月 9 日 SoftBank Group 与 Grab 宣布签署联合开发协议，连同 PETROS 计划为马来西亚 AI 基础设施提供合计约 18.5 亿美元初始种子资本：SoftBank 10 亿、Grab 7.5 亿、PETROS 1 亿；项目覆盖砂拉越与马来半岛，长期目标是 5 吉瓦以上算力。资金将按开发与客户合同里程碑分阶段投放，并寻求超大规模云厂商与更多投资人。砂拉越项目拟初始投资约 10 亿美元，半岛项目约 8.5 亿美元。公告含大量前瞻性表述，合资实体成立与最终投资条款仍取决于确定性协议与监管条件。<br>
-选题角度：东南亚主权算力竞赛里，出行超级 App 开始下场建机房。<br>
-来源：<a href="https://group.softbank/en/news/press/20261109_0" target="_blank" rel="noopener">SoftBank 官方新闻稿</a></p>
-<p><strong>5. 字节跳动发布 Seedream 5.5：百轮编辑更稳，原生透明素材</strong><br>
-11 月 9 日字节 Seed 团队发布图像创作模型 Seedream 5.5。重点升级包括：非编辑区域像素级保持，支持围绕同一作品最多约 100 轮连续修改；原生输出带 Alpha 通道的 RGBA 透明 / 半透明素材；改善光照、材质与皮肤质感，并加强复杂字形与密集小字渲染。官方称相较 Seedream 5.0 Pro，电商、营销、影视等场景可用率提升，影视与办公可用率达上一版两倍以上；严重文字崩坏率降至约 0.4%。豆包、豆包工作、即梦已接入，火山方舟 API 即将上线；2K 方图编辑单张成本约 0.28 元，不到 5.0 Pro 一半。评测数字均为官方公布。<br>
-选题角度：创作者真正卡的不是“一键出图”，而是改到第 80 轮还稳不稳、能不能直接出可进设计稿的透明层。<br>
-来源：<a href="https://seed.bytedance.com/zh/blog/more-realistic-images-more-stable-editing-across-100-rounds-introducing-seedream-5-5" target="_blank" rel="noopener">字节 Seed 官方</a>｜<a href="https://www.ithome.com/1/024/379.htm" target="_blank" rel="noopener">IT之家</a></p>
-<p><strong>6. Adobe 成为迪士尼“官方 AI 创新合作伙伴”，共研定制生成模型</strong><br>
-11 月 9 日 Adobe MAX 上，Adobe 与华特迪士尼公司宣布多年期战略联盟：Adobe 成为迪士尼官方 AI 创新合作伙伴，提供 Firefly、Firefly Foundry、Premiere、Photoshop 的早期访问，以及工程与研究支持。双方将用 Firefly Foundry 基于迪士尼 IP 知识共研“创作者主导”的专有生成模型；迪士尼幻想工程研发已在用草图转概念图等定制模型加速乐园管线。合作也覆盖 StudioLAB 与 ESPN Edge。金额与排他范围未在新闻稿披露。<br>
-选题角度：好莱坞开始公开说“我们要用自己的模型”，版权安全叙事进入采购合同。<br>
-来源：<a href="https://news.adobe.com/news/2026/11/adobe-and-the-walt-disney-company-alliance" target="_blank" rel="noopener">Adobe 官方新闻稿</a></p>
-<p><strong>7. 阿里云 Token Plan 个人版额度上调七成以上，月费不变</strong><br>
-11 月 9 日起，阿里云上调 Token Plan 个人版额度：Lite / Essential / Standard 月费仍为 39 / 79 / 139 元，额度分别由约 1.15 万、2.55 万、4.5 万 Credits 提到 2 万、4.5 万、8 万；Pro 额度由 18 万提到 20 万，月费由 499 元降至 312 元。IT之家测算四档单位额度成本降幅均超过约 40%；存量用户当期额度按新标准补齐，Pro 新价格下一周期生效。<br>
-选题角度：国内 API 价格战已经打到订阅套餐的“同等月费更多量”。<br>
-来源：<a href="https://www.ithome.com/1/024/250.htm" target="_blank" rel="noopener">IT之家</a></p>
-<p><strong>8. 英伟达在韩国宣布投资 Point2，并计划加码 Motif、RLWRLD、Upstage</strong><br>
-11 月 9 日，在韩国科技部与英伟达合办的 AI 初创伙伴论坛上，英伟达宣布已投资互联初创公司 Point2 Technology，并计划投资 Motif Technologies（开源权重基础模型）、RLWRLD（机器人基础模型）与 Upstage（企业文档 AI / Solar 模型）。覆盖从机柜互联、基础模型到实体 AI 与企业应用的栈。金额未披露；此前英伟达已完成对 Naver 约 10 亿美元投资（11 月 8 日简报已报道）。<br>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Tue, 10 Nov 2026 10:26:18 +0000</lastBuildDate><ttl>180</ttl>
+<item><title>[AI] 英伟达在韩国宣布投资 Point2，并计划加码 Motif、RLWRLD、Upstage</title><link>https://blogs.nvidia.com/blog/korean-startup-investments-msit/</link><guid isPermaLink="true">https://blogs.nvidia.com/blog/korean-startup-investments-msit/</guid><category>AI</category><author>每日简报</author><pubDate>Mon, 09 Nov 2026 23:59:00 +0000</pubDate><description><![CDATA[<p>11 月 9 日，在韩国科技部与英伟达合办的 AI 初创伙伴论坛上，英伟达宣布已投资互联初创公司 Point2 Technology，并计划投资 Motif Technologies（开源权重基础模型）、RLWRLD（机器人基础模型）与 Upstage（企业文档 AI / Solar 模型）。覆盖从机柜互联、基础模型到实体 AI 与企业应用的栈。金额未披露；此前英伟达已完成对 Naver 约 10 亿美元投资（11 月 8 日简报已报道）。<br>
 选题角度：英伟达在韩国不只买平台股权，还在按“互联—模型—机器人”铺本地生态。<br>
-来源：<a href="https://blogs.nvidia.com/blog/korean-startup-investments-msit/" target="_blank" rel="noopener">NVIDIA 官方博客</a></p>
-<h2><strong>X 上的动态</strong></h2>
-<ul><li><strong>Anthropic 官方：Fable 5.2 / Mythos 5.2 现已可用。</strong> 11 月 9 日短帖在抓取时约有 48.8 万次浏览、1.1 万赞。值得关注：在 IPO 窗口临近时，公司选择用“更难技术任务专用模型”而不是又一个日常对话模型来抢注意力；完整规格见上方第 1 条。</li></ul>
-<p><a href="https://x.com/AnthropicAI/status/2119867707546071125" target="_blank" rel="noopener">https://x.com/AnthropicAI/status/2119867707546071125</a></p>
-<ul><li><strong>Alexandr Wang：Muse Ember 主打“单位美元智能”高于 Haiku / Luna 等 flash 模型。</strong> 11 月 9 日开帖在抓取时约有 24.1 万次浏览、4500+ 赞，强调面向 Agent 整天重复的小步骤。值得关注：Meta 把叙事从“最大开源”切到“最便宜的可编排执行层”，和上方第 3 条产品定位一致，但帖子本身是社区传播主入口。</li></ul>
-<p><a href="https://x.com/alexandr_wang/status/2119853374158032950" target="_blank" rel="noopener">https://x.com/alexandr_wang/status/2119853374158032950</a></p>
-<ul><li><strong>Google AI Studio：一句话就能用 Google Maps 搭应用。</strong> 11 月 9 日官方称支持一键接入地图瓦片、地点、天气、路线与 3D，用自然语言描述即可生成地图类应用；抓取时约 17 万浏览、1100+ 收藏。值得关注：不是新模型发布，而是把地图能力塞进 AI 编程工作台——本地生活、出行类 Demo 的门槛又降了一截。</li></ul>
-<p><a href="https://x.com/GoogleAIStudio/status/2119837788937896234" target="_blank" rel="noopener">https://x.com/GoogleAIStudio/status/2119837788937896234</a></p>
-<ul><li><strong>Google 官方同步介绍 TPU 8i Max / 8tx。</strong> 11 月 9 日帖子在抓取时约有 19 万浏览、1175 赞，强调一年内推出四套第八代系统。值得关注：硬件新闻的传播节奏已经和模型发布同一天抢热度；细节见上方第 2 条。</li></ul>
-<p><a href="https://x.com/Google/status/2119788086490001906" target="_blank" rel="noopener">https://x.com/Google/status/2119788086490001906</a></p>
-<h2><strong>推荐选题</strong></h2>
-<ol><li>《Fable 管硬活、Ember 跑杂活：Agent 编排开始按“难度”买模型》</li><li>《一年四套 TPU：Google 在用系统组合拳，而不是一张更大的训练卡》</li><li>《改图改到第 100 轮：Seedream 5.5 和迪士尼定制 Firefly，创作者真正要的是可控》</li></ol>]]></description></item>
-<item><title>[AI] AI 每日简报 · 2026-11-08</title><link>https://dukeyang.github.io/x-hot-feed/briefs/ai/2026-11-08.html</link><guid isPermaLink="true">https://dukeyang.github.io/x-hot-feed/briefs/ai/2026-11-08.html</guid><category>AI</category><author>每日简报</author><pubDate>Sat, 07 Nov 2026 23:52:00 +0000</pubDate><description><![CDATA[<p><strong>今日主线：</strong> 资本市场给 AI 龙头降了降温——OpenAI 新一轮融资规模和估值都低于此前目标，Anthropic 仍打算感恩节前上市，但定价区间也往下调。同一周，芯片流向和数据中心项目也在被重新审查。</p>
-<p><strong>1. OpenAI 完成约 110 亿美元融资首批交割，估值 1.25 万亿美元</strong><br>
-彭博 11 月 6 日援引知情人士报道：OpenAI 已完成新一轮融资中约 110 亿美元的首批交割，款项于周五到账，投后估值 1.25 万亿美元；整轮尚未完全关闭，总额可能达到约 200 亿美元，其余部分预计未来数周完成。公司此前曾寻求以 1.4 万亿美元估值融资约 300 亿美元，目前规模和估值都低于原目标。OpenAI 已推迟今年 IPO，外界预期明年上市。上述数字来自匿名信源，OpenAI 尚未正式官宣。<br>
-选题角度：不是“又融了一大笔”，而是目标从 300 亿降到可能的 200 亿——市场在给算力账单重新定价。<br>
-来源：<a href="https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/" target="_blank" rel="noopener">TechCrunch（转述彭博）</a>｜<a href="https://www.bloomberg.com/news/articles/2026-11-06/openai-completes-11-billion-portion-of-funding-at-1-25-trillion-value" target="_blank" rel="noopener">彭博原文</a></p>
-<p><strong>2. 【进展】Anthropic 仍计划感恩节前上市，拟融资 800–1000 亿美元</strong><br>
-此前：2026-11-05 简报已报道修订版招股书中的三季度收入约 169.6 亿美元、算力承诺约 8954 亿美元，以及随后披露的三季度经营亏损 5.67 亿美元。<br>
-这次新增：英国《金融时报》援引投资者称，尽管本周科技股大跌，Anthropic 仍准备在感恩节前上市，计划融资 800 亿至 1000 亿美元，估值区间约 1.25 万亿至 1.75 万亿美元。这高于当前约 9650 亿美元的估值，但低于部分投资者一个月前曾期待的 2 万亿美元；另有彭博报道称，部分潜在买家看到的估值可能低至约 1.1 万亿美元。以上均为匿名投资者转述，公司未公开确认最终定价。<br>
-选题角度：招股书里的收入很好看，但上市定价要过的是“数据中心还要不要继续修”这一关。<br>
-来源：<a href="https://the-decoder.com/anthropic-pushes-ahead-with-pre-thanksgiving-ipo-despite-tech-selloff-accepts-lower-valuation/" target="_blank" rel="noopener">The Decoder（转述金融时报）</a>｜<a href="https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/" target="_blank" rel="noopener">TechCrunch（转述彭博对估值下修的报道）</a></p>
-<p><strong>3. 《纽约时报》：美国批准一家“空壳办公室”公司组装英伟达 H200</strong><br>
-时报 11 月 7 日调查：一家名为 New Matrix 的中国公司今年获美国商务部批准，可将英伟达 H200 芯片组装成人工智能服务器；记者实地探访其登记地址，看到的是空荡荡的厂房，天花板电线外露，园区目录和物业都查不到这家公司。New Matrix 约 17 个月前成立，网上几乎没有业务痕迹；企业记录显示其股东与 2024 年被美国列入实体清单的私募基金 Wise Road 存在关联。时报还写到另一家获批组装 H200 的公司 Maginfra，登记地址同样空置，分析人士认为它可能与已被列入实体清单的浪潮存在关联。知情人士称，商务部大约批准了二十多家中国企业购买或处理 H200。英伟达发言人表示，中国军方依赖美国技术“说不通”，并称截至 7 月当季，销往中国客户的 H200 占公司数据中心收入不到 1%，且当前季度指引未计入对华销售。New Matrix 未回应置评。这是调查报道，不是监管机构自己公布的处罚决定。<br>
-选题角度：出口管制松了之后，真正难的不是“卖不卖”，而是“卖给了谁”。<br>
-来源：<a href="https://www.theverge.com/ai-artificial-intelligence/1029483/nvidia-ai-chips-china-blacklist-government" target="_blank" rel="noopener">The Verge（转述《纽约时报》）</a>｜<a href="https://dnyuz.com/2026/11/07/u-s-cleared-nvidia-chips-to-chinese-firms-with-empty-offices-and-troubling-ties/" target="_blank" rel="noopener">时报调查转载</a></p>
-<p><strong>4. Google 接手 Crusoe 怀俄明数据中心用地，计划投资 170 亿美元建设园区</strong><br>
-Crusoe 11 月 6 日宣布：其位于怀俄明州东南部的数据中心用地已由 Google 收购，公司完成了选址、政府审批和与 Tallgrass Energy 共同制定的混合电力方案后退出该项目前期开发。收购金额未披露。TechCrunch 报道称，Google 原是 Crusoe 没谈成的客户，对成本和工期提出过担忧，并宣布计划投入 170 亿美元建设这座园区；项目最初规划最终可扩展至约 10 吉瓦。双方并未彻底分手：Crusoe 仍在得克萨斯州阿马里洛附近为 Google 开发另一座数据中心。<br>
-选题角度：AI 工厂不只缺电、缺卡，独立开发商能不能按时按预算交出来，已经开始决定项目花落谁家。<br>
-来源：<a href="https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update" target="_blank" rel="noopener">Crusoe 官方公告</a>｜<a href="https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/" target="_blank" rel="noopener">TechCrunch</a></p>
-<p><strong>5. 蚂蚁百灵发布 Ling-3.2-flash：5600 亿参数原生多模态，前两周免费</strong><br>
-蚂蚁百灵 11 月 5 日至 6 日宣布推出 Ling-3.2-flash：总参数 5600 亿、激活约 250 亿，上下文 100 万 token，支持文本、图像和视频输入，重点面向复杂视觉理解、多模态长程智能体、三维理解与交互，以及医疗多模态。官方评测称，它在三项基准上超过 Claude Opus 5（max）：OmniDocBench1.5 为 92.21 比 90.56，ZEROBench（Sub）为 43.71 比 39.52，Vision2Web 为 85.86 比 80.20；在 DesignArena 图像转前端竞技场以 Elo 1238 进入前十。API 定价为每百万 token 输入 0.30 美元、输出 0.90 美元，上线前两周限时免费，并兼容 OpenAI 与 Anthropic 接口。上述分数均为官方自行公布。<br>
-选题角度：国产多模态模型开始用“看图办事、看视频做事”报价，创作者可以先免费窗口里测一轮真实工作流。<br>
-来源：<a href="https://www.ithome.com/1/023/043.htm" target="_blank" rel="noopener">IT之家</a>｜<a href="https://cn.technode.com/post/2026-11-06/ant-ling-3-2-flash-multimodal-million-token-context/" target="_blank" rel="noopener">动点科技</a></p>
-<p><strong>6. Google：过期 TODO 会让编程智能体跑偏，单次会话 Token 多耗约 77%</strong><br>
-11 月 6 日，Google 工程博客分析了内部编程智能体数百万次读文件会话、数亿步操作后的轨迹。约 13% 的会话会读到带缺陷编号的 <code>TODO(bug/...)</code> 或 <code>FIXME</code> 注释；其中 6% 随后对这个缺陷采取了行动，而这些行动里约 83% 并非用户要求。在未被要求的“跑偏”里，约 41% 追的是已经关闭的缺陷，约 57% 则把仍开放的缺陷扩进了当前任务。控制其他变量后，这类跑偏平均让单次会话步数增加 70%、Token 增加 77%、等待时间增加 105%。Google 为此做了清理智能体：过去 6 个月删掉数千条确认过时的注释，人工评审通过率超过 95%。<br>
-选题角度：Agent 时代的技术债不再只是“难看”，而是会直接变成钱和等待。<br>
-来源：<a href="https://developers.googleblog.com/agent-distraction/" target="_blank" rel="noopener">Google Developers 原文</a></p>
-<p><strong>7. 【进展】报道：Thinking Machines 接近完成 50 亿美元新融资，估值 400 亿美元</strong><br>
-此前：2026-11-07 简报已报道该公司发布 Inkling 2 Small（总参数 5940 亿、激活约 170 亿，计划以 Apache 2.0 开放权重）。<br>
+来源：<a href="https://blogs.nvidia.com/blog/korean-startup-investments-msit/" target="_blank" rel="noopener">NVIDIA 官方博客</a></p>]]></description></item>
+<item><title>[AI] 阿里云 Token Plan 个人版额度上调七成以上，月费不变</title><link>https://www.ithome.com/1/024/250.htm</link><guid isPermaLink="true">https://www.ithome.com/1/024/250.htm</guid><category>AI</category><author>每日简报</author><pubDate>Mon, 09 Nov 2026 23:58:00 +0000</pubDate><description><![CDATA[<p>11 月 9 日起，阿里云上调 Token Plan 个人版额度：Lite / Essential / Standard 月费仍为 39 / 79 / 139 元，额度分别由约 1.15 万、2.55 万、4.5 万 Credits 提到 2 万、4.5 万、8 万；Pro 额度由 18 万提到 20 万，月费由 499 元降至 312 元。IT之家测算四档单位额度成本降幅均超过约 40%；存量用户当期额度按新标准补齐，Pro 新价格下一周期生效。<br>
+选题角度：国内 API 价格战已经打到订阅套餐的“同等月费更多量”。<br>
+来源：<a href="https://www.ithome.com/1/024/250.htm" target="_blank" rel="noopener">IT之家</a></p>]]></description></item>
+<item><title>[AI] Adobe 成为迪士尼“官方 AI 创新合作伙伴”，共研定制生成模型</title><link>https://news.adobe.com/news/2026/11/adobe-and-the-walt-disney-company-alliance</link><guid isPermaLink="true">https://news.adobe.com/news/2026/11/adobe-and-the-walt-disney-company-alliance</guid><category>AI</category><author>每日简报</author><pubDate>Mon, 09 Nov 2026 23:57:00 +0000</pubDate><description><![CDATA[<p>11 月 9 日 Adobe MAX 上，Adobe 与华特迪士尼公司宣布多年期战略联盟：Adobe 成为迪士尼官方 AI 创新合作伙伴，提供 Firefly、Firefly Foundry、Premiere、Photoshop 的早期访问，以及工程与研究支持。双方将用 Firefly Foundry 基于迪士尼 IP 知识共研“创作者主导”的专有生成模型；迪士尼幻想工程研发已在用草图转概念图等定制模型加速乐园管线。合作也覆盖 StudioLAB 与 ESPN Edge。金额与排他范围未在新闻稿披露。<br>
+选题角度：好莱坞开始公开说“我们要用自己的模型”，版权安全叙事进入采购合同。<br>
+来源：<a href="https://news.adobe.com/news/2026/11/adobe-and-the-walt-disney-company-alliance" target="_blank" rel="noopener">Adobe 官方新闻稿</a></p>]]></description></item>
+<item><title>[AI] 字节跳动发布 Seedream 5.5：百轮编辑更稳，原生透明素材</title><link>https://seed.bytedance.com/zh/blog/more-realistic-images-more-stable-editing-across-100-rounds-introducing-seedream-5-5</link><guid isPermaLink="true">https://seed.bytedance.com/zh/blog/more-realistic-images-more-stable-editing-across-100-rounds-introducing-seedream-5-5</guid><category>AI</category><author>每日简报</author><pubDate>Mon, 09 Nov 2026 23:56:00 +0000</pubDate><description><![CDATA[<p>11 月 9 日字节 Seed 团队发布图像创作模型 Seedream 5.5。重点升级包括：非编辑区域像素级保持，支持围绕同一作品最多约 100 轮连续修改；原生输出带 Alpha 通道的 RGBA 透明 / 半透明素材；改善光照、材质与皮肤质感，并加强复杂字形与密集小字渲染。官方称相较 Seedream 5.0 Pro，电商、营销、影视等场景可用率提升，影视与办公可用率达上一版两倍以上；严重文字崩坏率降至约 0.4%。豆包、豆包工作、即梦已接入，火山方舟 API 即将上线；2K 方图编辑单张成本约 0.28 元，不到 5.0 Pro 一半。评测数字均为官方公布。<br>
+选题角度：创作者真正卡的不是“一键出图”，而是改到第 80 轮还稳不稳、能不能直接出可进设计稿的透明层。<br>
+来源：<a href="https://seed.bytedance.com/zh/blog/more-realistic-images-more-stable-editing-across-100-rounds-introducing-seedream-5-5" target="_blank" rel="noopener">字节 Seed 官方</a>｜<a href="https://www.ithome.com/1/024/379.htm" target="_blank" rel="noopener">IT之家</a></p>]]></description></item>
+<item><title>[AI] SoftBank、Grab 与 PETROS：马来西亚 AI 基础设施拟投 18.5 亿美元种子资本</title><link>https://group.softbank/en/news/press/20261109_0</link><guid isPermaLink="true">https://group.softbank/en/news/press/20261109_0</guid><category>AI</category><author>每日简报</author><pubDate>Mon, 09 Nov 2026 23:55:00 +0000</pubDate><description><![CDATA[<p>11 月 9 日 SoftBank Group 与 Grab 宣布签署联合开发协议，连同 PETROS 计划为马来西亚 AI 基础设施提供合计约 18.5 亿美元初始种子资本：SoftBank 10 亿、Grab 7.5 亿、PETROS 1 亿；项目覆盖砂拉越与马来半岛，长期目标是 5 吉瓦以上算力。资金将按开发与客户合同里程碑分阶段投放，并寻求超大规模云厂商与更多投资人。砂拉越项目拟初始投资约 10 亿美元，半岛项目约 8.5 亿美元。公告含大量前瞻性表述，合资实体成立与最终投资条款仍取决于确定性协议与监管条件。<br>
+选题角度：东南亚主权算力竞赛里，出行超级 App 开始下场建机房。<br>
+来源：<a href="https://group.softbank/en/news/press/20261109_0" target="_blank" rel="noopener">SoftBank 官方新闻稿</a></p>]]></description></item>
+<item><title>[AI] Meta 发布 Muse Ember：为 Agent 高频小步骤做的最小高效模型</title><link>https://research.meta.ai/blog/muse-ember</link><guid isPermaLink="true">https://research.meta.ai/blog/muse-ember</guid><category>AI</category><author>每日简报</author><pubDate>Mon, 09 Nov 2026 23:54:00 +0000</pubDate><description><![CDATA[<p>11 月 9 日 Meta Superintelligence Labs 推出 Muse Ember，定位于工具调用、编码子任务、路由、抽取与长文档解析等高频 Agent 步骤。官方称在 Artificial Analysis Intelligence Index 上，以约三分之一任务成本达到与 Claude Haiku 5.5 相当的成绩，并在 Luna 各推理档位上更高；API 定价为每百万 token 输入 0.10 美元、输出 0.50 美元（提示超过约 20 万 token 时更高），上下文 100 万、输出最长约 51.2 万 token，支持文本、图像、音频与视频。今日起可在 Muse Code 与 Meta Model API（<code>muse-ember-1.0</code>）使用，并上线 Google Cloud 与 Oracle Cloud。公司称 Ember 是首个用 Muse Wonder Full 训练出的专用模型；分数来自官方与 Artificial Analysis，需自行复核。<br>
+选题角度：不是又一个“旗舰”，而是“子 Agent 专用廉价大脑”——编排贵模型、执行用 Ember。<br>
+来源：<a href="https://research.meta.ai/blog/muse-ember" target="_blank" rel="noopener">Meta 研究博客</a>｜<a href="https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/" target="_blank" rel="noopener">TechCrunch</a></p>]]></description></item>
+<item><title>[AI] Google 发布 TPU 8tx 与 TPU 8i Max：一年四套第八代系统</title><link>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/</link><guid isPermaLink="true">https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/</guid><category>AI</category><author>每日简报</author><pubDate>Mon, 09 Nov 2026 23:53:00 +0000</pubDate><description><![CDATA[<p>11 月 9 日 Google 官方博客宣布扩展第八代 TPU 组合：TPU 8tx 面向机密推理与小规模训练，把硬件级机密计算做进系统，并配第五代 AMD EPYC 主机与 Boardfly 低延迟网络，官方称相对 TPU 8t 延迟最多可降约一半；TPU 8i Max 把两颗 TPU 8i 封装在一起，计算、SRAM、HBM 带宽均为 8i 的约两倍，主打超大上下文与机架密度。它们与今年 4 月发布的 TPU 8t（大规模训练）、TPU 8i（低延迟推理）一起，构成一年内四套第八代系统。同期开源 TorchTPU、TPU Sync 等软件栈，并称在 InferenceX / AgentX 等生产向基准上取得价格性能领先；具体客户份额与对标英伟达的独立第三方对比未在该文给出。<br>
+选题角度：Agent 时代的芯片战争，已经从“训练卡更大”变成“机密推理 + 百万上下文各自成套”。<br>
+来源：<a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/" target="_blank" rel="noopener">Google 官方博客</a>｜<a href="https://www.theverge.com/ai-artificial-intelligence/1029670/google-announced-two-new-versions-of-its-eighth-gen-ai-chips" target="_blank" rel="noopener">The Verge</a></p>]]></description></item>
+<item><title>[AI] Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2：同一底座、两套访问</title><link>https://www.anthropic.com/claude-fable-and-mythos-5-2</link><guid isPermaLink="true">https://www.anthropic.com/claude-fable-and-mythos-5-2</guid><category>AI</category><author>每日简报</author><pubDate>Mon, 09 Nov 2026 23:52:00 +0000</pubDate><description><![CDATA[<p>11 月 9 日 Anthropic 宣布升级面向高难度技术任务的 Fable / Mythos 线。两者为同一底层模型：Fable 5.2 面向全体用户，带有更强的网络安全与生物安全分类器；Mythos 5.2 面向通过网络与生命科学核验计划的机构。官方称输出速度最多比 5.1 快约 30%，标准定价为每百万 token 输入 8 美元、输出 40 美元；可选 fast mode 为输入 16 / 输出 80 美元。官方评测显示，Fable 5.2 在 FrontierCode 2.0（Xhigh）达 49.1%，高于 Opus 5.5 的 45.5%；约 1000 个 Agent 在约 30 小时内形式化证明了费马大定理，而同设置的 Opus 5.5 约 18 小时只完成约 26%。公司称超过 90% 合入 Anthropic 核心代码库的改动现由 Claude 在人类指导下写出。上述分数与案例均为官方披露。<br>
+选题角度：日常用 Opus，硬活上 Fable——模型产品线开始按“任务难度”分层卖。<br>
+来源：<a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener">Anthropic 原文</a></p>]]></description></item>
+<item><title>[AI] 英伟达完成对韩国 Naver 10 亿美元投资，持股约 4.13%</title><link>https://www.koreajoongangdaily.com/business/nvidia-finalizes-payment-of-1-billion-acquires-over-4-stake-in-naver/12960143</link><guid isPermaLink="true">https://www.koreajoongangdaily.com/business/nvidia-finalizes-payment-of-1-billion-acquires-over-4-stake-in-naver/12960143</guid><category>AI</category><author>每日简报</author><pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate><description><![CDATA[<p>韩国《中央日报》11 月 6 日报道：英伟达已完成对 Naver 的 10 亿美元（约 1.3 万亿韩元）出资，通过定向增发获得超过 650 万股新股，持股比例约 4.13%。这笔投资服务于双方今年 6 月宣布的 AI 工厂合作，Naver 计划从世宗的 Gak 数据中心起步，建设面向 GPU 云服务的基础设施。<br>
+选题角度：主权 AI 不只是买卡，芯片厂商开始直接入股本地平台。<br>
+来源：<a href="https://www.koreajoongangdaily.com/business/nvidia-finalizes-payment-of-1-billion-acquires-over-4-stake-in-naver/12960143" target="_blank" rel="noopener">Korea JoongAng Daily</a></p>]]></description></item>
+<item><title>[AI] OpenAI 据报在测试 ChatGPT“商业中心”：统计品牌被提及次数和点击</title><link>https://searchengineland.com/openai-testing-business-tools-to-track-performance-within-chatgpt-500841</link><guid isPermaLink="true">https://searchengineland.com/openai-testing-business-tools-to-track-performance-within-chatgpt-500841</guid><category>AI</category><author>每日简报</author><pubDate>Sat, 07 Nov 2026 23:59:00 +0000</pubDate><description><![CDATA[<p>Search Engine Land 11 月 6 日报道，电商分析人士 Juozas Kaziukėnas 晒出尚未上线的界面：OpenAI 正在做一个类似 Google Search Console 的分析工具，供完成所有权验证（例如绑定 Shopify 店铺）的商家使用。功能包括查看自己的品牌在 ChatGPT 回答里出现了多少次（曝光）、链接被点了多少次，并按日做成图表；商家还可以更新产品信息，以及配置用于回答顾客问题的业务智能体。该人士称，工具不展示用户提问原文、用户数据或竞争对手排名，他最早在今年 8 月就见过雏形，最近又看到更接近上线的横幅。OpenAI 尚未正式发布。<br>
+选题角度：搜索有站长工具，对话里“被提到”也要开始有第一方数据了，做内容和做品牌的人都该盯着。<br>
+来源：<a href="https://searchengineland.com/openai-testing-business-tools-to-track-performance-within-chatgpt-500841" target="_blank" rel="noopener">Search Engine Land</a></p>]]></description></item>
+<item><title>[AI] 【进展】报道：Thinking Machines 接近完成 50 亿美元新融资，估值 400 亿美元</title><link>https://siliconangle.com/2026/11/06/thinking-machines-debuts-inkling-2-small-amid-reported-5b-fundraising-push/</link><guid isPermaLink="true">https://siliconangle.com/2026/11/06/thinking-machines-debuts-inkling-2-small-amid-reported-5b-fundraising-push/</guid><category>AI</category><author>每日简报</author><pubDate>Sat, 07 Nov 2026 23:58:00 +0000</pubDate><description><![CDATA[<p>此前：2026-11-07 简报已报道该公司发布 Inkling 2 Small（总参数 5940 亿、激活约 170 亿，计划以 Apache 2.0 开放权重）。<br>
 这次新增：Business Insider 报道称，Mira Murati 创办的 Thinking Machines Lab 正接近完成由 Accel 领投的 50 亿美元新一轮融资，估值约 400 亿美元。SiliconANGLE 11 月 6 日在报道模型发布时转述了同一消息。这是媒体援引的进展中融资，不是公司已宣布交割完成。<br>
 选题角度：一边发开放权重预告，一边按独立大实验室的估值再融一轮，开源叙事和资本叙事在同步推进。<br>
-来源：<a href="https://siliconangle.com/2026/11/06/thinking-machines-debuts-inkling-2-small-amid-reported-5b-fundraising-push/" target="_blank" rel="noopener">SiliconANGLE（转述 Business Insider）</a></p>
-<p><strong>8. OpenAI 据报在测试 ChatGPT“商业中心”：统计品牌被提及次数和点击</strong><br>
-Search Engine Land 11 月 6 日报道，电商分析人士 Juozas Kaziukėnas 晒出尚未上线的界面：OpenAI 正在做一个类似 Google Search Console 的分析工具，供完成所有权验证（例如绑定 Shopify 店铺）的商家使用。功能包括查看自己的品牌在 ChatGPT 回答里出现了多少次（曝光）、链接被点了多少次，并按日做成图表；商家还可以更新产品信息，以及配置用于回答顾客问题的业务智能体。该人士称，工具不展示用户提问原文、用户数据或竞争对手排名，他最早在今年 8 月就见过雏形，最近又看到更接近上线的横幅。OpenAI 尚未正式发布。<br>
-选题角度：搜索有站长工具，对话里“被提到”也要开始有第一方数据了，做内容和做品牌的人都该盯着。<br>
-来源：<a href="https://searchengineland.com/openai-testing-business-tools-to-track-performance-within-chatgpt-500841" target="_blank" rel="noopener">Search Engine Land</a></p>
-<p><strong>9. 英伟达完成对韩国 Naver 10 亿美元投资，持股约 4.13%</strong><br>
-韩国《中央日报》11 月 6 日报道：英伟达已完成对 Naver 的 10 亿美元（约 1.3 万亿韩元）出资，通过定向增发获得超过 650 万股新股，持股比例约 4.13%。这笔投资服务于双方今年 6 月宣布的 AI 工厂合作，Naver 计划从世宗的 Gak 数据中心起步，建设面向 GPU 云服务的基础设施。<br>
-选题角度：主权 AI 不只是买卡，芯片厂商开始直接入股本地平台。<br>
-来源：<a href="https://www.koreajoongangdaily.com/business/nvidia-finalizes-payment-of-1-billion-acquires-over-4-stake-in-naver/12960143" target="_blank" rel="noopener">Korea JoongAng Daily</a></p>
-<h2><strong>X 上的动态</strong></h2>
-<ul><li><strong>通义千问官方只发了一句 “The becoming begins.”</strong> 11 月 6 日这条预热帖在抓取时约有 242 万次浏览、1.7 万赞，配图化用“北冥有鱼”，模型名字位置留白。官方没有公布型号、参数、日期或下载地址，外界多在猜测是否指向下一代 Qwen，但目前只能当成预告，不能写成已经发布。值得关注：在开源模型竞争最密的时候，阿里选择先把热度打起来。</li></ul>
-<p><a href="https://x.com/Alibaba_Qwen/status/2118674834632978755" target="_blank" rel="noopener">https://x.com/Alibaba_Qwen/status/2118674834632978755</a></p>
-<ul><li><strong>Anthropic 科学博客：AI 开始参与“写科学模型”本身。</strong> 11 月 6 日官方转发 ELLIS Institute Tübingen 学者的客座文章，讨论智能体如何把科学模型写成代码、拟合数据、比较多种解释，而不只是给出一个最拟合的公式。作者强调：很多模型都能对上同一组数据，真正有用的是看出哪些部分被数据钉死、哪些替代方案失败了。值得关注：AI for Science 的下一阶段，可能从“算得更快”变成“帮科学家排除错误解释”。</li></ul>
-<p><a href="https://x.com/AnthropicAI/status/2118792930211107115" target="_blank" rel="noopener">https://x.com/AnthropicAI/status/2118792930211107115</a></p>
-<ul><li><strong>摩根大通全球首席信息安全官 Pat Opet：该考虑把公司服务从公网“抽离”了。</strong> 他 11 月 7 日发帖问：为什么还要让攻击者的未认证匿名智能体直接碰你的系统？并建议安全团队现在就评估架构杠杆。OpenAI 总裁 Greg Brockman 转发评论“安全架构的基本功比以往任何时候都更重要”。值得关注：在模型越来越会挖漏洞之后，业内讨论正在从“模型安不安全”转向“系统还该不该暴露在公网上”。</li></ul>
-<p><a href="https://x.com/patopet/status/2119119940036800520" target="_blank" rel="noopener">https://x.com/patopet/status/2119119940036800520</a><br>
-<a href="https://x.com/gdb/status/2119179547468005432" target="_blank" rel="noopener">https://x.com/gdb/status/2119179547468005432</a></p>
-<h2><strong>推荐选题</strong></h2>
-<ol><li>《1.25 万亿美元也算缩水：OpenAI 和 Anthropic 为什么同时下调胃口》</li><li>《代码里一条过期 TODO，让 Agent 多烧 77% Token：Google 内部几百万次会话说明了什么》</li><li>《ChatGPT 也要有 Search Console 了：品牌和创作者该怎么抢“被提到”的位置》</li></ol>]]></description></item>
-<item><title>[AI] AI 每日简报 · 2026-11-07</title><link>https://dukeyang.github.io/x-hot-feed/briefs/ai/2026-11-07.html</link><guid isPermaLink="true">https://dukeyang.github.io/x-hot-feed/briefs/ai/2026-11-07.html</guid><category>AI</category><author>每日简报</author><pubDate>Fri, 06 Nov 2026 23:52:00 +0000</pubDate><description><![CDATA[<p><strong>今日主线：</strong> AI 研发正在被 AI 自己加速——独立机构首次进 Anthropic 内部测到约 2 倍的能力进步速率；同一天，DeepMind 用智能体压测旧版加密，OpenAI 把湿实验室日常分析做成了新基准。</p>
-<p><strong>1. METR：Anthropic 能力进步速率约为历史的 2 倍，多数加速来自 AI 辅助研发</strong><br>
-独立评估机构 METR 11 月 5 日发布报告：2026 年 8 月 12 日至 10 月 29 日获 Anthropic 高权限内部数据后判断，截至 10 月，Anthropic 在可明确评测任务上的能力进步速率，大约是 2024 年 3 月至 2025 年 10 月的两倍（主观估计区间约 1.3–3 倍）。AECI 基准自 2025 年 10 月起约加速 1.9 倍（95% 置信区间 1.5–2.8）；METR 确信加速并非来自训练算力扩速。当前加速中约八成被归因于 AI 辅助研发，且未看到未来 12 个月会卡住进一步加速的明显瓶颈。报告约 100 页，Anthropic 对多数最关键证据做了脱敏，公众难以独立复核。<br>
-选题角度：招股书里写过“AI 可能加速自身研发”，现在外部机构第一次进场量了一把。<br>
-来源：<a href="https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/" target="_blank" rel="noopener">METR 原文</a></p>
-<p><strong>2. DeepMind：人机协作的智能体挖出旧版 1024 位 RSA 两大弱点</strong><br>
-11 月 6 日 Google DeepMind 官方宣布，在人类密码学家指导下，模型在数周内找出遗留 1024 位 RSA 体系的两类弱点：一类指向签名伪造方向（攻击者控制约一半签名块时，旧式填充几乎不再提供保护；更短可控区域上有约 1600 倍的理论效率提升）；另一类是批量分解，额外同长度密钥的平均成本约降 30 倍。官方强调结果不影响现代 2048 位及以上 RSA，也未点名任何在线生产系统遭破解；重点是密码硬度假设的压测节奏被智能体改写。<br>
-选题角度：加密标准过去按“年”更新，AI 之后可能要按“周”复盘。<br>
-来源：<a href="https://x.com/GoogleDeepMind/status/2118755418675765656" target="_blank" rel="noopener">Google DeepMind 官方帖</a>｜<a href="https://x.com/pushmeet/status/2118752095859794390" target="_blank" rel="noopener">Pushmeet Kohli 长文</a></p>
-<p><strong>3. Thinking Machines 发布 Inkling 2 Small：594B MoE、17B 激活，计划 Apache 2.0 开源权重</strong><br>
-Mira Murati 创办的 Thinking Machines Lab 11 月 5 日发布第二代首款模型 Inkling 2 Small：总参数 5940 亿、每 token 约激活 170 亿，支持文本与图像输入、可变推理力度，上下文约 100 万 token。Artificial Analysis Intelligence Index 得分 31，较上一代 Inkling Small 的 13 分大幅跃升，与 Gemini 3.8 Flash（high）持平；当前仅在 Tinker 平台提供推理与微调，定价约每百万 token 输入 0.30 / 输出 1.00 美元，公司称完成外部安全测试与红队后计划以 Apache 2.0 放出权重。<br>
-选题角度：美国开源权重阵营又多了一个“中国模型之外的高分选手”，权重落地前别急着下结论。<br>
-来源：<a href="https://artificialanalysis.ai/articles/thinking-machines-releases-inkling-2-small-highest-scoring-open-weights-model-outside-of-chinia-upon-weights-release-it" target="_blank" rel="noopener">Artificial Analysis</a></p>
-<p><strong>4. OpenAI 发布 BioBasicsBench：100 项湿实验室日常分析任务</strong><br>
-11 月 6 日 OpenAI 与酶设计公司 Ligo 推出 BioBasicsBench，用凝胶、显微、测序读数等原始实验证据，考智能体是否会看图、查对照、承认证据不足。在最高推理档位 xhigh 上，GPT-6 Astra 均分 66.7%，GPT-6.1 Sol 62.0%，GPT-5.6 Sol 43.8%。官方同时展示 Astra 仍会把假设压过对照、漏计菌落等问题，强调高分不等于能在真实实验室里下可靠判断。<br>
-选题角度：AI for Science 不只是发 Nature，更难的是别把失败实验读成阳性结果。<br>
-来源：<a href="https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science" target="_blank" rel="noopener">OpenAI 原文</a></p>
-<p><strong>5. Anthropic 推出 Claude Personal Finance：美国付费用户可读银行流水</strong><br>
-Anthropic 本周起向美国 Pro / Max / Ultra 用户开放 Personal Finance 测试：经 Plaid 自助连接银行与信用卡后，可用自然语言问余额、账单和异常消费；访问只读，不能转账、支付或投资，Personal Finance 对话不用于训练。官方称这是第一步，后续希望与持牌机构协作处理更大决策。<br>
-选题角度：谁先成为“管钱的入口”，广告型助手很难再追。<br>
-来源：<a href="https://claude.com/resources/articles/introducing-personal-finance-in-claude" target="_blank" rel="noopener">Anthropic 原文</a>｜<a href="https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/" target="_blank" rel="noopener">TechCrunch</a></p>
-<p><strong>6. Anthropic 工程博客：用「做梦」整理 Agent 记忆</strong><br>
-11 月 6 日 Anthropic 发布《The components of agent memory》，系统介绍 Agent 记忆笔记、显著性判断，以及空闲时回看日志的 dreaming（做梦）流程：可纠错、建 wiki 式知识图、把重要笔记提升到每会话预载层。评测里，对约 35 万份内部文档做 128 轮做梦后，25 题答题表现从 13% 升到 48%；Pokémon 实验中，做梦修正错误路标后智能体才走出山洞。<br>
-选题角度：下一代 Agent 比拼的不只是上下文长度，还有会不会“睡觉整理笔记”。<br>
-来源：<a href="https://www.anthropic.com/research/components-of-agent-memory" target="_blank" rel="noopener">Anthropic 原文</a></p>
-<p><strong>7. 国产 AI 芯片：墨芯、微纳核芯、凌川科技同周各完成约 10 亿元融资</strong><br>
-集邦咨询 11 月 6 日报道：墨芯人工智能完成近 10 亿元 C+ 轮，主攻稀疏推理芯片，计划年底前推 SP200 计算卡与 SECA 软件栈；微纳核芯完成超 10 亿元 C2 轮（两月内融资超 20 亿），推进三维存算一体推理芯片，预计 2027 年初客户送测；快手系凌川科技完成 10 亿元 B 轮，聚焦智能视频与 AIGV 专用算力，现有 SL200 号称单颗可处理 36 路高清视频。<br>
-选题角度：推理降本、存算一体、视频专用三条路线同时被资本加注。<br>
-来源：<a href="https://www.trendforce.cn/industry-news/semiconductors/20261106-9110.html" target="_blank" rel="noopener">集邦咨询</a></p>
-<p><strong>8. Visa 首个 Agentic Commerce 基准：AI 购物测试通过率约 57%</strong><br>
-Visa 11 月 5 日发布行业基准：22 个模型、12 家实验室、15 个真实购物场景（买电视、笔记本等），模型必须通过对话挖出全部隐藏需求，并正确决定买或不买。总通过率约 57.2%，最好 82.2%、最差 28.9%；同一场景三次全过的比例仅 34.2%；约 54% 的失败轮次仍以错误下单收场。Visa 称将继续扩展到结账与支付环节。<br>
+来源：<a href="https://siliconangle.com/2026/11/06/thinking-machines-debuts-inkling-2-small-amid-reported-5b-fundraising-push/" target="_blank" rel="noopener">SiliconANGLE（转述 Business Insider）</a></p>]]></description></item>
+<item><title>[AI] Google：过期 TODO 会让编程智能体跑偏，单次会话 Token 多耗约 77%</title><link>https://developers.googleblog.com/agent-distraction/</link><guid isPermaLink="true">https://developers.googleblog.com/agent-distraction/</guid><category>AI</category><author>每日简报</author><pubDate>Sat, 07 Nov 2026 23:57:00 +0000</pubDate><description><![CDATA[<p>11 月 6 日，Google 工程博客分析了内部编程智能体数百万次读文件会话、数亿步操作后的轨迹。约 13% 的会话会读到带缺陷编号的 <code>TODO(bug/...)</code> 或 <code>FIXME</code> 注释；其中 6% 随后对这个缺陷采取了行动，而这些行动里约 83% 并非用户要求。在未被要求的“跑偏”里，约 41% 追的是已经关闭的缺陷，约 57% 则把仍开放的缺陷扩进了当前任务。控制其他变量后，这类跑偏平均让单次会话步数增加 70%、Token 增加 77%、等待时间增加 105%。Google 为此做了清理智能体：过去 6 个月删掉数千条确认过时的注释，人工评审通过率超过 95%。<br>
+选题角度：Agent 时代的技术债不再只是“难看”，而是会直接变成钱和等待。<br>
+来源：<a href="https://developers.googleblog.com/agent-distraction/" target="_blank" rel="noopener">Google Developers 原文</a></p>]]></description></item>
+<item><title>[AI] 蚂蚁百灵发布 Ling-3.2-flash：5600 亿参数原生多模态，前两周免费</title><link>https://www.ithome.com/1/023/043.htm</link><guid isPermaLink="true">https://www.ithome.com/1/023/043.htm</guid><category>AI</category><author>每日简报</author><pubDate>Sat, 07 Nov 2026 23:56:00 +0000</pubDate><description><![CDATA[<p>蚂蚁百灵 11 月 5 日至 6 日宣布推出 Ling-3.2-flash：总参数 5600 亿、激活约 250 亿，上下文 100 万 token，支持文本、图像和视频输入，重点面向复杂视觉理解、多模态长程智能体、三维理解与交互，以及医疗多模态。官方评测称，它在三项基准上超过 Claude Opus 5（max）：OmniDocBench1.5 为 92.21 比 90.56，ZEROBench（Sub）为 43.71 比 39.52，Vision2Web 为 85.86 比 80.20；在 DesignArena 图像转前端竞技场以 Elo 1238 进入前十。API 定价为每百万 token 输入 0.30 美元、输出 0.90 美元，上线前两周限时免费，并兼容 OpenAI 与 Anthropic 接口。上述分数均为官方自行公布。<br>
+选题角度：国产多模态模型开始用“看图办事、看视频做事”报价，创作者可以先免费窗口里测一轮真实工作流。<br>
+来源：<a href="https://www.ithome.com/1/023/043.htm" target="_blank" rel="noopener">IT之家</a>｜<a href="https://cn.technode.com/post/2026-11-06/ant-ling-3-2-flash-multimodal-million-token-context/" target="_blank" rel="noopener">动点科技</a></p>]]></description></item>
+<item><title>[AI] Google 接手 Crusoe 怀俄明数据中心用地，计划投资 170 亿美元建设园区</title><link>https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update</link><guid isPermaLink="true">https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update</guid><category>AI</category><author>每日简报</author><pubDate>Sat, 07 Nov 2026 23:55:00 +0000</pubDate><description><![CDATA[<p>Crusoe 11 月 6 日宣布：其位于怀俄明州东南部的数据中心用地已由 Google 收购，公司完成了选址、政府审批和与 Tallgrass Energy 共同制定的混合电力方案后退出该项目前期开发。收购金额未披露。TechCrunch 报道称，Google 原是 Crusoe 没谈成的客户，对成本和工期提出过担忧，并宣布计划投入 170 亿美元建设这座园区；项目最初规划最终可扩展至约 10 吉瓦。双方并未彻底分手：Crusoe 仍在得克萨斯州阿马里洛附近为 Google 开发另一座数据中心。<br>
+选题角度：AI 工厂不只缺电、缺卡，独立开发商能不能按时按预算交出来，已经开始决定项目花落谁家。<br>
+来源：<a href="https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update" target="_blank" rel="noopener">Crusoe 官方公告</a>｜<a href="https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/" target="_blank" rel="noopener">TechCrunch</a></p>]]></description></item>
+<item><title>[AI] 《纽约时报》：美国批准一家“空壳办公室”公司组装英伟达 H200</title><link>https://www.theverge.com/ai-artificial-intelligence/1029483/nvidia-ai-chips-china-blacklist-government</link><guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1029483/nvidia-ai-chips-china-blacklist-government</guid><category>AI</category><author>每日简报</author><pubDate>Sat, 07 Nov 2026 23:54:00 +0000</pubDate><description><![CDATA[<p>时报 11 月 7 日调查：一家名为 New Matrix 的中国公司今年获美国商务部批准，可将英伟达 H200 芯片组装成人工智能服务器；记者实地探访其登记地址，看到的是空荡荡的厂房，天花板电线外露，园区目录和物业都查不到这家公司。New Matrix 约 17 个月前成立，网上几乎没有业务痕迹；企业记录显示其股东与 2024 年被美国列入实体清单的私募基金 Wise Road 存在关联。时报还写到另一家获批组装 H200 的公司 Maginfra，登记地址同样空置，分析人士认为它可能与已被列入实体清单的浪潮存在关联。知情人士称，商务部大约批准了二十多家中国企业购买或处理 H200。英伟达发言人表示，中国军方依赖美国技术“说不通”，并称截至 7 月当季，销往中国客户的 H200 占公司数据中心收入不到 1%，且当前季度指引未计入对华销售。New Matrix 未回应置评。这是调查报道，不是监管机构自己公布的处罚决定。<br>
+选题角度：出口管制松了之后，真正难的不是“卖不卖”，而是“卖给了谁”。<br>
+来源：<a href="https://www.theverge.com/ai-artificial-intelligence/1029483/nvidia-ai-chips-china-blacklist-government" target="_blank" rel="noopener">The Verge（转述《纽约时报》）</a>｜<a href="https://dnyuz.com/2026/11/07/u-s-cleared-nvidia-chips-to-chinese-firms-with-empty-offices-and-troubling-ties/" target="_blank" rel="noopener">时报调查转载</a></p>]]></description></item>
+<item><title>[AI] 【进展】Anthropic 仍计划感恩节前上市，拟融资 800–1000 亿美元</title><link>https://the-decoder.com/anthropic-pushes-ahead-with-pre-thanksgiving-ipo-despite-tech-selloff-accepts-lower-valuation/</link><guid isPermaLink="true">https://the-decoder.com/anthropic-pushes-ahead-with-pre-thanksgiving-ipo-despite-tech-selloff-accepts-lower-valuation/</guid><category>AI</category><author>每日简报</author><pubDate>Sat, 07 Nov 2026 23:53:00 +0000</pubDate><description><![CDATA[<p>此前：2026-11-05 简报已报道修订版招股书中的三季度收入约 169.6 亿美元、算力承诺约 8954 亿美元，以及随后披露的三季度经营亏损 5.67 亿美元。<br>
+这次新增：英国《金融时报》援引投资者称，尽管本周科技股大跌，Anthropic 仍准备在感恩节前上市，计划融资 800 亿至 1000 亿美元，估值区间约 1.25 万亿至 1.75 万亿美元。这高于当前约 9650 亿美元的估值，但低于部分投资者一个月前曾期待的 2 万亿美元；另有彭博报道称，部分潜在买家看到的估值可能低至约 1.1 万亿美元。以上均为匿名投资者转述，公司未公开确认最终定价。<br>
+选题角度：招股书里的收入很好看，但上市定价要过的是“数据中心还要不要继续修”这一关。<br>
+来源：<a href="https://the-decoder.com/anthropic-pushes-ahead-with-pre-thanksgiving-ipo-despite-tech-selloff-accepts-lower-valuation/" target="_blank" rel="noopener">The Decoder（转述金融时报）</a>｜<a href="https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/" target="_blank" rel="noopener">TechCrunch（转述彭博对估值下修的报道）</a></p>]]></description></item>
+<item><title>[AI] OpenAI 完成约 110 亿美元融资首批交割，估值 1.25 万亿美元</title><link>https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/</link><guid isPermaLink="true">https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/</guid><category>AI</category><author>每日简报</author><pubDate>Sat, 07 Nov 2026 23:52:00 +0000</pubDate><description><![CDATA[<p>彭博 11 月 6 日援引知情人士报道：OpenAI 已完成新一轮融资中约 110 亿美元的首批交割，款项于周五到账，投后估值 1.25 万亿美元；整轮尚未完全关闭，总额可能达到约 200 亿美元，其余部分预计未来数周完成。公司此前曾寻求以 1.4 万亿美元估值融资约 300 亿美元，目前规模和估值都低于原目标。OpenAI 已推迟今年 IPO，外界预期明年上市。上述数字来自匿名信源，OpenAI 尚未正式官宣。<br>
+选题角度：不是“又融了一大笔”，而是目标从 300 亿降到可能的 200 亿——市场在给算力账单重新定价。<br>
+来源：<a href="https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/" target="_blank" rel="noopener">TechCrunch（转述彭博）</a>｜<a href="https://www.bloomberg.com/news/articles/2026-11-06/openai-completes-11-billion-portion-of-funding-at-1-25-trillion-value" target="_blank" rel="noopener">彭博原文</a></p>]]></description></item>
+<item><title>[AI] Visa 首个 Agentic Commerce 基准：AI 购物测试通过率约 57%</title><link>https://usa.visa.com/about-visa/newsroom/press-releases.releaseId.22936.html</link><guid isPermaLink="true">https://usa.visa.com/about-visa/newsroom/press-releases.releaseId.22936.html</guid><category>AI</category><author>每日简报</author><pubDate>Fri, 06 Nov 2026 23:59:00 +0000</pubDate><description><![CDATA[<p>Visa 11 月 5 日发布行业基准：22 个模型、12 家实验室、15 个真实购物场景（买电视、笔记本等），模型必须通过对话挖出全部隐藏需求，并正确决定买或不买。总通过率约 57.2%，最好 82.2%、最差 28.9%；同一场景三次全过的比例仅 34.2%；约 54% 的失败轮次仍以错误下单收场。Visa 称将继续扩展到结账与支付环节。<br>
 选题角度：Agent 购物已经能“聊”，但还不敢把卡交出去。<br>
-来源：<a href="https://usa.visa.com/about-visa/newsroom/press-releases.releaseId.22936.html" target="_blank" rel="noopener">Visa 新闻稿</a></p>
-<h2><strong>X 上的动态</strong></h2>
-<ul><li><strong>AI at Meta：把 Muse Wonder 的专项能力下放到 Muse 与 Meta AI。</strong> 11 月 6 日官方称，为复杂工作与日常任务提供 Active Memory、Active 等专项模型能力。值得关注：前沿能力正在从独立产品拆进大众助手，而不是再发一个新 App。</li></ul>
-<p><a href="https://x.com/AIatMeta/status/2118768974779634084" target="_blank" rel="noopener">https://x.com/AIatMeta/status/2118768974779634084</a></p>
-<ul><li><strong>NVIDIA AI：Lyra 2.0，一张图生成可沿相机路径探索的 3D 世界。</strong> 11 月 6 日称结合视频生成与 3D 重建，并学习纠正累积视觉误差。值得关注：世界模型叙事从“会播视频”转向“能走进去逛”。</li></ul>
-<p><a href="https://x.com/NVIDIAAI/status/2118800021013643269" target="_blank" rel="noopener">https://x.com/NVIDIAAI/status/2118800021013643269</a></p>
-<ul><li><strong>OpenAI：与 Frontier Model Forum 发布 Jailbreak Rating Framework。</strong> 11 月 6 日称用于识别绕过安全护栏可能导致严重网络危害的情形，并推动更一致的评测方法。值得关注：大厂在等下一代模型对打的同时，先把“越狱危害等级”做成行业口径。</li></ul>
-<p><a href="https://x.com/OpenAI/status/2118795218099253606" target="_blank" rel="noopener">https://x.com/OpenAI/status/2118795218099253606</a></p>
-<ul><li><strong>Anthropic：工程博客同步发帖介绍 Claude 如何用 dreaming 整理记忆。</strong> 11 月 6 日帖子互动约 22 万浏览、3600+ 赞。值得关注：业内讨论正从“给 Agent 加长记忆文件”转向“空闲时如何纠错与建索引”；完整机制见上方新闻第 6 条。</li></ul>
-<p><a href="https://x.com/AnthropicAI/status/2118814753154064501" target="_blank" rel="noopener">https://x.com/AnthropicAI/status/2118814753154064501</a></p>
-<h2><strong>推荐选题</strong></h2>
-<ol><li>《两年进步一年完成：METR 进 Anthropic 内部，测到了什么》</li><li>《AI 开始改写密码学时间表：1024 位 RSA 的两道裂缝意味着什么》</li><li>《Agent 会做梦了：Anthropic 用空闲算力整理记忆，创作者能抄什么作业》</li></ol>]]></description></item>
+来源：<a href="https://usa.visa.com/about-visa/newsroom/press-releases.releaseId.22936.html" target="_blank" rel="noopener">Visa 新闻稿</a></p>]]></description></item>
+<item><title>[AI] 国产 AI 芯片：墨芯、微纳核芯、凌川科技同周各完成约 10 亿元融资</title><link>https://www.trendforce.cn/industry-news/semiconductors/20261106-9110.html</link><guid isPermaLink="true">https://www.trendforce.cn/industry-news/semiconductors/20261106-9110.html</guid><category>AI</category><author>每日简报</author><pubDate>Fri, 06 Nov 2026 23:58:00 +0000</pubDate><description><![CDATA[<p>集邦咨询 11 月 6 日报道：墨芯人工智能完成近 10 亿元 C+ 轮，主攻稀疏推理芯片，计划年底前推 SP200 计算卡与 SECA 软件栈；微纳核芯完成超 10 亿元 C2 轮（两月内融资超 20 亿），推进三维存算一体推理芯片，预计 2027 年初客户送测；快手系凌川科技完成 10 亿元 B 轮，聚焦智能视频与 AIGV 专用算力，现有 SL200 号称单颗可处理 36 路高清视频。<br>
+选题角度：推理降本、存算一体、视频专用三条路线同时被资本加注。<br>
+来源：<a href="https://www.trendforce.cn/industry-news/semiconductors/20261106-9110.html" target="_blank" rel="noopener">集邦咨询</a></p>]]></description></item>
+<item><title>[AI] Anthropic 工程博客：用「做梦」整理 Agent 记忆</title><link>https://www.anthropic.com/research/components-of-agent-memory</link><guid isPermaLink="true">https://www.anthropic.com/research/components-of-agent-memory</guid><category>AI</category><author>每日简报</author><pubDate>Fri, 06 Nov 2026 23:57:00 +0000</pubDate><description><![CDATA[<p>11 月 6 日 Anthropic 发布《The components of agent memory》，系统介绍 Agent 记忆笔记、显著性判断，以及空闲时回看日志的 dreaming（做梦）流程：可纠错、建 wiki 式知识图、把重要笔记提升到每会话预载层。评测里，对约 35 万份内部文档做 128 轮做梦后，25 题答题表现从 13% 升到 48%；Pokémon 实验中，做梦修正错误路标后智能体才走出山洞。<br>
+选题角度：下一代 Agent 比拼的不只是上下文长度，还有会不会“睡觉整理笔记”。<br>
+来源：<a href="https://www.anthropic.com/research/components-of-agent-memory" target="_blank" rel="noopener">Anthropic 原文</a></p>]]></description></item>
+<item><title>[AI] Anthropic 推出 Claude Personal Finance：美国付费用户可读银行流水</title><link>https://claude.com/resources/articles/introducing-personal-finance-in-claude</link><guid isPermaLink="true">https://claude.com/resources/articles/introducing-personal-finance-in-claude</guid><category>AI</category><author>每日简报</author><pubDate>Fri, 06 Nov 2026 23:56:00 +0000</pubDate><description><![CDATA[<p>Anthropic 本周起向美国 Pro / Max / Ultra 用户开放 Personal Finance 测试：经 Plaid 自助连接银行与信用卡后，可用自然语言问余额、账单和异常消费；访问只读，不能转账、支付或投资，Personal Finance 对话不用于训练。官方称这是第一步，后续希望与持牌机构协作处理更大决策。<br>
+选题角度：谁先成为“管钱的入口”，广告型助手很难再追。<br>
+来源：<a href="https://claude.com/resources/articles/introducing-personal-finance-in-claude" target="_blank" rel="noopener">Anthropic 原文</a>｜<a href="https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/" target="_blank" rel="noopener">TechCrunch</a></p>]]></description></item>
+<item><title>[AI] OpenAI 发布 BioBasicsBench：100 项湿实验室日常分析任务</title><link>https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science</link><guid isPermaLink="true">https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science</guid><category>AI</category><author>每日简报</author><pubDate>Fri, 06 Nov 2026 23:55:00 +0000</pubDate><description><![CDATA[<p>11 月 6 日 OpenAI 与酶设计公司 Ligo 推出 BioBasicsBench，用凝胶、显微、测序读数等原始实验证据，考智能体是否会看图、查对照、承认证据不足。在最高推理档位 xhigh 上，GPT-6 Astra 均分 66.7%，GPT-6.1 Sol 62.0%，GPT-5.6 Sol 43.8%。官方同时展示 Astra 仍会把假设压过对照、漏计菌落等问题，强调高分不等于能在真实实验室里下可靠判断。<br>
+选题角度：AI for Science 不只是发 Nature，更难的是别把失败实验读成阳性结果。<br>
+来源：<a href="https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science" target="_blank" rel="noopener">OpenAI 原文</a></p>]]></description></item>
+<item><title>[AI] Thinking Machines 发布 Inkling 2 Small：594B MoE、17B 激活，计划 Apache 2.0 开源权重</title><link>https://artificialanalysis.ai/articles/thinking-machines-releases-inkling-2-small-highest-scoring-open-weights-model-outside-of-chinia-upon-weights-release-it</link><guid isPermaLink="true">https://artificialanalysis.ai/articles/thinking-machines-releases-inkling-2-small-highest-scoring-open-weights-model-outside-of-chinia-upon-weights-release-it</guid><category>AI</category><author>每日简报</author><pubDate>Fri, 06 Nov 2026 23:54:00 +0000</pubDate><description><![CDATA[<p>Mira Murati 创办的 Thinking Machines Lab 11 月 5 日发布第二代首款模型 Inkling 2 Small：总参数 5940 亿、每 token 约激活 170 亿，支持文本与图像输入、可变推理力度，上下文约 100 万 token。Artificial Analysis Intelligence Index 得分 31，较上一代 Inkling Small 的 13 分大幅跃升，与 Gemini 3.8 Flash（high）持平；当前仅在 Tinker 平台提供推理与微调，定价约每百万 token 输入 0.30 / 输出 1.00 美元，公司称完成外部安全测试与红队后计划以 Apache 2.0 放出权重。<br>
+选题角度：美国开源权重阵营又多了一个“中国模型之外的高分选手”，权重落地前别急着下结论。<br>
+来源：<a href="https://artificialanalysis.ai/articles/thinking-machines-releases-inkling-2-small-highest-scoring-open-weights-model-outside-of-chinia-upon-weights-release-it" target="_blank" rel="noopener">Artificial Analysis</a></p>]]></description></item>
+<item><title>[AI] DeepMind：人机协作的智能体挖出旧版 1024 位 RSA 两大弱点</title><link>https://x.com/GoogleDeepMind/status/2118755418675765656</link><guid isPermaLink="true">https://x.com/GoogleDeepMind/status/2118755418675765656</guid><category>AI</category><author>每日简报</author><pubDate>Fri, 06 Nov 2026 23:53:00 +0000</pubDate><description><![CDATA[<p>11 月 6 日 Google DeepMind 官方宣布，在人类密码学家指导下，模型在数周内找出遗留 1024 位 RSA 体系的两类弱点：一类指向签名伪造方向（攻击者控制约一半签名块时，旧式填充几乎不再提供保护；更短可控区域上有约 1600 倍的理论效率提升）；另一类是批量分解，额外同长度密钥的平均成本约降 30 倍。官方强调结果不影响现代 2048 位及以上 RSA，也未点名任何在线生产系统遭破解；重点是密码硬度假设的压测节奏被智能体改写。<br>
+选题角度：加密标准过去按“年”更新，AI 之后可能要按“周”复盘。<br>
+来源：<a href="https://x.com/GoogleDeepMind/status/2118755418675765656" target="_blank" rel="noopener">Google DeepMind 官方帖</a>｜<a href="https://x.com/pushmeet/status/2118752095859794390" target="_blank" rel="noopener">Pushmeet Kohli 长文</a></p>]]></description></item>
+<item><title>[AI] METR：Anthropic 能力进步速率约为历史的 2 倍，多数加速来自 AI 辅助研发</title><link>https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/</link><guid isPermaLink="true">https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/</guid><category>AI</category><author>每日简报</author><pubDate>Fri, 06 Nov 2026 23:52:00 +0000</pubDate><description><![CDATA[<p>独立评估机构 METR 11 月 5 日发布报告：2026 年 8 月 12 日至 10 月 29 日获 Anthropic 高权限内部数据后判断，截至 10 月，Anthropic 在可明确评测任务上的能力进步速率，大约是 2024 年 3 月至 2025 年 10 月的两倍（主观估计区间约 1.3–3 倍）。AECI 基准自 2025 年 10 月起约加速 1.9 倍（95% 置信区间 1.5–2.8）；METR 确信加速并非来自训练算力扩速。当前加速中约八成被归因于 AI 辅助研发，且未看到未来 12 个月会卡住进一步加速的明显瓶颈。报告约 100 页，Anthropic 对多数最关键证据做了脱敏，公众难以独立复核。<br>
+选题角度：招股书里写过“AI 可能加速自身研发”，现在外部机构第一次进场量了一把。<br>
+来源：<a href="https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/" target="_blank" rel="noopener">METR 原文</a></p>]]></description></item>
 <item><title>[AI] 11月6日AI日报：多模型与产品更新</title><link>https://x.com/testingcatalog/status/2118644436917793116</link><guid isPermaLink="true">https://x.com/testingcatalog/status/2118644436917793116</guid><category>AI</category><author>@testingcatalog</author><pubDate>Fri, 06 Nov 2026 09:59:30 +0000</pubDate><description><![CDATA[<p>TestingCatalog汇总：OpenAI面向授权安全研究推出GPT-6 Cyber并将于11月12日直播；Gemini Omni 1.2 Flash已普遍可用；Claude Personal Finance美国beta上线；另有Thinking Machines、Perplexity、Meta Muse等动态。</p><p>@testingcatalog · 赞 27 · 转 0 · 浏览 2235</p><blockquote>DAILY AI BRIEF 🗞 — Nov 6
 
 MODEL FORECAST 👀:
@@ -190,42 +130,24 @@ We&#x27;re already past 11 AM PT, which has historically been OpenAI&#x27;s usua
 With GPT-6 Cyber already out, I wouldn&#x27;t expect another model to follow on the same day.
 
 Tomorrow could be our next shot.</blockquote><p><a href="https://x.com/codexresets_/status/2118532494500692352">查看原帖</a></p>]]></description></item>
-<item><title>[AI] AI 每日简报 · 2026-11-06</title><link>https://dukeyang.github.io/x-hot-feed/briefs/ai/2026-11-06.html</link><guid isPermaLink="true">https://dukeyang.github.io/x-hot-feed/briefs/ai/2026-11-06.html</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 05 Nov 2026 23:52:00 +0000</pubDate><description><![CDATA[<p><strong>今日主线：</strong> AI 竞争从模型分数延伸到安全边界、视频生产成本和基础设施效率。OpenAI 发布专门的网络安全模型，Google 同日把视频生成降价、Agent 运行底座推向开放治理。</p>
-<p><strong>1. 【进展】GPT-6 Cyber 发布：新增 Firefox 漏洞成果与授权边界评测</strong><br>
-此前：2026-11-05 简报已报道 OpenAI 的 Linux 漏洞流水线。新增：11 月 5 日官方揭晓背后模型 GPT-6 Cyber，披露发现 81 个此前未知的 Firefox 高危漏洞；ExploitGym 得分 48.5%，前代为 32.1%。在官方授权范围评测中，不加部署提示时 99.93% 不攻击范围外服务。首批仅向获批 Daybreak Red 客户开放，评测结果不等于现实零风险。<br>
-选题角度：安全模型越会攻击，如何证明它不会越权？<br>
-来源：<a href="https://openai.com/index/introducing-gpt-6-cyber" target="_blank" rel="noopener">OpenAI 原文</a></p>
-<p><strong>2. Gemini Omni 1.2 Flash：15 秒视频、价格下调 30%</strong><br>
-Google 11 月 5 日宣布，原生视频生成和编辑上限从 10 秒延至 15 秒，支持多轮对话修改；720p 定价降至每秒 0.07 美元，并正式面向生产使用。官方同时承认快速运动和复杂物理仍需改进。<br>
-选题角度：一条 15 秒片段的标价约 1.05 美元，但反复修改才是广告生产的真实成本。<br>
-来源：<a href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/" target="_blank" rel="noopener">Google 官方</a></p>
-<p><strong>3. Google 为 Anthropic 数据中心租约提供信用支持，不是直接投资 190 亿美元</strong><br>
-TeraWulf 11 月 4 日公告：Google 签署信用支持协议，支持肯塔基 Justified 园区约 190 亿美元 Anthropic 长期租赁承诺背后的债务融资；同时与 Fluor 签署覆盖 3 栋数据中心的 EPC 协议，分阶段交付预计从 2027 年末持续至 2028 年第二季度。<br>
-选题角度：AI 扩张不只靠买 GPU，谁愿意为长期算力账单背书更关键。<br>
-来源：<a href="https://investors.terawulf.com/news-events/press-releases/detail/148/terawulf-secures-google-credit-backstop-for-project-financing-in-support-of-19-billion-anthropic-lease-executes-definitive-fluor-epc-agreement" target="_blank" rel="noopener">TeraWulf 原始公告</a></p>
-<p><strong>4. NVIDIA 开放 4 个 Cosmos 3 检查点：世界模型走向可交互仿真</strong><br>
-11 月 5 日 NVIDIA 技术文章发布 4 个开放权重检查点，均基于 Cosmos 3 Nano、含 160 亿可训练参数，覆盖驾驶场景、多视角传感器、仿真转视频及双臂动作条件预测。Transfer-Auto 支持最多 11 路相机视角；按 OpenMDW1.1 条款允许商业与非商业使用。文章强调仍需测量对策略训练和评估的实际帮助。<br>
-选题角度：世界模型的下一道门槛不是“像视频”，而是动作改变后世界能否正确响应。<br>
-来源：<a href="https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation" target="_blank" rel="noopener">NVIDIA 原始技术文章</a></p>
-<p><strong>5. Google 将 Agent 底座交给 CNCF，Substrate 1.0 正式商用</strong><br>
-11 月 5 日 Google 宣布捐赠 Agent Substrate、gVisor、OpenRL；三者上月已获 CNCF Sandbox 接纳，目前推进接入。Substrate 1.0 同时在 GKE 正式可用。官方称可在不足 500 毫秒内恢复暂停的 Agent，达到标准容器 10 倍密度；这是厂商披露的运行指标。<br>
-选题角度：Agent 等模型回复时为什么还在烧服务器钱，暂停恢复能省多少？<br>
-来源：<a href="https://cloud.google.com/blog/products/containers-kubernetes/open-infrastructure-for-autonomous-agents-comes-to-cncf" target="_blank" rel="noopener">Google Cloud 官方</a></p>
-<p><strong>6. 报道：Anthropic 首次与美联社签内容授权，补齐实时选举信息</strong><br>
-Adweek 11 月 5 日报道援引两名知情人士称，协议在美国中期选举前达成，Claude 在选举夜提供了标注 AP 来源的实时信息。价格、期限均未披露，双方未具名置评；因此不能当成已公开完整条款的公司公告。<br>
+<item><title>[AI] 报道：Anthropic 首次与美联社签内容授权，补齐实时选举信息</title><link>https://www.adweek.com/media/anthropic-licensing-deal-ap-election/</link><guid isPermaLink="true">https://www.adweek.com/media/anthropic-licensing-deal-ap-election/</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 05 Nov 2026 23:57:00 +0000</pubDate><description><![CDATA[<p>Adweek 11 月 5 日报道援引两名知情人士称，协议在美国中期选举前达成，Claude 在选举夜提供了标注 AP 来源的实时信息。价格、期限均未披露，双方未具名置评；因此不能当成已公开完整条款的公司公告。<br>
 选题角度：抓网页和买权威实时数据，是两种不同的 AI 内容生意。<br>
-来源：<a href="https://www.adweek.com/media/anthropic-licensing-deal-ap-election/" target="_blank" rel="noopener">Adweek 原始报道</a></p>
-<h2><strong>X 上的动态</strong></h2>
-<ul><li><strong>Mistral AI：把 Studio 从模型控制台扩展为企业应用底座。</strong> 官方 11 月 5 日宣布托管 Agent、Apps，以及工作流、连接器、观测和评估能力；后续帖说明 Apps 与 Managed Agents 为公开预览、Workflows 已 GA。值得关注：竞争正在从“谁的模型好”变成“谁能把企业流程跑起来”。</li></ul>
-<p><a href="https://x.com/MistralAI/status/2118370229466153299" target="_blank" rel="noopener">https://x.com/MistralAI/status/2118370229466153299</a></p>
-<ul><li><strong>AI at Meta：Muse Realtime Avatar 开始在美国 Muse App 推出。</strong> 官方 11 月 5 日称，实时具象化技术把语音变成可互动的表现型头像。值得关注：语音助手开始争夺“有脸的交互入口”，不是实体机器人发布。</li></ul>
-<p><a href="https://x.com/AIatMeta/status/2118412135340572850" target="_blank" rel="noopener">https://x.com/AIatMeta/status/2118412135340572850</a></p>
-<ul><li><strong>Hugging Face：开源 ML Intern 现在可以安装为 Slack 机器人。</strong> 官方 11 月 5 日称可用于模型评估、数据集构建和微调。值得关注：模型研发 Agent 正在进入团队日常协作工具；帖子本身没有给出独立效率评测。</li></ul>
-<p><a href="https://x.com/huggingface/status/2118430862949945612" target="_blank" rel="noopener">https://x.com/huggingface/status/2118430862949945612</a></p>
-<h2><strong>推荐选题</strong></h2>
-<ol><li>安全模型的能力与边界：《更会挖漏洞，也更守规矩？GPT-6 Cyber 的两张成绩单》</li><li>算力融资结构：《190 亿美元不是谷歌打款：Anthropic 数据中心账单背后的信用生意》</li><li>视频工具实测：《15 秒约 1 美元：AI 视频降价之后，创作者真正省下什么？》</li></ol>
-<p>——<br>
-去重说明：已检索近 30 天对应目录；现有历史仅 2026-11-05.md（含补发），已全读并跨三领域排重。Linux 旧成果不重发，只保留模型发布与新增 Firefox 结果；Pierre、Fal、旧财报等无新进展项删除。Cosmos 通用世界模型仅收录于 AI 篇。</p>]]></description></item>
+来源：<a href="https://www.adweek.com/media/anthropic-licensing-deal-ap-election/" target="_blank" rel="noopener">Adweek 原始报道</a></p>]]></description></item>
+<item><title>[AI] Google 将 Agent 底座交给 CNCF，Substrate 1.0 正式商用</title><link>https://cloud.google.com/blog/products/containers-kubernetes/open-infrastructure-for-autonomous-agents-comes-to-cncf</link><guid isPermaLink="true">https://cloud.google.com/blog/products/containers-kubernetes/open-infrastructure-for-autonomous-agents-comes-to-cncf</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 05 Nov 2026 23:56:00 +0000</pubDate><description><![CDATA[<p>11 月 5 日 Google 宣布捐赠 Agent Substrate、gVisor、OpenRL；三者上月已获 CNCF Sandbox 接纳，目前推进接入。Substrate 1.0 同时在 GKE 正式可用。官方称可在不足 500 毫秒内恢复暂停的 Agent，达到标准容器 10 倍密度；这是厂商披露的运行指标。<br>
+选题角度：Agent 等模型回复时为什么还在烧服务器钱，暂停恢复能省多少？<br>
+来源：<a href="https://cloud.google.com/blog/products/containers-kubernetes/open-infrastructure-for-autonomous-agents-comes-to-cncf" target="_blank" rel="noopener">Google Cloud 官方</a></p>]]></description></item>
+<item><title>[AI] NVIDIA 开放 4 个 Cosmos 3 检查点：世界模型走向可交互仿真</title><link>https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation</link><guid isPermaLink="true">https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 05 Nov 2026 23:55:00 +0000</pubDate><description><![CDATA[<p>11 月 5 日 NVIDIA 技术文章发布 4 个开放权重检查点，均基于 Cosmos 3 Nano、含 160 亿可训练参数，覆盖驾驶场景、多视角传感器、仿真转视频及双臂动作条件预测。Transfer-Auto 支持最多 11 路相机视角；按 OpenMDW1.1 条款允许商业与非商业使用。文章强调仍需测量对策略训练和评估的实际帮助。<br>
+选题角度：世界模型的下一道门槛不是“像视频”，而是动作改变后世界能否正确响应。<br>
+来源：<a href="https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation" target="_blank" rel="noopener">NVIDIA 原始技术文章</a></p>]]></description></item>
+<item><title>[AI] Google 为 Anthropic 数据中心租约提供信用支持，不是直接投资 190 亿美元</title><link>https://investors.terawulf.com/news-events/press-releases/detail/148/terawulf-secures-google-credit-backstop-for-project-financing-in-support-of-19-billion-anthropic-lease-executes-definitive-fluor-epc-agreement</link><guid isPermaLink="true">https://investors.terawulf.com/news-events/press-releases/detail/148/terawulf-secures-google-credit-backstop-for-project-financing-in-support-of-19-billion-anthropic-lease-executes-definitive-fluor-epc-agreement</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 05 Nov 2026 23:54:00 +0000</pubDate><description><![CDATA[<p>TeraWulf 11 月 4 日公告：Google 签署信用支持协议，支持肯塔基 Justified 园区约 190 亿美元 Anthropic 长期租赁承诺背后的债务融资；同时与 Fluor 签署覆盖 3 栋数据中心的 EPC 协议，分阶段交付预计从 2027 年末持续至 2028 年第二季度。<br>
+选题角度：AI 扩张不只靠买 GPU，谁愿意为长期算力账单背书更关键。<br>
+来源：<a href="https://investors.terawulf.com/news-events/press-releases/detail/148/terawulf-secures-google-credit-backstop-for-project-financing-in-support-of-19-billion-anthropic-lease-executes-definitive-fluor-epc-agreement" target="_blank" rel="noopener">TeraWulf 原始公告</a></p>]]></description></item>
+<item><title>[AI] Gemini Omni 1.2 Flash：15 秒视频、价格下调 30%</title><link>https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/</link><guid isPermaLink="true">https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 05 Nov 2026 23:53:00 +0000</pubDate><description><![CDATA[<p>Google 11 月 5 日宣布，原生视频生成和编辑上限从 10 秒延至 15 秒，支持多轮对话修改；720p 定价降至每秒 0.07 美元，并正式面向生产使用。官方同时承认快速运动和复杂物理仍需改进。<br>
+选题角度：一条 15 秒片段的标价约 1.05 美元，但反复修改才是广告生产的真实成本。<br>
+来源：<a href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/" target="_blank" rel="noopener">Google 官方</a></p>]]></description></item>
+<item><title>[AI] 【进展】GPT-6 Cyber 发布：新增 Firefox 漏洞成果与授权边界评测</title><link>https://openai.com/index/introducing-gpt-6-cyber</link><guid isPermaLink="true">https://openai.com/index/introducing-gpt-6-cyber</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 05 Nov 2026 23:52:00 +0000</pubDate><description><![CDATA[<p>此前：2026-11-05 简报已报道 OpenAI 的 Linux 漏洞流水线。新增：11 月 5 日官方揭晓背后模型 GPT-6 Cyber，披露发现 81 个此前未知的 Firefox 高危漏洞；ExploitGym 得分 48.5%，前代为 32.1%。在官方授权范围评测中，不加部署提示时 99.93% 不攻击范围外服务。首批仅向获批 Daybreak Red 客户开放，评测结果不等于现实零风险。<br>
+选题角度：安全模型越会攻击，如何证明它不会越权？<br>
+来源：<a href="https://openai.com/index/introducing-gpt-6-cyber" target="_blank" rel="noopener">OpenAI 原文</a></p>]]></description></item>
 <item><title>[AI] 称周四未见GPT-6.2发布</title><link>https://x.com/kimmonismus/status/2118476452249153730</link><guid isPermaLink="true">https://x.com/kimmonismus/status/2118476452249153730</guid><category>AI</category><author>@kimmonismus</author><pubDate>Thu, 05 Nov 2026 22:52:00 +0000</pubDate><description><![CDATA[<p>kimmonismus称此前关于周四无GPT-6.2的信息属实，并猜测次日可能是发布日。</p><p>@kimmonismus · 赞 368 · 转 11 · 浏览 11370</p><p><img src="https://pbs.twimg.com/media/HWZJYyMWgAA-k_r.jpg"/></p><blockquote>The information was correct as always. No GPT-6.2 on Thursday. So tomorrow is probably the big day. Fingers crossed, see you tomorrow!</blockquote><p><a href="https://x.com/kimmonismus/status/2118476452249153730">查看原帖</a></p>]]></description></item>
 <item><title>[AI] Meta Muse上线语音与表情Avatar</title><link>https://x.com/testingcatalog/status/2118469389452271860</link><guid isPermaLink="true">https://x.com/testingcatalog/status/2118469389452271860</guid><category>AI</category><author>@testingcatalog</author><pubDate>Thu, 05 Nov 2026 22:23:56 +0000</pubDate><description><![CDATA[<p>TestingCatalog称Meta向美国Muse用户推送Voice语音与会随对话做出表情手势的Avatar，并提到Muse同时在墨西哥上线。</p><p>@testingcatalog · 赞 153 · 转 2 · 浏览 6074</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118400683942477824/img/8Nq_kxkL9PZTDlo7.jpg"/></p><blockquote>META 🔥: Muse Voice and expressive avatars are rolling out for Muse users in the US.  
 
@@ -376,115 +298,67 @@ I have a lot of respect for OpenAI for showing the world that scaling works, for
 I’m excited to work with @thsottiaux, an incredible PM team, and everyone across OpenAI. Together, we’ll build agents that have your back and your team’s, and keep you in control, so you get more time for the people and work you love.
 
 Lots to learn, and lots to build. Please keep your feedback coming!</blockquote><p><a href="https://x.com/_catwu/status/2118137612577968402">查看原帖</a></p>]]></description></item>
-<item><title>[AI] AI 每日简报 · 2026-11-05</title><link>https://dukeyang.github.io/x-hot-feed/briefs/ai/2026-11-05.html</link><guid isPermaLink="true">https://dukeyang.github.io/x-hot-feed/briefs/ai/2026-11-05.html</guid><category>AI</category><author>每日简报</author><pubDate>Wed, 04 Nov 2026 23:52:00 +0000</pubDate><description><![CDATA[<p><strong>今日主线：</strong> 算力产业链的钱越来越多：AMD 数据中心收入几乎翻倍，Marvell 用 1150 亿美元买下光通信公司 Lumentum。模型这边，中国开源大模型密集发布（腾讯 Hy4、美团 LongCat-2.5），OpenAI 把 GPT-6 Astra 用到了硬件设计上。</p>
-<p><strong>1. Marvell 以全股票方式收购 Lumentum，隐含企业价值 1150 亿美元</strong><br>
-11 月 2 日宣布：每股 Lumentum 换 4.5 股 Marvell，溢价 23.9%。交易完成后 Marvell 股东持股约 67%，预计 2028 年上半年交割。双方的逻辑是 AI 数据中心里铜缆快到极限，连接要换成光。按 Marvell 当前股价算，报价已经缩水，Lumentum 股价单日跌了近 19%。<br>
-选题角度：从“铜退光进”讲清楚 AI 机房里光模块为什么这么值钱。<br>
-来源：<a href="https://www.anothercodingblog.com/p/another-daily-ai-newsletter-november-83a" target="_blank" rel="noopener">Another Daily AI Newsletter（汇总，含官方公告）</a></p>
-<p><strong>2. AMD Q3 营收 134 亿美元，数据中心收入涨了 97%</strong><br>
-11 月 3 日盘后公布：营收同比增长 45%，数据中心收入 85.5 亿美元，主要靠 MI450 放量。Q4 指引约 170 亿美元，高于市场预期的约 162.9 亿。苏姿丰称 2027 年营收将增长超过 80%。盘后股价涨约 8%。Super Micro 同晚公布季度收入 199 亿美元，并把 FY2027 指引上调到 720–820 亿美元。<br>
-选题角度：英伟达 11 月 17 日发财报前，“第二供应商”AMD 能分走多少？<br>
-来源：<a href="https://daily.semidoped.com/p/daily-update-november-4th-2026" target="_blank" rel="noopener">Semi Doped</a>｜<a href="https://decryptingtech.com/daily-briefing-4-november-2026/" target="_blank" rel="noopener">decryptingtech</a></p>
-<p><strong>3. Anthropic 修订版 S-1：算力承诺 8954 亿美元，还提到“AI 加速自身研发”风险</strong><br>
-11 月 2 日的修订版文件显示，Anthropic Q3 收入 169.6 亿美元，环比增长 47%。基础设施采购和租赁承诺约 8954 亿美元，其中 698 亿在一年内到期。文件的风险因素部分写道，公司内部估计可能“即将”达到其 RSP 中“AI 显著加速研发”的门槛，同时说明目前还没有模型被认定越过这条线。另有路透报道称，Anthropic 计划在日本向投资者出售最多 35 亿美元股份。<br>
-选题角度：IPO 招股书里第一次把“AI 自我加速”列成经营风险，这意味着什么？<br>
-来源：<a href="https://www.vlsi.kr/en/daily-silicon-2026-11-04-en/" target="_blank" rel="noopener">vlsi.kr 汇总</a>｜<a href="https://aipolicydaily.org/archive/daily/2026-11-03/" target="_blank" rel="noopener">AI Policy Daily</a></p>
-<p><strong>4. 腾讯发布 Hy4：首次支持视觉理解和电脑操作，权重近期开源</strong><br>
-11 月 4 日发布。新增视觉理解和 computer-use 能力（可以操作命令行和图形界面），针对 Blender、CAD 等专业软件做了专门训练。定价约每百万 token 输入 0.9 美元、输出 2.7 美元。11 月 4 日至 15 日 WorkBuddy/CodeBuddy 免费，TokenHub 打五折到年底。官方称模型权重和系统卡“未来几天”放出。<br>
-选题角度：国产开源模型开始拼“会用电脑”，实测 Hy4 能不能帮你画 CAD。<br>
-来源：<a href="https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/" target="_blank" rel="noopener">腾讯官方</a></p>
-<p><strong>5. OpenAI 用 GPT-6 Astra 设计硬件：两个人不到一周做出一台设备</strong><br>
-11 月 3 日，OpenAI 公布 Astra 在机械、电子和仿真工程上的进展。两名员工以业余项目的形式，在一周内让模型完成了一台“与 Codex 对话”的设备的外壳、PCB 和固件设计，代工厂不到一个月做出了样机。官方也承认，模型没有充分考虑量产公差，后面还要多轮修改。自 2 月以来，OpenAI 硬件团队的 token 用量增长了 23 倍。合作方包括 Mazda 和 Chip Ganassi Racing。<br>
-选题角度：AI 从写代码走到画电路板，硬件工程师会被替代吗？<br>
-来源：<a href="https://openai.com/index/accelerating-engineering-for-the-physical-world" target="_blank" rel="noopener">OpenAI 官方</a></p>
-<p><strong>6. OpenAI：ChatGPT 的搜索量已达到 Google 的 20%</strong><br>
-OpenAI 11 月 3 日披露，经 ChatGPT 发起的搜索查询量相当于 Google 的 20%。同期 OpenAI 还给用户发邮件，说要测试把 Chat 和 Work 两个标签合并，12 月起 ChatGPT 和 Codex 共用同一份用量额度。<br>
-选题角度：“问 Chat”正在替代“搜一下”，内容创作者的流量入口在变。<br>
-来源：<a href="https://www.theverge.com/ai-artificial-intelligence/1025482/openai-says-chatgpt-is-catching-up-to-google-in-search" target="_blank" rel="noopener">The Verge</a></p>
-<p><strong>7. 美团 LongCat-2.5：1.6 万亿参数的原生多模态 Agent 模型</strong><br>
-官方博客日期为 11 月 1 日。总参数 1.6T，每个 token 激活约 48B，重点是长程 Agent 编程和视觉编码。官方说针对国产 AI 加速卡优化了长上下文训练和 W4A4 推理。同期 Mistral Large 4 正式开放权重（1.05T 参数、1M 上下文）。<br>
-选题角度：万亿参数开源模型扎堆出现，“国产卡训练”这件事有多重要？<br>
-来源：<a href="https://longcat.ai/blog/longcat-2.5/" target="_blank" rel="noopener">LongCat 官方博客</a></p>
-<p><strong>8. 纽约时报等媒体起诉 Brave：指控抓取网页卖给 AI 公司</strong><br>
-起诉书称，Brave 用一个身份不明的爬虫建了超过 300 亿网页的索引，再把出版商内容分发给客户，起诉书点名了 Anthropic、Perplexity、Mistral、xAI 和 Cohere。<br>
-选题角度：AI 训练数据版权战从模型公司打到了搜索引擎和数据中间商。<br>
-来源：<a href="https://aipolicydaily.org/archive/daily/2026-11-03/" target="_blank" rel="noopener">AI Policy Daily</a></p>
-<p><strong>9. 韩国 2027 年预算拟拿出 21.3 万亿韩元投 AI 和半导体</strong><br>
-据路透报道，李在明总统提出约 21.3 万亿韩元（约 159.7 亿美元）用于 AI、半导体、物理 AI 和 AI 数据中心，几乎是今年的两倍，还需国会批准。另一边，11 月 3 日韩股大跌：三星电子跌 4.15%，SK 海力士跌 5.03%。<br>
-选题角度：国家级 AI 预算竞赛，韩国为什么突然加码？<br>
-来源：<a href="https://www.anothercodingblog.com/p/another-daily-ai-newsletter-november-83a" target="_blank" rel="noopener">Another Daily AI Newsletter（转引路透）</a>｜<a href="https://www.vlsi.kr/en/daily-silicon-2026-11-04-en/" target="_blank" rel="noopener">vlsi.kr</a></p>
-<p><strong>10. Salesforce 收购语音客服 AI 公司 Cresta；Palantir 季度收入增长约 96%</strong><br>
-Salesforce 已签署收购 Cresta 的最终协议。The Information 报道价格约 27 亿美元，Salesforce 没有披露。Palantir Q3 收入 23.1 亿美元，同比增长约 96%，全年指引上调到约 85.3 亿美元（据路透）。<br>
-选题角度：企业级 AI Agent 已经开始真正赚钱。<br>
-来源：<a href="https://www.anothercodingblog.com/p/another-daily-ai-newsletter-november-83a" target="_blank" rel="noopener">Another Daily AI Newsletter</a></p>
-<h2><strong>X 上的动态</strong></h2>
-<p>• <strong>Sam Altman：“人应该始终掌控未来”</strong>。11 月 3 日（太平洋时间）发帖称，OpenAI 反对让人类退居到只做“AI 系统认为值得奖励的事”的位置。帖子浏览量约 680 万，回复 3500 多条。他没在帖里点名回应对象，背景暂不确定。同一晚他还连发几条回复，说“希望世界扩产内存”，抱怨自己的话被断章取义。<br>
-<a href="https://x.com/sama/status/2117794005165748448" target="_blank" rel="noopener">https://x.com/sama/status/2117794005165748448</a></p>
-<p>• <strong>Anthropic 发布 FlashProve 研究</strong>：基于密码学技术做“可证明推理”，开发者可以验证某个回答是否确实出自某个模型。这关系到 API 模型被偷偷替换、降级的信任问题。<br>
-<a href="https://x.com/AnthropicAI/status/2117710942826123294" target="_blank" rel="noopener">https://x.com/AnthropicAI/status/2117710942826123294</a></p>
-<p>• <strong>Mistral 演示 Large 4 自动挖漏洞</strong>：133 个 Agent 协作，在一个近期的 Django CVE 上完成代码梳理、漏洞复现和打补丁，展示开源模型的安全攻防能力。<br>
-<a href="https://x.com/MistralAI/status/2117925908572991748" target="_blank" rel="noopener">https://x.com/MistralAI/status/2117925908572991748</a></p>
-<p>• <strong>Anthropic Residency 开放申请</strong>：带薪、固定期限的研究项目，“不需要 ML 背景”，11 月 22 日截止。帖子浏览量超过 1400 万，收藏 6 万多次，是本周收藏最多的 AI 帖之一。<br>
-<a href="https://x.com/AnthropicAI/status/2117343929960112486" target="_blank" rel="noopener">https://x.com/AnthropicAI/status/2117343929960112486</a></p>
-<p>• <strong>腾讯混元发布 Hyra 2.0 研究 Agent</strong>：主打 AutoResearch，从“解题”走向“自己造可复用的工具、模型和工作流”。<br>
-<a href="https://x.com/TencentHunyuan/status/2117198622022619399" target="_blank" rel="noopener">https://x.com/TencentHunyuan/status/2117198622022619399</a></p>
-<h2><strong>推荐选题</strong></h2>
-<ol><li>算力产业链的财报季：建议标题《一周之内，AI 机房里的铜缆、GPU 和光模块都在暴涨：谁在收钱？》</li><li>Anthropic 招股书解读：建议标题《8954 亿美元算力账单，加上一条“AI 可能自我加速”的风险提示：Anthropic 招股书里最值得看的三句话》</li><li>AI 走进物理世界：建议标题《GPT-6 一周设计出一台硬件，腾讯 Hy4 学会用 CAD：工程师的饭碗还稳吗？》</li></ol>
-<p>---</p>
-<p>（补发）</p>
-<p><strong>今日主线：</strong> AI 一边在“攻”，一边在“缺”。OpenAI 用自动化流水线一次挖出 948 个 Linux 提权漏洞，又收购 Pierre 去抢 GitHub 的地盘；另一边，Anthropic 因为临时高价买算力转为季度亏损，英伟达的中国订单据报只能交付约 1%。</p>
-<p><strong>1. OpenAI 自动化流水线一次挖出并修补 948 个 Linux 提权漏洞</strong><br>
-11 月 4 日官方披露：10 月中旬的一次运行里，流水线用一个尚未发布的网络安全模型复现了 1,724 个内核漏洞，做出 948 个可用的本地提权（LPE）利用，API 总花费约 121 万美元，平均每个约 1,279 美元。按 Pwn2Own 等比赛过去的赏金估算，这些漏洞价值 1,890 万到 6,630 万美元。所有结果都由人工复核后，连同补丁提交给内核维护者。<br>
-选题角度：挖一个漏洞只要 1,000 多美元，攻防成本的平衡会不会被彻底打破？<br>
-来源：<a href="https://openai.com/index/a-thousand-fewer-paths-to-root" target="_blank" rel="noopener">OpenAI 官方</a></p>
-<p><strong>2. 彭博：英伟达的中国订单约 700 亿美元，近期只能交付约 1%</strong><br>
-11 月 4 日报道：字节、阿里、腾讯等公司合计订了约 600 万块 RTX Pro 5500（单价约 1.1 万美元），这款卡不受出口限制。未来几个月只能交付“几万块，约 1%”，原因是产能优先给了 Rubin。报道称到 2027 年底累计交付约 70 万块，但这个数字还可能变。消息来自匿名信源。<br>
-选题角度：买得到的卡只有订单的 1%，国产算力的窗口期来了吗？<br>
-来源：<a href="https://www.tomshardware.com/pc-components/gpus/nvidia-can-only-fulfill-1-percent-of-chinas-massive-usd70-billion-gpu-order-for-ai-chips-report-claims-supply-constraints-choke-export-friendly-rtx-pro-5500-deliveries-despite-huge-demand" target="_blank" rel="noopener">Tom&#x27;s Hardware（转引彭博）</a></p>
-<p><strong>3. 【进展】Anthropic 因临时高价买算力，Q3 由盈转亏</strong><br>
-此前：11-05 报道过修订版 S-1 中 Q3 收入约 169.6 亿美元、算力承诺约 8954 亿美元。<br>
+<item><title>[AI] 未成年人与 AI：谷歌学生账号默认关闭 AI，苹果把 AI 伴侣应用划为 18+</title><link>https://aiproplaybook.com/top-ai-stories/2026-11-04</link><guid isPermaLink="true">https://aiproplaybook.com/top-ai-stories/2026-11-04</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 05 Nov 2026 00:11:00 +0000</pubDate><description><![CDATA[<p>谷歌：K-12 学生账号里的 Gemini 和搜索等功能将默认关闭，需要学校管理员手动开启。谷歌教育负责人承认，关掉 AI 搜索也会一起关掉。苹果：提供恋爱或性内容的 AI 伴侣应用最低评级为 18+，开发者 11 月 16 日起可以申报，2027 年 1 月 12 日前必须完成。<br>
+选题角度：AI 和搜索已经拆不开，“给孩子关掉 AI”还做得到吗？<br>
+来源：<a href="https://aiproplaybook.com/top-ai-stories/2026-11-04" target="_blank" rel="noopener">AI Pro Playbook（汇总 TechCrunch、纽约时报）</a></p>]]></description></item>
+<item><title>[AI] 发改委：加快推进人工智能基础性、综合性立法</title><link>https://sflood.com/zh/daily/ai-2026-11-04</link><guid isPermaLink="true">https://sflood.com/zh/daily/ai-2026-11-04</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 05 Nov 2026 00:10:00 +0000</pubDate><description><![CDATA[<p>11 月 3 日“奋进十五五”首场发布会上，发改委高技术司副司长王若蒙表示：要构建 AI 法律法规体系，建立覆盖 AI 全生命周期的安全标准和伦理准则，并对制度执行情况做周期性评估、动态调整。<br>
+选题角度：中国版“AI 法”离我们还有多远？<br>
+来源：<a href="https://sflood.com/zh/daily/ai-2026-11-04" target="_blank" rel="noopener">Stillflood AI 前沿日报（转引 21 世纪经济报道）</a></p>]]></description></item>
+<item><title>[AI] CrowdStrike 以 4.95 亿美元买下两家 AI 安全公司，推出 “AI Kill Switch”</title><link>https://sflood.com/zh/daily/ai-2026-11-04</link><guid isPermaLink="true">https://sflood.com/zh/daily/ai-2026-11-04</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 05 Nov 2026 00:09:00 +0000</pubDate><description><![CDATA[<p>11 月 3 日宣布收购 Fiddler AI（约 4 亿美元，做智能体监控）和 Dreadnode（约 9500 万美元，做上线前的安全测试）。同时发布 AI Kill Switch，可以在人工控制下终止失控的智能体。<br>
+选题角度：企业买 Agent 之前，先要买一个“紧急停止按钮”。<br>
+来源：<a href="https://sflood.com/zh/daily/ai-2026-11-04" target="_blank" rel="noopener">Stillflood AI 前沿日报（汇总 CrowdStrike 新闻稿）</a></p>]]></description></item>
+<item><title>[AI] Fal 融资 13 亿美元，估值翻倍到 160 亿美元</title><link>https://aiproplaybook.com/top-ai-stories/2026-11-04</link><guid isPermaLink="true">https://aiproplaybook.com/top-ai-stories/2026-11-04</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 05 Nov 2026 00:08:00 +0000</pubDate><description><![CDATA[<p>据彭博报道，本轮由 Bessemer 领投，英伟达、T. Rowe Price 参投，估值比 4 月翻了一倍。Fal 是为开发者托管图像、视频和音频模型的推理平台，彭博称它今年年化收入超过 8 亿美元。TechCrunch 指出，这类推理平台的毛利仍然偏薄。<br>
+选题角度：AI 视频爆发，最先赚到钱的是“卖铲子”的推理平台。<br>
+来源：<a href="https://aiproplaybook.com/top-ai-stories/2026-11-04" target="_blank" rel="noopener">AI Pro Playbook（汇总 TechCrunch、彭博）</a></p>]]></description></item>
+<item><title>[AI] 报道：字节洽谈采购联发科数据中心 ASIC，2026 年资本开支最高 700 亿美元</title><link>https://sflood.com/zh/daily/ai-2026-11-04</link><guid isPermaLink="true">https://sflood.com/zh/daily/ai-2026-11-04</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 05 Nov 2026 00:07:00 +0000</pubDate><description><![CDATA[<p>集微网 11 月 3 日援引外媒报道：如果谈成，字节会成为联发科继谷歌之后的第二家大型 ASIC 客户。报道还称，字节考虑把 2026 年资本开支提高到最高 700 亿美元，2027 年再提到 1000 亿美元。<strong>双方均未确认。</strong><br>
+选题角度：英伟达供不上，大厂纷纷自己造芯片。<br>
+来源：<a href="https://sflood.com/zh/daily/ai-2026-11-04" target="_blank" rel="noopener">Stillflood AI 前沿日报（转引集微网）</a></p>]]></description></item>
+<item><title>[AI] 报道：DeepSeek V5 计划用华为昇腾 950 预训练</title><link>https://sflood.com/zh/daily/ai-2026-11-04</link><guid isPermaLink="true">https://sflood.com/zh/daily/ai-2026-11-04</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 05 Nov 2026 00:06:00 +0000</pubDate><description><![CDATA[<p>11 月 3 日，澎湃新闻和财联社分别援引产业链人士称，V5 将是 DeepSeek 第一款原生用昇腾 950 训练的模型。此前昇腾主要用于 DeepSeek 的推理。<strong>DeepSeek 和华为都还没有官宣。</strong><br>
+选题角度：国产芯片从“跑推理”到“训主力模型”，真正卡的是软件栈。<br>
+来源：<a href="https://sflood.com/zh/daily/ai-2026-11-04" target="_blank" rel="noopener">Stillflood AI 前沿日报（汇总澎湃、财联社）</a></p>]]></description></item>
+<item><title>[AI] OpenAI 收购 Pierre，Codex 剑指 GitHub</title><link>https://openai.com/index/openai-to-acquire-pierre/</link><guid isPermaLink="true">https://openai.com/index/openai-to-acquire-pierre/</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 05 Nov 2026 00:05:00 +0000</pubDate><description><![CDATA[<p>11 月 4 日宣布。Pierre 做的是 Code Storage，还有 Trees、Diffs 等开源工具，Codex 里看文件、看改动用的就是它们。交易金额没有披露，还需要监管批准。Axios 认为这是 OpenAI 在挑战微软的 GitHub。OpenAI 本周还公开了内部的 Git 后端 Pando，Axios 称它把推送代码改动的耗时缩短了近 80%。<br>
+选题角度：当写代码的主力变成 Agent，“代码仓库”这门生意要重做了。<br>
+来源：<a href="https://openai.com/index/openai-to-acquire-pierre/" target="_blank" rel="noopener">OpenAI 官方</a>｜<a href="https://www.axios.com/2026/11/04/openai-pierre-computer-github" target="_blank" rel="noopener">Axios</a></p>]]></description></item>
+<item><title>[AI] 【进展】Anthropic 因临时高价买算力，Q3 由盈转亏</title><link>https://aiproplaybook.com/top-ai-stories/2026-11-04</link><guid isPermaLink="true">https://aiproplaybook.com/top-ai-stories/2026-11-04</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 05 Nov 2026 00:04:00 +0000</pubDate><description><![CDATA[<p>此前：11-05 报道过修订版 S-1 中 Q3 收入约 169.6 亿美元、算力承诺约 8954 亿美元。<br>
 这次新增的内容：TechCrunch 进一步拆解了同一份文件。Q3 经营亏损 5.67 亿美元，Q2 则是经营盈利约 10 亿美元。亏损主要来自两块：约 50 亿美元短期合同算力，单价明显高于长约；以及约 20 亿美元与捐赠配捐计划相关的非现金费用。算力和基础设施成本占收入的比例从 48% 升到 58%。公司正在转向通过 “Anthropic Direct” 直接租芯片。<br>
 选题角度：收入涨得越快亏得越多，AI 公司的毛利到底被谁吃掉了？<br>
-来源：<a href="https://aiproplaybook.com/top-ai-stories/2026-11-04" target="_blank" rel="noopener">AI Pro Playbook（汇总 TechCrunch、SEC 文件）</a></p>
-<p><strong>4. OpenAI 收购 Pierre，Codex 剑指 GitHub</strong><br>
-11 月 4 日宣布。Pierre 做的是 Code Storage，还有 Trees、Diffs 等开源工具，Codex 里看文件、看改动用的就是它们。交易金额没有披露，还需要监管批准。Axios 认为这是 OpenAI 在挑战微软的 GitHub。OpenAI 本周还公开了内部的 Git 后端 Pando，Axios 称它把推送代码改动的耗时缩短了近 80%。<br>
-选题角度：当写代码的主力变成 Agent，“代码仓库”这门生意要重做了。<br>
-来源：<a href="https://openai.com/index/openai-to-acquire-pierre/" target="_blank" rel="noopener">OpenAI 官方</a>｜<a href="https://www.axios.com/2026/11/04/openai-pierre-computer-github" target="_blank" rel="noopener">Axios</a></p>
-<p><strong>5. 报道：DeepSeek V5 计划用华为昇腾 950 预训练</strong><br>
-11 月 3 日，澎湃新闻和财联社分别援引产业链人士称，V5 将是 DeepSeek 第一款原生用昇腾 950 训练的模型。此前昇腾主要用于 DeepSeek 的推理。<strong>DeepSeek 和华为都还没有官宣。</strong><br>
-选题角度：国产芯片从“跑推理”到“训主力模型”，真正卡的是软件栈。<br>
-来源：<a href="https://sflood.com/zh/daily/ai-2026-11-04" target="_blank" rel="noopener">Stillflood AI 前沿日报（汇总澎湃、财联社）</a></p>
-<p><strong>6. 报道：字节洽谈采购联发科数据中心 ASIC，2026 年资本开支最高 700 亿美元</strong><br>
-集微网 11 月 3 日援引外媒报道：如果谈成，字节会成为联发科继谷歌之后的第二家大型 ASIC 客户。报道还称，字节考虑把 2026 年资本开支提高到最高 700 亿美元，2027 年再提到 1000 亿美元。<strong>双方均未确认。</strong><br>
-选题角度：英伟达供不上，大厂纷纷自己造芯片。<br>
-来源：<a href="https://sflood.com/zh/daily/ai-2026-11-04" target="_blank" rel="noopener">Stillflood AI 前沿日报（转引集微网）</a></p>
-<p><strong>7. Fal 融资 13 亿美元，估值翻倍到 160 亿美元</strong><br>
-据彭博报道，本轮由 Bessemer 领投，英伟达、T. Rowe Price 参投，估值比 4 月翻了一倍。Fal 是为开发者托管图像、视频和音频模型的推理平台，彭博称它今年年化收入超过 8 亿美元。TechCrunch 指出，这类推理平台的毛利仍然偏薄。<br>
-选题角度：AI 视频爆发，最先赚到钱的是“卖铲子”的推理平台。<br>
-来源：<a href="https://aiproplaybook.com/top-ai-stories/2026-11-04" target="_blank" rel="noopener">AI Pro Playbook（汇总 TechCrunch、彭博）</a></p>
-<p><strong>8. CrowdStrike 以 4.95 亿美元买下两家 AI 安全公司，推出 “AI Kill Switch”</strong><br>
-11 月 3 日宣布收购 Fiddler AI（约 4 亿美元，做智能体监控）和 Dreadnode（约 9500 万美元，做上线前的安全测试）。同时发布 AI Kill Switch，可以在人工控制下终止失控的智能体。<br>
-选题角度：企业买 Agent 之前，先要买一个“紧急停止按钮”。<br>
-来源：<a href="https://sflood.com/zh/daily/ai-2026-11-04" target="_blank" rel="noopener">Stillflood AI 前沿日报（汇总 CrowdStrike 新闻稿）</a></p>
-<p><strong>9. 发改委：加快推进人工智能基础性、综合性立法</strong><br>
-11 月 3 日“奋进十五五”首场发布会上，发改委高技术司副司长王若蒙表示：要构建 AI 法律法规体系，建立覆盖 AI 全生命周期的安全标准和伦理准则，并对制度执行情况做周期性评估、动态调整。<br>
-选题角度：中国版“AI 法”离我们还有多远？<br>
-来源：<a href="https://sflood.com/zh/daily/ai-2026-11-04" target="_blank" rel="noopener">Stillflood AI 前沿日报（转引 21 世纪经济报道）</a></p>
-<p><strong>10. 未成年人与 AI：谷歌学生账号默认关闭 AI，苹果把 AI 伴侣应用划为 18+</strong><br>
-谷歌：K-12 学生账号里的 Gemini 和搜索等功能将默认关闭，需要学校管理员手动开启。谷歌教育负责人承认，关掉 AI 搜索也会一起关掉。苹果：提供恋爱或性内容的 AI 伴侣应用最低评级为 18+，开发者 11 月 16 日起可以申报，2027 年 1 月 12 日前必须完成。<br>
-选题角度：AI 和搜索已经拆不开，“给孩子关掉 AI”还做得到吗？<br>
-来源：<a href="https://aiproplaybook.com/top-ai-stories/2026-11-04" target="_blank" rel="noopener">AI Pro Playbook（汇总 TechCrunch、纽约时报）</a></p>
-<h2><strong>X 上的动态</strong></h2>
-<p>• <strong>OpenAI 发布 ChatGPT Images 2.6</strong>：支持生成 GIF 和使用参考图，API 将上线两款新模型，生图速度快 50%。帖子约 57 万次浏览、9,300 多赞。据 The Verge 报道，ChatGPT 每周生成的图片已超过 40 亿张。适合做动图类内容的实测选题。<br>
-<a href="https://x.com/OpenAI/status/2118124944928432327" target="_blank" rel="noopener">https://x.com/OpenAI/status/2118124944928432327</a></p>
-<p>• <strong>Anthropic：Claude 协助解出细菌“穹窿体”的第一个 3D 结构</strong>：穹窿体是细胞里最大的蛋白结构之一，长期是个谜。官方称生物团队和 Claude 合作完成了结构解析。帖子约 27.6 万次浏览。这是 AI for Science 的又一个案例。<br>
-<a href="https://x.com/AnthropicAI/status/2118073665296228863" target="_blank" rel="noopener">https://x.com/AnthropicAI/status/2118073665296228863</a></p>
-<p>• <strong>Google DeepMind 转发：Gemini 3.8 Flash TTS 上线“声音混音”</strong>：开发者可以在 AI Studio 和 Gemini API 里，从预设声音出发调出新的音色。对做配音和口播的自媒体来说，这是个可以马上上手的工具。<br>
-<a href="https://x.com/GoogleDeepMind/status/2118028516948336696" target="_blank" rel="noopener">https://x.com/GoogleDeepMind/status/2118028516948336696</a></p>
-<p>• <strong>Demis Hassabis 转发“协作智能基准”论文</strong>：研究者把 18 个模型当作队友，在 240 个任务上测试它们和人协作的能力。原帖只截到“最好的模型得分……”，完整结论要看原文。评测重点正在从“单打独斗”转向“会不会配合”。<br>
-<a href="https://x.com/demishassabis/status/2118138200292249908" target="_blank" rel="noopener">https://x.com/demishassabis/status/2118138200292249908</a></p>
-<h2><strong>推荐选题</strong></h2>
-<ol><li>AI 安全攻防：《1,279 美元一个提权漏洞：OpenAI 把“黑客”变成了流水线》</li><li>算力短缺：《订了 600 万块只到 1%：英伟达卡荒下，DeepSeek、字节各找出路》</li><li>AI 公司的利润账：《收入 170 亿还亏 5.67 亿：Anthropic 招股书里的算力焦虑》</li></ol>]]></description></item>
+来源：<a href="https://aiproplaybook.com/top-ai-stories/2026-11-04" target="_blank" rel="noopener">AI Pro Playbook（汇总 TechCrunch、SEC 文件）</a></p>]]></description></item>
+<item><title>[AI] 彭博：英伟达的中国订单约 700 亿美元，近期只能交付约 1%</title><link>https://www.tomshardware.com/pc-components/gpus/nvidia-can-only-fulfill-1-percent-of-chinas-massive-usd70-billion-gpu-order-for-ai-chips-report-claims-supply-constraints-choke-export-friendly-rtx-pro-5500-deliveries-despite-huge-demand</link><guid isPermaLink="true">https://www.tomshardware.com/pc-components/gpus/nvidia-can-only-fulfill-1-percent-of-chinas-massive-usd70-billion-gpu-order-for-ai-chips-report-claims-supply-constraints-choke-export-friendly-rtx-pro-5500-deliveries-despite-huge-demand</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 05 Nov 2026 00:03:00 +0000</pubDate><description><![CDATA[<p>11 月 4 日报道：字节、阿里、腾讯等公司合计订了约 600 万块 RTX Pro 5500（单价约 1.1 万美元），这款卡不受出口限制。未来几个月只能交付“几万块，约 1%”，原因是产能优先给了 Rubin。报道称到 2027 年底累计交付约 70 万块，但这个数字还可能变。消息来自匿名信源。<br>
+选题角度：买得到的卡只有订单的 1%，国产算力的窗口期来了吗？<br>
+来源：<a href="https://www.tomshardware.com/pc-components/gpus/nvidia-can-only-fulfill-1-percent-of-chinas-massive-usd70-billion-gpu-order-for-ai-chips-report-claims-supply-constraints-choke-export-friendly-rtx-pro-5500-deliveries-despite-huge-demand" target="_blank" rel="noopener">Tom&#x27;s Hardware（转引彭博）</a></p>]]></description></item>
+<item><title>[AI] OpenAI 自动化流水线一次挖出并修补 948 个 Linux 提权漏洞</title><link>https://openai.com/index/a-thousand-fewer-paths-to-root</link><guid isPermaLink="true">https://openai.com/index/a-thousand-fewer-paths-to-root</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 05 Nov 2026 00:02:00 +0000</pubDate><description><![CDATA[<p>11 月 4 日官方披露：10 月中旬的一次运行里，流水线用一个尚未发布的网络安全模型复现了 1,724 个内核漏洞，做出 948 个可用的本地提权（LPE）利用，API 总花费约 121 万美元，平均每个约 1,279 美元。按 Pwn2Own 等比赛过去的赏金估算，这些漏洞价值 1,890 万到 6,630 万美元。所有结果都由人工复核后，连同补丁提交给内核维护者。<br>
+选题角度：挖一个漏洞只要 1,000 多美元，攻防成本的平衡会不会被彻底打破？<br>
+来源：<a href="https://openai.com/index/a-thousand-fewer-paths-to-root" target="_blank" rel="noopener">OpenAI 官方</a></p>]]></description></item>
+<item><title>[AI] Salesforce 收购语音客服 AI 公司 Cresta；Palantir 季度收入增长约 96%</title><link>https://www.anothercodingblog.com/p/another-daily-ai-newsletter-november-83a</link><guid isPermaLink="true">https://www.anothercodingblog.com/p/another-daily-ai-newsletter-november-83a</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 05 Nov 2026 00:01:00 +0000</pubDate><description><![CDATA[<p>Salesforce 已签署收购 Cresta 的最终协议。The Information 报道价格约 27 亿美元，Salesforce 没有披露。Palantir Q3 收入 23.1 亿美元，同比增长约 96%，全年指引上调到约 85.3 亿美元（据路透）。<br>
+选题角度：企业级 AI Agent 已经开始真正赚钱。<br>
+来源：<a href="https://www.anothercodingblog.com/p/another-daily-ai-newsletter-november-83a" target="_blank" rel="noopener">Another Daily AI Newsletter</a></p>]]></description></item>
+<item><title>[AI] 韩国 2027 年预算拟拿出 21.3 万亿韩元投 AI 和半导体</title><link>https://www.anothercodingblog.com/p/another-daily-ai-newsletter-november-83a</link><guid isPermaLink="true">https://www.anothercodingblog.com/p/another-daily-ai-newsletter-november-83a</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate><description><![CDATA[<p>据路透报道，李在明总统提出约 21.3 万亿韩元（约 159.7 亿美元）用于 AI、半导体、物理 AI 和 AI 数据中心，几乎是今年的两倍，还需国会批准。另一边，11 月 3 日韩股大跌：三星电子跌 4.15%，SK 海力士跌 5.03%。<br>
+选题角度：国家级 AI 预算竞赛，韩国为什么突然加码？<br>
+来源：<a href="https://www.anothercodingblog.com/p/another-daily-ai-newsletter-november-83a" target="_blank" rel="noopener">Another Daily AI Newsletter（转引路透）</a>｜<a href="https://www.vlsi.kr/en/daily-silicon-2026-11-04-en/" target="_blank" rel="noopener">vlsi.kr</a></p>]]></description></item>
+<item><title>[AI] 纽约时报等媒体起诉 Brave：指控抓取网页卖给 AI 公司</title><link>https://aipolicydaily.org/archive/daily/2026-11-03/</link><guid isPermaLink="true">https://aipolicydaily.org/archive/daily/2026-11-03/</guid><category>AI</category><author>每日简报</author><pubDate>Wed, 04 Nov 2026 23:59:00 +0000</pubDate><description><![CDATA[<p>起诉书称，Brave 用一个身份不明的爬虫建了超过 300 亿网页的索引，再把出版商内容分发给客户，起诉书点名了 Anthropic、Perplexity、Mistral、xAI 和 Cohere。<br>
+选题角度：AI 训练数据版权战从模型公司打到了搜索引擎和数据中间商。<br>
+来源：<a href="https://aipolicydaily.org/archive/daily/2026-11-03/" target="_blank" rel="noopener">AI Policy Daily</a></p>]]></description></item>
+<item><title>[AI] 美团 LongCat-2.5：1.6 万亿参数的原生多模态 Agent 模型</title><link>https://longcat.ai/blog/longcat-2.5/</link><guid isPermaLink="true">https://longcat.ai/blog/longcat-2.5/</guid><category>AI</category><author>每日简报</author><pubDate>Wed, 04 Nov 2026 23:58:00 +0000</pubDate><description><![CDATA[<p>官方博客日期为 11 月 1 日。总参数 1.6T，每个 token 激活约 48B，重点是长程 Agent 编程和视觉编码。官方说针对国产 AI 加速卡优化了长上下文训练和 W4A4 推理。同期 Mistral Large 4 正式开放权重（1.05T 参数、1M 上下文）。<br>
+选题角度：万亿参数开源模型扎堆出现，“国产卡训练”这件事有多重要？<br>
+来源：<a href="https://longcat.ai/blog/longcat-2.5/" target="_blank" rel="noopener">LongCat 官方博客</a></p>]]></description></item>
+<item><title>[AI] OpenAI：ChatGPT 的搜索量已达到 Google 的 20%</title><link>https://www.theverge.com/ai-artificial-intelligence/1025482/openai-says-chatgpt-is-catching-up-to-google-in-search</link><guid isPermaLink="true">https://www.theverge.com/ai-artificial-intelligence/1025482/openai-says-chatgpt-is-catching-up-to-google-in-search</guid><category>AI</category><author>每日简报</author><pubDate>Wed, 04 Nov 2026 23:57:00 +0000</pubDate><description><![CDATA[<p>OpenAI 11 月 3 日披露，经 ChatGPT 发起的搜索查询量相当于 Google 的 20%。同期 OpenAI 还给用户发邮件，说要测试把 Chat 和 Work 两个标签合并，12 月起 ChatGPT 和 Codex 共用同一份用量额度。<br>
+选题角度：“问 Chat”正在替代“搜一下”，内容创作者的流量入口在变。<br>
+来源：<a href="https://www.theverge.com/ai-artificial-intelligence/1025482/openai-says-chatgpt-is-catching-up-to-google-in-search" target="_blank" rel="noopener">The Verge</a></p>]]></description></item>
+<item><title>[AI] OpenAI 用 GPT-6 Astra 设计硬件：两个人不到一周做出一台设备</title><link>https://openai.com/index/accelerating-engineering-for-the-physical-world</link><guid isPermaLink="true">https://openai.com/index/accelerating-engineering-for-the-physical-world</guid><category>AI</category><author>每日简报</author><pubDate>Wed, 04 Nov 2026 23:56:00 +0000</pubDate><description><![CDATA[<p>11 月 3 日，OpenAI 公布 Astra 在机械、电子和仿真工程上的进展。两名员工以业余项目的形式，在一周内让模型完成了一台“与 Codex 对话”的设备的外壳、PCB 和固件设计，代工厂不到一个月做出了样机。官方也承认，模型没有充分考虑量产公差，后面还要多轮修改。自 2 月以来，OpenAI 硬件团队的 token 用量增长了 23 倍。合作方包括 Mazda 和 Chip Ganassi Racing。<br>
+选题角度：AI 从写代码走到画电路板，硬件工程师会被替代吗？<br>
+来源：<a href="https://openai.com/index/accelerating-engineering-for-the-physical-world" target="_blank" rel="noopener">OpenAI 官方</a></p>]]></description></item>
+<item><title>[AI] 腾讯发布 Hy4：首次支持视觉理解和电脑操作，权重近期开源</title><link>https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/</link><guid isPermaLink="true">https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/</guid><category>AI</category><author>每日简报</author><pubDate>Wed, 04 Nov 2026 23:55:00 +0000</pubDate><description><![CDATA[<p>11 月 4 日发布。新增视觉理解和 computer-use 能力（可以操作命令行和图形界面），针对 Blender、CAD 等专业软件做了专门训练。定价约每百万 token 输入 0.9 美元、输出 2.7 美元。11 月 4 日至 15 日 WorkBuddy/CodeBuddy 免费，TokenHub 打五折到年底。官方称模型权重和系统卡“未来几天”放出。<br>
+选题角度：国产开源模型开始拼“会用电脑”，实测 Hy4 能不能帮你画 CAD。<br>
+来源：<a href="https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/" target="_blank" rel="noopener">腾讯官方</a></p>]]></description></item>
+<item><title>[AI] Anthropic 修订版 S-1：算力承诺 8954 亿美元，还提到“AI 加速自身研发”风险</title><link>https://www.vlsi.kr/en/daily-silicon-2026-11-04-en/</link><guid isPermaLink="true">https://www.vlsi.kr/en/daily-silicon-2026-11-04-en/</guid><category>AI</category><author>每日简报</author><pubDate>Wed, 04 Nov 2026 23:54:00 +0000</pubDate><description><![CDATA[<p>11 月 2 日的修订版文件显示，Anthropic Q3 收入 169.6 亿美元，环比增长 47%。基础设施采购和租赁承诺约 8954 亿美元，其中 698 亿在一年内到期。文件的风险因素部分写道，公司内部估计可能“即将”达到其 RSP 中“AI 显著加速研发”的门槛，同时说明目前还没有模型被认定越过这条线。另有路透报道称，Anthropic 计划在日本向投资者出售最多 35 亿美元股份。<br>
+选题角度：IPO 招股书里第一次把“AI 自我加速”列成经营风险，这意味着什么？<br>
+来源：<a href="https://www.vlsi.kr/en/daily-silicon-2026-11-04-en/" target="_blank" rel="noopener">vlsi.kr 汇总</a>｜<a href="https://aipolicydaily.org/archive/daily/2026-11-03/" target="_blank" rel="noopener">AI Policy Daily</a></p>]]></description></item>
+<item><title>[AI] AMD Q3 营收 134 亿美元，数据中心收入涨了 97%</title><link>https://daily.semidoped.com/p/daily-update-november-4th-2026</link><guid isPermaLink="true">https://daily.semidoped.com/p/daily-update-november-4th-2026</guid><category>AI</category><author>每日简报</author><pubDate>Wed, 04 Nov 2026 23:53:00 +0000</pubDate><description><![CDATA[<p>11 月 3 日盘后公布：营收同比增长 45%，数据中心收入 85.5 亿美元，主要靠 MI450 放量。Q4 指引约 170 亿美元，高于市场预期的约 162.9 亿。苏姿丰称 2027 年营收将增长超过 80%。盘后股价涨约 8%。Super Micro 同晚公布季度收入 199 亿美元，并把 FY2027 指引上调到 720–820 亿美元。<br>
+选题角度：英伟达 11 月 17 日发财报前，“第二供应商”AMD 能分走多少？<br>
+来源：<a href="https://daily.semidoped.com/p/daily-update-november-4th-2026" target="_blank" rel="noopener">Semi Doped</a>｜<a href="https://decryptingtech.com/daily-briefing-4-november-2026/" target="_blank" rel="noopener">decryptingtech</a></p>]]></description></item>
+<item><title>[AI] Marvell 以全股票方式收购 Lumentum，隐含企业价值 1150 亿美元</title><link>https://www.anothercodingblog.com/p/another-daily-ai-newsletter-november-83a</link><guid isPermaLink="true">https://www.anothercodingblog.com/p/another-daily-ai-newsletter-november-83a</guid><category>AI</category><author>每日简报</author><pubDate>Wed, 04 Nov 2026 23:52:00 +0000</pubDate><description><![CDATA[<p>11 月 2 日宣布：每股 Lumentum 换 4.5 股 Marvell，溢价 23.9%。交易完成后 Marvell 股东持股约 67%，预计 2028 年上半年交割。双方的逻辑是 AI 数据中心里铜缆快到极限，连接要换成光。按 Marvell 当前股价算，报价已经缩水，Lumentum 股价单日跌了近 19%。<br>
+选题角度：从“铜退光进”讲清楚 AI 机房里光模块为什么这么值钱。<br>
+来源：<a href="https://www.anothercodingblog.com/p/another-daily-ai-newsletter-november-83a" target="_blank" rel="noopener">Another Daily AI Newsletter（汇总，含官方公告）</a></p>]]></description></item>
 <item><title>[AI] OpenAI发布ChatGPT Images 2.6</title><link>https://x.com/OpenAI/status/2118124944928432327</link><guid isPermaLink="true">https://x.com/OpenAI/status/2118124944928432327</guid><category>AI</category><author>@OpenAI</author><pubDate>Wed, 04 Nov 2026 23:35:14 +0000</pubDate><description><![CDATA[<p>ChatGPT Images 2.6新增GIF生成和参考图功能，API还将上线两款生成速度快50%的新图像模型。</p><p>@OpenAI · 赞 12539 · 转 1149 · 浏览 930763</p><p><img src="https://pbs.twimg.com/amplify_video_thumb/2118124891572748288/img/ZSIlzNmSPQEK0Sfd.jpg"/></p><blockquote>Images, upgraded—introducing ChatGPT Images 2.6.
 
 Now with GIFs and reference images.
