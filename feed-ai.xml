@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · AI</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>X 热帖精选与汽车、AI、机器人每日简报。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Thu, 12 Nov 2026 00:01:47 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Thu, 12 Nov 2026 23:51:20 +0000</lastBuildDate><ttl>180</ttl>
 <item><title>[AI] 【进展】阿里上线 Qwen4-Max 预览版：百万上下文，窗口只有 15 天</title><link>https://x.com/Alibaba_Qwen/status/2120335993643684315</link><guid isPermaLink="true">https://x.com/Alibaba_Qwen/status/2120335993643684315</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 12 Nov 2026 00:07:20 +0000</pubDate><description><![CDATA[<p>此前：11 月 6 日简报已报道通义千问官方预热帖 “The becoming begins.”，当时未公布型号、参数或上线时间。<br>
 这次新增：11 月 11 日，通义千问官方宣布新一代千问大模型 Qwen4 即将发布，并已把旗舰预览版 Qwen4-Max 放到阿里 Token Plan。官方文档写明：这是新一代旗舰多模态模型，支持文本生成、图片与视频理解及深度思考，面向编程、办公、前端设计和复杂智能体任务，兼容 OpenAI 与 Anthropic 接口。上下文 100 万 token，最大输出 393,216 token，思考过程和最终回答共享这一预算；思考默认开启，推理力度默认为 xhigh。预览期为 11 月 11 日 10:00 至 11 月 25 日 24:00（北京时间），仅支持 Token Plan、不支持按量计费，预览结束后该版本将下线。千问 App、千问办公、Qoder 和 QwenStudio 也已接入。Token Plan 官方说明称，限时活动期间积分消耗最低可为标准费率的 20%；北京时间 22:00 至次日 08:00 再打六折，相当于标准费率的 8%。官方尚未公布参数量、基准分数或开源权重时间表。<br>
 选题角度：这不是一次“全面上市”，而是一个会过期的试用窗口——要测的是真实工作流，而不是再等官方分数。<br>
