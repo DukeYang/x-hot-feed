@@ -17,6 +17,23 @@
   "added_at": "2026-11-15T23:45:22.379076+00:00"
  },
  {
+  "id": "brief-ai-2026-11-16-02",
+  "kind": "brief-item",
+  "user": "每日简报",
+  "name": "每日简报",
+  "category": "AI",
+  "title": "美国与八个伙伴签署《旧金山宣言》，把 AI 供应链安全写成多边承诺",
+  "summary": "11 月 15 日，《金融时报》报道，美国与日本、澳大利亚、以色列、英国、韩国、印度、卡塔尔和阿联酋签署了《关于持久繁荣之安全基础的旧金山宣言》（San Francisco Declaration on the Secure Foundations of Enduring Prosperity）。德国、瑞典、荷兰和欧盟委员会预计将在下周签署。这是美国主导的 …",
+  "text": "11 月 15 日，《金融时报》报道，美国与日本、澳大利亚、以色列、英国、韩国、印度、卡塔尔和阿联酋签署了《关于持久繁荣之安全基础的旧金山宣言》（San Francisco Declaration on the Secure Foundations of Enduring Prosperity）。德国、瑞典、荷兰和欧盟委员会预计将在下周签署。这是美国主导的 “硅和平”（Pax Silica）倡议下的新文件。美国国务院经济事务副国务卿雅各布·赫尔伯格（Jacob Helberg）对《金融时报》表示，芯片设计技术、制造设备和装运港口可能分布在不同国家；《旧金山宣言》之所以重要，是因为参与伙伴已同意，把保障这些技术及其背后基础设施的安全视为共同责任。公开报道称，各方计划共同识别需要保护的 AI 敏感技术和关键供应链——包括半导体、关键矿物和能源——并分享供应链多元化信息、设立针对薄弱环节的工作组，讨论吸引相关投资的经济枢纽。韩国《金融新闻》转述，宣言强调“经济安全是国家安全的根基”。此事发生在亚太经合组织（APEC）本周于深圳举行、美国总统特朗普与中国国家主席习近平会晤前。需要说明：目前能看到的内容，主要来自《金融时报》对美方官员的转述；我这边尚未检索到美国国务院官网公布的完整约文，具体清单和约束力仍有待官方文本核对。\n选题角度：这不是又一份出口管制新闻稿，关键要看那份“需要保护的技术清单”会不会写到具体器件和港口。\n来源：[《金融时报》原文](https://www.ft.com/content/3c2197fc-9618-4838-91e6-522ce1a96a22)｜[联合早报](https://www.zaobao.com.sg/news/china/story20261116-10003315)｜[韩国《金融新闻》](https://www.fnnews.com/news/202611160629314745)",
+  "created_at": "2026-11-16T00:03:42.000Z",
+  "metrics": {},
+  "media": [],
+  "url": "https://www.ft.com/content/3c2197fc-9618-4838-91e6-522ce1a96a22",
+  "brief_date": "2026-11-16",
+  "brief_key": "ai",
+  "added_at": "2026-11-15T23:47:30.043283+00:00"
+ },
+ {
   "id": "brief-auto-2026-11-16-06",
   "kind": "brief-item",
   "user": "每日简报",
@@ -49,6 +66,23 @@
   "brief_date": "2026-11-16",
   "brief_key": "auto",
   "added_at": "2026-11-15T23:45:22.379076+00:00"
+ },
+ {
+  "id": "brief-ai-2026-11-16-03",
+  "kind": "brief-item",
+  "user": "每日简报",
+  "name": "每日简报",
+  "category": "AI",
+  "title": "OpenAI 开设科学博客，客座文章称 GPT-6 Astra 帮助完成标准模型格点定义的候选证明",
+  "summary": "11 月 15 日，OpenAI 开通科学博客，首篇客座文章由加州大学圣巴巴拉分校粒子理论组负责人、卡夫利理论物理研究所常任成员纳撒尼尔·克雷格（Nathaniel Craig）撰写。克雷格目前是 OpenAI 的访问科学家。他写道，标准模型虽然在实验上极为成功，但五十多年来仍缺少一个不依赖微扰展开的完整非微扰定义；把时空离散成格点是一条有希望的路，可弱力对…",
+  "text": "11 月 15 日，OpenAI 开通科学博客，首篇客座文章由加州大学圣巴巴拉分校粒子理论组负责人、卡夫利理论物理研究所常任成员纳撒尼尔·克雷格（Nathaniel Craig）撰写。克雷格目前是 OpenAI 的访问科学家。他写道，标准模型虽然在实验上极为成功，但五十多年来仍缺少一个不依赖微扰展开的完整非微扰定义；把时空离散成格点是一条有希望的路，可弱力对左、右手性粒子区别对待，直接搬上格子又会多出理论里并不存在的镜像伙伴。他原先有一套策略，但没能证明它覆盖所有必要情形；GPT-6 Astra 帮助把这套策略变成构造，并在详细证明中起了主导作用。相关工作已作为 10 月预印本发布。克雷格把结果称为原则上的答案，还不是可以用于真实模拟的工具；其他物理学家仍需检验这一构造是否具备他们想要的性质，他本人也还在确认它在有限格距上是否满足“反射正性”（reflection positivity）——这一性质关系到格子模型能否对应一个概率守恒的量子理论。官方同时表示，科学博客将刊登研究成果、方法说明和一线研究者的使用经验，并回顾了近期在流体方程、素数估计等数学问题上的工作。不宜把这篇博客写成“标准模型已被 AI 定义完毕”。\n选题角度：值得写的不是“AI 攻克了物理学”，而是一线研究者怎样把模型用进尚未完成的证明，以及他还主动划出的界限。\n来源：[OpenAI 科学博客客座文章](https://openai.com/index/step-toward-defining-the-standard-model/)｜[OpenAI 科学博客创刊说明](https://openai.com/index/our-new-blog-for-science/)｜[10 月预印本](https://arxiv.org/abs/2610.09093)",
+  "created_at": "2026-11-15T23:57:54.000Z",
+  "metrics": {},
+  "media": [],
+  "url": "https://openai.com/index/step-toward-defining-the-standard-model/",
+  "brief_date": "2026-11-16",
+  "brief_key": "ai",
+  "added_at": "2026-11-15T23:47:30.043283+00:00"
  },
  {
   "id": "brief-robot-2026-11-16-01",
@@ -117,6 +151,23 @@
   "brief_date": "2026-11-16",
   "brief_key": "auto",
   "added_at": "2026-11-15T23:45:22.379076+00:00"
+ },
+ {
+  "id": "brief-ai-2026-11-16-01",
+  "kind": "brief-item",
+  "user": "每日简报",
+  "name": "每日简报",
+  "category": "AI",
+  "title": "【进展】黄仁勋据报考虑回归，硅谷盟友组建“作战室”；财长贝森特要求外部选帅并“大换血”",
+  "summary": "17 日财报要看的不只是数字，还有董事会到底听硅谷的“作战室”，还是听华盛顿的“大换血”。",
+  "text": "此前：11 月 13 日简报已报道黄仁勋立即辞去总裁、CEO 和董事，CFO 科莱特·克雷斯任临时 CEO，11 月 17 日财报按计划发布；11 月 14 日简报已报道董事会据报接触 Arm CEO Rene Haas；11 月 15 日简报已报道 Altimeter 与 Atreides 致信董事会，要求审慎选帅并保留黄仁勋回归可能，以及 “Stand with Jensen” 请愿签名逾 11.5 万。\n这次新增：《金融时报》星期天（11 月 15 日）引述知情人士报道，黄仁勋已与亲信讨论重返 CEO 职位的可能性。一名盟友称，他们正在召集硅谷高管组成“作战室”（war room），游说英伟达董事会，并争取白宫支持；这名人士说“除了前沿实验室之外，科技圈里真正重要的人都喜欢黄仁勋”，并表示这些努力得到了黄仁勋本人的支持。路透社转述该报道称，英伟达和黄仁勋的发言人均拒绝置评。报道也指出，黄仁勋并不拥有可以压过董事会的控股权。同一天，美国财政部长斯科特·贝森特（Scott Bessent）在福克斯新闻节目中呼吁对公司做“大换血”（dramatic shakeup），并主张从公司外部物色下一任 CEO。他质疑英伟达是否存在为抬高营收和利润而推动“看似违规销售”的文化，并把这种情况比作：如果是一家银行如此不合规，货币监理署（OCC）现在就会进驻，很多高管会被拿下。雅虎财经援引 Axios 报道，贝森特还希望董事会和外聘律师在 10 天内给出答复。英伟达方面一直表示公司遵守美国出口管制法律。请愿网站“Stand with Jensen”在美国东部时间 11 月 15 日 18:43（北京时间 16 日 7:43）显示，签名已升至 162,414 个，其中自称现任员工 7,988 人、前员工 1,470 人、股东 85,736 人、其他支持者 67,220 人；网站写明隶属关系由签名者自行申报，并按约 42,000 名员工的口径给出约 19% 的现任员工占比，但这一比例未经核实。券商中国报道，北京时间 16 日凌晨，英伟达暗盘一度涨超 4%，发稿时涨 3.63%，纳指期货涨 0.60%；美光、SK 海力士、闪迪等 AI 硬件股暗盘也跟涨。需要强调：复职并未发生，董事会的独立调查仍在进行，17 日将迎来黄仁勋离职后的首份财报。\n选题角度：17 日财报要看的不只是数字，还有董事会到底听硅谷的“作战室”，还是听华盛顿的“大换血”。\n来源：[路透社（CNA 转述）](https://www.channelnewsasia.com/world/jensen-huang-discusses-comback-nvidia-6553591)｜[《金融时报》报道（Independent 转述）](https://www.independent.co.uk/news/world/americas/jensen-huang-nvidia-return-spy-b3085318.html)｜[CNBC 报道贝森特表态](https://www.cnbc.com/2026/11/15/bessent-nvidia-ceo-lutnick-megaspeed.html)｜[雅虎财经（综合 FT 与 Axios）](https://tech.yahoo.com/general/breaking-news/article/jensen-huang-weighs-comeback-as-nvidia-ceo-as-allies-lobby-board-ft-reports-bessent-calls-for-dramatic-shakeup-204839950.html)｜[联合早报](https://www.zaobao.com.sg/news/world/story20261116-10003282)｜[券商中国](https://finance.sina.com.cn/stock/marketresearch/2026-11-16/doc-iniywnmk5858581.shtml)｜[请愿网站](https://standwithjensen.com/)",
+  "created_at": "2026-11-15T23:56:14.000Z",
+  "metrics": {},
+  "media": [],
+  "url": "https://www.channelnewsasia.com/world/jensen-huang-discusses-comback-nvidia-6553591",
+  "brief_date": "2026-11-16",
+  "brief_key": "ai",
+  "added_at": "2026-11-15T23:47:30.043283+00:00"
  },
  {
   "id": "brief-auto-2026-11-16-05",
