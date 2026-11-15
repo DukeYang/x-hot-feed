@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · AI</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>X 热帖精选与汽车、AI、机器人每日简报。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Sat, 14 Nov 2026 23:58:18 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Sun, 15 Nov 2026 23:45:22 +0000</lastBuildDate><ttl>180</ttl>
 <item><title>[AI] 谷歌让美国 Gemini 用户连接 Google Wallet：只能看账，不能动钱</title><link>https://blog.google/innovation-and-ai/products/gemini-app/google-wallet-gemini-app/</link><guid isPermaLink="true">https://blog.google/innovation-and-ai/products/gemini-app/google-wallet-gemini-app/</guid><category>AI</category><author>每日简报</author><pubDate>Sun, 15 Nov 2026 00:06:23 +0000</pubDate><description><![CDATA[<p>11 月 13 日，谷歌宣布，美国所有 Gemini 应用用户可以把 Google Wallet 接到 Gemini，让回复参考自己的消费习惯；也可以通过 Plaid，把信用卡和银行账户安全连接到 Wallet，以获得更细的洞察。用户在对话里用 @Google Wallet 提问，即可查看支出、做预算、找出仍在扣费或已经涨价的订阅，或按去年礼品和旅行花费来规划假期预算；Gemini 还能在对话中生成现金流、资产配置和预算图表。该功能正在网页以及 Android、iOS 移动端推送。官方强调：连接之后 Gemini 只能读取账户信息，不能转移、管理或投资资金；用户可自行决定是否开通，并可随时关闭。这和 11 月 13 日 OpenAI 推出的 ChatGPT Wallet 形成对照：后者是在本人用面容或指纹批准后，让智能体完成代付，而且看不到真实卡号。<br>
 选题角度：同样是 AI 碰钱包，谷歌先把“能动钱”这一步留在门外。<br>
 来源：<a href="https://blog.google/innovation-and-ai/products/gemini-app/google-wallet-gemini-app/" target="_blank" rel="noopener">谷歌官方博客</a>｜<a href="https://9to5google.com/2026/11/13/gemini-google-wallet/" target="_blank" rel="noopener">9to5Google</a></p>]]></description></item>
