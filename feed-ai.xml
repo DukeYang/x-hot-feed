@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · AI</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>X 热帖精选与汽车、AI、机器人每日简报。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Thu, 19 Nov 2026 23:46:13 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Thu, 19 Nov 2026 23:48:02 +0000</lastBuildDate><ttl>180</ttl>
 <item><title>[AI] 【进展】腾讯开源 Hy4 flash：官方称 224B 总参数、每 token 激活 12B，完整版 Hy4 仍在后面</title><link>https://x.com/TencentHunyuan/status/2122912575302119554</link><guid isPermaLink="true">https://x.com/TencentHunyuan/status/2122912575302119554</guid><category>AI</category><author>每日简报</author><pubDate>Thu, 19 Nov 2026 00:02:53 +0000</pubDate><description><![CDATA[<p>此前：11 月 5 日简报已报道腾讯发布 Hy4，称首次支持视觉理解和电脑操作，并预告权重近期开源。当时尚未放出可下载的开源权重。<br>
 这次新增：北京时间 18 日中午前后，腾讯混元官方账号宣布，Hy4 flash、Hy4 flash-FP8 和 Hy4 flash-Base 已开放权重，可在 Hugging Face、GitHub 等平台下载，并明确“完整版 Hy4 还在后面，敬请期待”。官方帖给出的规格是总参数 224B、每 token 激活 12B、原生多模态、100 万 token 上下文。Hugging Face 上的官方说明更为细分：总参数约 2200 亿，其中 Engram（N-gram 嵌入表）约 635 亿，处理每个 token 时约激活 113 亿文本参数另加约 0.43 亿视觉参数，上下文长度为 1,048,576 token；模型按 Tencent Hy License 发布。IT之家报道称，Hy4 flash 已在腾讯云 TokenHub、元宝、企业微信、QQ 等产品上线，官方预告仍在加速开源完整版 Hy4。也就是说，这次落地的是更轻、更便宜的 flash 版本，并不等于 11 月 5 日那款 Hy4 旗舰已经开源。<br>
 选题角度：国产开源又多了一个能本地部署的百万上下文模型，但别把它写成“Hy4 已经全部开源”。<br>
