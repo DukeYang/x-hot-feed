@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · AI</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>X 热帖精选与汽车、AI、机器人每日简报。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Fri, 20 Nov 2026 23:48:44 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Fri, 20 Nov 2026 23:50:22 +0000</lastBuildDate><ttl>180</ttl>
 <item><title>[AI] OpenAI 公开 Performance Factory：三个多月自动排查逾 1700 次性能回退</title><link>https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/</link><guid isPermaLink="true">https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/</guid><category>AI</category><author>每日简报</author><pubDate>Fri, 20 Nov 2026 00:07:30 +0000</pubDate><description><![CDATA[<p>11 月 19 日，OpenAI 工程博客介绍了名为 Performance Factory 的云端系统：它用 Codex 和公司自有模型，自动调查并处理线上性能回退。工程师先为重复出现的工作定义工作流，再给 Codex 智能体写操作说明。其中的 Regression Workflow 会在性能告警触发时自动开任务：一个智能体负责调查并给出供工程师审核的修复方案，部署后再由另一个智能体检查性能是否回到基线。官方称，在三个多月时间里，这条工作流追踪了超过 1700 次调查，完成根因分析逾 600 例，相当于每天约 17 次自动调查。系统演进路径也被写得很清楚：从人工翻日志，到把排查步骤收进名为 <code>perf-forensics</code> 的技能，再到告警自动拉起云端调查，最后才连成“调查—写修复—验证恢复”的工厂。需要强调：修复方案仍需工程师审阅后才能部署，官方给出的是内部运行统计，不是对外承诺的服务质量指标。<br>
 选题角度：大模型公司开始用智能体养自己的线上系统。可写的不是“AI 已经会修 bug”，而是人还卡在哪一步——审核、上线和最终签字。<br>
 来源：<a href="https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/" target="_blank" rel="noopener">OpenAI 官方博客</a></p>]]></description></item>
