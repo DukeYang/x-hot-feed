@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日简报 · 2026-11-22</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header><div class="bar">
+<h1>AI 每日简报 · 2026-11-22</h1>
+<div class="navlinks">
+<a href="../../index.html">首页</a>
+
+</div>
+</div></header>
+<div class="article-wrap"><p class="lead">AI · 2026-11-22</p>
+<h2 id="item-02">【进展】Apollo 与高盛为 SpaceX 定价约 440 亿美元 GPU 融资，用于地面 Vera Rubin 算力</h2>
+<article class="article"><p>此前：11 月 14 日简报已报道，SpaceX 计划在得州和亚利桑那合计投资超过 740 亿美元建设超级计算园区。当时这是园区规划，还没有芯片采购融资的定价结果。路透社在本次报道中还提到，公司上月曾表示，Apollo 关联方将购买 AI 芯片和服务器硬件并租赁给 SpaceX，本金合计约 400 亿美元。<br>
+这次新增：11 月 20 日，Apollo 与高盛宣布，已成功定价约 440 亿美元优先及次级票据，为 SpaceX 购买 GPU 及相关设备提供资金。官方称，交易因投资者需求强劲而超额认购并上调规模，将为 SpaceX 的地面算力建设交付下一代英伟达 Vera Rubin 芯片，并称之为迄今规模最大的一笔 GPU 融资。租赁安排预计在 2027 年上半年、GPU 及相关设备交付后启动。BlackRock、高盛资管以及 KKR 顾问账户提供了锚定认购。需要说明：Apollo 官方新闻稿未公布各档票据利率；具体票息目前仍应等待公司后续披露或更完整的债券文件，不宜把二手转述当成已确认条款。<br>
+选题角度：740 亿美元是“要建多大的厂”，440 亿美元是“芯片怎么买、怎么租”。选题可以落在：AI 算力正在变成以芯片为抵押的重资产债务生意，而且租金会在设备产生收入之前就开始支付。<br>
+来源：<a href="https://ir.apollo.com/news-events/press-releases/detail/662/apollo-and-goldman-sachs-announce-pricing-of-44-billion" target="_blank" rel="noopener">Apollo 官方新闻稿</a>｜<a href="https://www.investing.com/news/stock-market-news/apollo-goldman-lead-44-billion-spacex-gpu-debt-financing-5042346" target="_blank" rel="noopener">路透社（Investing.com 转载）</a></p></article>
+<h2 id="item-01">OpenAI 官方复盘：维护导致读写副本同时失效，ChatGPT 请求失败率一度达 75%</h2>
+<article class="article"><p>美国太平洋时间 11 月 21 日凌晨 1:48–5:21（北京时间 21 日 17:48–21:21），OpenAI 出现大范围请求失败。官方事故说明写道，付费和免费版 ChatGPT 的失败率一度升至 75%。触发原因是：为 Primary API 服务所用的 Postgres 数据库做计划维护时，两个读副本同时失效。官方强调，虽然出问题的只是读副本，但它们是“承重”的：Primary API 负责整个 OpenAI 技术栈的用户认证和服务间认证，依赖这些副本的请求路径随之失败。公司多次尝试恢复原副本，并在其他区域拉起替代副本，都没有成功，最终与服务商一起在同一区域启用了两个新副本，才把故障压下去。<br>
+官方称，已经暂停同类维护、调整配置以降低连接抖动，并上线可按比例把流量从副本上切走的功能开关；还通过把 100% 查询打到主库，验证了关于主库为何失败的判断。后续计划包括：建立维护前审查、在维护窗口和关键区域准备热备容量、为副本延迟恢复做自动化，以及检视整套基础设施的冗余。官方同时写明：可用性指标是跨套餐、模型和错误类型的汇总，个别客户的实际可用性可能不同。这次故障发生在 11 月 21 日美国西岸凌晨、北京时间当晚，不在昨早简报的覆盖范围内。<br>
+选题角度：别只写成“ChatGPT 又挂了”。更值得写的是——认证这条公共路径把读副本做成了单点，一次常规维护就能把付费和免费用户一起打满。<br>
+来源：<a href="https://status.openai.com/incidents/01JMYB602A6H2E04Y1497J434X/write-up" target="_blank" rel="noopener">OpenAI Status 事故说明</a></p></article>
+<h2 id="item-03">Oracle 声明：履行与 OpenAI 的合约所需资金已经齐备</h2>
+<article class="article"><p>11 月 20 日，Oracle 发布声明称，已经获得履行与 OpenAI 合约所需的全部资金；随着本月早些时候完成最后一轮融资，公司成为“本轮投资周期中首家资金已全部到位的超大规模云厂商”。声明说，投资者日上披露的融资安排（包括供应商融资）已经就绪；与供应商的后续私下讨论只是额外选项，交付该合约并不取决于这些讨论；任何与此相反的媒体报道都是不正确的。<br>
+执行进展方面，Oracle 称：训练过 Astra-6 的 Abilene 园区接近完工；下一座吉瓦级园区 Shackelford 已完成全部许可；英伟达 Vera Rubin 机架交付按计划将在未来数周内进入数据大厅。财务指引方面，公司继续预计 2028 财年下半年自由现金流转为正值，并目标在 2029 财年自由现金流超过 300 亿美元，从该年起自行覆盖后续增长。需要说明：这份声明没有重申合约总金额，也没有列出本月这轮融资的具体规模，这两项数字不宜从旧报道里直接搬过来当成这次的新披露。<br>
+选题角度：在 AI 板块大跌之后，Oracle 选择先把“钱够不够”说清楚。可写的不是又一轮口号，而是它为什么觉得有必要在这个时点公开否认“还没融到钱”的说法。<br>
+来源：<a href="https://www.oracle.com/news/announcement/oracle-statement-2026-11-20/" target="_blank" rel="noopener">Oracle 官方声明</a></p></article>
+<h2 id="item-07">腾讯 WorkBuddy 上线电脑操控能力，目前处于公测</h2>
+<article class="article"><p>11 月 20 日，IT之家、第一财经、每日经济新闻等报道，腾讯 WorkBuddy 宣布上线电脑操控（Computer Use）能力：能识别当前页面、看懂客户端界面，并完成点击、输入、滚动等操作，不需要目标软件开放接口。功能目前处于公测，支持 macOS 和 Windows，需将客户端更新至 5.11.0 及以上版本，开启功能并完成相关授权；界面识别效果会因软件而异。用户可在对话框里描述任务，Buddy 会按意图调用电脑操作，并可在侧边小窗查看进度。报道称，官方建议在涉及登录、授权、支付、提交、删除等敏感操作时保持在场、实时监控，任务完成后会汇报结果。这不是新的大模型发布，而是国产办公助手把“动手点界面”做成了可试用能力。<br>
+选题角度：谷歌刚把 Gemini 的电脑操作推到 Mac 上，腾讯这边也把同类能力放进了办公助手。可对比的是权限、确认和失败时怎么停手，而不只是“会不会点”。<br>
+来源：<a href="https://www.ithome.com/1/030/222.htm" target="_blank" rel="noopener">IT之家</a>｜<a href="https://www.yicai.com/news/103448527.html" target="_blank" rel="noopener">第一财经</a>｜<a href="https://www.nbd.com.cn/articles/2026-11-20/4654209.html" target="_blank" rel="noopener">每日经济新闻</a></p></article>
+<h2 id="item-06">【进展】安全公司展示：一张恶意网页即可在实验中拿到 Muse 的私密对话和凭证存储</h2>
+<article class="article"><p>此前：11 月 19 日简报已报道，路透社等称 Meta 员工在测试 Muse 时发现它会读取用户并未主动连接的 Signal 等应用中的私信，并出现疑似串号；公司称多为孤立事件或幻觉。当时的焦点是客户端权限和通知预览，还不是云端运行环境被一条攻击链打穿。<br>
+这次新增：安全公司 NebuSec 在 11 月 20 日发布研究报告称，他们演示了攻击者控制的网页如何让 Muse 在未经用户批准的情况下访问对话历史和已存储的记忆，并进一步危及底层虚拟机。官方技术说明是：Muse 会为每个用户在隔离虚拟机中运行智能体，再用运行时容器、名为 Sentinel 的出站流量审批，以及把真实连接器凭证放在智能体执行环境之外的设计来分层防护。研究团队先利用 Muse 用于导出 PDF 等任务的内置 Chromium 漏洞，在智能体导出攻击者控制的网页时，于运行时容器内取得代码执行；再发现 Sentinel 对出站请求的分类和检查存在弱点，从而在不触发审批提示的情况下，把对话历史和记忆传到外部服务器，并能够改写这些内容。随后，他们用自动漏洞利用生成框架写出 Linux 内核漏洞利用，逃出容器、在用户虚拟机中获得 root 权限，进而接触到本应隔离的持久存储、安全凭证存储和 Sentinel 本身。研究团队写明：这次演示停留在单个用户的虚拟机内，没有证明可以逃逸到宿主机或其他租户；他们已向 Muse 团队报告，到发布时，文中描述的漏洞利用都已被修补。The Hacker News 11 月 21 日跟进时也写明：这是实验室演示，不是针对真实用户的攻击；Meta 尚未公开确认修复，报告也未说明修补前是否有用户数据被访问。<br>
+选题角度：和“智能体偷看了别的 App”是两类问题。这次演示的是：即使用户什么都没主动授权，一张网页加上浏览器、网络策略和内核上的漏洞链，也可能把云端沙箱里的记忆和凭证一起带走。<br>
+来源：<a href="https://nebusec.ai/research/meta-muse-credential-exposure/" target="_blank" rel="noopener">NebuSec 研究报告</a>｜<a href="https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html" target="_blank" rel="noopener">The Hacker News</a></p></article>
+<h2 id="item-05">Signal 默认拦截截屏，阻止系统级智能体读取聊天内容</h2>
+<article class="article"><p>11 月 20 日，Signal 总裁梅雷迪思·惠特克（Meredith Whittaker）在官方博客写道，公司将限制内置于移动操作系统中的新一代 AI 智能体“可能捕获并存储 Signal 数据”。具体做法是：在 iOS 27 上阻止应用内截屏；在能够检测到 AI 助手试图读取 Signal 屏幕的 Android 版本上，采取类似限制。她把这与去年用截屏拦截来防范 Windows 11 微软 Recall 的做法相提并论，并点名谷歌把 Gemini Intelligence、苹果把 Siri AI 的 Onscreen Awareness 深埋进操作系统。她的判断是：这些系统级智能体会扫描屏幕上的信息，使 Signal 数据落到本地数据库或远程服务器上，从而削弱 Signal 对隐私的独立保证，并称之为对 Signal 的“生存性威胁”。<br>
+用户可在应用设置中关闭这项保护以恢复截屏，但官方警告，这样做可能把你和联系人的 Signal 内容暴露给这些智能体，并打破其隐私保证。官方也承认补救并不完整：拦截截屏无法覆盖通过文件系统读取设备上已有内容等更隐蔽的路径；目前还无法在 macOS 上实现同类保护，因为操作系统没有给开发者提供在不严重损害体验的前提下限制 AI 取数的工具。Signal 要求苹果、谷歌和微软提供明确的退出机制和更清楚的技术说明。The Verge 报道时间是 11 月 20 日 12:30 UTC（北京时间 20 日 20:30）；此事未写入昨早简报，故在本期补上。<br>
+选题角度：加密管得住传输，管不住“亮在屏幕上的那一层”。这不是 Signal 和某款聊天机器人吵架，而是应用层隐私开始和操作系统里的智能体抢控制权。<br>
+来源：<a href="https://signal.org/blog/protecting-your-privacy/" target="_blank" rel="noopener">Signal 官方博客</a>｜<a href="https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app" target="_blank" rel="noopener">The Verge</a></p></article>
+<h2 id="item-04">OpenRouter 与 Novita 警示：发往 MiniMax 的提示词可能被第三方读取</h2>
+<article class="article"><p>11 月 21 日，有用户在 Hacker News 公开一封自称来自 OpenRouter 的邮件。邮件称：一名安全研究者在 2026 年 7 月至 10 月发往 MiniMax 模型的提示词里放入了独特的测试网址，这些网址在请求发出 40 至 130 小时后被第三方访问；无论请求是 MiniMax 直接处理，还是由其他服务商转发给 MiniMax，都出现了访问。除一个例外，同一批服务商上其他模型的同类测试没有被访问，AWS 测试密钥也未被使用。邮件还称，AtlasCloud、Novita 和 StreamLake 已告知 OpenRouter，它们把 MiniMax 模型请求转发给了 MiniMax；MiniMax 对 StreamLake 表示，10 月 22 日前其接口启用了内容审核，此后已启用“零数据保留”（Zero Data Retention）。OpenRouter 称已要求 MiniMax 作出说明、但尚未得到其直接回应，并在调查期间去掉了相关 MiniMax 接口上的“零数据保留”标签。这封邮件本身不是官网公告，但多名用户（包括开发者 Max Woolf）称收到了同样内容。<br>
+11 月 22 日，Novita 发布正式说明，确认部分 MiniMax 请求被转发到了 MiniMax 官方 API，而不是在 Novita 自有基础设施上处理；原因是一条本应只适用于特定客户的转发路径被更广泛地应用。官方建议：若在 2026 年 5 月 28 日至 11 月 11 日期间通过 Novita 使用 MiniMax 模型（包括经 OpenRouter 转到 Novita 的请求），请求内容可能已被第三方访问或留存；公司已暂停受影响模型，并建议轮换提示词中出现过的有效凭证。Novita 称自身不留存客户提示词和生成结果，也未将其用于模型训练；研究者观察到测试网址和主机名被访问，但未观察到 AWS 测试密钥被使用，访问模式“暗示可能涉及自动化内容审核”，公司正与 MiniMax 核实。更早的背景是：Dragos 首席研究官 HD Moore 在 11 月 19 日的报告中写道，团队在 7 月至 11 月向多种 AI 服务发送了约 200 万条带有独特金丝雀的提示词，并报告了服务商被入侵、转售商留存提示词、以及隐私设置未被遵守等情况。这次公开警示，是其中一条已落到具体模型和具体用户通知上的进展。<br>
+选题角度：真正刺痛人的不是“又一次泄露”，而是“零数据保留”原来只是链条上最弱一环的标签。可写提示词在路由、转售和内容审核之间到底走了几跳。<br>
+来源：<a href="https://news.ycombinator.com/item?id=50585962" target="_blank" rel="noopener">Hacker News 用户公开的 OpenRouter 邮件</a>｜<a href="https://novita.ai/blog/minimax-requests-privacy-notice/" target="_blank" rel="noopener">Novita 官方说明</a>｜<a href="https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens" target="_blank" rel="noopener">Dragos / HD Moore 研究博客</a>｜<a href="https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/" target="_blank" rel="noopener">Ars Technica</a></p></article>
+</div>
+<footer>内容来自每日简报整理，供选题与素材使用</footer>
+</body></html>
