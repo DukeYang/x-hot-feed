@@ -1,5 +1,22 @@
 [
  {
+  "id": "brief-auto-2026-11-22-05",
+  "kind": "brief-item",
+  "user": "每日简报",
+  "name": "每日简报",
+  "category": "汽车",
+  "title": "阿维塔与瑞士超豪华经销商签约，宣布进入瑞士市场",
+  "summary": "11月20日，阿维塔与 Schmohl AG 旗下 Kamps Import AG 签约，宣布进入瑞士市场。多家报道指出，Schmohl AG 是劳斯莱斯、宾利、布加迪在当地的经销商；Kamps Import AG 将负责车辆进口、销售、交付和售后。界面新闻等在 11 月 21 日的早报中转述了这一消息。目前尚未看到官方同步公布首批车型、定价和展厅安排，实际…",
+  "text": "11月20日，阿维塔与 Schmohl AG 旗下 Kamps Import AG 签约，宣布进入瑞士市场。多家报道指出，Schmohl AG 是劳斯莱斯、宾利、布加迪在当地的经销商；Kamps Import AG 将负责车辆进口、销售、交付和售后。界面新闻等在 11 月 21 日的早报中转述了这一消息。目前尚未看到官方同步公布首批车型、定价和展厅安排，实际开售仍需完成当地认证和服务网络。这是渠道签约落地，还不是已经在瑞士卖车。\n选题角度：不自己铺直营店，而是先挂上超豪华经销商的网络——阿维塔要在欧洲走的，显然不是走量路线。能不能卖动，还得等车型和价格出来之后再看。\n来源：[界面新闻（新浪转载）](https://finance.sina.com.cn/jjxw/2026-11-21/doc-iniznakn3566343.shtml)｜[汽车产经网](https://www.autoreport.cn/zonghexinwen/20261121/11114826179.html)",
+  "created_at": "2026-11-22T00:07:11.000Z",
+  "metrics": {},
+  "media": [],
+  "url": "https://finance.sina.com.cn/jjxw/2026-11-21/doc-iniznakn3566343.shtml",
+  "brief_date": "2026-11-22",
+  "brief_key": "auto",
+  "added_at": "2026-11-21T23:52:58.472773+00:00"
+ },
+ {
   "id": "brief-ai-2026-11-22-04",
   "kind": "brief-item",
   "user": "每日简报",
@@ -15,6 +32,23 @@
   "brief_date": "2026-11-22",
   "brief_key": "ai",
   "added_at": "2026-11-21T23:50:29.580802+00:00"
+ },
+ {
+  "id": "brief-auto-2026-11-22-03",
+  "kind": "brief-item",
+  "user": "每日简报",
+  "name": "每日简报",
+  "category": "汽车",
+  "title": "【进展】Waymo 就封闭高速车道和人工交通指挥向美国交通部提交两起召回",
+  "summary": "先被监管请下高速公路，再补交召回——补丁还没完全做完，说明 Waymo 要回去跑高速，比的已经不是会不会转弯，而是施工封闭和交警手势这类不规则场景能不能过关。",
+  "text": "此前：11月18日报道过加州机动车管理局限制 Waymo 高速运营，并认定其构成“对公共安全的即时危害”，公司随即在全美暂停高速公路接单。\n新增：路透社 11 月 20 日报道，Waymo 于周四（11月19日）向美国国家公路交通安全管理局（NHTSA）提交两起自动驾驶系统安全召回，目的是加强车辆在封闭高速车道、以及路口人工交通指挥场景下的处理。封闭车道召回针对的是车辆可能驶入并继续在封闭高速车道行驶的情况，公司称相关事件没有造成碰撞或人员受伤，补救方案仍在制定中。第二起召回是为了更好地响应执法或应急人员的现场指挥，起因是一起碰撞：车辆当时遵循了警员指示，但随后警员视线被暂时遮挡；该项软件更新已于 11 月 6 日完成。Engadget 引述公司发言人说，这是在更复杂驾驶环境中验证和改进技术的“常规步骤”。城市道路服务继续，高速公路运营仍暂停。\n选题角度：先被监管请下高速公路，再补交召回——补丁还没完全做完，说明 Waymo 要回去跑高速，比的已经不是会不会转弯，而是施工封闭和交警手势这类不规则场景能不能过关。\n来源：[路透社（Investing.com 转载）](https://www.investing.com/news/stock-market-news/waymo-recalls-selfdriving-cars-over-closed-freeway-lanes-manual-traffic-control-5042522)｜[Engadget](https://www.engadget.com/2324099/waymo-recalls-robotaxis-after-they-drove-into-closed-freeway-lanes/)",
+  "created_at": "2026-11-22T00:04:12.000Z",
+  "metrics": {},
+  "media": [],
+  "url": "https://www.investing.com/news/stock-market-news/waymo-recalls-selfdriving-cars-over-closed-freeway-lanes-manual-traffic-control-5042522",
+  "brief_date": "2026-11-22",
+  "brief_key": "auto",
+  "added_at": "2026-11-21T23:52:58.472773+00:00"
  },
  {
   "id": "brief-ai-2026-11-22-05",
@@ -153,6 +187,40 @@
   "added_at": "2026-11-21T23:50:29.580802+00:00"
  },
  {
+  "id": "brief-auto-2026-11-22-02",
+  "kind": "brief-item",
+  "user": "每日简报",
+  "name": "每日简报",
+  "category": "汽车",
+  "title": "荷兰海牙法院临时禁止方程豹钛7在欧盟销售，认定侵犯路虎卫士外观设计",
+  "summary": "11月20日，荷兰海牙地区法院在临时程序中裁定，比亚迪 Ti7（国内对应方程豹钛7）侵犯捷豹路虎卫士（Defender Type L663）的欧盟外观设计权，禁止相关主体在欧盟境内进口、生产、出售、储存、交付或以其他方式交易该车。法院官方新闻稿写明：这是紧急程序中的临时裁决，捷豹路虎须在判决后 6 个月内提起实体诉讼，否则禁令可能失效。路透社报道，禁令在裁决…",
+  "text": "11月20日，荷兰海牙地区法院在临时程序中裁定，比亚迪 Ti7（国内对应方程豹钛7）侵犯捷豹路虎卫士（Defender Type L663）的欧盟外观设计权，禁止相关主体在欧盟境内进口、生产、出售、储存、交付或以其他方式交易该车。法院官方新闻稿写明：这是紧急程序中的临时裁决，捷豹路虎须在判决后 6 个月内提起实体诉讼，否则禁令可能失效。路透社报道，禁令在裁决约一周后生效，因为比亚迪“目前没有在欧盟上市 Ti7 的具体计划”；在知识产权案解决前，也禁止在匈牙利新工厂生产该车型，该厂预计明年初开始量产。法院认为对英国的比亚迪子公司没有管辖权，英国市场及原定 2027 年 1 月起交付的计划暂不受这纸禁令约束。比亚迪声明“强烈不认同”，称 Ti7 是自主设计、未侵犯捷豹路虎权利，并将上诉。路透社引欧洲汽车制造商协会（ACEA）数据：比亚迪今年 1–9 月在欧洲销量同比翻倍、超过 28 万辆，已超过福特、特斯拉和日产。CarNewsChina 还写道，禁令覆盖十家比亚迪欧洲实体，违反可能面临每日 10 万欧元或每辆 2.5 万欧元的罚款、上限 1000 万欧元；另案指控版权与“依样模仿”，定于 11 月 25 日在鹿特丹开庭。需要分清的是：这还不是终审判决，禁的是尚未在欧盟开卖的 Ti7，不是比亚迪已经在欧洲在售的其他车型。\n选题角度：关税和本地建厂之后，出海又多了一道外观设计权的墙——英国暂时还能卖、匈牙利暂时不能造，接下来要看的是上诉能不能推翻临时禁令，以及这会不会变成更多传统车企跟进的样板。\n来源：[海牙法院官方通报](https://www.rechtspraak.nl/organisatie-en-contact/organisatie/rechtbanken/rechtbank-den-haag/nieuws/2026/11/autofabrikant-byd-mag-suv-model-ti7-niet-in-eu-verhandelen)｜[路透社（Investing.com 转载）](https://www.investing.com/news/stock-market-news/dutch-court-bars-chinese-suv-in-europe-over-resemblance-to-land-rover-defender-5042739)｜[联合早报](https://www.zaobao.com.sg/news/china/story20261121-10034819)｜[CarNewsChina](https://carnewschina.com/2026/11/21/dutch-court-blocks-byd-ti7-in-eu-over-defender-design-leaves-uk-launch-untouched/)",
+  "created_at": "2026-11-21T23:54:39.000Z",
+  "metrics": {},
+  "media": [],
+  "url": "https://www.rechtspraak.nl/organisatie-en-contact/organisatie/rechtbanken/rechtbank-den-haag/nieuws/2026/11/autofabrikant-byd-mag-suv-model-ti7-niet-in-eu-verhandelen",
+  "brief_date": "2026-11-22",
+  "brief_key": "auto",
+  "added_at": "2026-11-21T23:52:58.472773+00:00"
+ },
+ {
+  "id": "brief-auto-2026-11-22-04",
+  "kind": "brief-item",
+  "user": "每日简报",
+  "name": "每日简报",
+  "category": "汽车",
+  "title": "广汽夸克非晶-碳纤维电驱第 10 万套下线，官方称电机峰值效率 99.03%",
+  "summary": "11月20日，广汽夸克电驱非晶-碳纤维电驱第 10 万套正式量产下线。第一财经和 IT之家引述官方称，这使其成为全球唯一实现非晶合金车用电驱规模化量产的企业。据官方介绍，定子采用厚 0.025 毫米的非晶合金带材，非晶铁芯叠压层数达到 3800 层；转子以 1 毫米碳纤维套替代传统金属护套，电机最高转速达到 3 万转。经中汽中心认证，电机最高峰值效率达到 9…",
+  "text": "11月20日，广汽夸克电驱非晶-碳纤维电驱第 10 万套正式量产下线。第一财经和 IT之家引述官方称，这使其成为全球唯一实现非晶合金车用电驱规模化量产的企业。据官方介绍，定子采用厚 0.025 毫米的非晶合金带材，非晶铁芯叠压层数达到 3800 层；转子以 1 毫米碳纤维套替代传统金属护套，电机最高转速达到 3 万转。经中汽中心认证，电机最高峰值效率达到 99.03%，电驱系统 CLTC 工况效率达到 94.184%。总成将电机、电控、减速器等 12 个部件集成为一体，重量 59 公斤。该电驱已批量搭载埃安 N60、2027 款埃安 RT、2027 款埃安 i60。官方宣称，在电池容量不变的情况下，整车能耗下降 4%，续航提升 30 至 50 公里。效率和续航数字来自公司口径及认证声明，具体车型的实测表现会有差异。\n选题角度：电池之外，电驱效率每往上挤一点，都是在为续航和成本找空间——10 万套说明它已经不是实验室样品，但接下来要看的，是其他车企会不会跟进，以及这个效率在量产车里能不能稳定兑现。\n来源：[IT之家](https://www.ithome.com/1/030/504.htm)｜[第一财经](https://www.yicai.com/news/103448533.html)",
+  "created_at": "2026-11-21T23:54:22.000Z",
+  "metrics": {},
+  "media": [],
+  "url": "https://www.ithome.com/1/030/504.htm",
+  "brief_date": "2026-11-22",
+  "brief_key": "auto",
+  "added_at": "2026-11-21T23:52:58.472773+00:00"
+ },
+ {
   "id": "brief-robot-2026-11-22-01",
   "kind": "brief-item",
   "user": "每日简报",
@@ -168,6 +236,23 @@
   "brief_date": "2026-11-22",
   "brief_key": "robot",
   "added_at": "2026-11-21T23:47:22.862250+00:00"
+ },
+ {
+  "id": "brief-auto-2026-11-22-01",
+  "kind": "brief-item",
+  "user": "每日简报",
+  "name": "每日简报",
+  "category": "汽车",
+  "title": "特斯拉 FSD v15 开始向美国早期用户推送，官方称安全关键干预率提升 25 倍",
+  "summary": "11月22日凌晨（香港时间），特斯拉官方账号宣布 FSD v15 开始推送。Electrek 和 IT之家报道，首批面向美国市场的早期体验计划（EAP）成员。官方称，新版本升级了整条端到端驾驶网络，并引入与 Robotaxi、Optimus 共用的视觉编码器，该编码器还用互联网视频做了训练。发布说明把“25 倍”明确为关键干预率（critical inter…",
+  "text": "11月22日凌晨（香港时间），特斯拉官方账号宣布 FSD v15 开始推送。Electrek 和 IT之家报道，首批面向美国市场的早期体验计划（EAP）成员。官方称，新版本升级了整条端到端驾驶网络，并引入与 Robotaxi、Optimus 共用的视觉编码器，该编码器还用互联网视频做了训练。发布说明把“25 倍”明确为关键干预率（critical intervention rate）的改善，官方主帖的表述则是“对安全关键场景的处理提升 25 倍”；两种说法都来自特斯拉自己，公司没有给出改善前的基准里程，目前也还没有独立路测数据可以核对。新功能里最醒目的是 Tesla Reality View（发布说明里也称 Tesla Augmented Reality）：用一套端到端可视化替代原先分项模型信号，官方说驾驶者可以“看见并控制 FSD 接下来要做的事”。其他改进针对外界长期质疑的弱项，包括道路标志、坑洼和深层积水、学校区域与恶劣天气下的车速、减速摄像头，以及新增的自行车架模式。导航学习目前只覆盖行程的起点和终点，特斯拉说后续版本会扩展到全程。Investor's Business Daily 援引马斯克在 X 上的话说，FSD v15 将于下月大范围推送，并称“会是特别的东西”。需要说清楚的是：这仍是需要驾驶员持续监督的 Supervised 版本，不是已经获准的无人驾驶。\n选题角度：25 倍是公司自己的对比，Reality View 则是驾驶者立刻能看见的东西——接下来要看的，是坑洼、学校区域和限速这些老问题会不会真的改观，以及更精美的画面会不会让人更不愿意把手放回方向盘。\n来源：[特斯拉官方帖](https://x.com/Tesla/status/2124222447855743019)｜[Electrek](https://electrek.co/2026/11/21/tesla-fsd-v15-rollout-25x-safety-reality-view/)｜[IT之家](https://www.ithome.com/1/030/512.htm)｜[Investor's Business Daily](https://www.investors.com/news/tesla-fsd-v15-coming-next-month-elon-musk-says-something-special/)",
+  "created_at": "2026-11-21T23:53:17.000Z",
+  "metrics": {},
+  "media": [],
+  "url": "https://x.com/Tesla/status/2124222447855743019",
+  "brief_date": "2026-11-22",
+  "brief_key": "auto",
+  "added_at": "2026-11-21T23:52:58.472773+00:00"
  },
  {
   "id": "brief-ai-2026-11-22-01",
