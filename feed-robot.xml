@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · 机器人</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>X 热帖精选与汽车、AI、机器人每日简报。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-robot.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Wed, 25 Nov 2026 23:51:47 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-robot.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Wed, 25 Nov 2026 23:52:19 +0000</lastBuildDate><ttl>180</ttl>
 <item><title>[机器人] 众擎在深圳开发者大会宣布：联合产业基金，为生态伙伴提供不低于 10 亿元级别的支持</title><link>https://finance.sina.com.cn/tech/shenji/2026-11-25/doc-inizxian8668263.shtml</link><guid isPermaLink="true">https://finance.sina.com.cn/tech/shenji/2026-11-25/doc-inizxian8668263.shtml</guid><category>机器人</category><author>每日简报</author><pubDate>Thu, 26 Nov 2026 00:03:50 +0000</pubDate><description><![CDATA[<p>11 月 25 日，众擎机器人（EngineAI）在深圳举行全球开发者大会。新浪科技援引创始人兼首席执行官赵同阳的宣布称，公司将联合河南省投资集团、元禾辰坤等产业链基金，为优秀生态合作伙伴提供不低于 10 亿元级别的产业级支持，重点支持技术企业、高校和科研机构参与商业场景共创，并把单纯的商业合作做成更长期的共同成长。《环球时报》英文报道写到，这项计划至少为 10 亿元（约 2.10 亿美元），将为伙伴提供工程支持，以及机器人、数据和算力资源；一旦伙伴做出可演示的应用，公司可以把它介绍给面临同类问题的客户。<br>
 需要说清楚：这是面向生态伙伴的支持计划，不是众擎自己新完成的一轮股权融资，也不是已经拨付完毕的投资清单。官方和报道都没有给出首批入选名单、单笔额度或已经到账的金额。赵同阳在会上也谈到已有伙伴把同一类硬件用到不同岗位，例如多伦科技基于 T800、PM01 做交通指挥和安全教育类应用。T800 接入立讯精密苏州工厂管理系统、完成接单取送料，是公司在 2026 年 8 月世界机器人大会期间已经披露过的验证，不宜写成今天新签的工厂订单。<br>
 选题角度：整机厂开始用“产业基金 + 真机和算力”去买应用，而不是自己把所有场景做完。下一篇该看的是 10 亿元有没有落到具体项目上，以及这些应用最后是不是真的留下了可统计的班次。<br>

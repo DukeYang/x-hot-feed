@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日简报 · 2026-11-26</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header><div class="bar">
+<h1>AI 每日简报 · 2026-11-26</h1>
+<div class="navlinks">
+<a href="../../index.html">首页</a>
+
+</div>
+</div></header>
+<div class="article-wrap"><p class="lead">AI · 2026-11-26</p>
+<h2 id="item-01">OpenAI 预印本宣称：矩阵乘法指数恰好是 9/4</h2>
+<article class="article"><p>11 月 24 日，OpenAI 在公开数学仓库 openai/math 中加入预印本《The matrix multiplication exponent is nine fourths》，作者署名为 OpenAI。官方说明的核心表述是：在任意域上，方阵乘法的指数 ω 等于 9/4；论文证明的是形式算术电路模型下的匹配下界——对每个边长 n≥2，至少需要 ⌈n^{9/4}/2⌉ 个非标量乘法或除法门。同日发布的配套论文，为这一下界提供几何框架。<br>
+需要分清“新在哪里”。上界 ω ≤ 9/4 并不是今天才提出的：OpenAI 在 10 月 6 日公开的 10 月 2 日手稿里，已在复数域上给出这一上界；随后阿利姆让·阿马诺夫（Alimzhan Amanov）、马克西姆·范登贝赫（Maxim van den Berg）与耶伦·祖伊达姆（Jeroen Zuiddam）等人将其扩展到任意域。此后还有多组研究写出对该上界的阐释，但目前未见已通过同行评审的期刊论文。这次新增的，是与之匹配的下界。若主张成立，指数就不能再低于 9/4。学校里的 n³ 算法，以及 1969 年福尔克尔·施特拉森（Volker Strassen）把复杂度降到大约 n^2.81 之后、长期希望 ω 能靠近 2 的那条路线，就会在指数意义上碰到天花板。此前能够被证明的、关于指数本身的下界，一直停在平凡的 ω ≥ 2，因为乘积至少有 n² 个条目。<br>
+这条必须把边界写清楚。预印本讨论的是形式算术电路：输入是矩阵条目这些自变量，输出必须作为有理函数恒等式成立。它不谈真实计算机上的位运算和内存墙，也不给出这种方法从哪个矩阵规模开始会比现有实用算法更快。预印本尚未经过同行评审。仓库中的 Lean 形式化，证明的是无除法的直线式程序、在形式多项式恒等式意义下的方阵指数为 9/4；论文正文的模型允许除法门，且“每个 n 的门数下界”并不都写在同一份 Lean 声明里。独立写作者卡洛斯·托莱多（Carlos Toledo）在 11 月 25 日公布的公开核验中，认定相关 Lean 形式命题在 Lean 4.34.1 下通过了机器检查，但明确写到：这并不等于有人已经核对了数学本身，也不应写成定理已被学界接受。OpenAI 研究员塞巴斯蒂安·布贝克（Sébastien Bubeck）在北京时间 25 日 9:33 发帖说，10 月 6 日那批结果里已经有一个干净的 9/4 上界，此后模型一直在做下界；他写道：“这真是我以为这辈子都看不到的那种结果。”这是当事人的判断，不是评审结论。<br>
+选题角度：别写成“AI 一举解决了 57 年的数学难题”。更值得写的是——上界已经在 10 月被多组复述，今天争的是下界是否也锁死在 9/4；在同行评审和人类核验完成之前，这是一份高风险、高影响的声明，而不是已经写进教科书的结论。<br>
+来源：<a href="https://github.com/openai/math/tree/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026" target="_blank" rel="noopener">OpenAI 预印本说明</a>｜<a href="https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf" target="_blank" rel="noopener">预印本 PDF</a>｜<a href="https://x.com/SebastienBubeck/status/2125402576145572334" target="_blank" rel="noopener">布贝克的帖子</a>｜<a href="https://carlostoledo.co/omega/" target="_blank" rel="noopener">卡洛斯·托莱多的公开核验</a></p></article>
+<h2 id="item-05">《财富》：亚马逊与 Meta 就解除 Muse 购物封锁展开谈判</h2>
+<article class="article"><p>11 月 25 日，《财富》杂志援引知情人士独家报道，亚马逊与 Meta 正就一项可能的协议进行多轮讨论：让 Muse 接入亚马逊网店，并结束亚马逊两个月前对这款购物智能体的封锁。报道称，谈判中的两个主要议题是搜索结果如何呈现，以及广告收入如何分配；讨论仍在变动，目前尚不清楚会不会达成协议、何时达成。知情人士还说，任何协议预计都需要两家公司首席执行官点头。亚马逊和 Meta 均拒绝置评。<br>
+报道给出的背景是：亚马逊在 9 月封锁了 Muse 对其商店的访问，当时的理由是这会违反用户协议。截至 10 月，美国和加拿大已有超过 1000 万人设立 Muse，是 Meta 迄今最成功的消费级 AI 产品；马克·扎克伯格（Mark Zuckerberg）曾表示，购物是 Muse 的首要用途。亚马逊方面的主要担心，是购物智能体可能绕过其网站上的广告——广告已是一项 686 亿美元的业务，约占亚马逊年收入的近 10%；高管也担心这类智能体会削弱亚马逊与消费者的直接关系。首席执行官安迪·贾西（Andy Jassy）曾对投资者说，通过外部购物智能体购买的体验“目前还谈不上更好，也不比直接来零售商更方便”，但本月在一场会议上表示，并不排除向外部智能体开放商店，条件是必须提供“公平的价值交换”。这些都是谈判进行中的转述，不是已经达成的合作。<br>
+选题角度：昨天简报写的是沃尔玛向 Muse 开放黑色星期五下单，今天这条则是亚马逊还把大门半掩着。可写的冲突很清楚：智能体想代客下单，平台担心广告和顾客关系被绕开。<br>
+来源：<a href="https://fortune.com/2026/11/25/exclusive-amazon-meta-talks-deal-muse-ai-shopping-agent-blockade/" target="_blank" rel="noopener">《财富》独家报道</a>｜<a href="https://techcrunch.com/2026/11/25/amazon-and-meta-reportedly-in-talks-to-lift-blockade-on-ai-agent-muse/" target="_blank" rel="noopener">TechCrunch</a></p></article>
+<h2 id="item-06">Meta 宣布 Muse 登陆英国</h2>
+<article class="article"><p>11 月 24 日，Meta 官方发文，宣布个人智能体 Muse 向英国用户开放。官方写明：18 岁及以上用户可在 iOS、Android、muse.ai 和 WhatsApp 上使用；用户自行决定 Muse 能连接哪些应用、看见它做过什么以及计划做什么，并在发送邮件或完成购买等重要操作前需要本人同意。支付方面，官方提到可用 Stripe 推出的 Onelink 为智能体生成一次性数字卡，或在支持的商店使用 Shopify 的 Shop Pay。英国合作伙伴包括玛莎百货（Marks &amp; Spencer）、森宝利（Sainsbury&#x27;s）、Argos、Ocado、Trainline、easyJet、JD Sports 等；其中一部分可以连接个人账户，另一部分则是 Muse 从第一天起就能浏览其网站。英国董事总经理施鲁蒂·杜贝（Shruti Dube）表示，与英国本土品牌和零售商合作，是为了让每周采购到出行安排都能在人们日常使用的服务里完成。官方同时写明：与 Muse 的对话、以及其云端虚拟机中的数据，不会分享给 Meta 的广告系统；用户可以在设置中关闭将互动用于训练和改进 Meta AI。这是地区上线，不是新模型发布；能力边界仍取决于连接授权和人工确认，不宜写成“已经可以在英国无人看管地代买代办”。<br>
+选题角度：Muse 的下一步不再只是北美日活，而是能不能进入一套完全不同的零售和支付习惯。适合做一次实地体验：从连接超市账户，到真正下单前的确认，中间有多少步必须人点头。<br>
+来源：<a href="https://about.fb.com/news/2026/11/introducing-muse-in-the-uk-a-personal-ai-agent-you-control/" target="_blank" rel="noopener">Meta 官方新闻室</a></p></article>
+<h2 id="item-02">OpenAI：Private Inference 开始小范围企业试用</h2>
+<article class="article"><p>11 月 25 日（北京时间 26 日 1:12），首席执行官萨姆·奥特曼在 X 上宣布：作为 OpenAI Private Intelligence 的最新能力，Private Inference 正在和一小群客户一起测试。他写道，更强的隐私保护会让前沿模型能做更多工作，企业隐私对健康的生态系统很重要。The Next Web、The Decoder 等报道与官方产品页一致：这是一个 Alpha 功能，使用机密计算（confidential computing）和可独立核验的隔离硬件，保护的是模型处理过程中的提示词和回复；它和“零数据保留”（Zero Data Retention）不是同一件事——后者管的是处理之后存不存储。Private Safety Processing 是同一套方案里更早推出的部分，用于在不由 OpenAI 保留客户内容的前提下做安全审查；被标记的内容加密后存放在客户自己的云里。官方产品页仍把 Private Inference 标为 Alpha，并提供意向登记。报道称，该能力曾在 DevDay 上作为当年秋季预览出现，此次是进入客户测试的更新。负责该项工作的 OpenAI 员工 Shekar 对媒体说，这只是第一步，公司正在扩充机密计算容量，以便更大范围推广，但没有给出时间表。目前面向的是企业客户；与消费者版 ChatGPT 默认用于训练（除非关闭）不同，企业数据本来就不会被用于训练。这是小范围试用，不是已经向所有企业开放的正式服务，也不应写成“OpenAI 已经完全看不见任何企业数据”。<br>
+选题角度：企业真正卡的往往不是“会不会训练”，而是“运算那一瞬间提示词还在不在对方手里”。可以写成一次对比：承诺已经从存储层，走到了计算层；但容量、核验方式和适用范围，仍决定它现在能覆盖谁。<br>
+来源：<a href="https://x.com/sama/status/2125638790593274259" target="_blank" rel="noopener">奥特曼的帖子</a>｜<a href="https://openai.com/business/private-intelligence/" target="_blank" rel="noopener">OpenAI 产品页</a>｜<a href="https://thenextweb.com/news/openai-private-inference-testing-customers" target="_blank" rel="noopener">The Next Web</a>｜<a href="https://the-decoder.com/openai-wants-companies-to-trust-it-with-sensitive-work-by-promising-not-to-look-at-their-data/" target="_blank" rel="noopener">The Decoder</a></p></article>
+<h2 id="item-04">DeepMind：为 Antigravity 推出质谱解析技能，轻量模型也做到约 97% 精确匹配</h2>
+<article class="article"><p>11 月 25 日，Google DeepMind 发布面向 Google Antigravity 的 Mass Spec Skills。官方的定位是：把 Gemini 的化学推理，与已有的质谱工具和公共化学数据库查询接在一起，由 Antigravity 调用这些技能、综合结果并给出可供化学家审看的证据链。背景被写得很具体：参考谱库检索平均只能注释约 5% 的实测谱图，人体样本也大约只有 10%，其余常被称为质谱里的“暗物质”；不少分子其实已出现在公共化合物数据库里，只是还没有参考谱。官方强调，语言模型无法单靠峰列表可靠地推出结构，因为这需要精确的质量计算、在数百万化合物中检索，以及模拟键如何断裂。<br>
+评测部分可以核对。官方在 MoNA 的 Enamine REAL MS/MS 集合中抽样 100 个已有库谱的化合物（结构亦收录于 PubChem），过滤掉几乎不碎裂的记录，并以三种设置、三个模型做对比：轻量的 Gemini 3.8 Flash，以及前沿模型 Gemini 4 Argon、Gemini 4 Carbon；每张谱尝试三次，超过一小时的尝试记为失败，瞬时的基础设施和配额错误被排除。结果显示：没有联网、也没有技能时，三个模型的准确率都低于 4%；只给有限联网、让模型自己写检索脚本时，前沿模型仍会漏掉四分之一到三分之一的谱，轻量模型则漏掉四分之三以上；加上 Mass Spec Skills 后，三个模型都在约 97% 的尝试中识别并核验了准确分子，轻量模型的准确率与前沿模型持平。技能还降低了每个尝试产生的 token：Flash 约为原来的近四分之一，Argon 约一半，Carbon 约减少五分之一。必须写明：这 97% 测的是“库里已有参考谱”的端到端识别与核验，不是对未知新分子的完整结构鉴定；对尚未建档的分子，官方的表述是帮助缩小分子式、标出碎片所支持的结构部分，供化学家继续完成解析。<br>
+选题角度：可以和前一天简报里 GPT-6 设计蛋白质放到一起看。那里是通用模型走进湿实验室，这里是通用模型加上领域工具去读谱。真正要写的不是“AI 会认分子了”，而是——没有工具时几乎做不成，工具到位后，轻量模型也可以追上前沿模型。<br>
+来源：<a href="https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/" target="_blank" rel="noopener">DeepMind 官方文章</a></p></article>
+<h2 id="item-03">Anthropic：用 Claude 协助把 Messages API 从 Python 迁到 Rust</h2>
+<article class="article"><p>11 月 25 日，Anthropic 发表工程文章，回顾如何把 Messages API 从 Python 迁移到 Rust。Messages API 是客户以及 Claude Code、Cowork 等自家应用调用 Claude 的主要入口。官方写明：从 2024 年初到 2026 年秋，平台上的 API 请求量大约增长了 1,800 倍；Claude 用约一周写出了核心请求路径的第一个版本，但真正费时间的是证明新实现与仍在不断改动的生产服务行为一致。困难包括：Python 版在迁移过程中继续发布新功能和模型，对等目标是移动的；模型对同一请求的回复本身就不是确定性的，输出不同不一定等于出了 bug；公司又不能阅读客户请求，所以不容易直接看出两套实现分叉在哪里。官方的做法是把现有生产 API 变成校验器：用生产流量做对照，把同一份模型输出同时交给新旧两套实现，再比较模型前后各个阶段的差异，分组后交给智能体循环修复，并由人复查。文章给出的结果是：Rust 版在一个被统计的区域里，每个请求的 CPU 用量大约降低 70%，被统计的客户 Claude Code 请求的中位首 token 时间大约下降 20%；迁移过程中没有停机，也没有冻结功能开发。官方还写到一段弯路：先只把解析模型输出的部分改写成 Rust、再从 Python 调用，CPU 只降了约 8%–10%，每个回复 token 还要在两种语言之间往返三次，收益不足以抵消复杂度。文章同时提醒：把约 700 个集成测试迁过去时，审计发现有 100 多处断言被削弱——测试“通过了”，并不自动等于行为是对的。<br>
+选题角度：这不是“Rust 比 Python 快”的技术秀。更值得写的是——当模型已经能在一周内写出核心路径，瓶颈就变成了如何在活系统上验证“它真的一样”。生成和验证的差距，本身就是一条选题。<br>
+来源：<a href="https://www.anthropic.com/research/migrating-api-to-rust" target="_blank" rel="noopener">Anthropic 官方文章</a></p></article>
+<h2 id="item-07">谷歌：Workspace MCP 服务器和官方命令行工具正式商用</h2>
+<article class="article"><p>11 月 24 日，谷歌宣布 Workspace 的模型上下文协议（MCP）服务器和官方命令行工具（CLI）正式商用，并配上标准化用量档位和扩展的管理控制。官方写明，MCP 服务器由谷歌托管，可让云端和网页端的 AI 智能体直接调用 Gmail、云端硬盘、文档、表格、幻灯片、日历、Chat 和 Tasks 中的预置工具，Keep 将随后跟上；CLI 则面向本地终端、虚拟机和容器化沙盒。和传统 REST API 相比，官方强调这些接口是为动态的智能体工作流设计的：工具和模式可在运行时发现，MCP 工具在 Workspace 边界内返回综合摘要，以降低 token 成本和延迟，并带有用户确认、审计日志和管理员控制。用量上分为免费的 Standard 档和需要更高配额的 Scaled 档，先从 Gmail、云端硬盘和日历开始。官方写明：2027 年 4 月 1 日起，选择 Scaled 档的项目只为超出每日免费额度的 API 或 MCP 用量付费；若不作选择，项目可能会被限到已公布的配额。更关键的一条是：AI 智能体或类似的访问工具必须通过 MCP 访问 Workspace 数据，而不能直接调用 REST API，技术强制将从 2027 年 2 月 1 日开始。官方称，目前超过 99% 的活跃开发者仍在 Standard 档内，可继续免费使用。管理员可在管理控制台的 Security &gt; API Controls 中管理外部 AI 工具、MCP、CLI 和 API 的访问，并设置敏感操作的人工确认规则。<br>
+选题角度：这不是又一个连接器清单。更值得写的是谷歌在把“智能体怎么进邮箱和文档”收成一条标准通道，并且给出了强制切换的日期。对企业来说，现在要做的是盘点哪些代理还在直连 REST，而不是再讨论要不要支持 MCP。<br>
+来源：<a href="https://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html" target="_blank" rel="noopener">Google Workspace 更新</a></p></article>
+<h2 id="item-08">OpenAI：ChatGPT 与 Codex 将共用一份用量额度，12 月起更普遍推行</h2>
+<article class="article"><p>OpenAI 帮助中心更新说明：从 12 月起，Plus、Pro 和 Business 方案在 ChatGPT 与 Codex 上的用量额度将合并计算，以便把 Work 的智能体能力纳入主界面。用量改为按 token 计量，选用更强的模型和更复杂的任务通常消耗更多额度；Instant 对话不计入这份额度。官方称，正在谨慎准备这次过渡，预计大多数用户不必比现在更频繁地等待额度重置；可在 Settings → Usage 中查看合并后的剩余额度和重置时间。用完后可等待重置、升级方案，或购买积分以继续使用符合条件的功能。一小部分用户会在 12 月前先看到变化，以便收集早期反馈。TechCrunch 11 月 25 日报道，产品负责人蒂博·索蒂奥（Thibault “Tibo” Sottiaux）已在 X 上表示，该更新开始向一小群 Pro 订阅者推出；OpenAI 发言人对该媒体说，大多数用户预计不会更频繁地碰到重置，但极重的一小部分用户可能会更早触顶。发言人还说，Instant 模型在额度用尽后仍可继续使用。官方尚未公布新额度的具体数值和重置窗口，因此不能写成所有人的可用量一定下降；目前能确定的，是聊天和编程开始抢同一份配额。<br>
+选题角度：订阅费没变，但“聊天”和“写代码、跑智能体”不再分灶吃饭。适合写给重度用户：同一份套餐里，一次长推理或一次 Codex 任务，会怎样挤占日常对话。<br>
+来源：<a href="https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits" target="_blank" rel="noopener">OpenAI 帮助中心</a>｜<a href="https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/" target="_blank" rel="noopener">TechCrunch</a></p></article>
+</div>
+<footer>内容来自每日简报整理，供选题与素材使用</footer>
+</body></html>
