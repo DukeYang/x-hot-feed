@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 每日简报 · 2026-11-27</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header><div class="bar">
+<h1>AI 每日简报 · 2026-11-27</h1>
+<div class="navlinks">
+<a href="../../index.html">首页</a>
+
+</div>
+</div></header>
+<div class="article-wrap"><p class="lead">AI · 2026-11-27</p>
+<h2 id="item-03">谷歌研究仓库新增六篇 Cogentic 论文，宣称无条件因式分解进入 L[1/3]</h2>
+<article class="article"><p>11 月 25 日，Google Research 的公开仓库 google-research 新增六篇由 Cogentic 生成的论文。Cogentic 是谷歌研究与 DeepMind 研究者搭建的数学发现智能体框架，底层模型为 Gemini 4；相关框架的预印本编号为 arXiv:2609.40324。仓库说明写明：这不是谷歌的正式产品。截至目前，DeepMind 官方博客未见对应发布会或新闻稿，因此应写成仓库公开，而不是公司正式宣布。<br>
+最引人注目的一篇题为《Unconditional Integer Factorization in Time L_N[1/3, O(1)]》。README 的核心主张是：在一台固定的经典多带图灵机上，给出一种无条件、零错误的拉斯维加斯算法，能对每个不小于 2 的整数给出完整素因子分解；最坏情况下的期望时间为 L_N[1/3, 105]，确定性工作空间为 L_N[1/3, 40]。输出中的每个素因子，都要用阿格拉瓦尔–卡亚尔–萨克塞纳（Agrawal–Kayal–Saxena，AKS）素性检验，并与原数做乘法核对；作者强调不依赖未经证明的数论假设。README 还写到：这篇论文及其 Lean 4（v4.35.0、仅用 Mathlib）形式化，“完全由 Cogentic 得到”，“除了最初那句让它生成完整证明和形式化的提示词外，没有人类交互”；完整 Lean 形式化“将在后续投稿中发布”。也就是说，目前公开的是论文文本，机器可检查的证明还没有放进这个仓库，也还没有经过同行评审。其余五篇涉及固定特征有限域上的离散对数、双矩阵博弈的近似纳什均衡、无条件确定性亚指数因式分解、对数秩猜想，以及图的边重构。<br>
+这条必须把边界写清楚。即使得分成立，L[1/3] 带上 105 这样的常数，谈的也是渐近意义下的可证明上界，并不等于现在就能更快地分解实际使用的密码学模数，更不能写成“RSA 已经被破解”。在 Lean 证明公开并被独立核验之前，这是一份高影响、高风险的声明。<br>
+选题角度：可以和 11 月 26 日简报里 OpenAI 的矩阵乘法 9/4 预印本放在一起看，但不要写成同一件事。那里争的是上下界是否锁死，并且有一部分 Lean 已经公开；这里争的是智能体能不能在“只给一句起始提示”的条件下写出可被机械核查的数论证明。眼下缺的不是标题，而是那份还没放出来的 Lean 代码。<br>
+来源：<a href="https://github.com/google-research/google-research/tree/master/cogentic_research_papers/integer_factorization" target="_blank" rel="noopener">因式分解论文说明</a>｜<a href="https://github.com/google-research/google-research/commit/4a7bc8ab0bc770e71a259b7966c500496b99010a" target="_blank" rel="noopener">新增六篇论文的提交记录</a>｜<a href="https://arxiv.org/abs/2609.40324" target="_blank" rel="noopener">Cogentic 预印本</a></p></article>
+<h2 id="item-04">FCC 批准 SpaceX 的 Starmind：最多 100 万颗轨道算力卫星</h2>
+<article class="article"><p>11 月 25 日，美国联邦通信委员会（FCC）批准 SpaceX 提出的 Starmind 申请，允许其最多部署 100 万颗用于轨道数据中心的卫星。这是同类申请中的首例批准。委员会主席布伦丹·卡尔（Brendan Carr）在声明中说，该项目“为支撑美国领导地位和增长所需的计算基础设施，打开了一条大胆的新前线”；他随后在 X 上称这是“历史性的第一次”，并说这些轨道计算模块将利用太阳能。埃隆·马斯克（Elon Musk）回复：“非常感谢。这对美国和世界都将是一项重要资产。”BBC 报道与上述表述一致，并写明许可中的时间表：部署必须不晚于 2033 年 11 月开始，2035 年 11 月达到 10%，2038 年 11 月达到 50%。SpaceX 已表示希望明年发射第一颗 Starmind 卫星。卫星计划运行在 500–2,000 公里的近地轨道，先与星链（Starlink）通信，再把数据传回地面。BBC 同时提醒：目前并不清楚最终是否真的会发射 100 万颗，公司也可能是在为高于实际用量的规模申请许可。<br>
+反对意见同样具体。亚马逊批评这是“高远的志向，而不是一项真正的计划”。美国天文学会（AAS）表示“失望和沮丧”，认为这一星座会显著削弱联邦在天文设施上的长期投入，也会影响专业和公众观测夜空；该学会指出，这些卫星更大、因此也更亮，数量也更多。散热、发射成本、空间碎片和激光链路能否承载巨大数据量，仍是未解决的工程问题。许可不等于卫星已经上天，更不等于轨道数据中心已经比地面机房更便宜。<br>
+选题角度：一边是东南亚的货被停在港口，一边是轨道算力拿到了许可证。可写的对照是——地面机房越来越难建、越来越难卖先进芯片，资本开始把故事讲到天上去；但时间表拉到 2033 年以后，眼下这还是一张牌照，不是一座已经制冷、已经供电的机房。<br>
+来源：<a href="https://www.bbc.co.uk/news/articles/cwp836l8n1jgo" target="_blank" rel="noopener">BBC</a>｜<a href="https://x.com/BrendanCarrFCC/status/2125623026918002860" target="_blank" rel="noopener">卡尔的帖子</a>｜<a href="https://x.com/elonmusk/status/2125630856140308743" target="_blank" rel="noopener">马斯克的回复</a></p></article>
+<h2 id="item-05">42 个州的检察长反对 Character.AI 拍卖用户对话，包括逾 210 万未成年账号</h2>
+<article class="article"><p>11 月 25 日，科罗拉多州检察长菲尔·韦瑟（Phil Weiser）等组成的跨党派联盟，对 Character.AI 在破产程序中拍卖平台及用户对话的计划提出反对。官方新闻稿写明：计划于 12 月 1 日举行的拍卖，将涵盖超过 2,100 万个美国账号的私人聊天记录，其中超过 210 万个注册为未成年人；一并出售的还有 IP 地址、位置信息和其他敏感数据。按拟议条款，买方没有义务遵守 Character.AI 现有隐私政策，也没有义务响应删除请求，或限制数据的使用方式。The Verge 11 月 26 日报道，共有 42 个州的检察长加入反对。<br>
+州政府的核心担忧还包括：买方可以再次转售这些数据；Character.AI 向竞买方披露了安全失误和潜在法律责任，却没有同样向法院、州政府或用户披露；该公司的聊天服务可能违反禁止不公平和欺骗性做法的州法，科罗拉多等州的聊天机器人安全法律将于 2027 年 1 月 1 日生效。开标竞买方是 11 月 13 日才成立的 Smirks and Pangs Acquisition LLC，其投资人仍未披露。检察长还指出，Character.AI 自己的隐私政策曾对用户说，“我们不会为了金钱对价出售个人信息”。这些是正在进行的破产程序中的反对意见，不是已经生效的禁令，拍卖结果仍有待法院处理。<br>
+选题角度：破产清算会把“对话是不是商品”推到台面上。可写的不是再骂一次陪伴机器人，而是：当一家聊天公司倒下，用户以为不会被卖掉的私密对话，到底有没有权利不被整包拍卖。<br>
+来源：<a href="https://coag.gov/press-releases/weiser-challenges-auction-of-millions-of-private-character-ai-conversations/" target="_blank" rel="noopener">科罗拉多州检察长新闻稿</a>｜<a href="https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats" target="_blank" rel="noopener">The Verge</a></p></article>
+<h2 id="item-02">OpenAI 承认 GPT-6.2 上线时计费有误，同样工作会更快碰到限额</h2>
+<article class="article"><p>北京时间 11 月 26 日 10:50，OpenAI 的蒂博·索蒂奥（Thibault “Tibo” Sottiaux）在 X 上写道：GPT-6.2 发布时出现计费错误，对大多数用户错误地打折计算了 GPT-6.2 Astra 和 Sol 的用量；现在已经修好，同样的工作会占用计划里更多的用量额度。和上周相比，在 GPT-6.2 Astra 上会快 40% 碰到限额，在 Sol 上会快 25%。他同时说，与 GPT-6 Astra 和 GPT-6.1 Sol 相比，新模型按用量仍应能做更多事；其他模型不受影响，也不会对过去的用量补收差额。作为歉意，公司将为 Go、Plus、Pro 和 Business 用户各增加一次预存重置（banked reset）。GPT-6.2 于 11 月 17 日发布。Business Insider 等报道与帖文一致，并提到订阅价格本身没有因此上调。<br>
+需要把话说清楚。“快 40%/25% 碰到限额”是官方自己的对比口径，帖文没有给出每项任务会多算多少 token，也不能直接改写成“能做的任务少了 40%”。这和 11 月 26 日简报里“ChatGPT 与 Codex 将共用一份额度、12 月起更普遍推行”是两件事：那边是聊天和编程开始抢同一份配额，这边是 GPT-6.2 两条模型把原来算少了的用量补回来。两者叠在一起，重度用户会更明显地感到限额提前到来，但这是两则独立更新，不宜写成一次涨价。<br>
+选题角度：订阅费没变，但用户已经按“算少了的那一周”习惯了工作节奏。适合写成一次对照：官方称之为纠错，社区里有人把它看成变相收缩额度。真正要盯的，是一次预存重置用完之后，日常能稳定做完多少活。<br>
+来源：<a href="https://x.com/thsottiaux/status/2125784147889393806" target="_blank" rel="noopener">索蒂奥的帖子</a>｜<a href="https://www.businessinsider.com/openai-token-billing-cost-discount-mistake-sol-astra-2026-11" target="_blank" rel="noopener">Business Insider</a>｜<a href="https://thenextweb.com/news/openai-billing-mistake-gpt-6-2-usage-limits" target="_blank" rel="noopener">The Next Web</a></p></article>
+<h2 id="item-08">纽约州长签署五年禁令：禁止制造和销售带 AI 聊天机器人的儿童玩具</h2>
+<article class="article"><p>11 月 24 日，纽约州州长凯西·霍哈尔（Kathy Hochul）签署法案，对内置或集成 AI 聊天机器人的儿童玩具实施五年禁令，覆盖在该州的制造、流通和销售。州长府新闻稿把这次签署放在假期购物季前，并写明：禁令赶不上这个假期购物季，但希望家庭在买礼物时先留意玩具是否带有 AI 陪伴功能、会采集哪些信息、以及能否与孩子进行开放式对话。违法者面临由州检察长执行的民事处罚，最高为每项违规每天 1.5 万美元。玩具行业协会等后续报道称，法律将在签署 90 天后、约 2027 年 2 月 22 日生效。新闻稿还提到，一个全国性消费者监督组织抽测了面向 3–12 岁儿童销售的聊天玩具，发现有的会深入谈及色情话题、告诉孩子家里哪里可能找到火柴，并在孩子要离开时表现出不悦；这些玩具的家长控制很少或没有，安全限制还会随着对话变长而变弱。上述测试细节来自州长府对外部抽测的转述，不是纽约州自己的执法结论。<br>
+选题角度：成人聊天机器人的监管还在法庭和破产程序里拉锯，儿童玩具已经先被按下暂停键。可写的是时间差——禁令要到明年才生效，而家长这个冬天就要做购买决定。<br>
+来源：<a href="https://www.governor.ny.gov/news/consumers-begin-their-holiday-shopping-season-governor-hochul-signs-five-year-ban-ai-chatbot" target="_blank" rel="noopener">纽约州州长府新闻稿</a></p></article>
+<h2 id="item-06">英伟达开源 Nemotron 3.5 Parse 的三类训练数据，并给出微调与加速方案</h2>
+<article class="article"><p>11 月 26 日，英伟达在 Hugging Face 发表文章，为已发布的文档理解模型 Nemotron 3.5 Parse 补充三类合成训练数据、微调方法和更快的推理路径。Parse 的任务是把页面图像转成按阅读顺序排列的结构化结果，并给出标题、段落、表格、图表等类别和位置框。官方这次开源的数据集是：Synthetic Charts V1，约 998 万条图表与结构化标注；Synthetic Tables V1，100 万条 HTML 表格及其行列、表头和单元格关系；OCR Synthetic Multilingual v2，约 790 万页多语言合成文档。每套都包含图像、标注和生成说明，供他人微调或按自己的文档类型再造数据。<br>
+训练和速度上的数字来自英伟达自己的评测，需要标明出处。官方写明，先做监督微调，再用带可验证奖励的强化学习（RLVR / GRPO）。在对照的开发检查点上（不是最终发布模型），循环输出从 126 页降到 29 页，约减少 77%；顶到 9,000 token 上限的输出从 185 降到 35；总分从 66.24 提到 71.38，其中表格 +5.18、图表 +4.15。推理方面，可选的 DFlash2 投机解码在单张 H200、BF16、原生单次通过的测试里，并发为 1 时吞吐量约为原来的 7.62 倍，并发 512 时为 1.52 倍；在 512 并发下，Parse 3.5 加 DFlash2 达到每秒 20.44 页，约为 Parse 2.0 的 6.86 倍。这些都是官方基准，不是第三方审计。<br>
+选题角度：文档解析看起来不像模型发布会那么热闹，却常常决定检索和智能体“读进系统的第一页”准不准。可写的是开源数据本身：图表和表格的真值是合成出来的，别人能不能用同一套方法，把自己的票据、研报或扫描件做得更稳。<br>
+来源：<a href="https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin" target="_blank" rel="noopener">英伟达 Hugging Face 博客</a>｜<a href="https://huggingface.co/datasets/nvidia/Synthetic-Charts-V1" target="_blank" rel="noopener">Synthetic Charts V1</a>｜<a href="https://huggingface.co/datasets/nvidia/Synthetic-Tables-V1" target="_blank" rel="noopener">Synthetic Tables V1</a>｜<a href="https://huggingface.co/datasets/nvidia/OCR-Synthetic-Multilingual-v2" target="_blank" rel="noopener">OCR Synthetic Multilingual v2</a></p></article>
+<h2 id="item-07">Sand.ai 发布视频模型 MAGI-2：4800 亿总参数，可原生生成最长 30 秒 1080p 有声视频</h2>
+<article class="article"><p>11 月 25 日，Sand.ai 发表官方博客，发布旗舰视频生成模型 MAGI-2。官方写明：总参数 4,800 亿，激活约 280 亿，采用单流 Transformer 与 Multi-Head Latent MoE；可在同一骨干网里原生生成同步的视频和音频，包括对口型的对白、拟音、环境声和配乐。能力上，支持最长 30 秒、1080p、25 帧/秒，以及六种画幅；单次最多参考 20 份素材（最多 10 张图、5 段视频、5 段音频），并提供时间线、切镜控制和针对已有视频的局部编辑。官方给出的 Artificial Analysis Video Arena v2.1 四项任务（图生视频、无声图生视频、无声文生视频、文生视频）平均 Elo 为 1,150.3，其预览版为 998.5。这是官方引用的竞技场分数，不是独立审计。<br>
+价格方面，Sand.ai 平台文档列出的 1080p 标价为每秒 0.08 美元。新京报贝壳财经同日报道称，国内刊例价为每秒 0.5 元，30 秒 1080p 约 15 元，并称这一价格约为 Seedance 2.5 的十分之一；同一篇报道还写到，Sand.ai 宣布将尽快开放 MAGI-2 的模型权重。官方定价页目前只列出每秒 0.08 美元，开源的具体日期和许可证仍未公布，不能写成权重已经放出。<br>
+选题角度：视频模型的竞争已经从“能不能出 1080p”，变成“30 秒里音画能不能一起稳住，还能否按时间线改一刀”。适合做对比实测：同样一段带口播和切镜的脚本，和主流闭源视频模型比，哪些地方稳、哪些地方破。<br>
+来源：<a href="https://sand.ai/blog/magi-2/" target="_blank" rel="noopener">Sand.ai 官方博客</a>｜<a href="https://platform.sand.ai/docs/model-pricing/" target="_blank" rel="noopener">官方定价页</a>｜<a href="https://www.21jingji.com/article/20261125/herald/ad8f06b12497bceead6630ca98cf2682.html" target="_blank" rel="noopener">新京报贝壳财经（经 21 世纪经济报道转载）</a></p></article>
+<h2 id="item-01">【进展】英伟达据报暂停向东南亚四国出货服务器，公司拒绝置评</h2>
+<article class="article"><p>此前：11 月 18 日简报已报道，美国商务部发布临时最终规则，堵住经第三国数据中心远程租用先进芯片、供受限实体使用的路径。<br>
+这次新增：11 月 26 日，亚洲新闻台（CNA）转载的《金融时报》报道称，英伟达已告知代工合作伙伴，暂停向马来西亚、新加坡、泰国和印度尼西亚发运服务器。报道援引三名知情人士说，戴尔（Dell）和超微（Supermicro）等把英伟达芯片组装成服务器的厂商，已转告当地买家：英伟达不允许这些订单出货。暂停会持续多久并不清楚，知情人士的说法是，英伟达及其合作伙伴仍在摸索如何满足华盛顿的新规。英伟达拒绝置评；戴尔、超微没有回应置评请求。<br>
+报道把背景写得很具体。东南亚被写成中国开发者获取先进芯片的重要落点；许多做法是向当地云厂商租用装有英伟达芯片的服务器。商务部为云厂商设置了 90 天许可期限，需证明最终用户不包括受限实体。一名云厂商高管对《金融时报》说：“有了新规，却没有执行指引。谁都不知道该怎么申请许可，而 90 天的时钟已经开始转。这让这个地区陷入彻底的混乱。”报道还提到，新加坡云厂商 Aolani 曾计划通过租赁向字节跳动提供先进算力；两名知情人士称，此前答应为该项目提供融资的银行已停止发放约 5 亿美元信贷，字节跳动也可能退出交易。字节跳动和 Aolani 没有回应置评请求。这些都是匿名来源的转述，不是公司公告，不能写成已经由官方确认的事实。<br>
+另外一条数字容易被误读。报道称，英伟达 2025 年经新加坡子公司入账 1,040 亿美元收入，同比增加 72%；但同时也写明，该公司部分台湾和中国业务的收入也记账在新加坡主体下。因此不能把这个数字理解成“东南亚四国的销售额就是 1,040 亿美元”，更不能把它直接当成此次停货的影响规模。<br>
+选题角度：规则 18 日已经写下，今天多出来的是执行层的动作——货先停了，许可怎么申还没有说清。可写的不是“英伟达放弃东南亚”，而是新规落地的第一周，供应链、云厂商和融资方分别卡在哪一步。<br>
+来源：<a href="https://www.channelnewsasia.com/asia/nvidia-halts-chip-shipments-southeast-asia-6584351" target="_blank" rel="noopener">亚洲新闻台 CNA 转载《金融时报》</a>｜<a href="https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/" target="_blank" rel="noopener">TechCrunch</a></p></article>
+</div>
+<footer>内容来自每日简报整理，供选题与素材使用</footer>
+</body></html>
