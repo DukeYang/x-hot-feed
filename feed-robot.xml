@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · 机器人</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>X 热帖精选与汽车、AI、机器人每日简报。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-robot.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Fri, 27 Nov 2026 23:42:31 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-robot.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Fri, 27 Nov 2026 23:44:26 +0000</lastBuildDate><ttl>180</ttl>
 <item><title>[机器人] 云深处高交会首秀：重载四足绝影 X50 首次公开亮相，人形交管机器人展示已有路测经历</title><link>https://www.deeprobotics.cn/news/detail/38.html</link><guid isPermaLink="true">https://www.deeprobotics.cn/news/detail/38.html</guid><category>机器人</category><author>每日简报</author><pubDate>Sat, 28 Nov 2026 00:04:51 +0000</pubDate><description><![CDATA[<p>11 月 26 日，第二十八届高交会在深圳开幕。云深处科技 11 月 27 日在官网发文，介绍公司首次参加高交会的展出。全新重载四足绝影 X50 在此首次公开亮相。公司称，它在 50 公斤额定负载下能够以 3 米/秒的速度持续奔跑 2 公里以上，并在现场演示连续攀爬 80 厘米高台；还称可融合激光雷达点云和 IMU 等数据，用于电力巡检、消防和应急救援等场景。这些性能数字来自公司介绍，公开报道没有提供第三方实测对照。<br>
 同一展台还展出了基于全天候人形平台 DR02 升级的人形交管机器人。官方称，它可按预设路线在多个执勤点之间自主移动，识别闯红灯、未按规定让行等行为，并用语音和交通手势进行劝导，同时承接标准化咨询。公司写道，该机器人已在真实城市道路使用，包括国庆期间的杭州主城区主干道、2026 杭州马拉松赛道，以及四川、杭州的万人音乐节现场，承担路口值守、违规劝导、巡航、咨询和巡逻等任务。这是厂商对已有部署的自我陈述，并非交管部门发布的正式评估报告。云深处还在现场展示了能源电力、应急消防、安防巡逻、工业运维、民生服务、教育实训六大行业解决方案。<br>
 选题角度：四足新品拼的是负载和续航，人形交管机器人拼的是能不能在真实路口连续值守。后续如果要写成“已经规模化上路”，还需要路段、班次和干预次数，而不是展台上的一次攀爬。<br>

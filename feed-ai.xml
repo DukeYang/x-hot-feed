@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>X 热帖精选 · AI</title><link>https://dukeyang.github.io/x-hot-feed/</link><description>X 热帖精选与汽车、AI、机器人每日简报。</description><language>zh-cn</language>
-<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Fri, 27 Nov 2026 23:42:31 +0000</lastBuildDate><ttl>180</ttl>
+<atom:link href="https://dukeyang.github.io/x-hot-feed/feed-ai.xml" rel="self" type="application/rss+xml"/><lastBuildDate>Fri, 27 Nov 2026 23:44:26 +0000</lastBuildDate><ttl>180</ttl>
 <item><title>[AI] 【进展】英伟达据报暂停向东南亚四国出货服务器，公司拒绝置评</title><link>https://www.channelnewsasia.com/asia/nvidia-halts-chip-shipments-southeast-asia-6584351</link><guid isPermaLink="true">https://www.channelnewsasia.com/asia/nvidia-halts-chip-shipments-southeast-asia-6584351</guid><category>AI</category><author>每日简报</author><pubDate>Fri, 27 Nov 2026 00:07:54 +0000</pubDate><description><![CDATA[<p>此前：11 月 18 日简报已报道，美国商务部发布临时最终规则，堵住经第三国数据中心远程租用先进芯片、供受限实体使用的路径。<br>
 这次新增：11 月 26 日，亚洲新闻台（CNA）转载的《金融时报》报道称，英伟达已告知代工合作伙伴，暂停向马来西亚、新加坡、泰国和印度尼西亚发运服务器。报道援引三名知情人士说，戴尔（Dell）和超微（Supermicro）等把英伟达芯片组装成服务器的厂商，已转告当地买家：英伟达不允许这些订单出货。暂停会持续多久并不清楚，知情人士的说法是，英伟达及其合作伙伴仍在摸索如何满足华盛顿的新规。英伟达拒绝置评；戴尔、超微没有回应置评请求。<br>
 报道把背景写得很具体。东南亚被写成中国开发者获取先进芯片的重要落点；许多做法是向当地云厂商租用装有英伟达芯片的服务器。商务部为云厂商设置了 90 天许可期限，需证明最终用户不包括受限实体。一名云厂商高管对《金融时报》说：“有了新规，却没有执行指引。谁都不知道该怎么申请许可，而 90 天的时钟已经开始转。这让这个地区陷入彻底的混乱。”报道还提到，新加坡云厂商 Aolani 曾计划通过租赁向字节跳动提供先进算力；两名知情人士称，此前答应为该项目提供融资的银行已停止发放约 5 亿美元信贷，字节跳动也可能退出交易。字节跳动和 Aolani 没有回应置评请求。这些都是匿名来源的转述，不是公司公告，不能写成已经由官方确认的事实。<br>
